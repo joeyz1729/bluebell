@@ -1,0 +1,1034 @@
+1.685592159702999e+09	debug	bluebell/main.go:44	logger init success
+1.6855921719122336e+09	error	controller/user.go:22	signup param bind json err	{"error": "invalid character 'i' looking for beginning of value"}
+1.6855921719125857e+09	info	logger/logger.go:54	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0003521}
+1.6855921784913673e+09	error	controller/user.go:22	signup param bind json err	{"error": "json: cannot unmarshal number into Go struct field SignupForm.password of type string"}
+1.6855921784913673e+09	info	logger/logger.go:54	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.00102}
+1.6855922059752834e+09	error	controller/user.go:28	signup param bind json err	{"error": "Key: 'SignupForm.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag\nKey: 'SignupForm.Email' Error:Field validation for 'Email' failed on the 'required' tag"}
+1.6855922059752834e+09	info	logger/logger.go:54	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0004642}
+1.6855922359615076e+09	error	controller/user.go:22	signup param bind json err	{"error": "invalid character '\"' after object key:value pair"}
+1.6855922359622629e+09	info	logger/logger.go:54	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0007553}
+1.685592240637419e+09	error	controller/user.go:28	signup param bind json err	{"error": "Key: 'SignupForm.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag\nKey: 'SignupForm.Email' Error:Field validation for 'Email' failed on the 'email' tag"}
+1.685592240637419e+09	info	logger/logger.go:54	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0007832}
+1.6855922598571184e+09	debug	bluebell/main.go:44	logger init success
+1.6855922694855208e+09	error	controller/user.go:28	signup param bind json err	{"error": "Key: 'SignupForm.RePassword' Error:Field validation for 'RePassword' failed on the 'required' tag"}
+1.6855922694855208e+09	info	logger/logger.go:54	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.6855922779806945e+09	error	controller/user.go:28	signup param bind json err	{"error": "Key: 'SignupForm.RePassword' Error:Field validation for 'RePassword' failed on the 'eqfield' tag"}
+1.6855922779806945e+09	info	logger/logger.go:54	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0006224}
+1.6855922837565148e+09	info	logger/logger.go:54	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0001545}
+1.6856101054333863e+09	debug	bluebell/main.go:44	logger init success
+1.6856101197820694e+09	info	logger/logger.go:54	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.6856101282198358e+09	info	logger/logger.go:54	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0001364}
+1.6856124127405875e+09	debug	bluebell/main.go:44	logger init success
+1.685616126790404e+09	debug	bluebell/main.go:44	logger init success
+1.685616137334356e+09	error	logger/logger.go:96	[Recovery from panic]	{"error": "runtime error: invalid memory address or nil pointer dereference", "request": "POST /signup HTTP/1.1\r\nHost: localhost:8080\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nContent-Length: 103\r\nContent-Type: application/json\r\nPostman-Token: afd3b4de-0d26-4058-ad51-cf1235bc8750\r\nUser-Agent: PostmanRuntime/7.32.2\r\n\r\n", "stack": "goroutine 40 [running]:\nruntime/debug.Stack()\n\tD:/GoLang/src/runtime/debug/stack.go:24 +0x65\nliwenzhou/bluebell/logger.GinRecovery.func1.1()\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logger/logger.go:99 +0x2da\npanic({0xf2c5e0, 0x1364a10})\n\tD:/GoLang/src/runtime/panic.go:884 +0x212\ngithub.com/jmoiron/sqlx.(*DB).QueryRowx(0x0, {0xfcce98?, 0xa7af47?}, {0xc00068f1c0?, 0xf0d560?, 0xb39401?})\n\tD:/Codes/Golang/pkg/mod/github.com/jmoiron/sqlx@v1.3.5/sqlx.go:359 +0x2a\ngithub.com/jmoiron/sqlx.Get({0x1092c58?, 0x0?}, {0xefe9a0, 0xc0003f06b0}, {0xfcce98?, 0x10?}, {0xc00068f1c0?, 0xc0004f93a0?, 0xb446aa?})\n\tD:/Codes/Golang/pkg/mod/github.com/jmoiron/sqlx@v1.3.5/sqlx.go:689 +0x4a\ngithub.com/jmoiron/sqlx.(*DB).Get(...)\n\tD:/Codes/Golang/pkg/mod/github.com/jmoiron/sqlx@v1.3.5/sqlx.go:324\nliwenzhou/bluebell/dao/mysql.CheckUserExist(0xc000416510)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/dao/mysql/user.go:20 +0xb9\nliwenzhou/bluebell/logic.Signup(0xc000416510)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logic/user.go:11 +0x25\nliwenzhou/bluebell/controller.SignupHandler(0xc000138200)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/controller/user.go:39 +0x5b5\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\nliwenzhou/bluebell/logger.GinRecovery.func1(0xc000138200)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logger/logger.go:110 +0x76\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\nliwenzhou/bluebell/logger.GinLogger.func1(0xc000138200)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logger/logger.go:51 +0xa2\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc0004d9040, 0xc000138200)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620 +0x671\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc0004d9040, {0x1092ef8?, 0xc00013a1c0}, 0xc000138100)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576 +0x1dd\nnet/http.serverHandler.ServeHTTP({0x1092060?}, {0x1092ef8, 0xc00013a1c0}, 0xc000138100)\n\tD:/GoLang/src/net/http/server.go:2947 +0x30c\nnet/http.(*conn).serve(0xc00049e960, {0x1093780, 0xc000134ea0})\n\tD:/GoLang/src/net/http/server.go:1991 +0x607\ncreated by net/http.(*Server).Serve\n\tD:/GoLang/src/net/http/server.go:3102 +0x4db\n"}
+1.685616137334356e+09	info	logger/logger.go:54	/signup	{"status": 500, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0001739}
+1.6856162354904854e+09	error	logger/logger.go:96	[Recovery from panic]	{"error": "runtime error: invalid memory address or nil pointer dereference", "request": "POST /signup HTTP/1.1\r\nHost: localhost:8080\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nContent-Length: 79\r\nContent-Type: application/json\r\nPostman-Token: 73ab08fb-3e33-4593-8fa2-a587fc5c276e\r\nUser-Agent: PostmanRuntime/7.32.2\r\n\r\n", "stack": "goroutine 40 [running]:\nruntime/debug.Stack()\n\tD:/GoLang/src/runtime/debug/stack.go:24 +0x65\nliwenzhou/bluebell/logger.GinRecovery.func1.1()\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logger/logger.go:99 +0x2da\npanic({0xf2c5e0, 0x1364a10})\n\tD:/GoLang/src/runtime/panic.go:884 +0x212\ngithub.com/jmoiron/sqlx.(*DB).QueryRowx(0x0, {0xfcce98?, 0xa7af47?}, {0xc000070010?, 0xf0d560?, 0xb39401?})\n\tD:/Codes/Golang/pkg/mod/github.com/jmoiron/sqlx@v1.3.5/sqlx.go:359 +0x2a\ngithub.com/jmoiron/sqlx.Get({0x1092c58?, 0x0?}, {0xefe9a0, 0xc000487190}, {0xfcce98?, 0x10?}, {0xc000070010?, 0xc0004f93a0?, 0xb446aa?})\n\tD:/Codes/Golang/pkg/mod/github.com/jmoiron/sqlx@v1.3.5/sqlx.go:689 +0x4a\ngithub.com/jmoiron/sqlx.(*DB).Get(...)\n\tD:/Codes/Golang/pkg/mod/github.com/jmoiron/sqlx@v1.3.5/sqlx.go:324\nliwenzhou/bluebell/dao/mysql.CheckUserExist(0xc0001357d0)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/dao/mysql/user.go:20 +0xb9\nliwenzhou/bluebell/logic.Signup(0xc0001357d0)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logic/user.go:11 +0x25\nliwenzhou/bluebell/controller.SignupHandler(0xc000492400)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/controller/user.go:39 +0x5b5\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\nliwenzhou/bluebell/logger.GinRecovery.func1(0xc000492400)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logger/logger.go:110 +0x76\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\nliwenzhou/bluebell/logger.GinLogger.func1(0xc000492400)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logger/logger.go:51 +0xa2\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc0004d9040, 0xc000492400)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620 +0x671\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc0004d9040, {0x1092ef8?, 0xc0003be0e0}, 0xc000492300)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576 +0x1dd\nnet/http.serverHandler.ServeHTTP({0x1092060?}, {0x1092ef8, 0xc0003be0e0}, 0xc000492300)\n\tD:/GoLang/src/net/http/server.go:2947 +0x30c\nnet/http.(*conn).serve(0xc00049e960, {0x1093780, 0xc000134ea0})\n\tD:/GoLang/src/net/http/server.go:1991 +0x607\ncreated by net/http.(*Server).Serve\n\tD:/GoLang/src/net/http/server.go:3102 +0x4db\n"}
+1.6856162354904854e+09	info	logger/logger.go:54	/signup	{"status": 500, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0013217}
+1.6856163641752594e+09	debug	bluebell/main.go:44	logger init success
+1.6856163685693939e+09	error	logger/logger.go:96	[Recovery from panic]	{"error": "runtime error: invalid memory address or nil pointer dereference", "request": "POST /signup HTTP/1.1\r\nHost: localhost:8080\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nContent-Length: 79\r\nContent-Type: application/json\r\nPostman-Token: beaced5d-f3e3-4944-b178-44499cbe6ad8\r\nUser-Agent: PostmanRuntime/7.32.2\r\n\r\n", "stack": "goroutine 58 [running]:\nruntime/debug.Stack()\n\tD:/GoLang/src/runtime/debug/stack.go:24 +0x65\nliwenzhou/bluebell/logger.GinRecovery.func1.1()\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logger/logger.go:99 +0x2da\npanic({0xccc5e0, 0x1104a10})\n\tD:/GoLang/src/runtime/panic.go:884 +0x212\ngithub.com/jmoiron/sqlx.(*DB).QueryRowx(0x0, {0xd6cec1?, 0x81af47?}, {0xc000507390?, 0xcad560?, 0xc000693201?})\n\tD:/Codes/Golang/pkg/mod/github.com/jmoiron/sqlx@v1.3.5/sqlx.go:359 +0x2a\ngithub.com/jmoiron/sqlx.Get({0xe32d58?, 0x0?}, {0xc9e9a0, 0xc00001c380}, {0xd6cec1?, 0x0?}, {0xc000507390?, 0x8d9420?, 0xc0000046c0?})\n\tD:/Codes/Golang/pkg/mod/github.com/jmoiron/sqlx@v1.3.5/sqlx.go:689 +0x4a\ngithub.com/jmoiron/sqlx.(*DB).Get(...)\n\tD:/Codes/Golang/pkg/mod/github.com/jmoiron/sqlx@v1.3.5/sqlx.go:324\nliwenzhou/bluebell/dao/mysql.CheckUserExist(0xc000693260)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/dao/mysql/user.go:20 +0xb9\nliwenzhou/bluebell/logic.Signup(0xc000693260)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logic/user.go:12 +0x33\nliwenzhou/bluebell/controller.SignupHandler(0xc000138200)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/controller/user.go:39 +0x5b5\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\nliwenzhou/bluebell/logger.GinRecovery.func1(0xc000138200)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logger/logger.go:110 +0x76\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\nliwenzhou/bluebell/logger.GinLogger.func1(0xc000138200)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logger/logger.go:51 +0xa2\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc000584680, 0xc000138200)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620 +0x671\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc000584680, {0xe32ff8?, 0xc0003da0e0}, 0xc0004f2000)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576 +0x1dd\nnet/http.serverHandler.ServeHTTP({0xe32160?}, {0xe32ff8, 0xc0003da0e0}, 0xc0004f2000)\n\tD:/GoLang/src/net/http/server.go:2947 +0x30c\nnet/http.(*conn).serve(0xc0006880a0, {0xe33880, 0xc000693080})\n\tD:/GoLang/src/net/http/server.go:1991 +0x607\ncreated by net/http.(*Server).Serve\n\tD:/GoLang/src/net/http/server.go:3102 +0x4db\n"}
+1.685616368569899e+09	info	logger/logger.go:54	/signup	{"status": 500, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0010184}
+1.6856164571553183e+09	debug	bluebell/main.go:44	logger init success
+1.6856164620021782e+09	error	logger/logger.go:96	[Recovery from panic]	{"error": "runtime error: invalid memory address or nil pointer dereference", "request": "POST /signup HTTP/1.1\r\nHost: localhost:8080\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nContent-Length: 79\r\nContent-Type: application/json\r\nPostman-Token: 803f47f7-bd32-4696-81aa-9ae02dd7acd5\r\nUser-Agent: PostmanRuntime/7.32.2\r\n\r\n", "stack": "goroutine 24 [running]:\nruntime/debug.Stack()\n\tD:/GoLang/src/runtime/debug/stack.go:24 +0x65\nliwenzhou/bluebell/logger.GinRecovery.func1.1()\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logger/logger.go:99 +0x2da\npanic({0xb0c5e0, 0xf44a10})\n\tD:/GoLang/src/runtime/panic.go:884 +0x212\ngithub.com/jmoiron/sqlx.(*DB).QueryRowx(0x0, {0xbacec1?, 0x65af47?}, {0xc000070f10?, 0xaed560?, 0xc000416401?})\n\tD:/Codes/Golang/pkg/mod/github.com/jmoiron/sqlx@v1.3.5/sqlx.go:359 +0x2a\ngithub.com/jmoiron/sqlx.Get({0xc72d58?, 0x0?}, {0xade9a0, 0xc0003f2610}, {0xbacec1?, 0x0?}, {0xc000070f10?, 0x719420?, 0xc0000046c0?})\n\tD:/Codes/Golang/pkg/mod/github.com/jmoiron/sqlx@v1.3.5/sqlx.go:689 +0x4a\ngithub.com/jmoiron/sqlx.(*DB).Get(...)\n\tD:/Codes/Golang/pkg/mod/github.com/jmoiron/sqlx@v1.3.5/sqlx.go:324\nliwenzhou/bluebell/dao/mysql.CheckUserExist(0xc000416420)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/dao/mysql/user.go:20 +0xb9\nliwenzhou/bluebell/logic.Signup(0xc000416420)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logic/user.go:12 +0x33\nliwenzhou/bluebell/controller.SignupHandler(0xc0001a0000)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/controller/user.go:39 +0x5b5\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\nliwenzhou/bluebell/logger.GinRecovery.func1(0xc0001a0000)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logger/logger.go:110 +0x76\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\nliwenzhou/bluebell/logger.GinLogger.func1(0xc0001a0000)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logger/logger.go:51 +0xa2\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc0003a44e0, 0xc0001a0000)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620 +0x671\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc0003a44e0, {0xc72ff8?, 0xc00013a0e0}, 0xc0004d6100)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576 +0x1dd\nnet/http.serverHandler.ServeHTTP({0xc72160?}, {0xc72ff8, 0xc00013a0e0}, 0xc0004d6100)\n\tD:/GoLang/src/net/http/server.go:2947 +0x30c\nnet/http.(*conn).serve(0xc00019e0a0, {0xc73880, 0xc0003722d0})\n\tD:/GoLang/src/net/http/server.go:1991 +0x607\ncreated by net/http.(*Server).Serve\n\tD:/GoLang/src/net/http/server.go:3102 +0x4db\n"}
+1.6856164620021782e+09	info	logger/logger.go:54	/signup	{"status": 500, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0005055}
+1.6856164932421649e+09	debug	bluebell/main.go:44	logger init success
+1.6856164932427082e+09	debug	bluebell/main.go:51	snowflake init success
+1.6856165135299387e+09	error	logger/logger.go:96	[Recovery from panic]	{"error": "runtime error: invalid memory address or nil pointer dereference", "request": "POST /signup HTTP/1.1\r\nHost: localhost:8080\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nContent-Length: 79\r\nContent-Type: application/json\r\nPostman-Token: d903aa89-13f0-48bf-a5e6-4228ab7a2b73\r\nUser-Agent: PostmanRuntime/7.32.2\r\n\r\n", "stack": "goroutine 43 [running]:\nruntime/debug.Stack()\n\tD:/GoLang/src/runtime/debug/stack.go:24 +0x65\nliwenzhou/bluebell/logger.GinRecovery.func1.1()\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logger/logger.go:99 +0x2da\npanic({0xc3c5e0, 0x1074a10})\n\tD:/GoLang/src/runtime/panic.go:884 +0x212\ngithub.com/jmoiron/sqlx.(*DB).QueryRowx(0x0, {0xcdced7?, 0x78af47?}, {0xc000070f20?, 0xc1d560?, 0xc000088301?})\n\tD:/Codes/Golang/pkg/mod/github.com/jmoiron/sqlx@v1.3.5/sqlx.go:359 +0x2a\ngithub.com/jmoiron/sqlx.Get({0xda2d58?, 0x0?}, {0xc0e9a0, 0xc0000981c0}, {0xcdced7?, 0x0?}, {0xc000070f20?, 0x849420?, 0xc0000046c0?})\n\tD:/Codes/Golang/pkg/mod/github.com/jmoiron/sqlx@v1.3.5/sqlx.go:689 +0x4a\ngithub.com/jmoiron/sqlx.(*DB).Get(...)\n\tD:/Codes/Golang/pkg/mod/github.com/jmoiron/sqlx@v1.3.5/sqlx.go:324\nliwenzhou/bluebell/dao/mysql.CheckUserExist(0xc0000883c0)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/dao/mysql/user.go:20 +0xb9\nliwenzhou/bluebell/logic.Signup(0xc0000883c0)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logic/user.go:12 +0x33\nliwenzhou/bluebell/controller.SignupHandler(0xc00010a100)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/controller/user.go:39 +0x5b5\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\nliwenzhou/bluebell/logger.GinRecovery.func1(0xc00010a100)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logger/logger.go:110 +0x76\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\nliwenzhou/bluebell/logger.GinLogger.func1(0xc00010a100)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logger/logger.go:51 +0xa2\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc000504680, 0xc00010a100)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620 +0x671\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc000504680, {0xda2ff8?, 0xc00013a0e0}, 0xc00010a000)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576 +0x1dd\nnet/http.serverHandler.ServeHTTP({0xda2160?}, {0xda2ff8, 0xc00013a0e0}, 0xc00010a000)\n\tD:/GoLang/src/net/http/server.go:2947 +0x30c\nnet/http.(*conn).serve(0xc00019e000, {0xda3880, 0xc00022f410})\n\tD:/GoLang/src/net/http/server.go:1991 +0x607\ncreated by net/http.(*Server).Serve\n\tD:/GoLang/src/net/http/server.go:3102 +0x4db\n"}
+1.685616513530463e+09	info	logger/logger.go:54	/signup	{"status": 500, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0005241}
+1.6856166977475066e+09	debug	bluebell/main.go:44	logger init success
+1.6856166977480292e+09	debug	bluebell/main.go:51	snowflake init success
+1.6856166977480292e+09	debug	bluebell/main.go:79	trans init success
+1.6856166977485492e+09	debug	bluebell/main.go:82	router init success
+1.685616706733107e+09	error	logger/logger.go:96	[Recovery from panic]	{"error": "runtime error: invalid memory address or nil pointer dereference", "request": "POST /signup HTTP/1.1\r\nHost: localhost:8080\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nContent-Length: 79\r\nContent-Type: application/json\r\nPostman-Token: 98698267-5b91-43af-8051-9b1bcf3bf095\r\nUser-Agent: PostmanRuntime/7.32.2\r\n\r\n", "stack": "goroutine 51 [running]:\nruntime/debug.Stack()\n\tD:/GoLang/src/runtime/debug/stack.go:24 +0x65\nliwenzhou/bluebell/logger.GinRecovery.func1.1()\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logger/logger.go:99 +0x2da\npanic({0x88c5e0, 0xcc4a10})\n\tD:/GoLang/src/runtime/panic.go:884 +0x212\ngithub.com/jmoiron/sqlx.(*DB).QueryRowx(0x0, {0x92cf06?, 0x3daf47?}, {0xc000070f10?, 0x86d560?, 0xc000088301?})\n\tD:/Codes/Golang/pkg/mod/github.com/jmoiron/sqlx@v1.3.5/sqlx.go:359 +0x2a\ngithub.com/jmoiron/sqlx.Get({0x9f2df8?, 0x0?}, {0x85e9a0, 0xc0000941b0}, {0x92cf06?, 0x0?}, {0xc000070f10?, 0x499420?, 0xc0000046c0?})\n\tD:/Codes/Golang/pkg/mod/github.com/jmoiron/sqlx@v1.3.5/sqlx.go:689 +0x4a\ngithub.com/jmoiron/sqlx.(*DB).Get(...)\n\tD:/Codes/Golang/pkg/mod/github.com/jmoiron/sqlx@v1.3.5/sqlx.go:324\nliwenzhou/bluebell/dao/mysql.CheckUserExist(0xc000088330)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/dao/mysql/user.go:20 +0xb9\nliwenzhou/bluebell/logic.Signup(0xc000088330)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logic/user.go:12 +0x33\nliwenzhou/bluebell/controller.SignupHandler(0xc000112000)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/controller/user.go:40 +0x5ca\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\nliwenzhou/bluebell/logger.GinRecovery.func1(0xc000112000)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logger/logger.go:110 +0x76\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\nliwenzhou/bluebell/logger.GinLogger.func1(0xc000112000)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logger/logger.go:51 +0xa2\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc000504680, 0xc000112000)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620 +0x671\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc000504680, {0x9f3098?, 0xc00013a0e0}, 0xc0000ca000)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576 +0x1dd\nnet/http.serverHandler.ServeHTTP({0x9f2200?}, {0x9f3098, 0xc00013a0e0}, 0xc0000ca000)\n\tD:/GoLang/src/net/http/server.go:2947 +0x30c\nnet/http.(*conn).serve(0xc0001960a0, {0x9f3920, 0xc0006831d0})\n\tD:/GoLang/src/net/http/server.go:1991 +0x607\ncreated by net/http.(*Server).Serve\n\tD:/GoLang/src/net/http/server.go:3102 +0x4db\n"}
+1.685616706733107e+09	info	logger/logger.go:54	/signup	{"status": 500, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0005351}
+1.6856169611871376e+09	debug	bluebell/main.go:44	logger init success
+1.6856169611876569e+09	debug	bluebell/main.go:51	snowflake init success
+1.6856169611876569e+09	debug	bluebell/main.go:79	trans init success
+1.685616961188184e+09	debug	bluebell/main.go:82	router init success
+1.6856169654603913e+09	error	logger/logger.go:96	[Recovery from panic]	{"error": "runtime error: invalid memory address or nil pointer dereference", "request": "POST /signup HTTP/1.1\r\nHost: localhost:8080\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nContent-Length: 79\r\nContent-Type: application/json\r\nPostman-Token: 2b94ef29-c468-4e21-8bae-30f3f7384bce\r\nUser-Agent: PostmanRuntime/7.32.2\r\n\r\n", "stack": "goroutine 26 [running]:\nruntime/debug.Stack()\n\tD:/GoLang/src/runtime/debug/stack.go:24 +0x65\nliwenzhou/bluebell/logger.GinRecovery.func1.1()\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logger/logger.go:99 +0x2da\npanic({0xd6c5e0, 0x11a4a10})\n\tD:/GoLang/src/runtime/panic.go:884 +0x212\ngithub.com/jmoiron/sqlx.(*DB).QueryRowx(0x0, {0xe0cf12?, 0x8baf47?}, {0xc0001e2150?, 0xd4d560?, 0xc00010d201?})\n\tD:/Codes/Golang/pkg/mod/github.com/jmoiron/sqlx@v1.3.5/sqlx.go:359 +0x2a\ngithub.com/jmoiron/sqlx.Get({0xed2e38?, 0x0?}, {0xd3e9a0, 0xc0003ee3a0}, {0xe0cf12?, 0xc0003ee390?}, {0xc0001e2150?, 0x0?, 0xd?})\n\tD:/Codes/Golang/pkg/mod/github.com/jmoiron/sqlx@v1.3.5/sqlx.go:689 +0x4a\ngithub.com/jmoiron/sqlx.(*DB).Get(...)\n\tD:/Codes/Golang/pkg/mod/github.com/jmoiron/sqlx@v1.3.5/sqlx.go:324\nliwenzhou/bluebell/dao/mysql.CheckUserExist(0xc000416540)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/dao/mysql/user.go:20 +0xb9\nliwenzhou/bluebell/logic.Signup(0xc000416540)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logic/user.go:12 +0x79\nliwenzhou/bluebell/controller.SignupHandler(0xc0000e6000)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/controller/user.go:40 +0x5ca\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\nliwenzhou/bluebell/logger.GinRecovery.func1(0xc0000e6000)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logger/logger.go:110 +0x76\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\nliwenzhou/bluebell/logger.GinLogger.func1(0xc0000e6000)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logger/logger.go:51 +0xa2\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc000502820, 0xc0000e6000)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620 +0x671\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc000502820, {0xed30d8?, 0xc00013a0e0}, 0xc0001a2000)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576 +0x1dd\nnet/http.serverHandler.ServeHTTP({0xed2240?}, {0xed30d8, 0xc00013a0e0}, 0xc0001a2000)\n\tD:/GoLang/src/net/http/server.go:2947 +0x30c\nnet/http.(*conn).serve(0xc00019e0a0, {0xed3960, 0xc00051d650})\n\tD:/GoLang/src/net/http/server.go:1991 +0x607\ncreated by net/http.(*Server).Serve\n\tD:/GoLang/src/net/http/server.go:3102 +0x4db\n"}
+1.6856169654603913e+09	info	logger/logger.go:54	/signup	{"status": 500, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0005036}
+1.6856170079624665e+09	debug	bluebell/main.go:44	logger init success
+1.6856170079624665e+09	debug	bluebell/main.go:51	snowflake init success
+1.6856170079629817e+09	debug	bluebell/main.go:79	trans init success
+1.6856170079629817e+09	debug	bluebell/main.go:82	router init success
+1.685617012771738e+09	error	logger/logger.go:96	[Recovery from panic]	{"error": "runtime error: invalid memory address or nil pointer dereference", "request": "POST /signup HTTP/1.1\r\nHost: localhost:8080\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nContent-Length: 79\r\nContent-Type: application/json\r\nPostman-Token: dae9a8b3-df83-40f8-82b0-c2a565fcc8ee\r\nUser-Agent: PostmanRuntime/7.32.2\r\n\r\n", "stack": "goroutine 26 [running]:\nruntime/debug.Stack()\n\tD:/GoLang/src/runtime/debug/stack.go:24 +0x65\nliwenzhou/bluebell/logger.GinRecovery.func1.1()\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logger/logger.go:99 +0x2da\npanic({0x55c5e0, 0x994a10})\n\tD:/GoLang/src/runtime/panic.go:884 +0x212\ngithub.com/jmoiron/sqlx.(*DB).QueryRowx(0x0, {0x5fcf22?, 0xaaf47?}, {0xc000484660?, 0x53d560?, 0xc0000b3201?})\n\tD:/Codes/Golang/pkg/mod/github.com/jmoiron/sqlx@v1.3.5/sqlx.go:359 +0x2a\ngithub.com/jmoiron/sqlx.Get({0x6c2eb8?, 0x0?}, {0x52e9a0, 0xc00058a218}, {0x5fcf22?, 0xc00058a220?}, {0xc000484660?, 0x0?, 0xd?})\n\tD:/Codes/Golang/pkg/mod/github.com/jmoiron/sqlx@v1.3.5/sqlx.go:689 +0x4a\ngithub.com/jmoiron/sqlx.(*DB).Get(...)\n\tD:/Codes/Golang/pkg/mod/github.com/jmoiron/sqlx@v1.3.5/sqlx.go:324\nliwenzhou/bluebell/dao/mysql.CheckUserExist(0xc000134b70)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/dao/mysql/user.go:20 +0xb9\nliwenzhou/bluebell/logic.Signup(0xc000134b70)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logic/user.go:12 +0x85\nliwenzhou/bluebell/controller.SignupHandler(0xc0001e0000)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/controller/user.go:40 +0x5ca\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\nliwenzhou/bluebell/logger.GinRecovery.func1(0xc0001e0000)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logger/logger.go:110 +0x76\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\nliwenzhou/bluebell/logger.GinLogger.func1(0xc0001e0000)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logger/logger.go:51 +0xa2\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc000504680, 0xc0001e0000)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620 +0x671\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc000504680, {0x6c3158?, 0xc00013a0e0}, 0xc000138100)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576 +0x1dd\nnet/http.serverHandler.ServeHTTP({0x6c22c0?}, {0x6c3158, 0xc00013a0e0}, 0xc000138100)\n\tD:/GoLang/src/net/http/server.go:2947 +0x30c\nnet/http.(*conn).serve(0xc000000000, {0x6c39e0, 0xc000595620})\n\tD:/GoLang/src/net/http/server.go:1991 +0x607\ncreated by net/http.(*Server).Serve\n\tD:/GoLang/src/net/http/server.go:3102 +0x4db\n"}
+1.6856170127722435e+09	info	logger/logger.go:54	/signup	{"status": 500, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0009167}
+1.6856170644917467e+09	debug	bluebell/main.go:44	logger init success
+1.6856170644917467e+09	debug	bluebell/main.go:51	snowflake init success
+1.6856170644922662e+09	debug	bluebell/main.go:79	trans init success
+1.6856170644922662e+09	debug	bluebell/main.go:82	router init success
+1.685617069501329e+09	error	logger/logger.go:96	[Recovery from panic]	{"error": "runtime error: invalid memory address or nil pointer dereference", "request": "POST /signup HTTP/1.1\r\nHost: localhost:8080\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nContent-Length: 79\r\nContent-Type: application/json\r\nPostman-Token: 636ab27b-8005-4106-810d-5793df5fd55a\r\nUser-Agent: PostmanRuntime/7.32.2\r\n\r\n", "stack": "goroutine 41 [running]:\nruntime/debug.Stack()\n\tD:/GoLang/src/runtime/debug/stack.go:24 +0x65\nliwenzhou/bluebell/logger.GinRecovery.func1.1()\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logger/logger.go:99 +0x2da\npanic({0xe6c5e0, 0x12a4a10})\n\tD:/GoLang/src/runtime/panic.go:884 +0x212\ngithub.com/jmoiron/sqlx.(*DB).QueryRowx(0x0, {0xf10044?, 0x9baf47?}, {0xc0001e2160?, 0xe4d560?, 0xc0004f9201?})\n\tD:/Codes/Golang/pkg/mod/github.com/jmoiron/sqlx@v1.3.5/sqlx.go:359 +0x2a\ngithub.com/jmoiron/sqlx.Get({0xfd2eb8?, 0x0?}, {0xe3e9a0, 0xc000492250}, {0xf10044?, 0xc000492240?}, {0xc0001e2160?, 0x0?, 0xd?})\n\tD:/Codes/Golang/pkg/mod/github.com/jmoiron/sqlx@v1.3.5/sqlx.go:689 +0x4a\ngithub.com/jmoiron/sqlx.(*DB).Get(...)\n\tD:/Codes/Golang/pkg/mod/github.com/jmoiron/sqlx@v1.3.5/sqlx.go:324\nliwenzhou/bluebell/dao/mysql.CheckUserExist(0xc000416510)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/dao/mysql/user.go:20 +0xb9\nliwenzhou/bluebell/logic.Signup(0xc000416510)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logic/user.go:12 +0x85\nliwenzhou/bluebell/controller.SignupHandler(0xc000138200)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/controller/user.go:40 +0x5ca\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\nliwenzhou/bluebell/logger.GinRecovery.func1(0xc000138200)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logger/logger.go:110 +0x76\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\nliwenzhou/bluebell/logger.GinLogger.func1(0xc000138200)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logger/logger.go:51 +0xa2\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc0004dab60, 0xc000138200)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620 +0x671\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc0004dab60, {0xfd3158?, 0xc00013a0e0}, 0xc000138100)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576 +0x1dd\nnet/http.serverHandler.ServeHTTP({0xfd22c0?}, {0xfd3158, 0xc00013a0e0}, 0xc000138100)\n\tD:/GoLang/src/net/http/server.go:2947 +0x30c\nnet/http.(*conn).serve(0xc00019c000, {0xfd39e0, 0xc000372150})\n\tD:/GoLang/src/net/http/server.go:1991 +0x607\ncreated by net/http.(*Server).Serve\n\tD:/GoLang/src/net/http/server.go:3102 +0x4db\n"}
+1.6856170695018647e+09	info	logger/logger.go:54	/signup	{"status": 500, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0005358}
+1.6856171763667824e+09	debug	bluebell/main.go:44	logger init success
+1.6856171763678436e+09	debug	bluebell/main.go:51	snowflake init success
+1.6856171763678436e+09	debug	bluebell/main.go:79	trans init success
+1.6856171763683796e+09	debug	bluebell/main.go:82	router init success
+1.6856171815536525e+09	error	logger/logger.go:96	[Recovery from panic]	{"error": "runtime error: invalid memory address or nil pointer dereference", "request": "POST /signup HTTP/1.1\r\nHost: localhost:8080\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nContent-Length: 79\r\nContent-Type: application/json\r\nPostman-Token: 80d3cc48-37f8-4e34-8973-6e07a55ea8d5\r\nUser-Agent: PostmanRuntime/7.32.2\r\n\r\n", "stack": "goroutine 35 [running]:\nruntime/debug.Stack()\n\tD:/GoLang/src/runtime/debug/stack.go:24 +0x65\nliwenzhou/bluebell/logger.GinRecovery.func1.1()\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logger/logger.go:99 +0x2da\npanic({0xbbc5e0, 0xff4a10})\n\tD:/GoLang/src/runtime/panic.go:884 +0x212\ngithub.com/jmoiron/sqlx.(*DB).QueryRowx(0x0, {0xc5faba?, 0x70af47?}, {0xc000427400?, 0xb9d560?, 0xc0004a7201?})\n\tD:/Codes/Golang/pkg/mod/github.com/jmoiron/sqlx@v1.3.5/sqlx.go:359 +0x2a\ngithub.com/jmoiron/sqlx.Get({0xd22eb8?, 0x0?}, {0xb8e9a0, 0xc00048d208}, {0xc5faba?, 0xc0001366e0?}, {0xc000427400?, 0x0?, 0xd?})\n\tD:/Codes/Golang/pkg/mod/github.com/jmoiron/sqlx@v1.3.5/sqlx.go:689 +0x4a\ngithub.com/jmoiron/sqlx.(*DB).Get(...)\n\tD:/Codes/Golang/pkg/mod/github.com/jmoiron/sqlx@v1.3.5/sqlx.go:324\nliwenzhou/bluebell/dao/mysql.CheckUserExist(0xc000481b30)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/dao/mysql/user.go:20 +0xb9\nliwenzhou/bluebell/logic.Signup(0xc000481b30)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logic/user.go:12 +0x85\nliwenzhou/bluebell/controller.SignupHandler(0xc0000e0000)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/controller/user.go:40 +0x5ca\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\nliwenzhou/bluebell/logger.GinRecovery.func1(0xc0000e0000)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logger/logger.go:110 +0x76\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\nliwenzhou/bluebell/logger.GinLogger.func1(0xc0000e0000)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logger/logger.go:51 +0xa2\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc000443380, 0xc0000e0000)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620 +0x671\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc000443380, {0xd23158?, 0xc0003e40e0}, 0xc000494100)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576 +0x1dd\nnet/http.serverHandler.ServeHTTP({0xd222c0?}, {0xd23158, 0xc0003e40e0}, 0xc000494100)\n\tD:/GoLang/src/net/http/server.go:2947 +0x30c\nnet/http.(*conn).serve(0xc0001960a0, {0xd239e0, 0xc0004819b0})\n\tD:/GoLang/src/net/http/server.go:1991 +0x607\ncreated by net/http.(*Server).Serve\n\tD:/GoLang/src/net/http/server.go:3102 +0x4db\n"}
+1.6856171815536525e+09	info	logger/logger.go:54	/signup	{"status": 500, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0005262}
+1.6856174992048564e+09	debug	bluebell/main.go:44	logger init success
+1.6856174992048564e+09	debug	bluebell/main.go:51	snowflake init success
+1.6856174992053754e+09	debug	bluebell/main.go:79	trans init success
+1.6856174992053754e+09	debug	bluebell/main.go:82	router init success
+1.6856175036183898e+09	error	logger/logger.go:96	[Recovery from panic]	{"error": "runtime error: invalid memory address or nil pointer dereference", "request": "POST /signup HTTP/1.1\r\nHost: localhost:8080\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nContent-Length: 79\r\nContent-Type: application/json\r\nPostman-Token: 31ef6135-10a1-4753-9b5a-37892cf4df68\r\nUser-Agent: PostmanRuntime/7.32.2\r\n\r\n", "stack": "goroutine 51 [running]:\nruntime/debug.Stack()\n\tD:/GoLang/src/runtime/debug/stack.go:24 +0x65\nliwenzhou/bluebell/logger.GinRecovery.func1.1()\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logger/logger.go:99 +0x2da\npanic({0x103c5e0, 0x1474a10})\n\tD:/GoLang/src/runtime/panic.go:884 +0x212\ngithub.com/jmoiron/sqlx.(*DB).QueryRowx(0x0, {0x10d4472?, 0xb8d7e7?}, {0x0?, 0x101cde0?, 0x1477401?})\n\tD:/Codes/Golang/pkg/mod/github.com/jmoiron/sqlx@v1.3.5/sqlx.go:359 +0x2a\ngithub.com/jmoiron/sqlx.Get({0x11a2ef8?, 0x0?}, {0x100e9a0, 0xc000490230}, {0x10d4472?, 0xc00009d270?}, {0x0?, 0xc00000a018?, 0xc000490220?})\n\tD:/Codes/Golang/pkg/mod/github.com/jmoiron/sqlx@v1.3.5/sqlx.go:689 +0x4a\ngithub.com/jmoiron/sqlx.(*DB).Get(...)\n\tD:/Codes/Golang/pkg/mod/github.com/jmoiron/sqlx@v1.3.5/sqlx.go:324\nliwenzhou/bluebell/dao/mysql.CheckUserExist(0xc0004829f0)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/dao/mysql/user.go:21 +0x65\nliwenzhou/bluebell/logic.Signup(0xc0004829f0)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logic/user.go:12 +0x85\nliwenzhou/bluebell/controller.SignupHandler(0xc000460000)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/controller/user.go:40 +0x5ca\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\nliwenzhou/bluebell/logger.GinRecovery.func1(0xc000460000)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logger/logger.go:110 +0x76\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\nliwenzhou/bluebell/logger.GinLogger.func1(0xc000460000)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logger/logger.go:51 +0xa2\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc000085380, 0xc000460000)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620 +0x671\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc000085380, {0x11a3198?, 0xc00013a0e0}, 0xc00010a000)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576 +0x1dd\nnet/http.serverHandler.ServeHTTP({0x11a2300?}, {0x11a3198, 0xc00013a0e0}, 0xc00010a000)\n\tD:/GoLang/src/net/http/server.go:2947 +0x30c\nnet/http.(*conn).serve(0xc000000000, {0x11a3a20, 0xc000518fc0})\n\tD:/GoLang/src/net/http/server.go:1991 +0x607\ncreated by net/http.(*Server).Serve\n\tD:/GoLang/src/net/http/server.go:3102 +0x4db\n"}
+1.6856175036188946e+09	info	logger/logger.go:54	/signup	{"status": 500, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0009085}
+1.6856175469505432e+09	debug	bluebell/main.go:44	logger init success
+1.6856175469510655e+09	debug	bluebell/main.go:51	snowflake init success
+1.6856175469510655e+09	debug	bluebell/main.go:79	trans init success
+1.685617546951586e+09	debug	bluebell/main.go:82	router init success
+1.6856175617716947e+09	error	logger/logger.go:96	[Recovery from panic]	{"error": "runtime error: invalid memory address or nil pointer dereference", "request": "POST /signup HTTP/1.1\r\nHost: localhost:8080\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nContent-Length: 79\r\nContent-Type: application/json\r\nPostman-Token: af009b33-d392-4f9e-8134-074a72ba229d\r\nUser-Agent: PostmanRuntime/7.32.2\r\n\r\n", "stack": "goroutine 51 [running]:\nruntime/debug.Stack()\n\tD:/GoLang/src/runtime/debug/stack.go:24 +0x65\nliwenzhou/bluebell/logger.GinRecovery.func1.1()\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logger/logger.go:99 +0x2da\npanic({0x52c5e0, 0x964a10})\n\tD:/GoLang/src/runtime/panic.go:884 +0x212\ngithub.com/jmoiron/sqlx.(*DB).QueryRowx(0x0, {0x5cfaba?, 0x7af47?}, {0xc000070f40?, 0x50d560?, 0xc0004f7201?})\n\tD:/Codes/Golang/pkg/mod/github.com/jmoiron/sqlx@v1.3.5/sqlx.go:359 +0x2a\ngithub.com/jmoiron/sqlx.Get({0x692eb8?, 0x0?}, {0x4fe9a0, 0xc00001c438}, {0x5cfaba?, 0xc00001c440?}, {0xc000070f40?, 0x0?, 0xd?})\n\tD:/Codes/Golang/pkg/mod/github.com/jmoiron/sqlx@v1.3.5/sqlx.go:689 +0x4a\ngithub.com/jmoiron/sqlx.(*DB).Get(...)\n\tD:/Codes/Golang/pkg/mod/github.com/jmoiron/sqlx@v1.3.5/sqlx.go:324\nliwenzhou/bluebell/dao/mysql.CheckUserExist(0xc0003b2240)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/dao/mysql/user.go:21 +0xb9\nliwenzhou/bluebell/logic.Signup(0xc0003b2240)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logic/user.go:12 +0x85\nliwenzhou/bluebell/controller.SignupHandler(0xc00010a000)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/controller/user.go:40 +0x5ca\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\nliwenzhou/bluebell/logger.GinRecovery.func1(0xc00010a000)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logger/logger.go:110 +0x76\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\nliwenzhou/bluebell/logger.GinLogger.func1(0xc00010a000)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logger/logger.go:51 +0xa2\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc000584680, 0xc00010a000)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620 +0x671\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc000584680, {0x693158?, 0xc00013a0e0}, 0xc000490100)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576 +0x1dd\nnet/http.serverHandler.ServeHTTP({0x6922c0?}, {0x693158, 0xc00013a0e0}, 0xc000490100)\n\tD:/GoLang/src/net/http/server.go:2947 +0x30c\nnet/http.(*conn).serve(0xc00019e000, {0x6939e0, 0xc000368390})\n\tD:/GoLang/src/net/http/server.go:1991 +0x607\ncreated by net/http.(*Server).Serve\n\tD:/GoLang/src/net/http/server.go:3102 +0x4db\n"}
+1.6856175617722123e+09	info	logger/logger.go:54	/signup	{"status": 500, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0010211}
+1.6856176147178652e+09	debug	bluebell/main.go:45	logger init success
+1.685617614718385e+09	debug	bluebell/main.go:52	snowflake init success
+1.6856176147379444e+09	debug	bluebell/main.go:58	mysql init success
+1.6856176147379444e+09	debug	bluebell/main.go:77	trans init success
+1.6856176147384486e+09	debug	bluebell/main.go:80	router init success
+1.6856176268033946e+09	info	logger/logger.go:54	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.022365}
+1.685617683618652e+09	debug	bluebell/main.go:45	logger init success
+1.6856176836191726e+09	debug	bluebell/main.go:52	snowflake init success
+1.6856176836305192e+09	debug	bluebell/main.go:58	mysql init success
+1.6856176836305192e+09	debug	bluebell/main.go:77	trans init success
+1.6856176836310253e+09	debug	bluebell/main.go:80	router init success
+1.6856176897618775e+09	error	controller/user.go:44	signup err	{"error": "user already exists"}
+1.6856176897618775e+09	info	logger/logger.go:54	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0076745}
+1.6856177351063704e+09	error	controller/user.go:22	[bindJSON] signup param bind json err	{"error": "json: cannot unmarshal number into Go struct field SignupForm.password of type string"}
+1.685617735106863e+09	info	logger/logger.go:54	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0004926}
+1.6856177468056986e+09	error	controller/user.go:28	[Validator] signup param bind json err	{"error": "Key: 'SignupForm.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag"}
+1.6856177468061962e+09	info	logger/logger.go:54	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0004977}
+1.6856177517178447e+09	info	logger/logger.go:54	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0055906}
+1.6856177895093737e+09	info	logger/logger.go:54	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0057195}
+1.6856185045516155e+09	debug	bluebell/main.go:45	logger init success
+1.6856185045516155e+09	debug	bluebell/main.go:52	snowflake init success
+1.685618504558439e+09	debug	bluebell/main.go:58	mysql init success
+1.6856185045589607e+09	debug	bluebell/main.go:77	trans init success
+1.6856185045589607e+09	debug	bluebell/main.go:80	router init success
+1.6856185124047253e+09	error	controller/user.go:44	signup err	{"error": "user already exists"}
+1.6856185124047253e+09	info	logger/logger.go:64	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0006982}
+1.685618657802755e+09	error	controller/user.go:28	[Validator] signup param bind json err	{"error": "Key: 'SignupForm.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag"}
+1.685618657802864e+09	info	logger/logger.go:64	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0011145}
+1.6856188109241571e+09	debug	bluebell/main.go:45	logger init success
+1.68561881092468e+09	debug	bluebell/main.go:52	snowflake init success
+1.6856188109367087e+09	debug	bluebell/main.go:58	mysql init success
+1.6856188109367087e+09	debug	bluebell/main.go:77	trans init success
+1.6856188109372141e+09	debug	bluebell/main.go:80	router init success
+1.6856188169116473e+09	error	controller/user.go:28	[Validator] signup param bind json err	{"error": "Key: 'SignupForm.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag"}
+1.6856188169116473e+09	info	logger/logger.go:69	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0002972}
+1.6856191572164657e+09	info	logger/logger.go:48	init logger success
+1.6856191572169874e+09	debug	bluebell/main.go:45	logger init success
+1.6856191572169874e+09	debug	bluebell/main.go:52	snowflake init success
+1.6856191572290297e+09	debug	bluebell/main.go:58	mysql init success
+1.6856191572290297e+09	debug	bluebell/main.go:77	trans init success
+1.6856191572295341e+09	debug	bluebell/main.go:80	router init success
+1.6856192379447646e+09	info	logger/logger.go:48	init logger success
+1.6856192379604714e+09	debug	bluebell/main.go:45	logger init success
+1.6856192379604714e+09	debug	bluebell/main.go:52	snowflake init success
+1.6856192379722626e+09	debug	bluebell/main.go:58	mysql init success
+1.6856192379722626e+09	debug	bluebell/main.go:77	trans init success
+1.6856192379727666e+09	debug	bluebell/main.go:80	router init success
+1.6856192484440606e+09	error	controller/user.go:28	[Validator] signup param bind json err	{"error": "Key: 'SignupForm.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag"}
+1.6856192484440606e+09	info	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.000854}
+1.685619313131124e+09	info	logger/logger.go:48	init logger success
+1.6856193131480951e+09	debug	bluebell/main.go:46	logger init success
+1.6856193131480951e+09	debug	bluebell/main.go:53	snowflake init success
+1.6856193131595879e+09	debug	bluebell/main.go:59	mysql init success
+1.6856193131595879e+09	debug	bluebell/main.go:78	trans init success
+1.6856193131600919e+09	debug	bluebell/main.go:81	router init success
+1.6856195642360382e+09	info	bluebell/main.go:46	init logger success
+1.6856195642550032e+09	info	bluebell/main.go:53	snowflake init success
+1.685619564260694e+09	debug	bluebell/main.go:59	mysql init success
+1.685619564260694e+09	debug	bluebell/main.go:78	trans init success
+1.6856195642612002e+09	debug	bluebell/main.go:81	router init success
+1.685619618430087e+09	info	bluebell/main.go:46	init logger success
+1.685619618444775e+09	info	bluebell/main.go:53	snowflake init success
+1.6856196184565778e+09	debug	bluebell/main.go:59	mysql init success
+1.6856196184565778e+09	debug	bluebell/main.go:78	trans init success
+1.6856196184570863e+09	debug	bluebell/main.go:81	router init success
+1.6856200017659683e+09	info	bluebell/main.go:46	init logger success
+1.685620001780786e+09	info	bluebell/main.go:53	snowflake init success
+1.685620001786674e+09	debug	bluebell/main.go:59	mysql init success
+1.685620001786674e+09	debug	bluebell/main.go:78	trans init success
+1.6856200017871802e+09	debug	bluebell/main.go:81	router init success
+1.685620151417713e+09	info	bluebell/main.go:46	init logger success
+1.6856201514334555e+09	info	bluebell/main.go:53	snowflake init success
+1.6856201514391284e+09	info	bluebell/main.go:59	mysql init success
+1.6856201514391284e+09	info	bluebell/main.go:78	trans init success
+1.6856201514396367e+09	info	bluebell/main.go:81	router init success
+1.6856201742773044e+09	info	bluebell/main.go:46	init logger success
+1.6856201742940164e+09	info	bluebell/main.go:53	snowflake init success
+1.685620174299657e+09	info	bluebell/main.go:59	mysql init success
+1.685620174299657e+09	info	bluebell/main.go:78	trans init success
+1.685620174300188e+09	info	bluebell/main.go:81	router init success
+1.6856243573946943e+09	info	bluebell/main.go:46	[logger] init success
+1.6856243574124544e+09	info	bluebell/main.go:53	[snowflake] init success
+1.6856243574513628e+09	info	bluebell/main.go:59	[mysql] init success
+1.6856243574513628e+09	info	bluebell/main.go:78	[trans] init success
+1.6856243574518692e+09	info	bluebell/main.go:81	[router] init success
+1.6856243673375633e+09	error	mysql/user.go:33	[mysql] [login] incorrect password err
+1.6856243673375633e+09	error	controller/user.go:64	login err	{"error": "incorrect password"}
+1.6856243673375633e+09	info	logger/logger.go:75	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0091166}
+1.6856244003771374e+09	error	controller/user.go:56	[validator] params verification err	{"error": "Key: 'LoginForm.password' Error:Field validation for 'password' failed on the 'required' tag"}
+1.6856244003773334e+09	info	logger/logger.go:75	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0001962}
+1.6856244431431158e+09	error	controller/user.go:56	[validator] params verification err	{"error": "Key: 'LoginForm.username' Error:Field validation for 'username' failed on the 'required' tag"}
+1.6856244431437469e+09	info	logger/logger.go:75	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0006311}
+1.6856244541593604e+09	error	mysql/user.go:33	[mysql] [login] incorrect password err
+1.6856244541593604e+09	error	controller/user.go:64	login err	{"error": "incorrect password"}
+1.6856244541593604e+09	info	logger/logger.go:75	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0118294}
+1.6856245359231842e+09	info	logger/logger.go:75	/register	{"status": 200, "method": "POST", "path": "/register", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.685624602893832e+09	info	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0294428}
+1.6856246937103226e+09	error	mysql/user.go:26	[mysql] [login] no user data err	{"error": "sql: no rows in result set"}
+1.6856246937103226e+09	error	controller/user.go:64	login err	{"error": "no user data"}
+1.6856246937103226e+09	info	logger/logger.go:75	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0114729}
+1.6856247093612177e+09	error	controller/user.go:56	[validator] params verification err	{"error": "Key: 'LoginForm.username' Error:Field validation for 'username' failed on the 'required' tag"}
+1.6856247093617175e+09	info	logger/logger.go:75	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0004998}
+1.685624717416943e+09	error	controller/user.go:58	[gin] params get err	{"error": "invalid character '}' looking for beginning of object key string"}
+1.6856247174174135e+09	info	logger/logger.go:75	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0004702}
+1.6856247202391746e+09	error	controller/user.go:56	[validator] params verification err	{"error": "Key: 'LoginForm.password' Error:Field validation for 'password' failed on the 'required' tag"}
+1.6856247202395144e+09	info	logger/logger.go:75	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0003396}
+1.685624729261464e+09	error	mysql/user.go:33	[mysql] [login] incorrect password err
+1.6856247292619698e+09	error	controller/user.go:64	login err	{"error": "incorrect password"}
+1.6856247292619698e+09	info	logger/logger.go:75	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0057705}
+1.6856247379447813e+09	error	mysql/user.go:33	[mysql] [login] incorrect password err
+1.6856247379452858e+09	error	controller/user.go:64	login err	{"error": "incorrect password"}
+1.6856247379452858e+09	info	logger/logger.go:75	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0008661}
+1.6856247440398285e+09	error	mysql/user.go:33	[mysql] [login] incorrect password err
+1.6856247440403357e+09	error	controller/user.go:64	login err	{"error": "incorrect password"}
+1.6856247440403357e+09	info	logger/logger.go:75	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0110231}
+1.6856248236109674e+09	info	bluebell/main.go:46	[logger] init success
+1.6856248236267328e+09	info	bluebell/main.go:53	[snowflake] init success
+1.6856248236321404e+09	info	bluebell/main.go:59	[mysql] init success
+1.6856248236321404e+09	info	bluebell/main.go:78	[trans] init success
+1.685624823632645e+09	info	bluebell/main.go:81	[router] init success
+1.685624830428749e+09	error	controller/user.go:64	login err	{"error": "incorrect password"}
+1.685624830428749e+09	info	logger/logger.go:75	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.001074}
+1.685624837416331e+09	info	logger/logger.go:75	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0038524}
+1.685629304324439e+09	info	bluebell/main.go:46	[logger] init success
+1.6856293043395643e+09	info	bluebell/main.go:53	[snowflake] init success
+1.6856293043509943e+09	info	bluebell/main.go:59	[mysql] init success
+1.6856293043509943e+09	info	bluebell/main.go:78	[trans] init success
+1.6856293043514998e+09	info	bluebell/main.go:81	[router] init success
+1.6856293233475194e+09	error	controller/user.go:29	[Validator] signup param bind json err	{"error": "Key: 'SignupForm.re_password' Error:Field validation for 're_password' failed on the 'required' tag"}
+1.6856293233475194e+09	info	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0004654}
+1.6856293877330773e+09	info	bluebell/main.go:46	[logger] init success
+1.6856293877483375e+09	info	bluebell/main.go:53	[snowflake] init success
+1.6856293877543802e+09	info	bluebell/main.go:59	[mysql] init success
+1.6856293877543802e+09	info	bluebell/main.go:78	[trans] init success
+1.6856293877548869e+09	info	bluebell/main.go:81	[router] init success
+1.6856293920614228e+09	error	controller/user.go:29	[Validator] signup param bind json err	{"error": "Key: 'SignupForm.re_password' Error:Field validation for 're_password' failed on the 'required' tag"}
+1.6856293920614228e+09	info	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0005072}
+1.6856294082023246e+09	error	controller/user.go:29	[Validator] signup param bind json err	{"error": "Key: 'SignupForm.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag"}
+1.6856294082023246e+09	info	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0005965}
+1.6856294112822442e+09	error	controller/user.go:29	[Validator] signup param bind json err	{"error": "Key: 'SignupForm.username' Error:Field validation for 'username' failed on the 'required' tag\nKey: 'SignupForm.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag"}
+1.6856294112829888e+09	info	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0007448}
+1.6856294275653348e+09	error	controller/user.go:29	[Validator] signup param bind json err	{"error": "Key: 'SignupForm.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag"}
+1.6856294275655107e+09	info	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0001758}
+1.6856294323635209e+09	error	controller/user.go:41	signup err	{"error": "user already exists"}
+1.6856294323635209e+09	info	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0083859}
+1.6856294973293757e+09	info	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0075379}
+1.6856294998528605e+09	error	controller/user.go:41	signup err	{"error": "user already exists"}
+1.6856294998528605e+09	info	logger/logger.go:75	/signup	{"status": 200, "method": "POST", "path": "/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0010243}
+1.685629513195115e+09	info	logger/logger.go:75	/llogin	{"status": 200, "method": "POST", "path": "/llogin", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.6856295238537185e+09	info	logger/logger.go:75	/llogin	{"status": 200, "method": "POST", "path": "/llogin", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.685629529249237e+09	error	controller/user.go:76	[login] err	{"error": "incorrect password"}
+1.685629529249237e+09	info	logger/logger.go:75	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0044436}
+1.685629601635229e+09	info	logger/logger.go:75	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0047045}
+1.6856296102103622e+09	error	controller/user.go:76	[login] err	{"error": "user not exist"}
+1.685629610210472e+09	info	logger/logger.go:75	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0010379}
+1.68567586840981e+09	info	bluebell/main.go:41	[logger] init success
+1.6856758684322462e+09	info	bluebell/main.go:48	[snowflake] init success
+1.685675868446093e+09	info	bluebell/main.go:55	[mysql] init success
+1.685675868446093e+09	info	bluebell/main.go:69	[trans] init success
+1.685675868446093e+09	info	bluebell/main.go:72	[router] init success
+1.6856758740553014e+09	info	bluebell/main.go:96	server exiting
+1.6856830055988624e+09	info	bluebell/main.go:32	[logger] init success
+1.68568300561459e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6856830056254919e+09	info	bluebell/main.go:46	[mysql] init success
+1.6856830056254919e+09	info	bluebell/main.go:60	[trans] init success
+1.6856830056259968e+09	info	bluebell/main.go:63	[router] init success
+1.685683032322758e+09	error	controller/user.go:66	[login] [logic] err	{"error": "user not exist"}
+1.6856830323232632e+09	info	logger/logger.go:75	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0052169}
+1.685683037692835e+09	info	logger/logger.go:75	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.000772}
+1.68568797356354e+09	info	bluebell/main.go:32	[logger] init success
+1.6856879735812953e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6856879735872095e+09	info	bluebell/main.go:46	[mysql] init success
+1.6856879735872095e+09	info	bluebell/main.go:60	[trans] init success
+1.6856879735877168e+09	info	bluebell/main.go:63	[router] init success
+1.6856879849340587e+09	info	logger/logger.go:75	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0034195}
+1.6856880086946998e+09	info	logger/logger.go:75	/ping	{"status": 200, "method": "POST", "path": "/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.685688016705585e+09	info	logger/logger.go:75	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.6856880228842134e+09	info	logger/logger.go:75	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.685688286295571e+09	info	logger/logger.go:75	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.6856882911366825e+09	info	logger/logger.go:75	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.6856882992610955e+09	info	logger/logger.go:75	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.685688305623692e+09	info	logger/logger.go:75	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.6856883086689625e+09	info	logger/logger.go:75	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.6856887929217367e+09	info	bluebell/main.go:32	[logger] init success
+1.6856887929369395e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6856887929430904e+09	info	bluebell/main.go:46	[mysql] init success
+1.6856887929430904e+09	info	bluebell/main.go:60	[trans] init success
+1.6856887929435954e+09	info	bluebell/main.go:63	[router] init success
+1.6856887986028612e+09	info	logger/logger.go:75	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.6856888956173527e+09	info	bluebell/main.go:32	[logger] init success
+1.685688895632492e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6856888956381621e+09	info	bluebell/main.go:46	[mysql] init success
+1.6856888956381621e+09	info	bluebell/main.go:60	[trans] init success
+1.6856888956386747e+09	info	bluebell/main.go:63	[router] init success
+1.6856888996452475e+09	info	logger/logger.go:75	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.6856889880317378e+09	info	bluebell/main.go:32	[logger] init success
+1.6856889880474627e+09	info	bluebell/main.go:39	[snowflake] init success
+1.685688988053248e+09	info	bluebell/main.go:46	[mysql] init success
+1.685688988053248e+09	info	bluebell/main.go:60	[trans] init success
+1.6856889880537546e+09	info	bluebell/main.go:63	[router] init success
+1.685688993821946e+09	info	logger/logger.go:75	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.685688998452932e+09	info	logger/logger.go:75	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.6856890016894495e+09	info	logger/logger.go:75	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.6856891087895257e+09	info	bluebell/main.go:32	[logger] init success
+1.6856891088062575e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6856891088123624e+09	info	bluebell/main.go:46	[mysql] init success
+1.6856891088123624e+09	info	bluebell/main.go:60	[trans] init success
+1.6856891088128679e+09	info	bluebell/main.go:63	[router] init success
+1.6856891178396897e+09	info	logger/logger.go:75	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0010059}
+1.6856895566990528e+09	info	bluebell/main.go:32	[logger] init success
+1.6856895567141922e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6856895567200186e+09	info	bluebell/main.go:46	[mysql] init success
+1.6856895567200186e+09	info	bluebell/main.go:60	[trans] init success
+1.685689556720591e+09	info	bluebell/main.go:63	[router] init success
+1.6856895624458306e+09	info	logger/logger.go:75	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.6856895701047034e+09	info	logger/logger.go:75	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.6856895759779718e+09	info	logger/logger.go:75	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.6856895796116061e+09	info	logger/logger.go:75	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.6856971324575422e+09	info	bluebell/main.go:32	[logger] init success
+1.6856971324733737e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6856971324864857e+09	info	bluebell/main.go:46	[mysql] init success
+1.6856971324864857e+09	info	bluebell/main.go:60	[trans] init success
+1.6856971324869962e+09	info	bluebell/main.go:63	[router] init success
+1.6856971391252673e+09	info	logger/logger.go:75	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.6856971499144754e+09	info	logger/logger.go:75	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0066113}
+1.6856971733704581e+09	error	logger/logger.go:117	[Recovery from panic]	{"error": "Key \"username\" does not exist", "request": "GET /ping HTTP/1.1\r\nHost: localhost:8080\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nAuthorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjowLCJ1c2VybmFtZSI6IndtaCIsImV4cCI6MTY4NTcwNDM0OSwiaXNzIjoiYmx1ZWJlbGwifQ.E9NYsdwWv5SiXXd31R_N3foWIegNedTt5q-usR2hYJc\r\nConnection: keep-alive\r\nContent-Length: 52\r\nContent-Type: application/json\r\nPostman-Token: 3ea6eea1-f4c2-4858-8dbe-aa84d8d89e22\r\nUser-Agent: PostmanRuntime/7.32.2\r\n\r\n", "stack": "goroutine 70 [running]:\nruntime/debug.Stack()\n\tD:/GoLang/src/runtime/debug/stack.go:24 +0x65\nliwenzhou/bluebell/logger.GinRecovery.func1.1()\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logger/logger.go:120 +0x2da\npanic({0x13730a0, 0xc00008c610})\n\tD:/GoLang/src/runtime/panic.go:884 +0x212\ngithub.com/gin-gonic/gin.(*Context).MustGet(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:273\nliwenzhou/bluebell/router.Setup.func1(0xc000518600?)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/router/router.go:21 +0xf4\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\nliwenzhou/bluebell/middleware.JWTAuthMiddleware.func1(0xc000518600)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/middleware/auth.go:32 +0x158\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\nliwenzhou/bluebell/logger.GinRecovery.func1(0xc000518600)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logger/logger.go:131 +0x76\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\nliwenzhou/bluebell/logger.GinLogger.func1(0xc000518600)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logger/logger.go:72 +0xa2\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc000084680, 0xc000518600)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620 +0x671\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc000084680, {0x1501348?, 0xc0000d01c0}, 0xc000518500)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576 +0x1dd\nnet/http.serverHandler.ServeHTTP({0x1500330?}, {0x1501348, 0xc0000d01c0}, 0xc000518500)\n\tD:/GoLang/src/net/http/server.go:2947 +0x30c\nnet/http.(*conn).serve(0xc000000460, {0x1501be0, 0xc0005930e0})\n\tD:/GoLang/src/net/http/server.go:1991 +0x607\ncreated by net/http.(*Server).Serve\n\tD:/GoLang/src/net/http/server.go:3102 +0x4db\n"}
+1.6856971733717504e+09	info	logger/logger.go:75	/ping	{"status": 500, "method": "GET", "path": "/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0012924}
+1.6856972552676423e+09	error	logger/logger.go:117	[Recovery from panic]	{"error": "Key \"username\" does not exist", "request": "GET /ping HTTP/1.1\r\nHost: localhost:8080\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nAuthorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjowLCJ1c2VybmFtZSI6IndtaCIsImV4cCI6MTY4NTcwNDM0OSwiaXNzIjoiYmx1ZWJlbGwifQ.E9NYsdwWv5SiXXd31R_N3foWIegNedTt5q-usR2hYJc\r\nConnection: keep-alive\r\nContent-Length: 52\r\nContent-Type: application/json\r\nPostman-Token: b2f41cb2-fe70-4082-8dc0-92fa637e29e9\r\nUser-Agent: PostmanRuntime/7.32.2\r\n\r\n", "stack": "goroutine 70 [running]:\nruntime/debug.Stack()\n\tD:/GoLang/src/runtime/debug/stack.go:24 +0x65\nliwenzhou/bluebell/logger.GinRecovery.func1.1()\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logger/logger.go:120 +0x2da\npanic({0x13730a0, 0xc00008c790})\n\tD:/GoLang/src/runtime/panic.go:884 +0x212\ngithub.com/gin-gonic/gin.(*Context).MustGet(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:273\nliwenzhou/bluebell/router.Setup.func1(0xc000518600?)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/router/router.go:21 +0xf4\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\nliwenzhou/bluebell/middleware.JWTAuthMiddleware.func1(0xc000518600)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/middleware/auth.go:32 +0x158\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\nliwenzhou/bluebell/logger.GinRecovery.func1(0xc000518600)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logger/logger.go:131 +0x76\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\nliwenzhou/bluebell/logger.GinLogger.func1(0xc000518600)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logger/logger.go:72 +0xa2\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc000084680, 0xc000518600)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620 +0x671\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc000084680, {0x1501348?, 0xc0000d02a0}, 0xc000518700)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576 +0x1dd\nnet/http.serverHandler.ServeHTTP({0x1500330?}, {0x1501348, 0xc0000d02a0}, 0xc000518700)\n\tD:/GoLang/src/net/http/server.go:2947 +0x30c\nnet/http.(*conn).serve(0xc000000460, {0x1501be0, 0xc0005930e0})\n\tD:/GoLang/src/net/http/server.go:1991 +0x607\ncreated by net/http.(*Server).Serve\n\tD:/GoLang/src/net/http/server.go:3102 +0x4db\n"}
+1.6856972552688768e+09	info	logger/logger.go:75	/ping	{"status": 500, "method": "GET", "path": "/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0012345}
+1.685697319081147e+09	info	bluebell/main.go:32	[logger] init success
+1.685697319096991e+09	info	bluebell/main.go:39	[snowflake] init success
+1.685697319102827e+09	info	bluebell/main.go:46	[mysql] init success
+1.685697319102827e+09	info	bluebell/main.go:60	[trans] init success
+1.6856973191033325e+09	info	bluebell/main.go:63	[router] init success
+1.6856973229772766e+09	info	logger/logger.go:75	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0005057}
+1.6857012550753543e+09	info	bluebell/main.go:32	[logger] init success
+1.6857012550900285e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857012551149852e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857012551160123e+09	info	bluebell/main.go:60	[trans] init success
+1.6857012551160123e+09	info	bluebell/main.go:63	[router] init success
+1.685701269381331e+09	info	logger/logger.go:75	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.685705484053952e+09	info	bluebell/main.go:32	[logger] init success
+1.6857054840696635e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857054840802062e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857054840802062e+09	info	bluebell/main.go:60	[trans] init success
+1.6857054840807116e+09	info	bluebell/main.go:63	[router] init success
+1.6857055224667566e+09	info	bluebell/main.go:32	[logger] init success
+1.6857055224850805e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857055224903796e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857055224903796e+09	info	bluebell/main.go:60	[trans] init success
+1.6857055224908864e+09	info	bluebell/main.go:63	[router] init success
+1.6857056160927758e+09	info	bluebell/main.go:32	[logger] init success
+1.6857056161079829e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857056161122136e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857056161130319e+09	info	bluebell/main.go:60	[trans] init success
+1.6857056161130319e+09	info	bluebell/main.go:63	[router] init success
+1.6857056375317585e+09	info	logger/logger.go:75	/ping	{"status": 404, "method": "POST", "path": "/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.6857056435713012e+09	info	logger/logger.go:75	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.001}
+1.6857056504853885e+09	info	logger/logger.go:75	/login	{"status": 404, "method": "GET", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.6857056544861472e+09	info	logger/logger.go:75	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0150906}
+1.6857057105914311e+09	info	bluebell/main.go:32	[logger] init success
+1.6857057106125228e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857057106188915e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857057106194236e+09	info	bluebell/main.go:60	[trans] init success
+1.6857057106194236e+09	info	bluebell/main.go:63	[router] init success
+1.685705714609716e+09	info	bluebell/main.go:32	[logger] init success
+1.6857057146128492e+09	info	bluebell/main.go:32	[logger] init success
+1.6857057146265264e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857057146297774e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857057146313958e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857057146314583e+09	info	bluebell/main.go:60	[trans] init success
+1.6857057146314583e+09	info	bluebell/main.go:63	[router] init success
+1.6857057146346555e+09	info	bluebell/main.go:46	[mysql] init success
+1.685705714635513e+09	info	bluebell/main.go:60	[trans] init success
+1.685705714635513e+09	info	bluebell/main.go:63	[router] init success
+1.6857057230640552e+09	error	controller/user.go:68	[login] [logic] err	{"error": "incorrect password"}
+1.6857057230640552e+09	info	logger/logger.go:75	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0008257}
+1.6857057646619356e+09	info	bluebell/main.go:32	[logger] init success
+1.685705764685013e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857057646896706e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857057646896706e+09	info	bluebell/main.go:60	[trans] init success
+1.6857057646896706e+09	info	bluebell/main.go:63	[router] init success
+1.6857057647466164e+09	info	bluebell/main.go:32	[logger] init success
+1.685705764762395e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857057647670624e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857057647674801e+09	info	bluebell/main.go:60	[trans] init success
+1.6857057647674801e+09	info	bluebell/main.go:63	[router] init success
+1.6857057666492934e+09	error	controller/user.go:68	[login] [logic] 1err	{"error": "incorrect password"}
+1.6857057666492934e+09	info	logger/logger.go:75	/login	{"status": 200, "method": "POST", "path": "/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0005288}
+1.685705769855541e+09	info	bluebell/main.go:32	[logger] init success
+1.6857057698962533e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857057699027386e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857057699027386e+09	info	bluebell/main.go:60	[trans] init success
+1.6857057699027386e+09	info	bluebell/main.go:63	[router] init success
+1.6857057724885616e+09	info	bluebell/main.go:32	[logger] init success
+1.6857057724890924e+09	info	bluebell/main.go:32	[logger] init success
+1.6857057724922776e+09	info	bluebell/main.go:32	[logger] init success
+1.685705772508265e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857057725092843e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857057725114646e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857057725135696e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857057725135696e+09	info	bluebell/main.go:46	[mysql] init success
+1.685705772514096e+09	info	bluebell/main.go:60	[trans] init success
+1.685705772514096e+09	info	bluebell/main.go:60	[trans] init success
+1.685705772514096e+09	info	bluebell/main.go:63	[router] init success
+1.685705772514096e+09	info	bluebell/main.go:63	[router] init success
+1.6857057725162172e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857057725162172e+09	info	bluebell/main.go:60	[trans] init success
+1.6857057725167463e+09	info	bluebell/main.go:63	[router] init success
+1.6857091505074165e+09	info	bluebell/main.go:32	[logger] init success
+1.6857091505254824e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857091505347342e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857091505347342e+09	info	bluebell/main.go:60	[trans] init success
+1.6857091505361154e+09	info	bluebell/main.go:63	[router] init success
+1.6857091885494134e+09	info	logger/logger.go:75	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0044321}
+1.6857092281653016e+09	error	controller/user.go:28	[signup] [params] verification err	{"error": "Key: 'SignupForm.confirm_password' Error:Field validation for 'confirm_password' failed on the 'required' tag"}
+1.6857092281653016e+09	info	logger/logger.go:75	/api/v1/signup	{"status": 200, "method": "POST", "path": "/api/v1/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0009261}
+1.6857092354390774e+09	info	logger/logger.go:75	/api/v1/signup	{"status": 200, "method": "POST", "path": "/api/v1/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0128231}
+1.685709239692017e+09	info	logger/logger.go:75	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0010106}
+1.6857092453674595e+09	error	controller/user.go:57	[login] [params] invalid err	{"error": "invalid character '}' looking for beginning of object key string"}
+1.6857092453674595e+09	info	logger/logger.go:75	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0011395}
+1.6857092595827804e+09	info	logger/logger.go:75	/api/v1/community	{"status": 200, "method": "GET", "path": "/api/v1/community", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.685709275207734e+09	error	controller/user.go:57	[login] [params] invalid err	{"error": "invalid character '}' looking for beginning of object key string"}
+1.6857092752079334e+09	info	logger/logger.go:75	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0001993}
+1.685709279651029e+09	info	logger/logger.go:75	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0038521}
+1.6857092960626109e+09	info	logger/logger.go:75	/api/v1/community	{"status": 200, "method": "GET", "path": "/api/v1/community", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0043631}
+1.6857093037784724e+09	error	controller/community.go:27	[GetCommunityDetailById] [mysql] err	{"error": "[community] select query failed"}
+1.685709303780063e+09	info	logger/logger.go:75	/api/v1/community/1	{"status": 200, "method": "GET", "path": "/api/v1/community/1", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0015068}
+1.6857093067956605e+09	error	controller/community.go:27	[GetCommunityDetailById] [mysql] err	{"error": "[community] select query failed"}
+1.6857093067961645e+09	info	logger/logger.go:75	/api/v1/community/2	{"status": 200, "method": "GET", "path": "/api/v1/community/2", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0031638}
+1.685709316423166e+09	error	controller/community.go:27	[GetCommunityDetailById] [mysql] err	{"error": "[community] select query failed"}
+1.685709316423166e+09	info	logger/logger.go:75	/api/v1/community/2	{"status": 200, "method": "GET", "path": "/api/v1/community/2", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.000905}
+1.6857093839367657e+09	info	bluebell/main.go:32	[logger] init success
+1.6857093839541483e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857093839589496e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857093839594722e+09	info	bluebell/main.go:60	[trans] init success
+1.6857093839594722e+09	info	bluebell/main.go:63	[router] init success
+1.685709389501585e+09	error	controller/community.go:27	[GetCommunityDetailById] [mysql] err	{"error": "[community] invalid id"}
+1.685709389501585e+09	info	logger/logger.go:75	/api/v1/community/2	{"status": 200, "method": "GET", "path": "/api/v1/community/2", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0009144}
+1.6857093921193206e+09	error	controller/community.go:27	[GetCommunityDetailById] [mysql] err	{"error": "[community] invalid id"}
+1.6857093921198306e+09	info	logger/logger.go:75	/api/v1/community/1	{"status": 200, "method": "GET", "path": "/api/v1/community/1", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0016435}
+1.6857094030921965e+09	error	controller/community.go:27	[GetCommunityDetailById] [mysql] err	{"error": "[community] invalid id"}
+1.6857094030921965e+09	info	logger/logger.go:75	/api/v1/community/:2	{"status": 200, "method": "GET", "path": "/api/v1/community/:2", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0035009}
+1.6857094621881204e+09	error	controller/community.go:27	[GetCommunityDetailById] [mysql] err	{"error": "[community] invalid id"}
+1.6857094621881204e+09	info	logger/logger.go:75	/api/v1/community/1	{"status": 200, "method": "GET", "path": "/api/v1/community/1", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0034089}
+1.6857094941294618e+09	info	logger/logger.go:75	/api/v1/community	{"status": 200, "method": "GET", "path": "/api/v1/community", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0037284}
+1.6857095239643292e+09	info	bluebell/main.go:32	[logger] init success
+1.6857095239648585e+09	info	bluebell/main.go:32	[logger] init success
+1.6857095239829454e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857095239845667e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857095239882963e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857095239888246e+09	info	bluebell/main.go:60	[trans] init success
+1.6857095239888246e+09	info	bluebell/main.go:63	[router] init success
+1.6857095239893553e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857095239898946e+09	info	bluebell/main.go:60	[trans] init success
+1.6857095239898946e+09	info	bluebell/main.go:63	[router] init success
+1.6857095259192924e+09	info	logger/logger.go:75	/api/v1/community	{"status": 200, "method": "GET", "path": "/api/v1/community", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0005128}
+1.6857095290627177e+09	error	controller/community.go:27	[GetCommunityDetailById] [mysql] err	{"error": "[community] select query failed"}
+1.6857095290627177e+09	info	logger/logger.go:75	/api/v1/community/1	{"status": 200, "method": "GET", "path": "/api/v1/community/1", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0003557}
+1.685709531706042e+09	error	controller/community.go:27	[GetCommunityDetailById] [mysql] err	{"error": "[community] select query failed"}
+1.685709531706042e+09	info	logger/logger.go:75	/api/v1/community/2	{"status": 200, "method": "GET", "path": "/api/v1/community/2", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0005086}
+1.6857095335922258e+09	error	controller/community.go:27	[GetCommunityDetailById] [mysql] err	{"error": "[community] select query failed"}
+1.6857095335922258e+09	info	logger/logger.go:75	/api/v1/community/1	{"status": 200, "method": "GET", "path": "/api/v1/community/1", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0005415}
+1.6857095419035969e+09	info	bluebell/main.go:32	[logger] init success
+1.6857095419035969e+09	info	bluebell/main.go:32	[logger] init success
+1.685709541920987e+09	info	bluebell/main.go:39	[snowflake] init success
+1.685709541920987e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857095419268367e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857095419268367e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857095419268367e+09	info	bluebell/main.go:60	[trans] init success
+1.6857095419268367e+09	info	bluebell/main.go:60	[trans] init success
+1.6857095419273448e+09	info	bluebell/main.go:63	[router] init success
+1.6857095419273448e+09	info	bluebell/main.go:63	[router] init success
+1.6857096549667132e+09	info	bluebell/main.go:32	[logger] init success
+1.6857096549667132e+09	info	bluebell/main.go:32	[logger] init success
+1.6857096549667132e+09	info	bluebell/main.go:32	[logger] init success
+1.6857096549672492e+09	info	bluebell/main.go:32	[logger] init success
+1.6857096549895804e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857096549901185e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857096549906704e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857096549917538e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857096549949188e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857096549949188e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857096549949188e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857096549949188e+09	info	bluebell/main.go:60	[trans] init success
+1.6857096549949188e+09	info	bluebell/main.go:60	[trans] init success
+1.685709654995448e+09	info	bluebell/main.go:63	[router] init success
+1.685709654995448e+09	info	bluebell/main.go:63	[router] init success
+1.685709654995448e+09	info	bluebell/main.go:60	[trans] init success
+1.685709654995448e+09	info	bluebell/main.go:63	[router] init success
+1.6857096549959753e+09	info	bluebell/main.go:46	[mysql] init success
+1.685709654996516e+09	info	bluebell/main.go:60	[trans] init success
+1.685709654996516e+09	info	bluebell/main.go:63	[router] init success
+1.68570965863765e+09	info	logger/logger.go:75	/api/v1/community/1	{"status": 200, "method": "GET", "path": "/api/v1/community/1", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.000713}
+1.6857100401782813e+09	info	bluebell/main.go:32	[logger] init success
+1.6857100401929984e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857100401991477e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857100401991477e+09	info	bluebell/main.go:60	[trans] init success
+1.6857100401996536e+09	info	bluebell/main.go:63	[router] init success
+1.6857100466335053e+09	info	logger/logger.go:75	/api/v1/community/1	{"status": 200, "method": "GET", "path": "/api/v1/community/1", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0011395}
+1.685710052891252e+09	info	logger/logger.go:75	/api/v1/community/2	{"status": 200, "method": "GET", "path": "/api/v1/community/2", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0039755}
+1.685710054161502e+09	info	logger/logger.go:75	/api/v1/community/3	{"status": 200, "method": "GET", "path": "/api/v1/community/3", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0009293}
+1.6857101993145561e+09	info	bluebell/main.go:32	[logger] init success
+1.6857101993292696e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857101993346765e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857101993346765e+09	info	bluebell/main.go:60	[trans] init success
+1.6857101993351827e+09	info	bluebell/main.go:63	[router] init success
+1.6857102043603017e+09	info	logger/logger.go:75	/api/v1/community/3	{"status": 200, "method": "GET", "path": "/api/v1/community/3", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0010488}
+1.6857102116664877e+09	info	logger/logger.go:75	/api/v1/community	{"status": 200, "method": "GET", "path": "/api/v1/community", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0033128}
+1.6857105849271922e+09	info	bluebell/main.go:32	[logger] init success
+1.685710584942072e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857105849480908e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857105849480908e+09	info	bluebell/main.go:60	[trans] init success
+1.6857105849485974e+09	info	bluebell/main.go:63	[router] init success
+1.6857105888145964e+09	info	logger/logger.go:75	/api/v1/community	{"status": 200, "method": "GET", "path": "/api/v1/community", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0005901}
+1.6857105914787455e+09	info	logger/logger.go:75	/api/v1/community/1	{"status": 200, "method": "GET", "path": "/api/v1/community/1", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0011904}
+1.685710595044503e+09	error	controller/community.go:28	[GetCommunityDetailById] [mysql] valid id err	{"error": "strconv.ParseUint: parsing \"!\": invalid syntax"}
+1.6857105950446544e+09	info	logger/logger.go:75	/api/v1/community/!	{"status": 200, "method": "GET", "path": "/api/v1/community/!", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0001513}
+1.6857105976752007e+09	error	controller/community.go:34	[GetCommunityDetailById] [mysql] err	{"error": "[community] invalid id"}
+1.6857105976752007e+09	info	logger/logger.go:75	/api/v1/community/2222222	{"status": 200, "method": "GET", "path": "/api/v1/community/2222222", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0030422}
+1.6857105999936814e+09	error	controller/community.go:34	[GetCommunityDetailById] [mysql] err	{"error": "[community] invalid id"}
+1.685710599994189e+09	info	logger/logger.go:75	/api/v1/community/22222222222222	{"status": 200, "method": "GET", "path": "/api/v1/community/22222222222222", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0017677}
+1.6857106015314531e+09	error	controller/community.go:28	[GetCommunityDetailById] [mysql] valid id err	{"error": "strconv.ParseUint: parsing \"222222222222222222222222\": value out of range"}
+1.6857106015315983e+09	info	logger/logger.go:75	/api/v1/community/222222222222222222222222	{"status": 200, "method": "GET", "path": "/api/v1/community/222222222222222222222222", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0001452}
+1.6857143617220864e+09	info	bluebell/main.go:32	[logger] init success
+1.6857143617367418e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857143617469876e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857143617469876e+09	info	bluebell/main.go:60	[trans] init success
+1.6857143617474918e+09	info	bluebell/main.go:63	[router] init success
+1.6857143710259025e+09	debug	controller/post.go:15	[PostHandler] bind err	{"error": "Key: 'Post.community_id' Error:Field validation for 'community_id' failed on the 'required' tag\nKey: 'Post.title' Error:Field validation for 'title' failed on the 'required' tag\nKey: 'Post.content' Error:Field validation for 'content' failed on the 'required' tag"}
+1.6857143710264285e+09	info	logger/logger.go:75	/api/v1/post	{"status": 200, "method": "POST", "path": "/api/v1/post", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0005256}
+1.6857144142326374e+09	debug	controller/post.go:15	[PostHandler] bind err	{"error": "Key: 'Post.community_id' Error:Field validation for 'community_id' failed on the 'required' tag"}
+1.6857144142330213e+09	info	logger/logger.go:75	/api/v1/post	{"status": 200, "method": "POST", "path": "/api/v1/post", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0003837}
+1.6857144856471694e+09	debug	controller/post.go:15	[PostHandler] bind err	{"error": "json: cannot unmarshal string into Go struct field Post.community_id of type uint64"}
+1.6857144856479454e+09	info	logger/logger.go:75	/api/v1/post	{"status": 200, "method": "POST", "path": "/api/v1/post", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0007761}
+1.6857145124839704e+09	error	mysql/post.go:13	insert err	{"error": "Error 1136 (21S01): Column count doesn't match value count at row 1"}
+1.6857145124849684e+09	error	logic/post.go:23	create post err	{"error": "insert post info failed"}
+1.6857145124849684e+09	error	controller/post.go:30	logic create post err	{"error": "insert post info failed"}
+1.6857145124849684e+09	info	logger/logger.go:75	/api/v1/post	{"status": 200, "method": "POST", "path": "/api/v1/post", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0128501}
+1.68571466333477e+09	info	bluebell/main.go:32	[logger] init success
+1.6857146633504877e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857146633554504e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857146633564584e+09	info	bluebell/main.go:60	[trans] init success
+1.685714663356964e+09	info	bluebell/main.go:63	[router] init success
+1.68571466760772e+09	error	mysql/post.go:13	insert err	{"error": "Error 1136 (21S01): Column count doesn't match value count at row 1"}
+1.6857146676079552e+09	error	logic/post.go:23	create post err	{"error": "insert post info failed"}
+1.6857146676079552e+09	error	controller/post.go:30	logic create post err	{"error": "insert post info failed"}
+1.6857146676079552e+09	info	logger/logger.go:75	/api/v1/post	{"status": 200, "method": "POST", "path": "/api/v1/post", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0010845}
+1.6857147285935597e+09	info	bluebell/main.go:32	[logger] init success
+1.6857147286083527e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857147286142266e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857147286142266e+09	info	bluebell/main.go:60	[trans] init success
+1.685714728614731e+09	info	bluebell/main.go:63	[router] init success
+1.6857147331962025e+09	info	logger/logger.go:75	/api/v1/post	{"status": 200, "method": "POST", "path": "/api/v1/post", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0127874}
+1.6857149096885328e+09	info	bluebell/main.go:32	[logger] init success
+1.6857149097058613e+09	info	bluebell/main.go:39	[snowflake] init success
+1.68571490971129e+09	info	bluebell/main.go:46	[mysql] init success
+1.68571490971129e+09	info	bluebell/main.go:60	[trans] init success
+1.6857149097117949e+09	info	bluebell/main.go:63	[router] init success
+1.6857149167021022e+09	info	logger/logger.go:75	/api/v1/post	{"status": 200, "method": "POST", "path": "/api/v1/post", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0018018}
+1.685716004918208e+09	info	bluebell/main.go:32	[logger] init success
+1.685716004934001e+09	info	bluebell/main.go:39	[snowflake] init success
+1.685716004939587e+09	info	bluebell/main.go:46	[mysql] init success
+1.685716004939587e+09	info	bluebell/main.go:60	[trans] init success
+1.685716004940092e+09	info	bluebell/main.go:63	[router] init success
+1.685716010315133e+09	info	logger/logger.go:75	/api/v1/post	{"status": 200, "method": "POST", "path": "/api/v1/post", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0077113}
+1.6857160188055644e+09	error	controller/post.go:50	get post by id failed	{"error": "sql: no rows in result set"}
+1.6857160188055644e+09	info	logger/logger.go:75	/api/v1/post/463363906186772481	{"status": 200, "method": "POST", "path": "/api/v1/post/463363906186772481", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0044331}
+1.685716054394534e+09	info	bluebell/main.go:32	[logger] init success
+1.6857160544097402e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857160544152246e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857160544152246e+09	info	bluebell/main.go:60	[trans] init success
+1.6857160544162571e+09	info	bluebell/main.go:63	[router] init success
+1.6857160638121014e+09	error	controller/post.go:50	get post by id failed	{"error": "sql: no rows in result set"}
+1.6857160638126137e+09	info	logger/logger.go:75	/api/v1/post/463363906186772481	{"status": 200, "method": "GET", "path": "/api/v1/post/463363906186772481", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0015908}
+1.68571611233964e+09	error	controller/post.go:50	get post by id failed	{"error": "sql: no rows in result set"}
+1.68571611233964e+09	info	logger/logger.go:75	/api/v1/post/463361763534962689	{"status": 200, "method": "GET", "path": "/api/v1/post/463361763534962689", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0037112}
+1.6857161782351997e+09	info	bluebell/main.go:32	[logger] init success
+1.6857161782505672e+09	info	bluebell/main.go:39	[snowflake] init success
+1.685716178255543e+09	info	bluebell/main.go:46	[mysql] init success
+1.685716178255543e+09	info	bluebell/main.go:60	[trans] init success
+1.6857161782565918e+09	info	bluebell/main.go:63	[router] init success
+1.6857161822322693e+09	info	logger/logger.go:75	/api/v1/post/463361763534962689	{"status": 200, "method": "GET", "path": "/api/v1/post/463361763534962689", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0006142}
+1.6857161926540618e+09	info	logger/logger.go:75	/api/v1/post	{"status": 200, "method": "POST", "path": "/api/v1/post", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0045086}
+1.685716198780178e+09	info	logger/logger.go:75	/api/v1/post/463364212119306241	{"status": 200, "method": "GET", "path": "/api/v1/post/463364212119306241", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0015412}
+1.6857178105575583e+09	info	bluebell/main.go:32	[logger] init success
+1.685717810573181e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857178105784283e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857178105784283e+09	info	bluebell/main.go:60	[trans] init success
+1.685717810578937e+09	info	bluebell/main.go:63	[router] init success
+1.6857187509819055e+09	info	bluebell/main.go:32	[logger] init success
+1.685718750999016e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857187510052905e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857187510052905e+09	info	bluebell/main.go:60	[trans] init success
+1.6857187510063279e+09	info	bluebell/main.go:63	[router] init success
+1.6857187589948516e+09	info	logger/logger.go:75	/api/v1/post/463364212119306241	{"status": 200, "method": "GET", "path": "/api/v1/post/463364212119306241", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.6857187988174996e+09	info	logger/logger.go:75	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0039146}
+1.685718823560831e+09	info	logger/logger.go:75	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0030257}
+1.6857188302678292e+09	info	logger/logger.go:75	/api/v1/post/463364212119306241	{"status": 200, "method": "GET", "path": "/api/v1/post/463364212119306241", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.6857189736388035e+09	info	logger/logger.go:75	/api/v1/community	{"status": 200, "method": "GET", "path": "/api/v1/community", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.685719022646646e+09	info	logger/logger.go:75	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0041527}
+1.6857190408354695e+09	info	logger/logger.go:75	/api/v1/community	{"status": 200, "method": "GET", "path": "/api/v1/community", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.6857190836888988e+09	info	logger/logger.go:75	/api/v1/ping	{"status": 200, "method": "GET", "path": "/api/v1/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.6857191338913364e+09	info	logger/logger.go:75	/api/v1/ping	{"status": 200, "method": "GET", "path": "/api/v1/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.6857192142578642e+09	info	bluebell/main.go:32	[logger] init success
+1.685719214273147e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857192142785962e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857192142785962e+09	info	bluebell/main.go:60	[trans] init success
+1.6857192142796228e+09	info	bluebell/main.go:63	[router] init success
+1.685719218308015e+09	error	middleware/auth.go:33	invalid token 
+1.6857192183085623e+09	info	logger/logger.go:75	/api/v1/ping	{"status": 200, "method": "GET", "path": "/api/v1/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0005471}
+1.68571924633929e+09	info	logger/logger.go:75	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0046787}
+1.6857192758800516e+09	error	controller/user.go:105	jwt.refreshToken failed	{"error": "token contains an invalid number of segments"}
+1.6857192758808622e+09	info	logger/logger.go:75	/api/v1/refresh_token	{"status": 200, "method": "GET", "path": "/api/v1/refresh_token", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0008105}
+1.6857192822996876e+09	info	logger/logger.go:75	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0037346}
+1.6857192913787835e+09	info	logger/logger.go:75	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0003152}
+1.685719303174687e+09	error	middleware/auth.go:33	invalid token 
+1.6857193031751885e+09	info	logger/logger.go:75	/api/v1/community	{"status": 200, "method": "GET", "path": "/api/v1/community", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0005015}
+1.6857193303678517e+09	error	controller/user.go:28	[signup] [params] verification err	{"error": "Key: 'SignupForm.confirm_password' Error:Field validation for 'confirm_password' failed on the 'required' tag"}
+1.6857193303688564e+09	info	logger/logger.go:75	/api/v1/signup	{"status": 200, "method": "POST", "path": "/api/v1/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0010045}
+1.6857193443728986e+09	error	controller/user.go:28	[signup] [params] verification err	{"error": "Key: 'SignupForm.confirm_password' Error:Field validation for 'confirm_password' failed on the 'required' tag"}
+1.6857193443745453e+09	info	logger/logger.go:75	/api/v1/signup	{"status": 200, "method": "POST", "path": "/api/v1/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0016468}
+1.6857193519594042e+09	info	logger/logger.go:75	/api/v1/signup	{"status": 200, "method": "POST", "path": "/api/v1/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0127157}
+1.685719362902848e+09	info	logger/logger.go:75	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0037412}
+1.6857193880696542e+09	error	middleware/auth.go:33	invalid token 
+1.6857193880697582e+09	info	logger/logger.go:75	/api/v1/community	{"status": 200, "method": "GET", "path": "/api/v1/community", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.000104}
+1.6857194026010408e+09	error	controller/user.go:105	jwt.refreshToken failed	{"error": "token contains an invalid number of segments"}
+1.685719402601634e+09	info	logger/logger.go:75	/api/v1/refresh_token	{"status": 200, "method": "GET", "path": "/api/v1/refresh_token", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0005931}
+1.6857194593368437e+09	error	controller/user.go:57	[login] [params] invalid err	{"error": "invalid character '\"' after object key:value pair"}
+1.6857194593368437e+09	info	logger/logger.go:75	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.6857194656129205e+09	info	logger/logger.go:75	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0047128}
+1.6857194822654228e+09	error	controller/user.go:105	jwt.refreshToken failed	{"error": "token contains an invalid number of segments"}
+1.6857194822657878e+09	info	logger/logger.go:75	/api/v1/refresh_token	{"status": 200, "method": "GET", "path": "/api/v1/refresh_token", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0003652}
+1.6857195763325765e+09	info	logger/logger.go:75	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0036125}
+1.685719613672269e+09	error	controller/user.go:105	jwt.refreshToken failed	{"error": "token contains an invalid number of segments"}
+1.6857196136724157e+09	info	logger/logger.go:75	/api/v1/refresh_token	{"status": 200, "method": "GET", "path": "/api/v1/refresh_token", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0001467}
+1.6857196464204378e+09	error	controller/user.go:105	jwt.refreshToken failed	{"error": "token contains an invalid number of segments"}
+1.6857196464206376e+09	info	logger/logger.go:75	/api/v1/refresh_token	{"status": 200, "method": "GET", "path": "/api/v1/refresh_token", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0002001}
+1.6857200523542829e+09	info	bluebell/main.go:32	[logger] init success
+1.6857200523695414e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857200523752525e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857200523752525e+09	info	bluebell/main.go:60	[trans] init success
+1.6857200523762836e+09	info	bluebell/main.go:63	[router] init success
+1.6857200560096796e+09	error	controller/user.go:107	jwt.refreshToken failed	{"error": "token contains an invalid number of segments"}
+1.6857200560096796e+09	info	logger/logger.go:75	/api/v1/refresh_token	{"status": 200, "method": "GET", "path": "/api/v1/refresh_token", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0005212}
+1.6857201601326976e+09	info	bluebell/main.go:32	[logger] init success
+1.6857201601483264e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857201601538482e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857201601538482e+09	info	bluebell/main.go:60	[trans] init success
+1.685720160154884e+09	info	bluebell/main.go:63	[router] init success
+1.6857201644579773e+09	error	controller/user.go:106	jwt.refreshToken failed	{"error": "token contains an invalid number of segments"}
+1.6857201644579773e+09	info	logger/logger.go:75	/api/v1/refresh_token	{"status": 200, "method": "GET", "path": "/api/v1/refresh_token", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.6857202583306518e+09	info	bluebell/main.go:32	[logger] init success
+1.6857202583453295e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857202583496385e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857202583503628e+09	info	bluebell/main.go:60	[trans] init success
+1.6857202583503628e+09	info	bluebell/main.go:63	[router] init success
+1.6857202620728788e+09	error	controller/user.go:107	jwt.refreshToken failed	{"error": "token contains an invalid number of segments"}
+1.6857202620733793e+09	info	logger/logger.go:75	/api/v1/refresh_token	{"status": 200, "method": "GET", "path": "/api/v1/refresh_token", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0005004}
+1.6857202893474216e+09	error	controller/user.go:107	jwt.refreshToken failed	{"error": "token contains an invalid number of segments"}
+1.6857202893481429e+09	info	logger/logger.go:75	/api/v1/refresh_token	{"status": 200, "method": "GET", "path": "/api/v1/refresh_token", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0007211}
+1.6857203124403687e+09	info	bluebell/main.go:32	[logger] init success
+1.6857203124550734e+09	info	bluebell/main.go:39	[snowflake] init success
+1.685720312459004e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857203124600089e+09	info	bluebell/main.go:60	[trans] init success
+1.6857203124600089e+09	info	bluebell/main.go:63	[router] init success
+1.6857203138511584e+09	error	controller/user.go:108	jwt.refreshToken failed	{"error": "token contains an invalid number of segments"}
+1.6857203138511584e+09	info	logger/logger.go:75	/api/v1/refresh_token	{"status": 200, "method": "GET", "path": "/api/v1/refresh_token", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.6857203823149178e+09	info	bluebell/main.go:32	[logger] init success
+1.6857203823149178e+09	info	bluebell/main.go:32	[logger] init success
+1.6857203823149178e+09	info	bluebell/main.go:32	[logger] init success
+1.685720382317604e+09	info	bluebell/main.go:32	[logger] init success
+1.6857203823382862e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857203823382862e+09	info	bluebell/main.go:39	[snowflake] init success
+1.685720382338836e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857203823399312e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857203823436763e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857203823436763e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857203823436763e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857203823436763e+09	info	bluebell/main.go:60	[trans] init success
+1.6857203823442023e+09	info	bluebell/main.go:60	[trans] init success
+1.6857203823436763e+09	info	bluebell/main.go:60	[trans] init success
+1.6857203823442023e+09	info	bluebell/main.go:63	[router] init success
+1.6857203823442023e+09	info	bluebell/main.go:63	[router] init success
+1.6857203823442023e+09	info	bluebell/main.go:63	[router] init success
+1.6857203823447294e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857203823447294e+09	info	bluebell/main.go:60	[trans] init success
+1.6857203823447294e+09	info	bluebell/main.go:63	[router] init success
+1.6857203911354647e+09	info	logger/logger.go:75	/api/v1/refresh_token	{"status": 200, "method": "GET", "path": "/api/v1/refresh_token", "query": "refresh_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODYzNDk1NzYsImlzcyI6ImJsdWViZWxsIn0.8k6ed3mXeJ2kCk8hfSbmOWe6EbdD8CYAnn4Le3fYFqs", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.6857204103586493e+09	error	middleware/auth.go:33	invalid token
+1.6857204103589098e+09	info	logger/logger.go:75	/api/v1/community	{"status": 200, "method": "GET", "path": "/api/v1/community", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0002606}
+1.6857206545802102e+09	info	bluebell/main.go:32	[logger] init success
+1.6857206545828357e+09	info	bluebell/main.go:32	[logger] init success
+1.6857206545975664e+09	info	bluebell/main.go:39	[snowflake] init success
+1.685720654600262e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857206546023633e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857206546023633e+09	info	bluebell/main.go:60	[trans] init success
+1.6857206546028798e+09	info	bluebell/main.go:63	[router] init success
+1.685720654604454e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857206546049798e+09	info	bluebell/main.go:60	[trans] init success
+1.6857206546049798e+09	info	bluebell/main.go:63	[router] init success
+1.6857206628744755e+09	info	logger/logger.go:75	/api/v1/refresh_token	{"status": 200, "method": "GET", "path": "/api/v1/refresh_token", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.685720677127966e+09	info	logger/logger.go:75	/api/v1/refresh_token	{"status": 200, "method": "GET", "path": "/api/v1/refresh_token", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.6857207161704118e+09	info	bluebell/main.go:32	[logger] init success
+1.6857207161714962e+09	info	bluebell/main.go:32	[logger] init success
+1.6857207161964495e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857207162002056e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857207162029655e+09	info	bluebell/main.go:46	[mysql] init success
+1.685720716203472e+09	info	bluebell/main.go:60	[trans] init success
+1.685720716203472e+09	info	bluebell/main.go:63	[router] init success
+1.685720716207407e+09	info	bluebell/main.go:46	[mysql] init success
+1.685720716207407e+09	info	bluebell/main.go:60	[trans] init success
+1.685720716207407e+09	info	bluebell/main.go:63	[router] init success
+1.6857207206813083e+09	info	bluebell/main.go:32	[logger] init success
+1.6857207206813083e+09	info	bluebell/main.go:32	[logger] init success
+1.6857207206813083e+09	info	bluebell/main.go:32	[logger] init success
+1.6857207206818354e+09	info	bluebell/main.go:32	[logger] init success
+1.685720720706795e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857207207073195e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857207207073195e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857207207083964e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857207207126698e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857207207126698e+09	info	bluebell/main.go:60	[trans] init success
+1.6857207207126698e+09	info	bluebell/main.go:63	[router] init success
+1.6857207207132044e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857207207132044e+09	info	bluebell/main.go:60	[trans] init success
+1.6857207207132044e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857207207132044e+09	info	bluebell/main.go:63	[router] init success
+1.6857207207132044e+09	info	bluebell/main.go:60	[trans] init success
+1.6857207207137368e+09	info	bluebell/main.go:63	[router] init success
+1.6857207207137368e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857207207137368e+09	info	bluebell/main.go:60	[trans] init success
+1.6857207207137368e+09	info	bluebell/main.go:63	[router] init success
+1.6857207316593604e+09	info	logger/logger.go:75	/api/v1/community	{"status": 200, "method": "GET", "path": "/api/v1/community", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0034701}
+1.6857207767074046e+09	error	controller/post.go:50	get post by id failed	{"error": "missing destination name username in *model.PostDetail"}
+1.6857207767074046e+09	info	logger/logger.go:75	/api/v1/post/463361763534962689	{"status": 200, "method": "GET", "path": "/api/v1/post/463361763534962689", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0045604}
+1.685720858560501e+09	info	bluebell/main.go:32	[logger] init success
+1.685720858560501e+09	info	bluebell/main.go:32	[logger] init success
+1.685720858580267e+09	info	bluebell/main.go:39	[snowflake] init success
+1.685720858580267e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857208585845504e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857208585850916e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857208585850916e+09	info	bluebell/main.go:60	[trans] init success
+1.6857208585850916e+09	info	bluebell/main.go:60	[trans] init success
+1.6857208585850916e+09	info	bluebell/main.go:63	[router] init success
+1.6857208585850916e+09	info	bluebell/main.go:63	[router] init success
+1.685720860362159e+09	error	controller/post.go:50	get post by id failed	{"error": "sql: no rows in result set"}
+1.685720860362692e+09	info	logger/logger.go:75	/api/v1/post/463361763534962689	{"status": 200, "method": "GET", "path": "/api/v1/post/463361763534962689", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0016366}
+1.6857209546400602e+09	info	bluebell/main.go:32	[logger] init success
+1.6857209546547546e+09	info	bluebell/main.go:39	[snowflake] init success
+1.685720954660123e+09	info	bluebell/main.go:46	[mysql] init success
+1.685720954660123e+09	info	bluebell/main.go:60	[trans] init success
+1.685720954660123e+09	info	bluebell/main.go:63	[router] init success
+1.6857209547886252e+09	info	bluebell/main.go:32	[logger] init success
+1.6857209547886252e+09	info	bluebell/main.go:32	[logger] init success
+1.685720954789689e+09	info	bluebell/main.go:32	[logger] init success
+1.685720954789689e+09	info	bluebell/main.go:32	[logger] init success
+1.685720954789149e+09	info	bluebell/main.go:32	[logger] init success
+1.6857209548160038e+09	info	bluebell/main.go:39	[snowflake] init success
+1.68572095481654e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857209548170793e+09	info	bluebell/main.go:39	[snowflake] init success
+1.685720954817615e+09	info	bluebell/main.go:39	[snowflake] init success
+1.685720954818149e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857209548208742e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857209548208742e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857209548208742e+09	info	bluebell/main.go:60	[trans] init success
+1.6857209548208742e+09	info	bluebell/main.go:60	[trans] init success
+1.6857209548208742e+09	info	bluebell/main.go:63	[router] init success
+1.6857209548208742e+09	info	bluebell/main.go:63	[router] init success
+1.6857209548213954e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857209548213954e+09	info	bluebell/main.go:60	[trans] init success
+1.6857209548219376e+09	info	bluebell/main.go:63	[router] init success
+1.6857209548224666e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857209548230064e+09	info	bluebell/main.go:60	[trans] init success
+1.6857209548230064e+09	info	bluebell/main.go:63	[router] init success
+1.6857209548235507e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857209548235507e+09	info	bluebell/main.go:60	[trans] init success
+1.6857209548235507e+09	info	bluebell/main.go:63	[router] init success
+1.685720961446561e+09	error	logic/post.go:29	get post by id failed	{"error": "sql: no rows in result set"}
+1.6857209614470944e+09	info	logger/logger.go:75	/api/v1/post/463361763534962689	{"status": 200, "method": "GET", "path": "/api/v1/post/463361763534962689", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0015483}
+1.6857210249061842e+09	info	bluebell/main.go:32	[logger] init success
+1.6857210249061842e+09	info	bluebell/main.go:32	[logger] init success
+1.6857210249246278e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857210249246278e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857210249301248e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857210249301248e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857210249301248e+09	info	bluebell/main.go:60	[trans] init success
+1.6857210249301248e+09	info	bluebell/main.go:60	[trans] init success
+1.6857210249306505e+09	info	bluebell/main.go:63	[router] init success
+1.6857210249306505e+09	info	bluebell/main.go:63	[router] init success
+1.6857210267703218e+09	error	logic/post.go:35	get user by id failed	{"error": "sql: no rows in result set"}
+1.6857210267703218e+09	info	logger/logger.go:75	/api/v1/post/463361763534962689	{"status": 200, "method": "GET", "path": "/api/v1/post/463361763534962689", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0012274}
+1.685721043710725e+09	info	bluebell/main.go:32	[logger] init success
+1.685721043710725e+09	info	bluebell/main.go:32	[logger] init success
+1.685721043727718e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857210437294044e+09	info	bluebell/main.go:39	[snowflake] init success
+1.685721043733644e+09	info	bluebell/main.go:46	[mysql] init success
+1.685721043733644e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857210437341807e+09	info	bluebell/main.go:60	[trans] init success
+1.6857210437341807e+09	info	bluebell/main.go:60	[trans] init success
+1.6857210437341807e+09	info	bluebell/main.go:63	[router] init success
+1.6857210437341807e+09	info	bluebell/main.go:63	[router] init success
+1.6857211424771817e+09	error	logic/post.go:35	get user by id failed	{"error": "sql: no rows in result set"}
+1.685721142477706e+09	info	logger/logger.go:75	/api/v1/post/463361763534962689	{"status": 200, "method": "GET", "path": "/api/v1/post/463361763534962689", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0044622}
+1.68572114757528e+09	error	logic/post.go:35	get user by id failed	{"error": "sql: no rows in result set"}
+1.68572114757528e+09	info	logger/logger.go:75	/api/v1/post/463361763534962689	{"status": 200, "method": "GET", "path": "/api/v1/post/463361763534962689", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0018343}
+1.6857211717295556e+09	info	bluebell/main.go:32	[logger] init success
+1.6857211717295556e+09	info	bluebell/main.go:32	[logger] init success
+1.6857211717295556e+09	info	bluebell/main.go:32	[logger] init success
+1.6857211717295556e+09	info	bluebell/main.go:32	[logger] init success
+1.685721171754806e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857211717553368e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857211717553368e+09	info	bluebell/main.go:39	[snowflake] init success
+1.685721171755882e+09	info	bluebell/main.go:39	[snowflake] init success
+1.685721171760149e+09	info	bluebell/main.go:46	[mysql] init success
+1.685721171760149e+09	info	bluebell/main.go:46	[mysql] init success
+1.685721171760149e+09	info	bluebell/main.go:46	[mysql] init success
+1.685721171760149e+09	info	bluebell/main.go:60	[trans] init success
+1.685721171760149e+09	info	bluebell/main.go:60	[trans] init success
+1.685721171760149e+09	info	bluebell/main.go:60	[trans] init success
+1.685721171760149e+09	info	bluebell/main.go:63	[router] init success
+1.685721171760149e+09	info	bluebell/main.go:63	[router] init success
+1.685721171760149e+09	info	bluebell/main.go:63	[router] init success
+1.6857211717606692e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857211717606692e+09	info	bluebell/main.go:60	[trans] init success
+1.6857211717606692e+09	info	bluebell/main.go:63	[router] init success
+1.6857211744409986e+09	error	logic/post.go:35	get user by id failed	{"error": "sql: no rows in result set"}
+1.685721174441663e+09	info	logger/logger.go:75	/api/v1/post/463361763534962689	{"status": 200, "method": "GET", "path": "/api/v1/post/463361763534962689", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0024996}
+1.6857211943174412e+09	info	bluebell/main.go:32	[logger] init success
+1.6857211943174412e+09	info	bluebell/main.go:32	[logger] init success
+1.685721194336459e+09	info	bluebell/main.go:39	[snowflake] init success
+1.685721194336459e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857211943412287e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857211943412287e+09	info	bluebell/main.go:46	[mysql] init success
+1.685721194341761e+09	info	bluebell/main.go:60	[trans] init success
+1.685721194341761e+09	info	bluebell/main.go:60	[trans] init success
+1.685721194341761e+09	info	bluebell/main.go:63	[router] init success
+1.685721194341761e+09	info	bluebell/main.go:63	[router] init success
+1.6857212437624726e+09	error	logger/logger.go:117	[Recovery from panic]	{"error": "runtime error: invalid memory address or nil pointer dereference", "request": "GET /api/v1/post/463361763534962689 HTTP/1.1\r\nHost: localhost:8081\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nAuthorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjowLCJ1c2VybmFtZSI6InBvc3QiLCJleHAiOjE2ODU3MjAzOTEsImlzcyI6ImJsdWViZWxsIn0.XA2CyQTBUujihgRfVNJtNAcYxBGYn-z17igt9Tv_xL8\r\nConnection: keep-alive\r\nContent-Length: 511\r\nContent-Type: application/json\r\nPostman-Token: 1c5a8b89-0b8f-46ba-8541-11f1c99a2643\r\nUser-Agent: PostmanRuntime/7.32.2\r\n\r\n", "stack": "goroutine 66 [running]:\nruntime/debug.Stack()\n\tD:/GoLang/src/runtime/debug/stack.go:24 +0x65\nliwenzhou/bluebell/logger.GinRecovery.func1.1()\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logger/logger.go:120 +0x2da\npanic({0x547520, 0x99ec60})\n\tD:/GoLang/src/runtime/panic.go:884 +0x212\nliwenzhou/bluebell/logic.GetPostDetailById(0xc0002afa81?)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logic/post.go:38 +0x1b7\nliwenzhou/bluebell/controller.GetPostHandler(0xc000164200)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/controller/post.go:48 +0x1da\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\nliwenzhou/bluebell/logger.GinRecovery.func1(0xc000164200)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logger/logger.go:131 +0x76\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\nliwenzhou/bluebell/logger.GinLogger.func1(0xc000164200)\n\tD:/Codes/Golang/src/liwenzhou/bluebell/logger/logger.go:72 +0xa2\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc0004d51e0, 0xc000164200)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620 +0x671\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc0004d51e0, {0x6b8228?, 0xc0003ca0e0}, 0xc0004ec000)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576 +0x1dd\nnet/http.serverHandler.ServeHTTP({0x6b7210?}, {0x6b8228, 0xc0003ca0e0}, 0xc0004ec000)\n\tD:/GoLang/src/net/http/server.go:2947 +0x30c\nnet/http.(*conn).serve(0xc00019c000, {0x6b8ac0, 0xc000511980})\n\tD:/GoLang/src/net/http/server.go:1991 +0x607\ncreated by net/http.(*Server).Serve\n\tD:/GoLang/src/net/http/server.go:3102 +0x4db\n"}
+1.6857212437624726e+09	info	logger/logger.go:75	/api/v1/post/463361763534962689	{"status": 500, "method": "GET", "path": "/api/v1/post/463361763534962689", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.003833}
+1.6857213951401587e+09	info	bluebell/main.go:32	[logger] init success
+1.6857213951401587e+09	info	bluebell/main.go:32	[logger] init success
+1.685721395158873e+09	info	bluebell/main.go:39	[snowflake] init success
+1.685721395159403e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857213951632495e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857213951632495e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857213951641006e+09	info	bluebell/main.go:60	[trans] init success
+1.6857213951641006e+09	info	bluebell/main.go:60	[trans] init success
+1.6857213951641006e+09	info	bluebell/main.go:63	[router] init success
+1.6857213951641006e+09	info	bluebell/main.go:63	[router] init success
+1.6857214136828904e+09	info	bluebell/main.go:32	[logger] init success
+1.6857214137004328e+09	info	bluebell/main.go:39	[snowflake] init success
+1.685721413705959e+09	info	bluebell/main.go:46	[mysql] init success
+1.685721413705959e+09	info	bluebell/main.go:60	[trans] init success
+1.685721413706487e+09	info	bluebell/main.go:63	[router] init success
+1.6857214186133454e+09	info	logger/logger.go:75	/api/v1/post/463361763534962689	{"status": 200, "method": "GET", "path": "/api/v1/post/463361763534962689", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.000804}
+1.6857214419912965e+09	info	logger/logger.go:75	/api/v1/post/463361763534962689	{"status": 200, "method": "GET", "path": "/api/v1/post/463361763534962689", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0037905}
+1.685721450102949e+09	info	logger/logger.go:75	/api/v1/community	{"status": 200, "method": "GET", "path": "/api/v1/community", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0011474}
+1.6857214826177313e+09	info	bluebell/main.go:32	[logger] init success
+1.6857214826329832e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857214826368454e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857214826374764e+09	info	bluebell/main.go:60	[trans] init success
+1.6857214826374764e+09	info	bluebell/main.go:63	[router] init success
+1.6857214976015987e+09	info	bluebell/main.go:32	[logger] init success
+1.6857214976169987e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857214976229033e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857214976234314e+09	info	bluebell/main.go:60	[trans] init success
+1.6857214976234314e+09	info	bluebell/main.go:63	[router] init success
+1.6857214978219306e+09	info	bluebell/main.go:32	[logger] init success
+1.6857214978224652e+09	info	bluebell/main.go:32	[logger] init success
+1.6857214978230023e+09	info	bluebell/main.go:32	[logger] init success
+1.6857214978439054e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857214978449674e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857214978449674e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857214978486824e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857214978486824e+09	info	bluebell/main.go:60	[trans] init success
+1.6857214978486824e+09	info	bluebell/main.go:63	[router] init success
+1.68572149784921e+09	info	bluebell/main.go:46	[mysql] init success
+1.68572149784921e+09	info	bluebell/main.go:46	[mysql] init success
+1.68572149784921e+09	info	bluebell/main.go:60	[trans] init success
+1.68572149784921e+09	info	bluebell/main.go:60	[trans] init success
+1.68572149784921e+09	info	bluebell/main.go:63	[router] init success
+1.68572149784921e+09	info	bluebell/main.go:63	[router] init success
+1.6857215007366805e+09	info	logger/logger.go:75	/api/v1/community	{"status": 200, "method": "GET", "path": "/api/v1/community", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0004319}
+1.6857215223488638e+09	info	logger/logger.go:75	/api/v1/post/463361763534962689	{"status": 200, "method": "GET", "path": "/api/v1/post/463361763534962689", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0038726}
+1.6857215552693918e+09	info	bluebell/main.go:32	[logger] init success
+1.6857215552693918e+09	info	bluebell/main.go:32	[logger] init success
+1.6857215552883635e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857215552889278e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857215552931187e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857215552935286e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857215552935286e+09	info	bluebell/main.go:60	[trans] init success
+1.6857215552935286e+09	info	bluebell/main.go:60	[trans] init success
+1.6857215552935286e+09	info	bluebell/main.go:63	[router] init success
+1.6857215552935286e+09	info	bluebell/main.go:63	[router] init success
+1.6857215585179205e+09	info	logger/logger.go:75	/api/v1/post/463361763534962689	{"status": 200, "method": "GET", "path": "/api/v1/post/463361763534962689", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0014007}
+1.6857216169443324e+09	info	bluebell/main.go:32	[logger] init success
+1.6857216169607117e+09	info	bluebell/main.go:39	[snowflake] init success
+1.685721616966414e+09	info	bluebell/main.go:46	[mysql] init success
+1.685721616966414e+09	info	bluebell/main.go:60	[trans] init success
+1.685721616966923e+09	info	bluebell/main.go:63	[router] init success
+1.6857216360025544e+09	error	middleware/auth.go:33	invalid token
+1.6857216360025544e+09	info	logger/logger.go:75	/api/v1/post/signup	{"status": 200, "method": "GET", "path": "/api/v1/post/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.685721668557173e+09	error	controller/user.go:37	[signup] [logic] err	{"error": "user already exists"}
+1.685721668557173e+09	info	logger/logger.go:75	/api/v1/signup	{"status": 200, "method": "POST", "path": "/api/v1/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0049554}
+1.6857216752451136e+09	info	logger/logger.go:75	/api/v1/signup	{"status": 200, "method": "POST", "path": "/api/v1/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0021199}
+1.6857216853024588e+09	info	logger/logger.go:75	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.004816}
+1.6857217178054297e+09	error	middleware/auth.go:33	invalid token
+1.6857217178060842e+09	info	logger/logger.go:75	/api/v1/community	{"status": 200, "method": "GET", "path": "/api/v1/community", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0006542}
+1.6857217546665244e+09	error	middleware/auth.go:33	invalid token
+1.6857217546668274e+09	info	logger/logger.go:75	/api/v1/community	{"status": 200, "method": "GET", "path": "/api/v1/community", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0003029}
+1.685721767670425e+09	info	bluebell/main.go:32	[logger] init success
+1.6857217676856453e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857217676907308e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857217676907308e+09	info	bluebell/main.go:60	[trans] init success
+1.6857217676912374e+09	info	bluebell/main.go:63	[router] init success
+1.6857217721092699e+09	error	middleware/auth.go:33	invalid token
+1.6857217721100066e+09	info	logger/logger.go:75	/api/v1/community	{"status": 200, "method": "GET", "path": "/api/v1/community", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0007369}
+1.6857218129213738e+09	error	middleware/auth.go:33	invalid token
+1.6857218129217024e+09	info	logger/logger.go:75	/api/v1/community	{"status": 200, "method": "GET", "path": "/api/v1/community", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0003284}
+1.6857218522297547e+09	info	bluebell/main.go:32	[logger] init success
+1.6857218522445595e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857218522493536e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857218522493536e+09	info	bluebell/main.go:60	[trans] init success
+1.68572185225036e+09	info	bluebell/main.go:63	[router] init success
+1.6857218566348152e+09	error	middleware/auth.go:36	invalid token
+1.6857218566348152e+09	info	logger/logger.go:75	/api/v1/community	{"status": 200, "method": "GET", "path": "/api/v1/community", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.000843}
+1.685722087526066e+09	info	logger/logger.go:75	/api/v1/refresh_token	{"status": 200, "method": "GET", "path": "/api/v1/refresh_token", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.6857221715469959e+09	info	bluebell/main.go:32	[logger] init success
+1.6857221715622168e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857221715673504e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857221715673504e+09	info	bluebell/main.go:60	[trans] init success
+1.6857221715678573e+09	info	bluebell/main.go:63	[router] init success
+1.6857221848089836e+09	info	logger/logger.go:75	/api/v1/refresh_token	{"status": 200, "method": "GET", "path": "/api/v1/refresh_token", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.685722245611904e+09	info	bluebell/main.go:32	[logger] init success
+1.6857222456282113e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857222456331246e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857222456331246e+09	info	bluebell/main.go:60	[trans] init success
+1.6857222456341755e+09	info	bluebell/main.go:63	[router] init success
+1.6857222500079963e+09	info	logger/logger.go:75	/api/v1/refresh_token	{"status": 200, "method": "GET", "path": "/api/v1/refresh_token", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.6857223056240954e+09	info	logger/logger.go:75	/api/v1/refresh_token	{"status": 200, "method": "GET", "path": "/api/v1/refresh_token", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.6857223799361947e+09	info	bluebell/main.go:32	[logger] init success
+1.6857223799510767e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857223799566736e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857223799566736e+09	info	bluebell/main.go:60	[trans] init success
+1.6857223799571779e+09	info	bluebell/main.go:63	[router] init success
+1.6857223832669613e+09	error	controller/user.go:93	can't get refresh_token
+1.6857223832677796e+09	info	logger/logger.go:75	/api/v1/refresh_token	{"status": 200, "method": "GET", "path": "/api/v1/refresh_token", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0008183}
+1.685722508295239e+09	info	bluebell/main.go:32	[logger] init success
+1.6857225083111994e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857225083168502e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857225083168502e+09	info	bluebell/main.go:60	[trans] init success
+1.6857225083178792e+09	info	bluebell/main.go:63	[router] init success
+1.6857225140225904e+09	error	controller/user.go:93	can't get refresh_token
+1.6857225140229573e+09	info	logger/logger.go:75	/api/v1/refresh_token	{"status": 200, "method": "POST", "path": "/api/v1/refresh_token", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0003667}
+1.6857225731824262e+09	info	bluebell/main.go:32	[logger] init success
+1.68572257319775e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857225732032018e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857225732032018e+09	info	bluebell/main.go:60	[trans] init success
+1.685722573203706e+09	info	bluebell/main.go:63	[router] init success
+1.6857226145623162e+09	info	logger/logger.go:75	/api/v1/refresh_token	{"status": 200, "method": "GET", "path": "/api/v1/refresh_token", "query": "refresh_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODYzNTE2ODUsImlzcyI6ImJsdWViZWxsIn0.oDL-7AwaoB2SUx7Zyd6wL9jIrAtvYQzVhNOGYCeIZs8", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0006906}
+1.6857226815687265e+09	error	middleware/auth.go:33	invalid token
+1.6857226815687265e+09	info	logger/logger.go:75	/api/v1/ping	{"status": 200, "method": "GET", "path": "/api/v1/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.6857227519149327e+09	info	bluebell/main.go:32	[logger] init success
+1.6857227519327965e+09	info	bluebell/main.go:39	[snowflake] init success
+1.685722751938278e+09	info	bluebell/main.go:46	[mysql] init success
+1.685722751938278e+09	info	bluebell/main.go:60	[trans] init success
+1.6857227519388654e+09	info	bluebell/main.go:63	[router] init success
+1.6857227556626513e+09	error	middleware/auth.go:33	invalid token	{"error": "token is expired by 2m21s"}
+1.6857227556630642e+09	info	logger/logger.go:75	/api/v1/ping	{"status": 200, "method": "GET", "path": "/api/v1/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0004129}
+1.685722772628593e+09	info	bluebell/main.go:32	[logger] init success
+1.6857227726444728e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857227726497588e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857227726497588e+09	info	bluebell/main.go:60	[trans] init success
+1.6857227726502638e+09	info	bluebell/main.go:63	[router] init success
+1.6857227771160975e+09	error	middleware/auth.go:33	invalid token	{"error": "token is expired by 2m43s"}
+1.6857227771160975e+09	info	logger/logger.go:75	/api/v1/ping	{"status": 200, "method": "GET", "path": "/api/v1/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0005379}
+1.6857228271167343e+09	error	middleware/auth.go:33	invalid token	{"error": "token is expired by 3m33s"}
+1.6857228271179547e+09	info	logger/logger.go:75	/api/v1/ping	{"status": 200, "method": "GET", "path": "/api/v1/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0012207}
+1.685722844620613e+09	info	bluebell/main.go:32	[logger] init success
+1.6857228446358294e+09	info	bluebell/main.go:39	[snowflake] init success
+1.685722844640705e+09	info	bluebell/main.go:46	[mysql] init success
+1.685722844640705e+09	info	bluebell/main.go:60	[trans] init success
+1.6857228446412115e+09	info	bluebell/main.go:63	[router] init success
+1.6857228483461423e+09	error	middleware/auth.go:33	invalid token	{"error": "token is expired by 3m54s"}
+1.6857228483464265e+09	info	logger/logger.go:75	/api/v1/ping	{"status": 200, "method": "GET", "path": "/api/v1/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0002842}
+1.6857229764873724e+09	error	middleware/auth.go:33	invalid token	{"error": "token is expired by 6m2s"}
+1.685722976488904e+09	info	logger/logger.go:75	/api/v1/ping	{"status": 200, "method": "GET", "path": "/api/v1/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0010263}
+1.6857610782793603e+09	info	bluebell/main.go:32	[logger] init success
+1.6857610782962003e+09	info	bluebell/main.go:39	[snowflake] init success
+1.685761078308661e+09	info	bluebell/main.go:46	[mysql] init success
+1.685761078308661e+09	info	bluebell/main.go:60	[trans] init success
+1.6857610783091671e+09	info	bluebell/main.go:63	[router] init success
+1.6857610927161906e+09	error	logic/post.go:32	GetPostById() failed	{"error": "sql: no rows in result set"}
+1.6857610927161906e+09	info	logger/logger.go:75	/api/v1/post/333	{"status": 200, "method": "GET", "path": "/api/v1/post/333", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0052135}
+1.685761120420376e+09	error	logic/post.go:46	GetCommunityDetailById() failed	{"error": "invalid id"}
+1.685761120420376e+09	info	logger/logger.go:75	/api/v1/post/463361763534962689	{"status": 200, "method": "GET", "path": "/api/v1/post/463361763534962689", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0053883}
+1.6857611396458044e+09	info	logger/logger.go:75	/api/v1/post/463362071430430721	{"status": 200, "method": "GET", "path": "/api/v1/post/463362071430430721", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0060511}
+1.6857627804203804e+09	info	bluebell/main.go:32	[logger] init success
+1.685762780437759e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857627804445274e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857627804445274e+09	info	bluebell/main.go:60	[trans] init success
+1.6857627804455621e+09	info	bluebell/main.go:63	[router] init success
+1.6857627888257518e+09	info	logger/logger.go:75	/api/v1/posts	{"status": 200, "method": "GET", "path": "/api/v1/posts", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.003396}
+1.685762919177299e+09	info	bluebell/main.go:32	[logger] init success
+1.685762919193062e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857629191984653e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857629191984653e+09	info	bluebell/main.go:60	[trans] init success
+1.6857629191989698e+09	info	bluebell/main.go:63	[router] init success
+1.6857629238903964e+09	info	logger/logger.go:75	/api/v1/posts	{"status": 200, "method": "GET", "path": "/api/v1/posts", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0020502}
+1.6857632175346055e+09	info	bluebell/main.go:32	[logger] init success
+1.6857632175498722e+09	info	bluebell/main.go:39	[snowflake] init success
+1.685763217556035e+09	info	bluebell/main.go:46	[mysql] init success
+1.685763217556035e+09	info	bluebell/main.go:60	[trans] init success
+1.6857632175570617e+09	info	bluebell/main.go:63	[router] init success
+1.6857632749335299e+09	error	controller/post.go:23	get current user by authToken err	{"error": "user not login"}
+1.6857632749335299e+09	info	logger/logger.go:75	/api/v1/post	{"status": 200, "method": "POST", "path": "/api/v1/post", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0008212}
+1.685763697947886e+09	info	bluebell/main.go:32	[logger] init success
+1.6857636979630685e+09	info	bluebell/main.go:39	[snowflake] init success
+1.685763697969715e+09	info	bluebell/main.go:46	[mysql] init success
+1.685763697969715e+09	info	bluebell/main.go:60	[trans] init success
+1.6857636979702199e+09	info	bluebell/main.go:63	[router] init success
+1.6857637317577128e+09	info	logger/logger.go:75	/api/v1/posts	{"status": 200, "method": "GET", "path": "/api/v1/posts", "query": "offset=1&limit=3", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.013122}
+1.6857637384080713e+09	info	logger/logger.go:75	/api/v1/posts	{"status": 200, "method": "GET", "path": "/api/v1/posts", "query": "offset=0&limit=3", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0019868}
+1.6857637419238691e+09	info	logger/logger.go:75	/api/v1/posts	{"status": 200, "method": "GET", "path": "/api/v1/posts", "query": "offset=6&limit=3", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0055245}
+1.6857637489059768e+09	info	logger/logger.go:75	/api/v1/posts	{"status": 200, "method": "GET", "path": "/api/v1/posts", "query": "offset=0&limit=3", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0038358}
+1.6857638015352623e+09	info	bluebell/main.go:32	[logger] init success
+1.6857638015511055e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857638015565555e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857638015565555e+09	info	bluebell/main.go:60	[trans] init success
+1.6857638015576081e+09	info	bluebell/main.go:63	[router] init success
+1.6857638038396754e+09	info	logger/logger.go:75	/api/v1/posts	{"status": 200, "method": "GET", "path": "/api/v1/posts", "query": "offset=0&limit=3", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0031744}
+1.6857640655305061e+09	info	bluebell/main.go:32	[logger] init success
+1.6857640655457785e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857640655513296e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857640655513296e+09	info	bluebell/main.go:60	[trans] init success
+1.6857640655518377e+09	info	bluebell/main.go:63	[router] init success
+1.6857640716032422e+09	info	logger/logger.go:75	/api/v1/posts	{"status": 200, "method": "GET", "path": "/api/v1/posts", "query": "offset=1&limit=3", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0026473}
+1.6857640928849847e+09	info	logger/logger.go:75	/api/v1/posts	{"status": 200, "method": "GET", "path": "/api/v1/posts", "query": "page_num=1&page_size=3", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0067026}
+1.6857641183487372e+09	info	bluebell/main.go:32	[logger] init success
+1.6857641183641791e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857641183693275e+09	info	bluebell/main.go:46	[mysql] init success
+1.6857641183693275e+09	info	bluebell/main.go:60	[trans] init success
+1.6857641183704696e+09	info	bluebell/main.go:63	[router] init success
+1.685764122226581e+09	info	logger/logger.go:75	/api/v1/posts	{"status": 200, "method": "GET", "path": "/api/v1/posts", "query": "page_num=1&page_size=1", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0016392}
+1.685764128017374e+09	info	logger/logger.go:75	/api/v1/posts	{"status": 200, "method": "GET", "path": "/api/v1/posts", "query": "page_num=1&page_size=12", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0031019}
+1.6857641329618044e+09	info	logger/logger.go:75	/api/v1/posts	{"status": 200, "method": "GET", "path": "/api/v1/posts", "query": "page_num=1&page_size=2", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0042641}
+1.6857641382233915e+09	info	logger/logger.go:75	/api/v1/posts	{"status": 200, "method": "GET", "path": "/api/v1/posts", "query": "page_num=2&page_size=2", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0017498}
+1.6857641457496288e+09	info	logger/logger.go:75	/api/v1/posts	{"status": 200, "method": "GET", "path": "/api/v1/posts", "query": "page_num=3&page_size=2", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0037567}
+1.6857641505093899e+09	info	logger/logger.go:75	/api/v1/posts	{"status": 200, "method": "GET", "path": "/api/v1/posts", "query": "page_num=2&page_size=2", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0022599}
+1.685764157478143e+09	info	logger/logger.go:75	/api/v1/posts	{"status": 200, "method": "GET", "path": "/api/v1/posts", "query": "page_num=3&page_size=2", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0034169}
+1.68577512214085e+09	info	bluebell/main.go:32	[logger] init success
+1.6857751221581178e+09	info	bluebell/main.go:39	[snowflake] init success
+1.6857751221751947e+09	info	bluebell/main.go:46	[mysql] init success
+1.685775122176195e+09	info	bluebell/main.go:60	[trans] init success
+1.6857751221766987e+09	info	bluebell/main.go:63	[router] init success
