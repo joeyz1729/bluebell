@@ -2,6 +2,7 @@ package logic
 
 import (
 	"zouyi/bluebell/dao/mysql"
+	"zouyi/bluebell/dao/redis"
 	"zouyi/bluebell/model"
 	"zouyi/bluebell/pkg/snowflake"
 
@@ -16,8 +17,17 @@ func CreatePost(p *model.Post) (err error) {
 		return
 	}
 	p.Id = id
-	// 2. store into database
-	if err = mysql.CreatePost(p); err != nil {
+	// 2. save to redis
+	err = redis.CreatePost(p.Id)
+	if err != nil {
+		zap.L().Error("post info save to redis err", zap.Error(err))
+		return
+	}
+
+	// 2. save to database
+	err = mysql.CreatePost(p)
+	if err != nil {
+		zap.L().Error("post info save to mysql err", zap.Error(err))
 		return
 	}
 	return

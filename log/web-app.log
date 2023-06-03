@@ -1032,3 +1032,342 @@
 1.6857751221751947e+09	info	bluebell/main.go:46	[mysql] init success
 1.685775122176195e+09	info	bluebell/main.go:60	[trans] init success
 1.6857751221766987e+09	info	bluebell/main.go:63	[router] init success
+1.6857795102608109e+09	info	bluebell/main.go:31	[logger] init success
+1.6857795102782824e+09	info	bluebell/main.go:38	[snowflake] init success
+1.6857795102868128e+09	info	bluebell/main.go:45	[mysql] init success
+1.6857795102868128e+09	info	bluebell/main.go:59	[trans] init success
+1.6857795102878418e+09	info	bluebell/main.go:62	[router] init success
+1.68577953251381e+09	error	controller/vote.go:18	validation err	{"error": "Key: 'VoteForm.post_id' Error:Field validation for 'post_id' failed on the 'required' tag"}
+1.68577953251381e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0002144}
+1.6857795440729237e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0008174}
+1.6857795620666034e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.6857795951071904e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.6857796157263906e+09	info	bluebell/main.go:31	[logger] init success
+1.6857796157415588e+09	info	bluebell/main.go:38	[snowflake] init success
+1.6857796157475688e+09	info	bluebell/main.go:45	[mysql] init success
+1.6857796157475688e+09	info	bluebell/main.go:59	[trans] init success
+1.6857796157480757e+09	info	bluebell/main.go:62	[router] init success
+1.685779621007834e+09	error	controller/vote.go:23	binding err	{"error": "json: invalid use of ,string struct tag, trying to unmarshal unquoted value into int8"}
+1.685779621007834e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.6857796507353263e+09	error	controller/vote.go:23	binding err	{"error": "json: invalid use of ,string struct tag, trying to unmarshal unquoted value into int8"}
+1.6857796507355034e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0001772}
+1.6857796964988148e+09	error	controller/vote.go:23	binding err	{"error": "json: invalid use of ,string struct tag, trying to unmarshal unquoted value into int8"}
+1.68577969649894e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0001252}
+1.6857797030250018e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0001336}
+1.685779707535006e+09	error	controller/vote.go:23	binding err	{"error": "invalid character '\\r' in string literal"}
+1.6857797075354056e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0003997}
+1.6857797108952756e+09	error	controller/vote.go:18	validation err	{"error": "Key: 'VoteForm.attitude' Error:Field validation for 'attitude' failed on the 'oneof' tag"}
+1.6857797108959122e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0006367}
+1.6857797642021046e+09	info	bluebell/main.go:31	[logger] init success
+1.6857797642183273e+09	info	bluebell/main.go:38	[snowflake] init success
+1.6857797642323346e+09	info	bluebell/main.go:45	[mysql] init success
+1.6857797642323346e+09	info	bluebell/main.go:59	[trans] init success
+1.6857797642333698e+09	info	bluebell/main.go:62	[router] init success
+1.6857797681873617e+09	error	controller/vote.go:18	validation err	{"error": "Key: 'VoteForm.attitude' Error:Field validation for 'attitude' failed on the 'oneof' tag"}
+1.6857797681878903e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0005283}
+1.6857797840507739e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.6857822754965236e+09	info	bluebell/main.go:31	[logger] init success
+1.6857822755122178e+09	info	bluebell/main.go:38	[snowflake] init success
+1.685782275527717e+09	info	bluebell/main.go:45	[mysql] init success
+1.685782275527717e+09	info	bluebell/main.go:59	[trans] init success
+1.6857822755287476e+09	info	bluebell/main.go:62	[router] init success
+1.6857822827103453e+09	error	controller/vote.go:29	invalid user	{"error": "user not login"}
+1.6857822827103453e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0001356}
+1.685782383606258e+09	error	controller/vote.go:29	invalid user	{"error": "user not login"}
+1.685782383607008e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.00075}
+1.6857823861605382e+09	error	controller/vote.go:29	invalid user	{"error": "user not login"}
+1.685782386161547e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0010089}
+1.6857824515644636e+09	info	bluebell/main.go:31	[logger] init success
+1.6857824515802708e+09	info	bluebell/main.go:38	[snowflake] init success
+1.6857824515869875e+09	info	bluebell/main.go:45	[mysql] init success
+1.6857824515869875e+09	info	bluebell/main.go:59	[trans] init success
+1.6857824515880127e+09	info	bluebell/main.go:62	[router] init success
+1.6857824555443273e+09	error	controller/request.go:21	get user id err
+1.6857824555443273e+09	error	controller/vote.go:29	invalid user	{"error": "user not login"}
+1.6857824555443273e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0006319}
+1.6857825896694958e+09	info	bluebell/main.go:31	[logger] init success
+1.6857825896852295e+09	info	bluebell/main.go:38	[snowflake] init success
+1.6857825896984916e+09	info	bluebell/main.go:45	[mysql] init success
+1.6857825896984916e+09	info	bluebell/main.go:59	[trans] init success
+1.685782589699523e+09	info	bluebell/main.go:62	[router] init success
+1.6857825937468143e+09	error	controller/request.go:22	get user id err
+1.6857825937468143e+09	error	controller/vote.go:29	invalid user	{"error": "user not login"}
+1.6857825937468143e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0004418}
+1.685782623527767e+09	error	controller/request.go:22	get user id err
+1.685782623527767e+09	error	controller/vote.go:29	invalid user	{"error": "user not login"}
+1.685782623527767e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0007003}
+1.6857826895350564e+09	info	bluebell/main.go:31	[logger] init success
+1.6857826895518215e+09	info	bluebell/main.go:38	[snowflake] init success
+1.685782689564436e+09	info	bluebell/main.go:45	[mysql] init success
+1.685782689564436e+09	info	bluebell/main.go:59	[trans] init success
+1.6857826895654666e+09	info	bluebell/main.go:62	[router] init success
+1.6857826936398616e+09	error	logger/logger.go:117	[Recovery from panic]	{"error": "runtime error: invalid memory address or nil pointer dereference", "request": "POST /api/v1/vote HTTP/1.1\r\nHost: localhost:8081\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nAuthorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjowLCJ1c2VybmFtZSI6InBvc3QxIiwiZXhwIjoxNjg1NzIyNjE0LCJpc3MiOiJibHVlYmVsbCJ9.w4PYOg1tYtbbnQGCi4ZwTF6lR-gxyMUSWITg32t6g-g\r\nConnection: keep-alive\r\nContent-Length: 272\r\nContent-Type: application/json\r\nPostman-Token: 5986c6f0-250c-44d9-b10a-86d210f41dfd\r\nUser-Agent: PostmanRuntime/7.32.2\r\n\r\n", "stack": "goroutine 50 [running]:\nruntime/debug.Stack()\n\tD:/GoLang/src/runtime/debug/stack.go:24 +0x65\nzouyi/bluebell/logger.GinRecovery.func1.1()\n\tD:/Codes/Golang/src/zouyi/bluebell/logger/logger.go:120 +0x2da\npanic({0xdfde60, 0x128e6f0})\n\tD:/GoLang/src/runtime/panic.go:884 +0x212\nzouyi/bluebell/dao/redis.VoteForPost(0xdcdadb3d3763ddee?, {0xc000491928, 0x3}, 0xa0?)\n\tD:/Codes/Golang/src/zouyi/bluebell/dao/redis/vote.go:19 +0x55\nzouyi/bluebell/logic.PostVote(...)\n\tD:/Codes/Golang/src/zouyi/bluebell/logic/vote.go:16\nzouyi/bluebell/controller.PostVoteHandler(0xc000166200)\n\tD:/Codes/Golang/src/zouyi/bluebell/controller/vote.go:34 +0x3e9\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174\nzouyi/bluebell/logger.GinRecovery.func1(0xc000166200)\n\tD:/Codes/Golang/src/zouyi/bluebell/logger/logger.go:131 +0x76\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174\nzouyi/bluebell/logger.GinLogger.func1(0xc000166200)\n\tD:/Codes/Golang/src/zouyi/bluebell/logger/logger.go:72 +0xa2\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc000504d00, 0xc000166200)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620 +0x671\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc000504d00, {0xf81588?, 0xc00040e0e0}, 0xc0004b8000)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576 +0x1dd\nnet/http.serverHandler.ServeHTTP({0xf80540?}, {0xf81588, 0xc00040e0e0}, 0xc0004b8000)\n\tD:/GoLang/src/net/http/server.go:2947 +0x30c\nnet/http.(*conn).serve(0xc000000000, {0xf81e20, 0xc00060d560})\n\tD:/GoLang/src/net/http/server.go:1991 +0x607\ncreated by net/http.(*Server).Serve\n\tD:/GoLang/src/net/http/server.go:3102 +0x4db\n"}
+1.6857826936403756e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 500, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0010188}
+1.685782841329041e+09	info	bluebell/main.go:33	[logger] init success
+1.6857828413441105e+09	info	bluebell/main.go:40	[snowflake] init success
+1.6857828413500965e+09	info	bluebell/main.go:47	[mysql] init success
+1.6857828496307368e+09	error	redis/redis.go:25	connect to redis failed, err: %s
+	{"error": "dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it."}
+1.685782849631246e+09	debug	bluebell/main.go:53	redis init success
+1.6857828496317706e+09	info	bluebell/main.go:61	[trans] init success
+1.6857828496322842e+09	info	bluebell/main.go:64	[router] init success
+1.6857828757547953e+09	info	bluebell/main.go:33	[logger] init success
+1.6857828757718208e+09	info	bluebell/main.go:40	[snowflake] init success
+1.6857828757796915e+09	info	bluebell/main.go:47	[mysql] init success
+1.6857828757809796e+09	debug	bluebell/main.go:53	redis init success
+1.6857828757809796e+09	info	bluebell/main.go:61	[trans] init success
+1.6857828757820191e+09	info	bluebell/main.go:64	[router] init success
+1.6857829157928362e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0002148}
+1.6857839450959775e+09	info	bluebell/main.go:33	[logger] init success
+1.685783945115497e+09	info	bluebell/main.go:40	[snowflake] init success
+1.6857839451292324e+09	info	bluebell/main.go:47	[mysql] init success
+1.6857839451297588e+09	info	bluebell/main.go:53	[redis] init success
+1.6857839451302857e+09	info	bluebell/main.go:61	[trans] init success
+1.6857839451308146e+09	info	bluebell/main.go:64	[router] init success
+1.685783953091918e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0006622}
+1.6857841651282544e+09	info	bluebell/main.go:33	[logger] init success
+1.685784165143412e+09	info	bluebell/main.go:40	[snowflake] init success
+1.6857841651550484e+09	info	bluebell/main.go:47	[mysql] init success
+1.6857841651556065e+09	info	bluebell/main.go:53	[redis] init success
+1.6857841651561122e+09	info	bluebell/main.go:61	[trans] init success
+1.6857841651566412e+09	info	bluebell/main.go:64	[router] init success
+1.685784169909993e+09	debug	logic/vote.go:19	logic.post vote	{"userId": 463373410378973185, "postId": "134", "attitude": 1}
+1.685784169910519e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0010333}
+1.685784282477103e+09	debug	logic/vote.go:19	logic.post vote	{"userId": 463373410378973185, "postId": "134", "attitude": 1}
+1.6857842824778297e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0007265}
+1.6857842849981968e+09	debug	logic/vote.go:19	logic.post vote	{"userId": 463373410378973185, "postId": "134", "attitude": 1}
+1.6857842849987614e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0014899}
+1.6857843760811234e+09	info	bluebell/main.go:33	[logger] init success
+1.6857843760983589e+09	info	bluebell/main.go:40	[snowflake] init success
+1.68578437610481e+09	info	bluebell/main.go:47	[mysql] init success
+1.6857843761053147e+09	info	bluebell/main.go:53	[redis] init success
+1.6857843761058393e+09	info	bluebell/main.go:61	[trans] init success
+1.6857843761063564e+09	info	bluebell/main.go:64	[router] init success
+1.685784379325364e+09	debug	logic/vote.go:19	logic.post vote	{"userId": 463373410378973185, "postId": "134", "attitude": 1}
+1.6857843793258722e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0007819}
+1.6857843927941954e+09	debug	logic/vote.go:19	logic.post vote	{"userId": 463373410378973185, "postId": "134", "attitude": 1}
+1.6857843927948623e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.000667}
+1.6857844003169262e+09	debug	logic/vote.go:19	logic.post vote	{"userId": 463373410378973185, "postId": "134", "attitude": -1}
+1.6857844003180377e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0011115}
+1.6857847083286912e+09	info	bluebell/main.go:33	[logger] init success
+1.6857847083438847e+09	info	bluebell/main.go:40	[snowflake] init success
+1.6857847083560417e+09	info	bluebell/main.go:47	[mysql] init success
+1.685784708356628e+09	info	bluebell/main.go:53	[redis] init success
+1.6857847083571346e+09	info	bluebell/main.go:61	[trans] init success
+1.6857847083576584e+09	info	bluebell/main.go:64	[router] init success
+1.6857847581760507e+09	debug	controller/post.go:16	[PostHandler] bind err	{"error": "invalid character '}' looking for beginning of object key string"}
+1.6857847581763017e+09	info	logger/logger.go:75	/api/v1/post	{"status": 200, "method": "POST", "path": "/api/v1/post", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0002511}
+1.6857848270830126e+09	info	logger/logger.go:75	/api/v1/post	{"status": 200, "method": "POST", "path": "/api/v1/post", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0163219}
+1.6857848613925197e+09	debug	logic/vote.go:19	logic.post vote	{"userId": 463373410378973185, "postId": "463479361551466497", "attitude": -1}
+1.6857848613930874e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0009208}
+1.6857849015294132e+09	debug	logic/vote.go:19	logic.post vote	{"userId": 463373410378973185, "postId": "463479361551466497", "attitude": -1}
+1.6857849015307786e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0013655}
+1.6857850620405037e+09	info	bluebell/main.go:33	[logger] init success
+1.6857850620558584e+09	info	bluebell/main.go:40	[snowflake] init success
+1.6857850620679016e+09	info	bluebell/main.go:47	[mysql] init success
+1.685785062068405e+09	info	bluebell/main.go:53	[redis] init success
+1.685785062068405e+09	info	bluebell/main.go:61	[trans] init success
+1.6857850620694792e+09	info	bluebell/main.go:64	[router] init success
+1.685785070222062e+09	debug	logic/vote.go:19	logic.post vote	{"userId": 463373410378973185, "postId": "463479361551466497", "attitude": -1}
+1.6857850702225664e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0007914}
+1.6857850848127182e+09	error	logic/post.go:23	post info save to redis err	{"error": "WRONGTYPE Operation against a key holding the wrong kind of value"}
+1.6857850848127182e+09	error	controller/post.go:32	create post err	{"error": "WRONGTYPE Operation against a key holding the wrong kind of value"}
+1.6857850848132236e+09	info	logger/logger.go:75	/api/v1/post	{"status": 200, "method": "POST", "path": "/api/v1/post", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0003548}
+1.685785231680952e+09	info	bluebell/main.go:33	[logger] init success
+1.68578523169665e+09	info	bluebell/main.go:40	[snowflake] init success
+1.6857852317034147e+09	info	bluebell/main.go:47	[mysql] init success
+1.6857852317039206e+09	info	bluebell/main.go:53	[redis] init success
+1.6857852317039206e+09	info	bluebell/main.go:61	[trans] init success
+1.6857852317049491e+09	info	bluebell/main.go:64	[router] init success
+1.6857852375230203e+09	error	logic/post.go:23	post info save to redis err	{"error": "WRONGTYPE Operation against a key holding the wrong kind of value"}
+1.6857852375230203e+09	error	controller/post.go:32	create post err	{"error": "WRONGTYPE Operation against a key holding the wrong kind of value"}
+1.685785237523524e+09	info	logger/logger.go:75	/api/v1/post	{"status": 200, "method": "POST", "path": "/api/v1/post", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0007214}
+1.6857857542916718e+09	info	bluebell/main.go:33	[logger] init success
+1.6857857543087687e+09	info	bluebell/main.go:40	[snowflake] init success
+1.6857857543145595e+09	info	bluebell/main.go:47	[mysql] init success
+1.6857857543151314e+09	info	bluebell/main.go:53	[redis] init success
+1.6857857543156397e+09	info	bluebell/main.go:61	[trans] init success
+1.6857857543167078e+09	info	bluebell/main.go:64	[router] init success
+1.685785757987793e+09	info	logger/logger.go:75	/api/v1/post	{"status": 200, "method": "POST", "path": "/api/v1/post", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0075051}
+1.6857860595213358e+09	debug	logic/vote.go:19	logic.post vote	{"userId": 463373410378973185, "postId": "463480923376058369", "attitude": -1}
+1.6857860595218418e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0011252}
+1.6857862011771727e+09	debug	logic/vote.go:19	logic.post vote	{"userId": 463373410378973185, "postId": "463480923376058369", "attitude": 0}
+1.685786201178748e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0015752}
+1.6857862055808291e+09	debug	logic/vote.go:19	logic.post vote	{"userId": 463373410378973185, "postId": "463480923376058369", "attitude": 1}
+1.6857862055820773e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.001248}
+1.6857862743524492e+09	debug	logic/vote.go:19	logic.post vote	{"userId": 463373410378973185, "postId": "463480923376058369", "attitude": 1}
+1.6857862743531363e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0006872}
+1.6857862810600536e+09	debug	logic/vote.go:19	logic.post vote	{"userId": 463373410378973185, "postId": "463480923376058369", "attitude": 1}
+1.685786281060656e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0006026}
+1.6857862869678526e+09	debug	logic/vote.go:19	logic.post vote	{"userId": 463373410378973185, "postId": "463480923376058369", "attitude": 1}
+1.6857862869687731e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0009206}
+1.685786292110824e+09	debug	logic/vote.go:19	logic.post vote	{"userId": 463373410378973185, "postId": "463480923376058369", "attitude": -1}
+1.6857862921122491e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.001425}
+1.6857867988165522e+09	info	bluebell/main.go:33	[logger] init success
+1.6857867988322911e+09	info	bluebell/main.go:40	[snowflake] init success
+1.6857867988453326e+09	info	bluebell/main.go:47	[mysql] init success
+1.6857867988470168e+09	info	bluebell/main.go:53	[redis] init success
+1.6857867988470168e+09	info	bluebell/main.go:61	[trans] init success
+1.685786798848043e+09	info	bluebell/main.go:64	[router] init success
+1.6857868357538311e+09	info	logger/logger.go:75	/api/v1/post	{"status": 200, "method": "POST", "path": "/api/v1/post", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0126476}
+1.6857868520875494e+09	debug	logic/vote.go:19	logic.post vote	{"userId": 463373410378973185, "postId": "463482731557289985", "attitude": -1}
+1.685786852088055e+09	error	redis/vote.go:62	vote for post pipeline err	{"error": "redis: nil"}
+1.685786852088055e+09	error	controller/vote.go:36	post vote err	{"error": "redis: nil"}
+1.685786852088055e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0008397}
+1.6857869105345192e+09	debug	logic/vote.go:19	logic.post vote	{"userId": 463373410378973185, "postId": "463482731557289985", "attitude": -1}
+1.68578691053493e+09	error	redis/vote.go:62	vote for post pipeline err	{"error": "redis: nil"}
+1.6857869105354385e+09	error	controller/vote.go:36	post vote err	{"error": "redis: nil"}
+1.6857869105354385e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0009191}
+1.6857870018644183e+09	info	bluebell/main.go:33	[logger] init success
+1.6857870018812118e+09	info	bluebell/main.go:40	[snowflake] init success
+1.685787001886538e+09	info	bluebell/main.go:47	[mysql] init success
+1.68578700188706e+09	info	bluebell/main.go:53	[redis] init success
+1.6857870018875966e+09	info	bluebell/main.go:61	[trans] init success
+1.685787001888122e+09	info	bluebell/main.go:64	[router] init success
+1.6857870060349216e+09	debug	logic/vote.go:19	logic.post vote	{"userId": 463373410378973185, "postId": "463482731557289985", "attitude": -1}
+1.6857870060354323e+09	error	redis/vote.go:67	vote for post pipeline err	{"error": "redis: nil"}
+1.685787006035498e+09	error	controller/vote.go:36	post vote err	{"error": "redis: nil"}
+1.685787006035498e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0009912}
+1.6857871038750086e+09	info	bluebell/main.go:33	[logger] init success
+1.6857871038912785e+09	info	bluebell/main.go:40	[snowflake] init success
+1.6857871039035766e+09	info	bluebell/main.go:47	[mysql] init success
+1.6857871039040852e+09	info	bluebell/main.go:53	[redis] init success
+1.685787103904614e+09	info	bluebell/main.go:61	[trans] init success
+1.6857871039051497e+09	info	bluebell/main.go:64	[router] init success
+1.6857871073310902e+09	debug	logic/vote.go:19	logic.post vote	{"userId": 463373410378973185, "postId": "463482731557289985", "attitude": -1}
+1.685787107331719e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0011384}
+1.6857871958625674e+09	info	bluebell/main.go:33	[logger] init success
+1.685787195878376e+09	info	bluebell/main.go:40	[snowflake] init success
+1.6857871958841338e+09	info	bluebell/main.go:47	[mysql] init success
+1.6857871958846405e+09	info	bluebell/main.go:53	[redis] init success
+1.6857871958846405e+09	info	bluebell/main.go:61	[trans] init success
+1.6857871958856847e+09	info	bluebell/main.go:64	[router] init success
+1.685787201932495e+09	debug	logic/vote.go:19	logic.post vote	{"userId": 463373410378973185, "postId": "463482731557289985", "attitude": -1}
+1.6857872019330163e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0010258}
+1.6857872111146681e+09	debug	logic/vote.go:19	logic.post vote	{"userId": 463373410378973185, "postId": "463482731557289985", "attitude": -1}
+1.6857872111159275e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0012595}
+1.685787221701644e+09	debug	logic/vote.go:19	logic.post vote	{"userId": 463373410378973185, "postId": "463482731557289985", "attitude": 1}
+1.6857872217032106e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0015664}
+1.6857872357559235e+09	debug	logic/vote.go:19	logic.post vote	{"userId": 463373410378973185, "postId": "463482731557289985", "attitude": 1}
+1.6857872357566268e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0007036}
+1.6857872391810725e+09	debug	logic/vote.go:19	logic.post vote	{"userId": 463373410378973185, "postId": "463482731557289985", "attitude": 1}
+1.6857872391826057e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0015335}
+1.6857881340251114e+09	info	bluebell/main.go:33	[logger] init success
+1.6857881340414805e+09	info	bluebell/main.go:40	[snowflake] init success
+1.685788134048302e+09	info	bluebell/main.go:47	[mysql] init success
+1.6857881340488062e+09	info	bluebell/main.go:53	[redis] init success
+1.685788134049332e+09	info	bluebell/main.go:61	[trans] init success
+1.6857881340498493e+09	info	bluebell/main.go:64	[router] init success
+1.6857881393479548e+09	debug	logic/vote.go:19	logic.post vote	{"userId": 463373410378973185, "postId": "463482731557289985", "attitude": 1}
+1.6857881393484612e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0008766}
+1.685788289675731e+09	debug	logic/vote.go:19	logic.post vote	{"userId": 463373410378973185, "postId": "463482731557289985", "attitude": 1}
+1.6857882896766958e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0009649}
+1.6857882947956977e+09	info	bluebell/main.go:33	[logger] init success
+1.6857882948119175e+09	info	bluebell/main.go:40	[snowflake] init success
+1.6857882948184881e+09	info	bluebell/main.go:47	[mysql] init success
+1.6857882948191292e+09	info	bluebell/main.go:53	[redis] init success
+1.6857882948191292e+09	info	bluebell/main.go:61	[trans] init success
+1.685788294820169e+09	info	bluebell/main.go:64	[router] init success
+1.6857882987741086e+09	debug	logic/vote.go:19	logic.post vote	{"userId": 463373410378973185, "postId": "463482731557289985", "attitude": 1}
+1.685788298774731e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0011286}
+1.6857883099114745e+09	debug	logic/vote.go:19	logic.post vote	{"userId": 463373410378973185, "postId": "463482731557289985", "attitude": 1}
+1.6857883099124362e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0009619}
+1.6857883168951497e+09	debug	logic/vote.go:19	logic.post vote	{"userId": 463373410378973185, "postId": "463482731557289985", "attitude": 0}
+1.6857883168964145e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0012646}
+1.6857887791952965e+09	info	bluebell/main.go:33	[logger] init success
+1.6857887792113757e+09	info	bluebell/main.go:40	[snowflake] init success
+1.685788779218177e+09	info	bluebell/main.go:47	[mysql] init success
+1.685788779218685e+09	info	bluebell/main.go:53	[redis] init success
+1.685788779218685e+09	info	bluebell/main.go:61	[trans] init success
+1.6857887792197344e+09	info	bluebell/main.go:64	[router] init success
+1.6857887848484166e+09	debug	logic/vote.go:19	logic.post vote	{"userId": 463373410378973185, "postId": "463482731557289985", "attitude": 0}
+1.6857887848491046e+09	error	controller/vote.go:36	post vote err	{"error": "vote repeated"}
+1.6857887848491046e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0006881}
+1.6857887990288665e+09	debug	logic/vote.go:19	logic.post vote	{"userId": 463373410378973185, "postId": "463482731557289985", "attitude": 1}
+1.6857887990301795e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0013131}
+1.6857888053189843e+09	debug	logic/vote.go:19	logic.post vote	{"userId": 463373410378973185, "postId": "463482731557289985", "attitude": 0}
+1.6857888053198261e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0008418}
+1.6857888171346798e+09	debug	logic/vote.go:19	logic.post vote	{"userId": 463373410378973185, "postId": "463482731557289985", "attitude": 1}
+1.6857888171361868e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.001507}
+1.6857888239773104e+09	debug	logic/vote.go:19	logic.post vote	{"userId": 463373410378973185, "postId": "463482731557289985", "attitude": -1}
+1.6857888239786854e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0013749}
+1.6857888323722155e+09	debug	logic/vote.go:19	logic.post vote	{"userId": 463373410378973185, "postId": "463482731557289985", "attitude": 0}
+1.6857888323730109e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0007954}
+1.6857888377806478e+09	debug	logic/vote.go:19	logic.post vote	{"userId": 463373410378973185, "postId": "463482731557289985", "attitude": -1}
+1.6857888377814913e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0008435}
+1.6857888420008624e+09	debug	logic/vote.go:19	logic.post vote	{"userId": 463373410378973185, "postId": "463482731557289985", "attitude": 1}
+1.6857888420022864e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0014238}
+1.685788979700012e+09	info	bluebell/main.go:33	[logger] init success
+1.6857889797154033e+09	info	bluebell/main.go:40	[snowflake] init success
+1.685788979721402e+09	info	bluebell/main.go:47	[mysql] init success
+1.685788979721907e+09	info	bluebell/main.go:53	[redis] init success
+1.6857889797224302e+09	info	bluebell/main.go:61	[trans] init success
+1.685788979723477e+09	info	bluebell/main.go:64	[router] init success
+1.6857889846518939e+09	debug	logic/vote.go:19	logic.post vote	{"userId": 463373410378973185, "postId": "463482731557289985", "attitude": 0}
+1.6857889846524253e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0005313}
+1.6857889873397434e+09	debug	logic/vote.go:19	logic.post vote	{"userId": 463373410378973185, "postId": "463482731557289985", "attitude": 0}
+1.685788987341416e+09	error	controller/vote.go:36	post vote err	{"error": "vote repeated"}
+1.685788987341416e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0016726}
+1.6857889994506054e+09	debug	logic/vote.go:19	logic.post vote	{"userId": 463373410378973185, "postId": "463482731557289985", "attitude": -1}
+1.6857889994517128e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0011076}
+1.685789002355379e+09	debug	logic/vote.go:19	logic.post vote	{"userId": 463373410378973185, "postId": "463482731557289985", "attitude": -1}
+1.6857890023560238e+09	error	controller/vote.go:36	post vote err	{"error": "vote repeated"}
+1.6857890023560238e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0006447}
+1.6857890050872262e+09	debug	logic/vote.go:19	logic.post vote	{"userId": 463373410378973185, "postId": "463482731557289985", "attitude": 1}
+1.685789005088737e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.001511}
+1.68578965076929e+09	info	bluebell/main.go:33	[logger] init success
+1.685789650785354e+09	info	bluebell/main.go:40	[snowflake] init success
+1.6857896507911117e+09	info	bluebell/main.go:47	[mysql] init success
+1.685789650791617e+09	info	bluebell/main.go:53	[redis] init success
+1.6857896507921374e+09	info	bluebell/main.go:61	[trans] init success
+1.6857896507926571e+09	info	bluebell/main.go:64	[router] init success
+1.685789655853476e+09	error	middleware/auth.go:33	invalid token	{"error": "token is expired by 18h37m21s"}
+1.685789655853476e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.6857896803649335e+09	info	bluebell/main.go:33	[logger] init success
+1.6857896803823552e+09	info	bluebell/main.go:40	[snowflake] init success
+1.6857896803886294e+09	info	bluebell/main.go:47	[mysql] init success
+1.6857896803891373e+09	info	bluebell/main.go:53	[redis] init success
+1.6857896803896642e+09	info	bluebell/main.go:61	[trans] init success
+1.6857896803901932e+09	info	bluebell/main.go:64	[router] init success
+1.6857896849822593e+09	error	controller/request.go:22	get user id err
+1.6857896849827983e+09	error	controller/vote.go:29	invalid user	{"error": "user not login"}
+1.6857896849830067e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0007474}
+1.6857898641520712e+09	info	bluebell/main.go:33	[logger] init success
+1.6857898641677787e+09	info	bluebell/main.go:40	[snowflake] init success
+1.6857898641743968e+09	info	bluebell/main.go:47	[mysql] init success
+1.6857898641749055e+09	info	bluebell/main.go:53	[redis] init success
+1.685789864175428e+09	info	bluebell/main.go:61	[trans] init success
+1.6857898641759477e+09	info	bluebell/main.go:64	[router] init success
+1.6857898830400088e+09	error	controller/request.go:22	get user id err
+1.6857898830400088e+09	error	controller/vote.go:29	invalid user	{"error": "user not login"}
+1.6857898830400088e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "user_id=463373410378973185", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0003675}
+1.6857898920986993e+09	error	controller/request.go:22	get user id err
+1.6857898920993104e+09	error	controller/vote.go:29	invalid user	{"error": "user not login"}
+1.6857898920993104e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "user_id=463373410378973185", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0006111}
+1.685789965462498e+09	info	bluebell/main.go:33	[logger] init success
+1.6857899654776447e+09	info	bluebell/main.go:40	[snowflake] init success
+1.6857899654830387e+09	info	bluebell/main.go:47	[mysql] init success
+1.6857899654835448e+09	info	bluebell/main.go:53	[redis] init success
+1.6857899654840686e+09	info	bluebell/main.go:61	[trans] init success
+1.6857899654845924e+09	info	bluebell/main.go:64	[router] init success
+1.685789970055502e+09	error	controller/request.go:24	get user id err
+1.685789970055502e+09	error	controller/vote.go:29	invalid user	{"error": "user not login"}
+1.685789970055502e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "user_id=463373410378973185", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0003539}
+1.6857900859752836e+09	info	bluebell/main.go:33	[logger] init success
+1.685790085990452e+09	info	bluebell/main.go:40	[snowflake] init success
+1.685790085996171e+09	info	bluebell/main.go:47	[mysql] init success
+1.685790085996689e+09	info	bluebell/main.go:53	[redis] init success
+1.6857900859972148e+09	info	bluebell/main.go:61	[trans] init success
+1.6857900859977372e+09	info	bluebell/main.go:64	[router] init success
+1.685790090093008e+09	debug	logic/vote.go:19	logic.post vote	{"userId": 463373410378973185, "postId": "463482731557289985", "attitude": 1}
+1.6857900900935142e+09	error	controller/vote.go:36	post vote err	{"error": "vote repeated"}
+1.6857900900935693e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "user_id=463373410378973185", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.000821}
+1.6857901276977074e+09	info	bluebell/main.go:33	[logger] init success
+1.6857901277134001e+09	info	bluebell/main.go:40	[snowflake] init success
+1.6857901277188866e+09	info	bluebell/main.go:47	[mysql] init success
+1.6857901277193906e+09	info	bluebell/main.go:53	[redis] init success
+1.6857901277199047e+09	info	bluebell/main.go:61	[trans] init success
+1.685790127720428e+09	info	bluebell/main.go:64	[router] init success
+1.6857901317493117e+09	error	controller/request.go:29	user id is not uint64 type
+1.6857901317493117e+09	error	controller/vote.go:29	invalid user	{"error": "user not login"}
+1.6857901317493117e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "user_id=463373410378973185", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0004576}

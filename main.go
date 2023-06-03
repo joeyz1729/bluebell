@@ -3,13 +3,15 @@ package main
 import (
 	"flag"
 	"fmt"
-	"go.uber.org/zap"
 	"zouyi/bluebell/controller"
 	"zouyi/bluebell/dao/mysql"
+	"zouyi/bluebell/dao/redis"
 	"zouyi/bluebell/logger"
 	"zouyi/bluebell/pkg/snowflake"
 	"zouyi/bluebell/router"
 	"zouyi/bluebell/setting"
+
+	"go.uber.org/zap"
 )
 
 func main() {
@@ -44,11 +46,11 @@ func main() {
 	defer mysql.Close()
 	zap.L().Info("[mysql] init success")
 
-	//if err := redis.Init(setting.Conf.RedisConfig); err != nil {
-	//	fmt.Printf("init logger err: %s\n", err)
-	//}
-	//defer redis.Close()
-	//zap.L().Debug("redis init success")
+	if err := redis.Init(setting.Conf.RedisConfig); err != nil {
+		fmt.Printf("init logger err: %s\n", err)
+	}
+	defer redis.Close()
+	zap.L().Info("[redis] init success")
 
 	// 4. route register
 	if err := controller.InitTrans("en"); err != nil {

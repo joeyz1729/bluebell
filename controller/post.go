@@ -24,6 +24,7 @@ func PostHandler(c *gin.Context) {
 		ResponseError(c, CodeNotLogin)
 		return
 	}
+
 	post.AuthorId = userId
 
 	// 3. create post and store into database
