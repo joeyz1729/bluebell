@@ -55,7 +55,32 @@ func GetPostHandler(c *gin.Context) {
 	ResponseSuccess(c, post)
 }
 
+func PostListOrderHandler(c *gin.Context) {
+	// score(vote), create_time, update_time
+	// get params from context, order basis
+	// GET /api/v1/posts
+	PostListForm := &model.PostListForm{
+		Page:  1,
+		Size:  10,
+		Order: model.OrderByTime,
+	}
+	err := c.ShouldBindQuery(PostListForm)
+	if err != nil {
+		zap.L().Error("get post list form err", zap.Error(err))
+		ResponseError(c, CodeInvalidParams)
+		return
+	}
+	postList, err := logic.GetPostListInOrder(PostListForm)
+	if err != nil {
+		zap.L().Error("get post list by order err", zap.Error(err))
+		ResponseError(c, CodeServerBusy)
+		return
+	}
+	ResponseSuccess(c, postList)
+
+}
 func PostListHandler(c *gin.Context) {
+
 	pageNum, pageSize := getPageInfo(c)
 
 	postList, err := logic.GetPostList(pageNum, pageSize)
@@ -68,15 +93,15 @@ func PostListHandler(c *gin.Context) {
 	ResponseSuccess(c, postList)
 }
 
-func getPageInfo(c *gin.Context) (page, size uint64) {
+func getPageInfo(c *gin.Context) (page, size int64) {
 	pageStr := c.Query("page_num")
 	sizeStr := c.Query("page_size")
 	var err error
-	page, err = strconv.ParseUint(pageStr, 10, 64)
+	page, err = strconv.ParseInt(pageStr, 10, 64)
 	if err != nil {
 		page = 1
 	}
-	size, err = strconv.ParseUint(sizeStr, 10, 64)
+	size, err = strconv.ParseInt(sizeStr, 10, 64)
 	if err != nil {
 		size = 10
 	}

@@ -3,6 +3,7 @@ package redis
 import (
 	"context"
 	"time"
+	"zouyi/bluebell/model"
 
 	"go.uber.org/zap"
 
@@ -28,5 +29,16 @@ func CreatePost(postId uint64) (err error) {
 		zap.L().Error("redis pipeline create post err", zap.Error(err))
 		return
 	}
+	return
+}
+
+func GetPostIdsInOrder(form *model.PostListForm) (PostIdStrings []string, err error) {
+	key := getRedisKey(PostTimeZSet)
+	if form.Order == model.OrderByScore {
+		key = getRedisKey(PostScoreZSet)
+	}
+	ctx := context.Background()
+	PostIdStrings, err = rdb.ZRevRange(ctx, key, (form.Page-1)*form.Size, form.Page*form.Size-1).Result()
+
 	return
 }

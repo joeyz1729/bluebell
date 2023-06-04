@@ -1,7 +1,10 @@
 package mysql
 
 import (
+	"strings"
 	"zouyi/bluebell/model"
+
+	"github.com/jmoiron/sqlx"
 )
 
 func CreatePost(p *model.Post) (err error) {
@@ -14,10 +17,10 @@ func CreatePost(p *model.Post) (err error) {
 	return
 }
 
-func GetPostList(page, size uint64) (posts []*model.Post, err error) {
+func GetPostList(page, size int64) (posts []*model.Post, err error) {
 
 	posts = make([]*model.Post, 0, size)
-	sqlStr := `select post_id, author_id, community_id, title, content, create_time from post order by update_time limit ? offset ? `
+	sqlStr := `select post_id, author_id, community_id, title, content, create_time from post order by update_time desc limit ? offset ? `
 	err = db.Select(&posts, sqlStr, size, (page-1)*size)
 	return
 }
@@ -28,5 +31,17 @@ func GetPostById(pid uint64) (pd *model.Post, err error) {
 	sqlStr := `select author_id, community_id, title, content, create_time from post where post_id = ?`
 	err = db.Get(pd, sqlStr, pid)
 
+	return
+}
+
+func GetPostByIds(ids []string) (posts []*model.Post, err error) {
+	sqlStr := `select post_id, title, content, author_id, community_id, create_time from post	where post_id in (?) order by FIND_IN_SET(post_id, ?)`
+
+	query, args, err := sqlx.In(sqlStr, ids, strings.Join(ids, ","))
+	if err != nil {
+		return nil, err
+	}
+	query = db.Rebind(query)
+	err = db.Select(&posts, query, args...)
 	return
 }

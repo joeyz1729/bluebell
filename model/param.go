@@ -1,5 +1,10 @@
 package model
 
+const (
+	OrderByTime  = "time"
+	OrderByScore = "score"
+)
+
 type SignupForm struct {
 	//Age        uint8  `json:"age" binding:"gte=1,lte=130"`
 	Username        string `json:"username" binding:"required"`
@@ -19,4 +24,10 @@ type VoteForm struct {
 	// UserID, get from token
 	PostID   string `json:"post_id" binding:"required"`
 	Attitude int8   `json:"attitude,string" binding:"oneof=1 0 -1" ` // 赞成票(1)还是反对票(-1)取消投票(0)
+}
+
+type PostListForm struct {
+	Page  int64  `form:"page"`
+	Size  int64  `form:"size"`
+	Order string `form:"order"`
 }

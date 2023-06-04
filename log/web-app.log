@@ -1532,3 +1532,54 @@
 1.685850859685751e+09	info	logger/logger.go:75	/api/v1/post/463361763534962689	{"status": 200, "method": "GET", "path": "/api/v1/post/463361763534962689", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0084119}
 1.6858509371502585e+09	info	logger/logger.go:75	/api/v1/posts	{"status": 200, "method": "GET", "path": "/api/v1/posts", "query": "page_num=2&page_size=1", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0066143}
 1.6858509441984608e+09	info	logger/logger.go:75	/api/v1/posts	{"status": 200, "method": "GET", "path": "/api/v1/posts", "query": "page_num=2&page_size=2", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0013028}
+1.685862865516198e+09	info	bluebell/main.go:33	[logger] init success
+1.6858628655380347e+09	info	bluebell/main.go:40	[snowflake] init success
+1.6858628655482063e+09	info	bluebell/main.go:47	[mysql] init success
+1.6858628727937334e+09	info	bluebell/main.go:53	[redis] init success
+1.6858628727937334e+09	info	bluebell/main.go:61	[trans] init success
+1.6858628727947824e+09	info	bluebell/main.go:64	[router] init success
+1.6858628905067458e+09	info	bluebell/main.go:33	[logger] init success
+1.6858628905229514e+09	info	bluebell/main.go:40	[snowflake] init success
+1.6858628905288565e+09	info	bluebell/main.go:47	[mysql] init success
+1.685862890529361e+09	info	bluebell/main.go:53	[redis] init success
+1.685862890529361e+09	info	bluebell/main.go:61	[trans] init success
+1.6858628905304155e+09	info	bluebell/main.go:64	[router] init success
+1.6858628991997192e+09	info	logger/logger.go:75	/api/v1/posts	{"status": 200, "method": "GET", "path": "/api/v1/posts", "query": "page_num=2&page_size=2", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0037519}
+1.6858629066151717e+09	info	logger/logger.go:75	/api/v1/posts	{"status": 200, "method": "GET", "path": "/api/v1/posts", "query": "page_num=2&page_size=3", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0066568}
+1.68586301747315e+09	info	bluebell/main.go:33	[logger] init success
+1.6858630174889815e+09	info	bluebell/main.go:40	[snowflake] init success
+1.6858630174949234e+09	info	bluebell/main.go:47	[mysql] init success
+1.685863017495429e+09	info	bluebell/main.go:53	[redis] init success
+1.6858630174959636e+09	info	bluebell/main.go:61	[trans] init success
+1.6858630174965036e+09	info	bluebell/main.go:64	[router] init success
+1.6858630283610933e+09	info	logger/logger.go:75	/api/v1/posts	{"status": 200, "method": "GET", "path": "/api/v1/posts", "query": "page_num=2&page_size=3", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0076542}
+1.6858630349732401e+09	error	logic/post.go:111	GetPostListByIds from mysql err	{"error": "sql: converting argument $1 type: unsupported type []interface {}, a slice of interface"}
+1.685863034973746e+09	error	controller/post.go:75	get post list by order err	{"error": "sql: converting argument $1 type: unsupported type []interface {}, a slice of interface"}
+1.685863034973746e+09	info	logger/logger.go:75	/api/v1/posts/order	{"status": 200, "method": "GET", "path": "/api/v1/posts/order", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0008891}
+1.6858630868911304e+09	error	logic/post.go:111	GetPostListByIds from mysql err	{"error": "sql: converting argument $1 type: unsupported type []interface {}, a slice of interface"}
+1.685863086891635e+09	error	controller/post.go:75	get post list by order err	{"error": "sql: converting argument $1 type: unsupported type []interface {}, a slice of interface"}
+1.685863086891635e+09	info	logger/logger.go:75	/api/v1/posts/order	{"status": 200, "method": "GET", "path": "/api/v1/posts/order", "query": "page=1&size=3&order=%22time%22", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0052757}
+1.6858633030768385e+09	info	bluebell/main.go:33	[logger] init success
+1.6858633030932097e+09	info	bluebell/main.go:40	[snowflake] init success
+1.6858633030998168e+09	info	bluebell/main.go:47	[mysql] init success
+1.685863303100323e+09	info	bluebell/main.go:53	[redis] init success
+1.685863303100323e+09	info	bluebell/main.go:61	[trans] init success
+1.6858633031013746e+09	info	bluebell/main.go:64	[router] init success
+1.685863306323917e+09	error	logic/post.go:111	GetPostListByIds from mysql err	{"error": "must pass a pointer, not a value, to StructScan destination"}
+1.6858633063244228e+09	error	controller/post.go:75	get post list by order err	{"error": "must pass a pointer, not a value, to StructScan destination"}
+1.685863306324949e+09	info	logger/logger.go:75	/api/v1/posts/order	{"status": 200, "method": "GET", "path": "/api/v1/posts/order", "query": "page=1&size=3&order=%22time%22", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0029947}
+1.6858634656896565e+09	info	bluebell/main.go:33	[logger] init success
+1.6858634657058601e+09	info	bluebell/main.go:40	[snowflake] init success
+1.6858634657113698e+09	info	bluebell/main.go:47	[mysql] init success
+1.6858634657118757e+09	info	bluebell/main.go:53	[redis] init success
+1.6858634657118757e+09	info	bluebell/main.go:61	[trans] init success
+1.6858634657129488e+09	info	bluebell/main.go:64	[router] init success
+1.6858634764789758e+09	info	bluebell/main.go:33	[logger] init success
+1.685863476495196e+09	info	bluebell/main.go:40	[snowflake] init success
+1.6858634765005875e+09	info	bluebell/main.go:47	[mysql] init success
+1.6858634765011423e+09	info	bluebell/main.go:53	[redis] init success
+1.6858634765011423e+09	info	bluebell/main.go:61	[trans] init success
+1.6858634765021946e+09	info	bluebell/main.go:64	[router] init success
+1.6858634794324782e+09	info	logger/logger.go:75	/api/v1/posts/order	{"status": 200, "method": "GET", "path": "/api/v1/posts/order", "query": "page=1&size=3&order=%22time%22", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0026882}
+1.685863489527992e+09	info	logger/logger.go:75	/api/v1/posts/order	{"status": 200, "method": "GET", "path": "/api/v1/posts/order", "query": "page=1&size=3&order=%22score%22", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0062687}
+1.6858635040999324e+09	info	logger/logger.go:75	/api/v1/posts/order	{"status": 200, "method": "GET", "path": "/api/v1/posts/order", "query": "page=1&size=3&order=%22scddore%22", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0063812}
