@@ -4,8 +4,6 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/spf13/viper"
-
 	"github.com/dgrijalva/jwt-go"
 
 	"errors"
@@ -18,8 +16,8 @@ type Claims struct {
 }
 
 var (
-	AccessTokenExpireDuration  = viper.GetDuration("jwt_expire") * time.Hour
-	RefreshTokenExpireDuration = time.Hour * 25 * 7
+	AccessTokenExpireDuration  = 30 * 24 * time.Hour
+	RefreshTokenExpireDuration = time.Hour * 24 * 30
 )
 
 var (
@@ -38,7 +36,7 @@ func GenToken(userId uint64, username string) (aToken, rToken string, err error)
 			Issuer:    "bluebell",
 		},
 	}
-
+	fmt.Println(c.ExpiresAt)
 	// with userid and username
 	aToken, err = jwt.NewWithClaims(jwt.SigningMethodHS256, c).SignedString(secret)
 
@@ -52,9 +50,14 @@ func GenToken(userId uint64, username string) (aToken, rToken string, err error)
 }
 
 func ParseToken(tokenString string) (claims *Claims, err error) {
-	var token *jwt.Token
+
 	claims = new(Claims)
-	token, err = jwt.ParseWithClaims(tokenString, claims, keyFunc)
+	token, err := jwt.ParseWithClaims(tokenString, claims, keyFunc)
+	fmt.Println(claims.UserId)
+	fmt.Println(claims.Username)
+	fmt.Println(claims.ExpiresAt)
+	fmt.Println(time.Now().Unix())
+
 	if err != nil {
 		return nil, err
 	}
@@ -69,11 +72,11 @@ func RefreshToken(accessToken, refreshToken string) (newAccessToken, newRefreshT
 	if _, err = jwt.Parse(refreshToken, keyFunc); err != nil {
 		return
 	}
-	fmt.Println(1)
+
 	// parse token
 	var claims Claims
 	_, err = jwt.ParseWithClaims(accessToken, &claims, keyFunc)
-	fmt.Println(2)
+
 	v, _ := err.(*jwt.ValidationError)
 
 	// token expired

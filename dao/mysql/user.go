@@ -9,16 +9,16 @@ import (
 
 func Login(user *model.User) (err error) {
 	// 1. get user info from mysql database
-	sqlStr := `select password from user where username = ?`
+	sqlStr := `select user_id,password from user where username = ?`
 	inputPassword := user.Password
-	var correctPassword string
-	if err := db.Get(&correctPassword, sqlStr, user.Username); err != nil {
+	err = db.Get(user, sqlStr, user.Username)
+	if err != nil {
 		if err == sql.ErrNoRows {
 			return ErrorUserNotExist
 		}
 		return ErrorQueryUserData
 	}
-	if encryptPassword(inputPassword) != correctPassword {
+	if encryptPassword(inputPassword) != user.Password {
 		return ErrorIncorrectPassword
 	}
 

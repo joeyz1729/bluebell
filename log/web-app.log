@@ -1371,3 +1371,164 @@
 1.6857901317493117e+09	error	controller/request.go:29	user id is not uint64 type
 1.6857901317493117e+09	error	controller/vote.go:29	invalid user	{"error": "user not login"}
 1.6857901317493117e+09	info	logger/logger.go:75	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "user_id=463373410378973185", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0004576}
+1.6858472681451423e+09	info	bluebell/main.go:33	[logger] init success
+1.6858472681681287e+09	info	bluebell/main.go:40	[snowflake] init success
+1.6858472681807861e+09	info	bluebell/main.go:47	[mysql] init success
+1.6858472764436116e+09	error	redis/redis.go:25	connect to redis failed, err: %s
+	{"error": "dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it."}
+1.6858472764446456e+09	info	bluebell/main.go:53	[redis] init success
+1.6858472764446456e+09	info	bluebell/main.go:61	[trans] init success
+1.6858472764457147e+09	info	bluebell/main.go:64	[router] init success
+1.6858473334675868e+09	error	controller/user.go:57	[login] [params] invalid err	{"error": "EOF"}
+1.6858473334675868e+09	info	logger/logger.go:75	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0004379}
+1.6858473749784102e+09	info	logger/logger.go:75	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0051396}
+1.6858474794050753e+09	error	logger/logger.go:117	[Recovery from panic]	{"error": "Key \"user_id\" does not exist", "request": "GET /api/v1/ping HTTP/1.1\r\nHost: localhost:8081\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nAuthorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjowLCJ1c2VybmFtZSI6IndtaCIsImV4cCI6MTY4NTg0NzM3NCwiaXNzIjoiYmx1ZWJlbGwifQ.7tzy2kZDhBCiBzcFhiwW5HGUIZ7vhZMS37y1i1L-xWk\r\nConnection: keep-alive\r\nContent-Length: 51\r\nContent-Type: application/json\r\nPostman-Token: ca5eb27a-0ff7-4f11-9111-b27e392649ea\r\nUser-Agent: PostmanRuntime/7.32.2\r\n\r\n", "stack": "goroutine 83 [running]:\nruntime/debug.Stack()\n\tD:/GoLang/src/runtime/debug/stack.go:24 +0x65\nzouyi/bluebell/logger.GinRecovery.func1.1()\n\tD:/Codes/Golang/src/zouyi/bluebell/logger/logger.go:120 +0x2da\npanic({0xb07c40, 0xc0006081d0})\n\tD:/GoLang/src/runtime/panic.go:884 +0x212\ngithub.com/gin-gonic/gin.(*Context).MustGet(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:273\nzouyi/bluebell/router.Setup.func1(0xc0002e5640?)\n\tD:/Codes/Golang/src/zouyi/bluebell/router/router.go:24 +0xf4\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174\nzouyi/bluebell/logger.GinRecovery.func1(0xc000510100)\n\tD:/Codes/Golang/src/zouyi/bluebell/logger/logger.go:131 +0x76\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174\nzouyi/bluebell/logger.GinLogger.func1(0xc000510100)\n\tD:/Codes/Golang/src/zouyi/bluebell/logger/logger.go:72 +0xa2\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0xc000485520, 0xc000510100)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620 +0x671\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0xc000485520, {0xcccd38?, 0xc00040c1c0}, 0xc000510300)\n\tD:/Codes/Golang/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576 +0x1dd\nnet/http.serverHandler.ServeHTTP({0xccbcc0?}, {0xcccd38, 0xc00040c1c0}, 0xc000510300)\n\tD:/GoLang/src/net/http/server.go:2947 +0x30c\nnet/http.(*conn).serve(0xc0001c4320, {0xccd5c0, 0xc000486210})\n\tD:/GoLang/src/net/http/server.go:1991 +0x607\ncreated by net/http.(*Server).Serve\n\tD:/GoLang/src/net/http/server.go:3102 +0x4db\n"}
+1.6858474794124386e+09	info	logger/logger.go:75	/api/v1/ping	{"status": 500, "method": "GET", "path": "/api/v1/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0073632}
+1.6858475556683922e+09	info	bluebell/main.go:33	[logger] init success
+1.6858475556845958e+09	info	bluebell/main.go:40	[snowflake] init success
+1.6858475556911237e+09	info	bluebell/main.go:47	[mysql] init success
+1.6858475556921487e+09	info	bluebell/main.go:53	[redis] init success
+1.6858475556921487e+09	info	bluebell/main.go:61	[trans] init success
+1.6858475556926975e+09	info	bluebell/main.go:64	[router] init success
+1.6858475599352272e+09	error	middleware/auth.go:33	invalid token	{"error": "token is expired by 3m5s"}
+1.6858475599352272e+09	info	logger/logger.go:75	/api/v1/ping	{"status": 200, "method": "GET", "path": "/api/v1/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.685847591843689e+09	info	bluebell/main.go:33	[logger] init success
+1.685847591859905e+09	info	bluebell/main.go:40	[snowflake] init success
+1.685847591866938e+09	info	bluebell/main.go:47	[mysql] init success
+1.685847591867447e+09	info	bluebell/main.go:53	[redis] init success
+1.6858475918679771e+09	info	bluebell/main.go:61	[trans] init success
+1.68584759186851e+09	info	bluebell/main.go:64	[router] init success
+1.6858475960136526e+09	error	middleware/auth.go:33	invalid token	{"error": "token is expired by 3m42s"}
+1.6858475960136526e+09	info	logger/logger.go:75	/api/v1/ping	{"status": 200, "method": "GET", "path": "/api/v1/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0005043}
+1.6858476140830014e+09	info	logger/logger.go:75	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0050541}
+1.6858476300879946e+09	error	middleware/auth.go:33	invalid token	{"error": "token is expired by 16s"}
+1.685847630088522e+09	info	logger/logger.go:75	/api/v1/ping	{"status": 200, "method": "GET", "path": "/api/v1/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0005272}
+1.6858476494387703e+09	info	bluebell/main.go:33	[logger] init success
+1.6858476494560802e+09	info	bluebell/main.go:40	[snowflake] init success
+1.6858476494629803e+09	info	bluebell/main.go:47	[mysql] init success
+1.6858476494634871e+09	info	bluebell/main.go:53	[redis] init success
+1.6858476494634871e+09	info	bluebell/main.go:61	[trans] init success
+1.6858476494645357e+09	info	bluebell/main.go:64	[router] init success
+1.6858476550139577e+09	error	middleware/auth.go:33	invalid token	{"error": "token is expired by 41s"}
+1.6858476550146444e+09	info	logger/logger.go:75	/api/v1/ping	{"status": 200, "method": "GET", "path": "/api/v1/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0006868}
+1.6858476608381565e+09	info	logger/logger.go:75	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0111395}
+1.6858476779419942e+09	error	middleware/auth.go:33	invalid token	{"error": "token is expired by 17s"}
+1.6858476779424603e+09	info	logger/logger.go:75	/api/v1/ping	{"status": 200, "method": "GET", "path": "/api/v1/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0004663}
+1.6858477328806016e+09	info	bluebell/main.go:33	[logger] init success
+1.6858477329015322e+09	info	bluebell/main.go:40	[snowflake] init success
+1.6858477329074066e+09	info	bluebell/main.go:47	[mysql] init success
+1.6858477329079132e+09	info	bluebell/main.go:53	[redis] init success
+1.6858477329079132e+09	info	bluebell/main.go:61	[trans] init success
+1.685847732908967e+09	info	bluebell/main.go:64	[router] init success
+1.6858477364073195e+09	error	middleware/auth.go:33	invalid token	{"error": "token is expired by 1m16s"}
+1.6858477364073195e+09	info	logger/logger.go:75	/api/v1/ping	{"status": 200, "method": "GET", "path": "/api/v1/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.6858477459477046e+09	info	logger/logger.go:75	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0041802}
+1.6858477671988473e+09	error	controller/user.go:106	jwt.refreshToken failed	{"error": "token contains an invalid number of segments"}
+1.6858477672001245e+09	info	logger/logger.go:75	/api/v1/refresh_token	{"status": 200, "method": "GET", "path": "/api/v1/refresh_token", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0012773}
+1.6858478274500027e+09	error	controller/user.go:106	jwt.refreshToken failed	{"error": "token contains an invalid number of segments"}
+1.6858478274503813e+09	info	logger/logger.go:75	/api/v1/refresh_token	{"status": 200, "method": "GET", "path": "/api/v1/refresh_token", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0003786}
+1.685847864782411e+09	info	logger/logger.go:75	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0043407}
+1.6858478916153705e+09	error	middleware/auth.go:33	invalid token	{"error": "token is expired by 27s"}
+1.6858478916160626e+09	info	logger/logger.go:75	/api/v1/ping	{"status": 200, "method": "GET", "path": "/api/v1/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0006922}
+1.6858479002023954e+09	error	middleware/auth.go:33	invalid token	{"error": "token is expired by 36s"}
+1.6858479002029736e+09	info	logger/logger.go:75	/api/v1/ping	{"status": 200, "method": "GET", "path": "/api/v1/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0005784}
+1.6858479017835612e+09	error	middleware/auth.go:33	invalid token	{"error": "token is expired by 37s"}
+1.6858479017835612e+09	info	logger/logger.go:75	/api/v1/ping	{"status": 200, "method": "GET", "path": "/api/v1/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.6858479287641509e+09	error	controller/user.go:106	jwt.refreshToken failed	{"error": "token contains an invalid number of segments"}
+1.6858479287641509e+09	info	logger/logger.go:75	/api/v1/refresh_token	{"status": 200, "method": "GET", "path": "/api/v1/refresh_token", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.685847942670361e+09	error	controller/user.go:106	jwt.refreshToken failed	{"error": "Token is expired"}
+1.685847942671013e+09	info	logger/logger.go:75	/api/v1/refresh_token	{"status": 200, "method": "GET", "path": "/api/v1/refresh_token", "query": "refresh_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODU4NDc4NjQsImlzcyI6ImJsdWViZWxsIn0.KF9bRx7IV5ONw05qV-4Tqy4In6LUNWeRbo-2Lsi0FyQ", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0006522}
+1.6858489812542152e+09	info	bluebell/main.go:33	[logger] init success
+1.685848981271773e+09	info	bluebell/main.go:40	[snowflake] init success
+1.6858489812779076e+09	info	bluebell/main.go:47	[mysql] init success
+1.6858489812784157e+09	info	bluebell/main.go:53	[redis] init success
+1.6858489812789464e+09	info	bluebell/main.go:61	[trans] init success
+1.6858489812794733e+09	info	bluebell/main.go:64	[router] init success
+1.685849000020596e+09	error	controller/user.go:57	[login] [params] invalid err	{"error": "EOF"}
+1.685849000020596e+09	info	logger/logger.go:75	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0003187}
+1.6858490236256952e+09	error	controller/user.go:68	[login] [logic] err	{"error": "query user data err"}
+1.6858490236262112e+09	info	logger/logger.go:75	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0047081}
+1.6858493112922285e+09	info	bluebell/main.go:33	[logger] init success
+1.6858493113102336e+09	info	bluebell/main.go:40	[snowflake] init success
+1.685849311315903e+09	info	bluebell/main.go:47	[mysql] init success
+1.6858493113164093e+09	info	bluebell/main.go:53	[redis] init success
+1.6858493113164093e+09	info	bluebell/main.go:61	[trans] init success
+1.6858493113174825e+09	info	bluebell/main.go:64	[router] init success
+1.6858493148390691e+09	info	logger/logger.go:75	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.001214}
+1.685849362330737e+09	error	middleware/auth.go:33	invalid token	{"error": "token is expired by 48s"}
+1.685849362330737e+09	info	logger/logger.go:75	/api/v1/ping	{"status": 200, "method": "GET", "path": "/api/v1/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0}
+1.68584937645993e+09	error	middleware/auth.go:33	invalid token	{"error": "token is expired by 1m2s"}
+1.685849376461319e+09	info	logger/logger.go:75	/api/v1/ping	{"status": 200, "method": "GET", "path": "/api/v1/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0013889}
+1.6858498827104018e+09	info	logger/logger.go:75	/api/v1/signup	{"status": 200, "method": "POST", "path": "/api/v1/signup", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0131274}
+1.6858498949168797e+09	info	logger/logger.go:75	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0036648}
+1.685849928781455e+09	error	middleware/auth.go:33	invalid token	{"error": "token is expired by 10m14s"}
+1.6858499287824605e+09	info	logger/logger.go:75	/api/v1/ping	{"status": 200, "method": "GET", "path": "/api/v1/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0010051}
+1.6858499397650287e+09	error	middleware/auth.go:19	code not login err
+1.685849939765195e+09	info	logger/logger.go:75	/api/v1/ping	{"status": 200, "method": "GET", "path": "/api/v1/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0001666}
+1.6858499517288368e+09	error	middleware/auth.go:33	invalid token	{"error": "token is expired by 57s"}
+1.6858499517296472e+09	info	logger/logger.go:75	/api/v1/ping	{"status": 200, "method": "GET", "path": "/api/v1/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0008103}
+1.6858503244091618e+09	info	bluebell/main.go:33	[logger] init success
+1.68585032442499e+09	info	bluebell/main.go:40	[snowflake] init success
+1.6858503244308336e+09	info	bluebell/main.go:47	[mysql] init success
+1.6858503244313388e+09	info	bluebell/main.go:53	[redis] init success
+1.6858503244318635e+09	info	bluebell/main.go:61	[trans] init success
+1.685850324432383e+09	info	bluebell/main.go:64	[router] init success
+1.6858503279699903e+09	error	middleware/auth.go:33	invalid token	{"error": "token is expired by 7m13s"}
+1.6858503279705215e+09	info	logger/logger.go:75	/api/v1/ping	{"status": 200, "method": "GET", "path": "/api/v1/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0005313}
+1.6858503847066846e+09	info	bluebell/main.go:33	[logger] init success
+1.685850384722649e+09	info	bluebell/main.go:40	[snowflake] init success
+1.6858503847279236e+09	info	bluebell/main.go:47	[mysql] init success
+1.6858503847284288e+09	info	bluebell/main.go:53	[redis] init success
+1.685850384728981e+09	info	bluebell/main.go:61	[trans] init success
+1.6858503847295284e+09	info	bluebell/main.go:64	[router] init success
+1.685850388237036e+09	error	jwt/jwt.go:61	parse with claims	{"error": "token is expired by 8m14s"}
+1.685850388237036e+09	error	middleware/auth.go:33	invalid token	{"error": "token is expired by 8m14s"}
+1.6858503882375674e+09	info	logger/logger.go:75	/api/v1/ping	{"status": 200, "method": "GET", "path": "/api/v1/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0010363}
+1.6858504791010647e+09	info	bluebell/main.go:33	[logger] init success
+1.6858504791161962e+09	info	bluebell/main.go:40	[snowflake] init success
+1.685850479121571e+09	info	bluebell/main.go:47	[mysql] init success
+1.685850479122075e+09	info	bluebell/main.go:53	[redis] init success
+1.6858504791225867e+09	info	bluebell/main.go:61	[trans] init success
+1.685850479123111e+09	info	bluebell/main.go:64	[router] init success
+1.6858504912522237e+09	info	logger/logger.go:75	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.003831}
+1.6858505063675742e+09	info	logger/logger.go:75	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0042332}
+1.6858505160275414e+09	info	logger/logger.go:75	/api/v1/ping	{"status": 200, "method": "GET", "path": "/api/v1/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0003466}
+1.68585054326309e+09	info	bluebell/main.go:33	[logger] init success
+1.6858505432805145e+09	info	bluebell/main.go:40	[snowflake] init success
+1.6858505432863927e+09	info	bluebell/main.go:47	[mysql] init success
+1.685850543286899e+09	info	bluebell/main.go:53	[redis] init success
+1.6858505432874281e+09	info	bluebell/main.go:61	[trans] init success
+1.6858505432879498e+09	info	bluebell/main.go:64	[router] init success
+1.6858505749376915e+09	info	bluebell/main.go:33	[logger] init success
+1.6858505749549847e+09	info	bluebell/main.go:40	[snowflake] init success
+1.685850574960375e+09	info	bluebell/main.go:47	[mysql] init success
+1.6858505749608836e+09	info	bluebell/main.go:53	[redis] init success
+1.6858505749614112e+09	info	bluebell/main.go:61	[trans] init success
+1.685850574961935e+09	info	bluebell/main.go:64	[router] init success
+1.6858505841883254e+09	info	logger/logger.go:75	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0008197}
+1.6858505905592453e+09	info	logger/logger.go:75	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0036726}
+1.6858506224240017e+09	info	logger/logger.go:75	/api/v1/ping	{"status": 200, "method": "GET", "path": "/api/v1/ping", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0004572}
+1.6858507067123432e+09	info	bluebell/main.go:33	[logger] init success
+1.6858507067301552e+09	info	bluebell/main.go:40	[snowflake] init success
+1.6858507067357125e+09	info	bluebell/main.go:47	[mysql] init success
+1.685850706736241e+09	info	bluebell/main.go:53	[redis] init success
+1.685850706736771e+09	info	bluebell/main.go:61	[trans] init success
+1.6858507067378297e+09	info	bluebell/main.go:64	[router] init success
+1.6858507104954424e+09	info	logger/logger.go:75	/api/v1/community	{"status": 200, "method": "GET", "path": "/api/v1/community", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0067909}
+1.6858507151629076e+09	info	logger/logger.go:75	/api/v1/posts	{"status": 200, "method": "GET", "path": "/api/v1/posts", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0045587}
+1.6858507320510414e+09	error	logic/post.go:42	GetPostById() failed	{"error": "sql: no rows in result set"}
+1.6858507320510414e+09	error	controller/post.go:51	GetPostDetailById() err	{"error": "sql: no rows in result set"}
+1.6858507320510414e+09	info	logger/logger.go:75	/api/v1/post/1	{"status": 200, "method": "GET", "path": "/api/v1/post/1", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0038841}
+1.6858508055643601e+09	error	logic/post.go:42	GetPostById() failed	{"error": "sql: no rows in result set"}
+1.6858508055643601e+09	error	controller/post.go:51	GetPostDetailById() err	{"error": "sql: no rows in result set"}
+1.6858508055643601e+09	info	logger/logger.go:75	/api/v1/post/1	{"status": 200, "method": "GET", "path": "/api/v1/post/1", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0040651}
+1.6858508385407708e+09	info	logger/logger.go:75	/api/v1/post/463361763534962689	{"status": 200, "method": "GET", "path": "/api/v1/post/463361763534962689", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0112341}
+1.6858508547326987e+09	info	bluebell/main.go:33	[logger] init success
+1.6858508547484214e+09	info	bluebell/main.go:40	[snowflake] init success
+1.6858508547538126e+09	info	bluebell/main.go:47	[mysql] init success
+1.6858508547543166e+09	info	bluebell/main.go:53	[redis] init success
+1.6858508547543166e+09	info	bluebell/main.go:61	[trans] init success
+1.6858508547553666e+09	info	bluebell/main.go:64	[router] init success
+1.685850859685751e+09	info	logger/logger.go:75	/api/v1/post/463361763534962689	{"status": 200, "method": "GET", "path": "/api/v1/post/463361763534962689", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0084119}
+1.6858509371502585e+09	info	logger/logger.go:75	/api/v1/posts	{"status": 200, "method": "GET", "path": "/api/v1/posts", "query": "page_num=2&page_size=1", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0066143}
+1.6858509441984608e+09	info	logger/logger.go:75	/api/v1/posts	{"status": 200, "method": "GET", "path": "/api/v1/posts", "query": "page_num=2&page_size=2", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0013028}

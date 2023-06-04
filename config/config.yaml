@@ -5,7 +5,8 @@ port: 8080
 version: "v0.1"
 start_time: "2023-5-29"
 machine_id: 1
-jwt_expire: 800000
+jwt_access_expire: 25
+jwt_refresh_expire: 25
 
 log:
   level: "debug"

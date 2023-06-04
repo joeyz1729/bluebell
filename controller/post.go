@@ -39,7 +39,7 @@ func PostHandler(c *gin.Context) {
 }
 
 func GetPostHandler(c *gin.Context) {
-	pidStr := c.Param("id")
+	pidStr := c.Param("pid")
 	pid, err := strconv.ParseUint(pidStr, 10, 64)
 	if err != nil {
 		zap.L().Error("invalid params", zap.Error(err))
