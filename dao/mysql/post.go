@@ -45,3 +45,10 @@ func GetPostByIds(ids []string) (posts []*model.Post, err error) {
 	err = db.Select(&posts, query, args...)
 	return
 }
+
+func GetCommunityPosts(cid uint64, page, size int) (posts []*model.Post, err error) {
+	posts = make([]*model.Post, 0, size)
+	sqlStr := `select author_id, post_id, title, content, create_time from post where community_id = ? order by update_time desc limit ? offset ?`
+	err = db.Select(&posts, sqlStr, size, (page-1)*size)
+	return
+}

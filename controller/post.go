@@ -59,7 +59,7 @@ func PostListOrderHandler(c *gin.Context) {
 	// score(vote), create_time, update_time
 	// get params from context, order basis
 	// GET /api/v1/posts
-	PostListForm := &model.PostListForm{
+	PostListForm := &model.PostsForm{
 		Page:  1,
 		Size:  10,
 		Order: model.OrderByTime,
@@ -91,6 +91,12 @@ func PostListHandler(c *gin.Context) {
 	}
 
 	ResponseSuccess(c, postList)
+}
+
+func CommunityPostListHandler(c *gin.Context) {
+	// 1. get community id
+	// 2. mysql query by community id
+
 }
 
 func getPageInfo(c *gin.Context) (page, size int64) {

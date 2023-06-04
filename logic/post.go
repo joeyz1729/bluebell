@@ -18,7 +18,7 @@ func CreatePost(p *model.Post) (err error) {
 	}
 	p.Id = id
 	// 2. save to redis
-	err = redis.CreatePost(p.Id)
+	err = redis.CreatePost(p.Id, p.CommunityId)
 	if err != nil {
 		zap.L().Error("post info save to redis err", zap.Error(err))
 		return
@@ -51,7 +51,7 @@ func GetPostDetailById(pid uint64) (pd *model.PostDetail, err error) {
 	}
 	pd.AuthorName = user.Username
 	// 3. get community detail
-	community, err := mysql.GetCommunityDetailById(pd.CommunityId)
+	community, err := mysql.GetCommunityDetailById(pd.CommunityDetail.CommunityId)
 	if err != nil {
 		zap.L().Error("GetCommunityDetailById() failed", zap.Error(err))
 		return
@@ -62,13 +62,13 @@ func GetPostDetailById(pid uint64) (pd *model.PostDetail, err error) {
 }
 
 func GetPostList(page, size int64) (postDetailList []*model.PostDetail, err error) {
-	postDetailList = make([]*model.PostDetail, 0, size)
 	var posts []*model.Post
 	posts, err = mysql.GetPostList(page, size)
 	if err != nil {
 		zap.L().Error("GetPostList() err", zap.Error(err))
 		return nil, err
 	}
+
 	for _, post := range posts {
 		var postDetail = new(model.PostDetail)
 		postDetail.Post = post
@@ -96,7 +96,7 @@ func GetPostList(page, size int64) (postDetailList []*model.PostDetail, err erro
 	return
 }
 
-func GetPostListInOrder(form *model.PostListForm) (postDetailList []*model.PostDetail, err error) {
+func GetPostListInOrder(form *model.PostsForm) (postDetailList []*model.PostDetail, err error) {
 	postDetailList = make([]*model.PostDetail, 0, form.Size)
 	var posts []*model.Post
 	// get id in order in from redis
@@ -105,13 +105,50 @@ func GetPostListInOrder(form *model.PostListForm) (postDetailList []*model.PostD
 		zap.L().Error("get post ids in order from redis err, or len(ids) == 0", zap.Error(err))
 		return
 	}
+
 	// get data from mysql
 	posts, err = mysql.GetPostByIds(ids)
 	if err != nil {
 		zap.L().Error("GetPostListByIds from mysql err", zap.Error(err))
 		return nil, err
 	}
+
+	voteData, err := redis.GetPostVoteData(ids)
+	if err != nil {
+		return nil, err
+	}
+
 	// query post detail
+	for id, post := range posts {
+		var postDetail = new(model.PostDetail)
+		postDetail.Post = post
+		postDetail.Votes = voteData[id]
+
+		// get username by author_id
+		var user = new(model.User)
+		user, err = mysql.GetUserById(post.AuthorId)
+		if err != nil {
+			zap.L().Error("GetUserById err", zap.Error(err))
+			return
+		}
+		postDetail.AuthorName = user.Username
+
+		// get communityDetail by community_id
+		var communityDetail = new(model.CommunityDetail)
+		communityDetail, err = mysql.GetCommunityDetailById(post.CommunityId)
+		if err != nil {
+			zap.L().Error("GetCommunityDetailById err", zap.Error(err))
+			return
+		}
+		postDetail.CommunityDetail = communityDetail
+
+		postDetailList = append(postDetailList, postDetail)
+	}
+	return
+}
+
+func FullPostDetail(posts []*model.Post) (postDetailList []*model.PostDetail, err error) {
+	postDetailList = make([]*model.PostDetail, 0, len(posts))
 	for _, post := range posts {
 		var postDetail = new(model.PostDetail)
 		postDetail.Post = post
@@ -136,5 +173,9 @@ func GetPostListInOrder(form *model.PostListForm) (postDetailList []*model.PostD
 
 		postDetailList = append(postDetailList, postDetail)
 	}
+	return
+}
+
+func GetCommunityPosts(p *model.CommunityPostsForm) (data []*model.PostDetail, err error) {
 	return
 }
