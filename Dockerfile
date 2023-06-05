@@ -25,23 +25,23 @@ RUN go build -o bluebell_app .
 ###################
 FROM debian:stretch-slim
 
-COPY ./wait-for.sh /
-COPY ./templates /templates
-COPY ./static /static
+# COPY ./wait-for.sh /
+# COPY ./templates /templates
+# COPY ./static /static
 COPY ./conf /conf
 
 # 从builder镜像中把/dist/app 拷贝到当前目录
 COPY --from=builder /build/bluebell_app /
 
-RUN set -eux; \
-	apt-get update; \
-	apt-get install -y \
-		--no-install-recommends \
-		netcat; \
-        chmod 755 wait-for.sh
+#RUN set -eux; \
+#	apt-get update; \
+#	apt-get install -y \
+#		--no-install-recommends \
+#		netcat; \
+#        chmod 755 wait-for.sh
 
 # 声明服务端口
 EXPOSE 8084
 
 # 需要运行的命令
-#ENTRYPOINT ["/bluebell_app", "conf/config.yaml"]
+ENTRYPOINT ["/bluebell_app", "conf/config.yaml"]

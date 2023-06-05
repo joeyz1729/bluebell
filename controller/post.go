@@ -1,6 +1,7 @@
 package controller
 
 import (
+	"fmt"
 	"strconv"
 	"zouyi/bluebell/logic"
 	"zouyi/bluebell/model"
@@ -41,18 +42,20 @@ func PostHandler(c *gin.Context) {
 func GetPostHandler(c *gin.Context) {
 	pidStr := c.Param("pid")
 	pid, err := strconv.ParseUint(pidStr, 10, 64)
+	fmt.Println(pid)
 	if err != nil {
 		zap.L().Error("invalid params", zap.Error(err))
 		ResponseError(c, CodeInvalidParams)
 		return
 	}
-	post, err := logic.GetPostDetailById(pid)
+	postDetail, err := logic.GetPostDetailById(pid)
 	if err != nil {
 		zap.L().Error("GetPostDetailById() err", zap.Error(err))
 		ResponseError(c, CodeServerBusy)
 		return
 	}
-	ResponseSuccess(c, post)
+
+	ResponseSuccess(c, postDetail)
 }
 
 func PostListOrderHandler(c *gin.Context) {
@@ -100,8 +103,8 @@ func CommunityPostListHandler(c *gin.Context) {
 }
 
 func getPageInfo(c *gin.Context) (page, size int64) {
-	pageStr := c.Query("page_num")
-	sizeStr := c.Query("page_size")
+	pageStr := c.Query("page")
+	sizeStr := c.Query("size")
 	var err error
 	page, err = strconv.ParseInt(pageStr, 10, 64)
 	if err != nil {

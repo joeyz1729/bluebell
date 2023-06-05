@@ -17,7 +17,7 @@ import (
 func main() {
 	// --------flag-------------
 	var configPath string
-	flag.StringVar(&configPath, "conf", "D:/Codes/Golang/src/zouyi/bluebell/config/config.yaml", "配置文件路径")
+	flag.StringVar(&configPath, "conf", "D:/Codes/Golang/src/zouyi/bluebell/conf/config.yaml", "配置文件路径")
 	flag.Parse()
 
 	// 1. load config file

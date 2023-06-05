@@ -43,6 +43,7 @@ func GetPostDetailById(pid uint64) (pd *model.PostDetail, err error) {
 		return
 	}
 	pd.Post = post
+
 	// 2. get username
 	user, err := mysql.GetUserById(pd.AuthorId)
 	if err != nil {
@@ -50,13 +51,15 @@ func GetPostDetailById(pid uint64) (pd *model.PostDetail, err error) {
 		return
 	}
 	pd.AuthorName = user.Username
-	// 3. get community detail
-	community, err := mysql.GetCommunityDetailById(pd.CommunityDetail.CommunityId)
+	//3. get community detail
+	var communityDetail = new(model.CommunityDetail)
+	communityDetail, err = mysql.GetCommunityDetailById(pd.Post.CommunityId)
+
 	if err != nil {
 		zap.L().Error("GetCommunityDetailById() failed", zap.Error(err))
 		return
 	}
-	pd.CommunityDetail = community
+	pd.CommunityDetail = communityDetail
 
 	return
 }

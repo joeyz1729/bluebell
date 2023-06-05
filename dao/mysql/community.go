@@ -22,6 +22,7 @@ func GetCommunityList() (communityList []*model.Community, err error) {
 
 func GetCommunityDetailById(communityId uint64) (cd *model.CommunityDetail, err error) {
 	cd = new(model.CommunityDetail)
+	cd.CommunityId = communityId
 	sqlStr := `select community_name, introduction, create_time from community where community_id = ?`
 	err = db.Get(cd, sqlStr, communityId)
 	if err == sql.ErrNoRows {
