@@ -1,17 +1,28 @@
 package router
 
 import (
+	"net/http"
 	"zouyi/bluebell/controller"
 	"zouyi/bluebell/logger"
 	"zouyi/bluebell/middleware"
+
+	"github.com/gin-contrib/pprof"
 
 	"github.com/gin-gonic/gin"
 )
 
 func Setup() *gin.Engine {
 	gin.SetMode(gin.DebugMode)
-
 	r := gin.New()
+
+	r.GET("/ping", func(c *gin.Context) {
+		c.String(http.StatusOK, "pong")
+	})
+
+	//r.Use(logger.GinLogger(), logger.GinRecovery(true), middleware.RateLimitMiddleware(time.Second*2, 1))
+
+	pprof.Register(r)
+
 	v1 := r.Group("/api/v1")
 	v1.Use(logger.GinLogger(), logger.GinRecovery(true))
 

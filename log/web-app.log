@@ -1828,3 +1828,28 @@
 1.6859562957508826e+09	info	bluebell/main.go:61	[trans] init success
 1.6859562957514834e+09	info	bluebell/main.go:64	[router] init success
 1.6859563054595819e+09	info	logger/logger.go:75	/api/v1/post/463361763534962689	{"status": 200, "method": "GET", "path": "/api/v1/post/463361763534962689", "query": "", "ip": "::1", "user-agent": "PostmanRuntime/7.32.2", "errors": "", "cost": 0.0017462}
+1.6877700488482132e+09	info	bluebell/main.go:33	[logger] init success
+1.6877700488752317e+09	info	bluebell/main.go:40	[snowflake] init success
+1.687770048908075e+09	info	bluebell/main.go:47	[mysql] init success
+1.687770048909122e+09	info	bluebell/main.go:53	[redis] init success
+1.687770048909122e+09	info	bluebell/main.go:61	[trans] init success
+1.6877700489096522e+09	info	bluebell/main.go:64	[router] init success
+1.6877703803775103e+09	info	logger/logger.go:75	/debug/pprof/profile	{"status": 200, "method": "GET", "path": "/debug/pprof/profile", "query": "", "ip": "127.0.0.1", "user-agent": "Go-http-client/1.1", "errors": "", "cost": 0}
+1.687770401210228e+09	info	bluebell/main.go:33	[logger] init success
+1.687770401232442e+09	info	bluebell/main.go:40	[snowflake] init success
+1.687770401237754e+09	info	bluebell/main.go:47	[mysql] init success
+1.6877704012382593e+09	info	bluebell/main.go:53	[redis] init success
+1.6877704012382593e+09	info	bluebell/main.go:61	[trans] init success
+1.6877704012398083e+09	info	bluebell/main.go:64	[router] init success
+1.687770416810502e+09	info	logger/logger.go:75	/debug/pprof/profile	{"status": 200, "method": "GET", "path": "/debug/pprof/profile", "query": "", "ip": "127.0.0.1", "user-agent": "Go-http-client/1.1", "errors": "", "cost": 0}
+1.687770433005645e+09	info	logger/logger.go:75	/debug/pprof/	{"status": 200, "method": "GET", "path": "/debug/pprof/", "query": "", "ip": "127.0.0.1", "user-agent": "Go-http-client/1.1", "errors": "", "cost": 0}
+1.6877704435859928e+09	info	logger/logger.go:75	/	{"status": 200, "method": "GET", "path": "/", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.58", "errors": "", "cost": 0.000576}
+1.6877704439275584e+09	info	logger/logger.go:75	/favicon.ico	{"status": 404, "method": "GET", "path": "/favicon.ico", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.58", "errors": "", "cost": 0}
+1.6877704547238836e+09	info	logger/logger.go:75	/debug/pprof/	{"status": 200, "method": "GET", "path": "/debug/pprof/", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.58", "errors": "", "cost": 0}
+1.6877704572749915e+09	info	logger/logger.go:75	/debug/pprof/	{"status": 200, "method": "GET", "path": "/debug/pprof/", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.58", "errors": "", "cost": 0}
+1.6877704895699537e+09	info	bluebell/main.go:33	[logger] init success
+1.6877704895909045e+09	info	bluebell/main.go:40	[snowflake] init success
+1.6877704895968347e+09	info	bluebell/main.go:47	[mysql] init success
+1.6877704895973394e+09	info	bluebell/main.go:53	[redis] init success
+1.6877704895973394e+09	info	bluebell/main.go:61	[trans] init success
+1.687770489598917e+09	info	bluebell/main.go:64	[router] init success
