@@ -4,14 +4,18 @@ type CodeType int64
 
 const (
 	CodeSuccess CodeType = 1000 + iota
+
 	CodeInvalidParams
 	CodeUserExist
 	CodeUserNotExist
 	CodeInvalidPassword
+
 	CodeServerBusy
+
 	CodeInvalidToken
 	CodeInvalidAuthFormat
 	CodeNotLogin
+
 	ErrVoteRepeated
 	ErrorVoteTimeExpire
 )

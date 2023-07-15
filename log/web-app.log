@@ -1853,3 +1853,63 @@
 1.6877704895973394e+09	info	bluebell/main.go:53	[redis] init success
 1.6877704895973394e+09	info	bluebell/main.go:61	[trans] init success
 1.687770489598917e+09	info	bluebell/main.go:64	[router] init success
+1.689345418115266e+09	info	bluebell/main.go:30	[logger] init success
+1.689345418115952e+09	info	bluebell/main.go:37	[snowflake] init success
+1.689345418116541e+09	error	mysql/mysql.go:27	connect to mysql failed, err: %v
+	{"error": "dial tcp 127.0.0.1:3306: connect: connection refused"}
+1.6893454181166642e+09	info	bluebell/main.go:44	[mysql] init success
+1.6893469054904408e+09	info	bluebell/main.go:30	[logger] init success
+1.689346905490763e+09	info	bluebell/main.go:37	[snowflake] init success
+1.689346905491064e+09	error	mysql/mysql.go:27	connect to mysql failed, err: %v
+	{"error": "dial tcp 127.0.0.1:3306: connect: connection refused"}
+1.6893469054911418e+09	info	bluebell/main.go:44	[mysql] init success
+1.689351720286763e+09	info	bluebell/main.go:30	[logger] init success
+1.689351720287431e+09	info	bluebell/main.go:37	[snowflake] init success
+1.689351720310984e+09	error	mysql/mysql.go:27	connect to mysql failed, err: %v
+	{"error": "Error 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)"}
+1.689351720311163e+09	info	bluebell/main.go:44	[mysql] init success
+1.689351737624804e+09	info	bluebell/main.go:30	[logger] init success
+1.689351737625289e+09	info	bluebell/main.go:37	[snowflake] init success
+1.68935173764462e+09	error	mysql/mysql.go:27	connect to mysql failed, err: %v
+	{"error": "Error 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)"}
+1.689351737645493e+09	info	bluebell/main.go:44	[mysql] init success
+1.689351757767227e+09	info	bluebell/main.go:30	[logger] init success
+1.689351757767686e+09	info	bluebell/main.go:37	[snowflake] init success
+1.689351757770452e+09	error	mysql/mysql.go:27	connect to mysql failed, err: %v
+	{"error": "Error 1049 (42000): Unknown database 'bluebell'"}
+1.689351757770873e+09	info	bluebell/main.go:44	[mysql] init success
+1.689351794579786e+09	info	bluebell/main.go:30	[logger] init success
+1.68935179458011e+09	info	bluebell/main.go:37	[snowflake] init success
+1.68935179458447e+09	info	bluebell/main.go:44	[mysql] init success
+1.689351851354988e+09	info	bluebell/main.go:31	[logger] init success
+1.689351851355496e+09	info	bluebell/main.go:38	[snowflake] init success
+1.689351851362666e+09	info	bluebell/main.go:45	[mysql] init success
+1.6893518513651042e+09	info	bluebell/main.go:51	[redis] init success
+1.689351875327513e+09	info	bluebell/main.go:33	[logger] init success
+1.689351875328314e+09	info	bluebell/main.go:40	[snowflake] init success
+1.689351875331424e+09	info	bluebell/main.go:47	[mysql] init success
+1.689351875332032e+09	info	bluebell/main.go:53	[redis] init success
+1.689351875332312e+09	info	bluebell/main.go:61	[trans] init success
+1.689351875334553e+09	info	bluebell/main.go:64	[router] init success
+1.689431031577038e+09	info	bluebell/main.go:33	[logger] init success
+1.6894310315779881e+09	info	bluebell/main.go:40	[snowflake] init success
+1.689431031619308e+09	info	bluebell/main.go:47	[mysql] init success
+1.689431031623629e+09	info	bluebell/main.go:53	[redis] init success
+1.689431031623925e+09	info	bluebell/main.go:61	[trans] init success
+1.689431031627106e+09	info	bluebell/main.go:64	[router] init success
+1.6894310845027452e+09	error	controller/community.go:15	GetCommunityList() error	{"error": "Error 1146 (42S02): Table 'bluebell.community' doesn't exist"}
+1.6894310845042e+09	info	logger/logger.go:75	/api/v1/community	{"status": 200, "method": "GET", "path": "/api/v1/community", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.039876917}
+1.689431095261656e+09	error	controller/user.go:24	[signup] [params] invalid err	{"error": "EOF"}
+1.689431095261794e+09	info	logger/logger.go:75	/api/v1/signup	{"status": 200, "method": "POST", "path": "/api/v1/signup", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000151542}
+1.689435549174556e+09	info	bluebell/main.go:33	[logger] init success
+1.689435549175601e+09	info	bluebell/main.go:40	[snowflake] init success
+1.6894355492272e+09	info	bluebell/main.go:47	[mysql] init success
+1.689435549231819e+09	info	bluebell/main.go:53	[redis] init success
+1.6894355492321138e+09	info	bluebell/main.go:61	[trans] init success
+1.6894355492341871e+09	info	bluebell/main.go:64	[router] init success
+1.6894379850037189e+09	info	bluebell/main.go:33	[logger] init success
+1.689437985004321e+09	info	bluebell/main.go:40	[snowflake] init success
+1.689437985071785e+09	info	bluebell/main.go:47	[mysql] init success
+1.689437985077197e+09	info	bluebell/main.go:53	[redis] init success
+1.689437985077472e+09	info	bluebell/main.go:61	[trans] init success
+1.68943798507888e+09	info	bluebell/main.go:64	[router] init success

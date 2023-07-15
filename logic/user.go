@@ -38,8 +38,8 @@ func Login(lf *model.LoginForm) (user *model.User, err error) {
 	if err = mysql.Login(user); err != nil {
 		return nil, err
 	}
-	// get userid success
-	// generate token
+
+	// 生成jwt token
 	accessToken, refreshToken, err := jwt.GenToken(user.UserId, user.Username)
 	if err != nil {
 		return nil, err

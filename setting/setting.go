@@ -10,16 +10,18 @@ import (
 )
 
 type AppConfig struct {
-	Name         string `mapstructure:"name"`
-	Mode         string `mapstructure:"mode"`
-	Host         string `mapstructure:"host"`
-	Port         int    `mapstructure:"port"`
-	Version      string `mapstructure:"version"`
-	StartTime    string `mapstructure:"start_time"`
-	MachineID    uint16 `mapstructure:"machine_id"`
-	*LogConfig   `mapstructure:"log"`
-	*MySQLConfig `mapstructure:"mysql"`
-	*RedisConfig `mapstructure:"redis"`
+	Name                       string        `mapstructure:"name"`
+	Mode                       string        `mapstructure:"mode"`
+	Host                       string        `mapstructure:"host"`
+	Port                       int           `mapstructure:"port"`
+	Version                    string        `mapstructure:"version"`
+	StartTime                  string        `mapstructure:"start_time"`
+	MachineID                  uint16        `mapstructure:"machine_id"`
+	AccessTokenExpireDuration  time.Duration `mapstructure:"jwt_access_expire"`
+	RefreshTokenExpireDuration time.Duration `mapstructure:"jwt_refresh_expire"`
+	*LogConfig                 `mapstructure:"log"`
+	*MySQLConfig               `mapstructure:"mysql"`
+	*RedisConfig               `mapstructure:"redis"`
 }
 
 type LogConfig struct {

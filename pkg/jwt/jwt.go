@@ -1,7 +1,6 @@
 package jwt
 
 import (
-	"fmt"
 	"time"
 
 	"github.com/dgrijalva/jwt-go"
@@ -16,8 +15,8 @@ type Claims struct {
 }
 
 var (
-	AccessTokenExpireDuration  = 30 * 24 * time.Hour
-	RefreshTokenExpireDuration = time.Hour * 24 * 30
+	AccessTokenExpireDuration  = 30 * 24 * time.Hour // 20 * time.Minute
+	RefreshTokenExpireDuration = 24 * 30 * time.Hour // 30 * 24 * time.Hour
 )
 
 var (
@@ -25,22 +24,24 @@ var (
 )
 
 // salt
-var secret = []byte("joey89")
+var secret = []byte("joey1729")
 
+// GenToken 根据用户身份信息生成jwt 的access token和refresh token
 func GenToken(userId uint64, username string) (aToken, rToken string, err error) {
 	c := &Claims{
+		// 自定义字段
 		userId,
 		username,
 		jwt.StandardClaims{
-			ExpiresAt: time.Now().Add(AccessTokenExpireDuration).Unix(),
-			Issuer:    "bluebell",
+			// 标准字段
+			ExpiresAt: time.Now().Add(AccessTokenExpireDuration).Unix(), // 过期时间
+			Issuer:    "bluebell",                                       // 发布者
 		},
 	}
-	fmt.Println(c.ExpiresAt)
-	// with userid and username
+
+	// 使用指定加密算法，将json对象c加密生成token，再对token进行签名
 	aToken, err = jwt.NewWithClaims(jwt.SigningMethodHS256, c).SignedString(secret)
 
-	// without any data
 	rToken, err = jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.StandardClaims{
 		ExpiresAt: time.Now().Add(RefreshTokenExpireDuration).Unix(),
 		Issuer:    "bluebell",
@@ -49,41 +50,37 @@ func GenToken(userId uint64, username string) (aToken, rToken string, err error)
 	return
 }
 
+// ParseToken 将token字符串解析为json对象
 func ParseToken(tokenString string) (claims *Claims, err error) {
-
 	claims = new(Claims)
 	token, err := jwt.ParseWithClaims(tokenString, claims, keyFunc)
-	fmt.Println(claims.UserId)
-	fmt.Println(claims.Username)
-	fmt.Println(claims.ExpiresAt)
-	fmt.Println(time.Now().Unix())
-
 	if err != nil {
 		return nil, err
 	}
+
 	if token.Valid {
 		return claims, nil
 	}
 	return nil, ErrorInvalidToken
 }
 
+// RefreshToken 验证并解析access token和refresh token，如果合法则重新生成
 func RefreshToken(accessToken, refreshToken string) (newAccessToken, newRefreshToken string, err error) {
-	// invalid token
+	// 解析refresh token并验证是否有效
 	if _, err = jwt.Parse(refreshToken, keyFunc); err != nil {
 		return
 	}
 
-	// parse token
+	// 解析access token获取json信息
 	var claims Claims
 	_, err = jwt.ParseWithClaims(accessToken, &claims, keyFunc)
-
 	v, _ := err.(*jwt.ValidationError)
 
-	// token expired
+	// 如果access token 解析成功并且过期
 	if v.Errors == jwt.ValidationErrorExpired {
 		return GenToken(claims.UserId, claims.Username)
 	}
-	fmt.Println(3)
+
 	return
 }
 

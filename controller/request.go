@@ -8,27 +8,26 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-const ContextUserIdKey = "user_id"
-const ContextUsernameKey = "username"
+const CtxUserIdKey = "user_id"
+const CtxUsernameKey = "username"
 
 var (
 	ErrorUserNotLogin = errors.New("user not login")
 )
 
+// GetCurrentUser 从context中获取uid信息，可用于jwt鉴权后
 func GetCurrentUser(c *gin.Context) (userId uint64, err error) {
-	var id uint64
-	id = 463373410378973185
-	c.Set(ContextUserIdKey, id)
-	_userId, ok := c.Get(ContextUserIdKey)
+	uid, ok := c.Get(CtxUserIdKey)
 	if !ok {
-		zap.L().Error("get user id err", zap.Error(err))
 		err = ErrorUserNotLogin
+		zap.L().Error("[request] not login", zap.Error(err))
 		return
 	}
-	userId, ok = _userId.(uint64)
+
+	userId, ok = uid.(uint64)
 	if !ok {
-		zap.L().Error("user id is not uint64 type", zap.Error(err))
 		err = ErrorUserNotLogin
+		zap.L().Error("[request] invalid user_id", zap.Error(err))
 		return
 	}
 	return

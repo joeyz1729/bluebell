@@ -5,8 +5,8 @@ port: 8080
 version: "v0.1"
 start_time: "2023-5-29"
 machine_id: 1
-jwt_access_expire: 25
-jwt_refresh_expire: 25
+jwt_access_expire: 2592000
+jwt_refresh_expire: 2592000
 
 log:
   level: "debug"
@@ -20,7 +20,7 @@ mysql:
   host: "127.0.0.1"
   port: 3306
   username: "root"
-  password: "mysql"
+  password: "Zy_9908091729"
   dbname: "bluebell"
   max_life_time: 10
   max_open_conns: 200
@@ -30,7 +30,7 @@ mysql:
 redis:
   host: "127.0.0.1"
   port: 6379
-  password: ""
+  password: "Zy_9908091729"
   db: 0
   pool_size: 100
 
