@@ -83,7 +83,6 @@ func PostListOrderHandler(c *gin.Context) {
 
 }
 func PostListHandler(c *gin.Context) {
-
 	pageNum, pageSize := getPageInfo(c)
 
 	postList, err := logic.GetPostList(pageNum, pageSize)

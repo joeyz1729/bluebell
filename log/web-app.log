@@ -1913,3 +1913,112 @@
 1.689437985077197e+09	info	bluebell/main.go:53	[redis] init success
 1.689437985077472e+09	info	bluebell/main.go:61	[trans] init success
 1.68943798507888e+09	info	bluebell/main.go:64	[router] init success
+1.689609003619988e+09	info	bluebell/main.go:33	[logger] init success
+1.68960900362122e+09	info	bluebell/main.go:40	[snowflake] init success
+1.6896090036764271e+09	info	bluebell/main.go:47	[mysql] init success
+1.689609003680606e+09	info	bluebell/main.go:53	[redis] init success
+1.689609003680951e+09	info	bluebell/main.go:61	[trans] init success
+1.689609003683556e+09	info	bluebell/main.go:64	[router] init success
+1.689609028854375e+09	error	controller/user.go:24	[signup] [params] invalid err	{"error": "EOF"}
+1.689609028856954e+09	info	logger/logger.go:75	/api/v1/signup	{"status": 200, "method": "POST", "path": "/api/v1/signup", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.002925125}
+1.68960911187941e+09	error	controller/user.go:28	[signup] [params] verification err	{"error": "Key: 'SignupForm.confirm_password' Error:Field validation for 'confirm_password' failed on the 'required' tag\nKey: 'SignupForm.email' Error:Field validation for 'email' failed on the 'email' tag"}
+1.689609111880197e+09	info	logger/logger.go:75	/api/v1/signup	{"status": 200, "method": "POST", "path": "/api/v1/signup", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.002229334}
+1.68960913116475e+09	error	controller/user.go:24	[signup] [params] invalid err	{"error": "invalid character '}' looking for beginning of object key string"}
+1.689609131165422e+09	info	logger/logger.go:75	/api/v1/signup	{"status": 200, "method": "POST", "path": "/api/v1/signup", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000762459}
+1.689609134607944e+09	error	controller/user.go:28	[signup] [params] verification err	{"error": "Key: 'SignupForm.email' Error:Field validation for 'email' failed on the 'email' tag"}
+1.689609134608116e+09	info	logger/logger.go:75	/api/v1/signup	{"status": 200, "method": "POST", "path": "/api/v1/signup", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.001155334}
+1.689609279068089e+09	error	controller/user.go:28	[signup] [params] verification err	{"error": "Key: 'SignupForm.email' Error:Field validation for 'email' failed on the 'email' tag"}
+1.689609279069219e+09	info	logger/logger.go:75	/api/v1/signup	{"status": 200, "method": "POST", "path": "/api/v1/signup", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.001234125}
+1.689609439648289e+09	info	bluebell/main.go:33	[logger] init success
+1.68960943964869e+09	info	bluebell/main.go:40	[snowflake] init success
+1.6896094396555772e+09	info	bluebell/main.go:47	[mysql] init success
+1.6896094396574972e+09	info	bluebell/main.go:53	[redis] init success
+1.689609439657769e+09	info	bluebell/main.go:61	[trans] init success
+1.6896094396605508e+09	info	bluebell/main.go:64	[router] init success
+1.68960944292135e+09	error	controller/user.go:28	[signup] [params] verification err	{"error": "Key: 'SignupForm.email' Error:Field validation for 'email' failed on the 'email' tag"}
+1.689609442921551e+09	info	logger/logger.go:75	/api/v1/signup	{"status": 200, "method": "POST", "path": "/api/v1/signup", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000637125}
+1.689609447083777e+09	error	controller/user.go:28	[signup] [params] verification err	{"error": "Key: 'SignupForm.email' Error:Field validation for 'email' failed on the 'email' tag"}
+1.689609447083922e+09	info	logger/logger.go:75	/api/v1/signup	{"status": 200, "method": "POST", "path": "/api/v1/signup", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000184208}
+1.689609460584109e+09	info	bluebell/main.go:33	[logger] init success
+1.689609460584523e+09	info	bluebell/main.go:40	[snowflake] init success
+1.689609460587019e+09	info	bluebell/main.go:47	[mysql] init success
+1.689609460587553e+09	info	bluebell/main.go:53	[redis] init success
+1.6896094605878022e+09	info	bluebell/main.go:61	[trans] init success
+1.6896094605894258e+09	info	bluebell/main.go:64	[router] init success
+1.689609462909037e+09	info	logger/logger.go:75	/api/v1/signup	{"status": 200, "method": "POST", "path": "/api/v1/signup", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.012775375}
+1.689609473614372e+09	error	controller/user.go:28	[signup] [params] verification err	{"error": "Key: 'SignupForm.age' Error:Field validation for 'age' failed on the 'gte' tag"}
+1.68960947361454e+09	info	logger/logger.go:75	/api/v1/signup	{"status": 200, "method": "POST", "path": "/api/v1/signup", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000217541}
+1.689609504558238e+09	error	controller/user.go:24	[signup] [params] invalid err	{"error": "json: cannot unmarshal string into Go struct field SignupForm.age of type uint8"}
+1.68960950455852e+09	info	logger/logger.go:75	/api/v1/signup	{"status": 200, "method": "POST", "path": "/api/v1/signup", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000441458}
+1.6896095117883909e+09	error	controller/user.go:24	[signup] [params] invalid err	{"error": "json: cannot unmarshal string into Go struct field SignupForm.age of type uint8"}
+1.6896095117887402e+09	info	logger/logger.go:75	/api/v1/signup	{"status": 200, "method": "POST", "path": "/api/v1/signup", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000373459}
+1.6896095225635111e+09	error	controller/user.go:24	[signup] [params] invalid err	{"error": "json: cannot unmarshal string into Go struct field SignupForm.age of type uint8"}
+1.689609522564076e+09	info	logger/logger.go:75	/api/v1/signup	{"status": 200, "method": "POST", "path": "/api/v1/signup", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.00062975}
+1.6896095503244128e+09	info	logger/logger.go:75	/api/v1/signup	{"status": 200, "method": "POST", "path": "/api/v1/signup", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.005714833}
+1.68960955490991e+09	info	logger/logger.go:75	/api/v1/signup	{"status": 200, "method": "POST", "path": "/api/v1/signup", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.002395208}
+1.689609558842974e+09	error	controller/user.go:28	[signup] [params] verification err	{"error": "Key: 'SignupForm.age' Error:Field validation for 'age' failed on the 'gte' tag"}
+1.6896095588432481e+09	info	logger/logger.go:75	/api/v1/signup	{"status": 200, "method": "POST", "path": "/api/v1/signup", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000308958}
+1.689609589576258e+09	info	bluebell/main.go:33	[logger] init success
+1.6896095895766559e+09	info	bluebell/main.go:40	[snowflake] init success
+1.6896095895805728e+09	info	bluebell/main.go:47	[mysql] init success
+1.689609589581304e+09	info	bluebell/main.go:53	[redis] init success
+1.689609589581784e+09	info	bluebell/main.go:61	[trans] init success
+1.6896095895829692e+09	info	bluebell/main.go:64	[router] init success
+1.6896095920234509e+09	error	controller/user.go:28	[signup] [params] verification err	{"error": "Key: 'SignupForm.age' Error:Field validation for 'age' failed on the 'gte' tag"}
+1.68960959202371e+09	info	logger/logger.go:75	/api/v1/signup	{"status": 200, "method": "POST", "path": "/api/v1/signup", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.001002}
+1.689609998079944e+09	info	bluebell/main.go:33	[logger] init success
+1.68960999808028e+09	info	bluebell/main.go:40	[snowflake] init success
+1.689609998121731e+09	info	bluebell/main.go:47	[mysql] init success
+1.6896099981247182e+09	info	bluebell/main.go:53	[redis] init success
+1.689609998125126e+09	info	bluebell/main.go:61	[trans] init success
+1.689609998126425e+09	info	bluebell/main.go:64	[router] init success
+1.689610003981387e+09	info	logger/logger.go:75	/api/v1/signup	{"status": 200, "method": "POST", "path": "/api/v1/signup", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.009373209}
+1.6896100183085408e+09	info	bluebell/main.go:33	[logger] init success
+1.689610018308946e+09	info	bluebell/main.go:40	[snowflake] init success
+1.689610018312715e+09	info	bluebell/main.go:47	[mysql] init success
+1.689610018313442e+09	info	bluebell/main.go:53	[redis] init success
+1.689610018313806e+09	info	bluebell/main.go:61	[trans] init success
+1.689610018315108e+09	info	bluebell/main.go:64	[router] init success
+1.689610026542021e+09	info	bluebell/main.go:33	[logger] init success
+1.689610026543006e+09	info	bluebell/main.go:40	[snowflake] init success
+1.689610026545504e+09	info	bluebell/main.go:47	[mysql] init success
+1.689610026545981e+09	info	bluebell/main.go:53	[redis] init success
+1.689610026546387e+09	info	bluebell/main.go:61	[trans] init success
+1.689610026547458e+09	info	bluebell/main.go:64	[router] init success
+1.689610039402648e+09	error	controller/user.go:24	[signup] [params] invalid err	{"error": "json: cannot unmarshal number 123312132 into Go struct field SignupForm.age of type uint8"}
+1.6896100394030201e+09	info	logger/logger.go:75	/api/v1/signup	{"status": 200, "method": "POST", "path": "/api/v1/signup", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000619958}
+1.689610045339475e+09	error	controller/user.go:24	[signup] [params] invalid err	{"error": "json: cannot unmarshal number 1244 into Go struct field SignupForm.age of type uint8"}
+1.6896100453396008e+09	info	logger/logger.go:75	/api/v1/signup	{"status": 200, "method": "POST", "path": "/api/v1/signup", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.00015175}
+1.689610049299384e+09	error	controller/user.go:24	[signup] [params] invalid err	{"error": "json: cannot unmarshal number -1 into Go struct field SignupForm.age of type uint8"}
+1.689610049299595e+09	info	logger/logger.go:75	/api/v1/signup	{"status": 200, "method": "POST", "path": "/api/v1/signup", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000238042}
+1.689610054732901e+09	error	controller/user.go:24	[signup] [params] invalid err	{"error": "json: cannot unmarshal number 13.22 into Go struct field SignupForm.age of type uint8"}
+1.689610054733025e+09	info	logger/logger.go:75	/api/v1/signup	{"status": 200, "method": "POST", "path": "/api/v1/signup", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000151583}
+1.689610068891504e+09	error	controller/user.go:28	[signup] [params] verification err	{"error": "Key: 'SignupForm.email' Error:Field validation for 'email' failed on the 'email' tag"}
+1.689610068891671e+09	info	logger/logger.go:75	/api/v1/signup	{"status": 200, "method": "POST", "path": "/api/v1/signup", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000382333}
+1.689610087193671e+09	info	logger/logger.go:75	/api/v1/signup	{"status": 200, "method": "POST", "path": "/api/v1/signup", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.004158041}
+1.6896102952991722e+09	info	bluebell/main.go:33	[logger] init success
+1.6896102953003001e+09	info	bluebell/main.go:40	[snowflake] init success
+1.689610295304232e+09	info	bluebell/main.go:47	[mysql] init success
+1.689610295304876e+09	info	bluebell/main.go:53	[redis] init success
+1.6896102953051672e+09	info	bluebell/main.go:61	[trans] init success
+1.689610295306624e+09	info	bluebell/main.go:64	[router] init success
+1.689610299258827e+09	error	controller/user.go:28	[signup] [params] verification err	{"error": "Key: 'SignupForm.confirm_password' Error:Field validation for 'confirm_password' failed on the 'eqfield' tag"}
+1.689610299259058e+09	info	logger/logger.go:75	/api/v1/signup	{"status": 200, "method": "POST", "path": "/api/v1/signup", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000666667}
+1.689610307302731e+09	error	controller/user.go:28	[signup] [params] verification err	{"error": "Key: 'SignupForm.age' Error:Field validation for 'age' failed on the 'lte' tag"}
+1.689610307303575e+09	info	logger/logger.go:75	/api/v1/signup	{"status": 200, "method": "POST", "path": "/api/v1/signup", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000902125}
+1.689610313672501e+09	error	controller/user.go:37	[signup] [logic] err	{"error": "user already exists"}
+1.689610313672621e+09	info	logger/logger.go:75	/api/v1/signup	{"status": 200, "method": "POST", "path": "/api/v1/signup", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.003367}
+1.689610369269275e+09	info	logger/logger.go:75	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.003139084}
+1.689610409763217e+09	info	logger/logger.go:75	/api/v1/community	{"status": 200, "method": "GET", "path": "/api/v1/community", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.0041125}
+1.689610414725021e+09	error	logic/post.go:83	GetUserById err	{"error": "sql: no rows in result set"}
+1.689610414725153e+09	error	controller/post.go:91	GetPostList() err	{"error": "sql: no rows in result set"}
+1.689610414725229e+09	info	logger/logger.go:75	/api/v1/posts	{"status": 200, "method": "GET", "path": "/api/v1/posts", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.002985291}
+1.689610624947523e+09	error	logic/post.go:83	GetUserById err	{"error": "sql: no rows in result set"}
+1.6896106249480371e+09	error	controller/post.go:91	GetPostList() err	{"error": "sql: no rows in result set"}
+1.689610624948189e+09	info	logger/logger.go:75	/api/v1/posts	{"status": 200, "method": "GET", "path": "/api/v1/posts", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.006426917}
+1.6896106423156512e+09	info	logger/logger.go:75	/api/v1/community/1	{"status": 200, "method": "GET", "path": "/api/v1/community/1", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.003128459}
+1.689610643975378e+09	info	logger/logger.go:75	/api/v1/community/2	{"status": 200, "method": "GET", "path": "/api/v1/community/2", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000514042}
+1.6896106452321112e+09	info	logger/logger.go:75	/api/v1/community/3	{"status": 200, "method": "GET", "path": "/api/v1/community/3", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000926375}
+1.689610646779257e+09	info	logger/logger.go:75	/api/v1/community/4	{"status": 200, "method": "GET", "path": "/api/v1/community/4", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000486291}
+1.689610805630294e+09	info	logger/logger.go:75	/api/v1/community/4	{"status": 200, "method": "GET", "path": "/api/v1/community/4", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.003080417}
+1.689610809445075e+09	info	logger/logger.go:75	/api/v1/posts	{"status": 200, "method": "GET", "path": "/api/v1/posts", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.003548792}

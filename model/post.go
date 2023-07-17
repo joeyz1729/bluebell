@@ -21,5 +21,5 @@ type PostDetail struct {
 	AuthorName string `json:"username" db:"username"`
 	Votes      int64  `json:"votes"`
 	*Post
-	*CommunityDetail
+	*CommunityDetail `json:"community"`
 }

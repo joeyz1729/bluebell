@@ -6,11 +6,11 @@ const (
 )
 
 type SignupForm struct {
-	Age             uint8  `json:"age" binding:"gte=1,lte=130"`
+	Age             uint8  `json:"age" binding:"omitempty,gte=1,lte=130"`
 	Username        string `json:"username" binding:"required"`
 	Password        string `json:"password" binding:"required"`
 	ConfirmPassword string `json:"confirm_password" binding:"required,eqfield=Password"`
-	Email           string `json:"email" binding:"email"`
+	Email           string `json:"email,omitempty" binding:"omitempty,email"`
 }
 
 type LoginForm struct {
