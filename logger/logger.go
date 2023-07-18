@@ -16,54 +16,68 @@ import (
 	"go.uber.org/zap/zapcore"
 )
 
-//var sugaredLogger *zap.SugaredLogger
+// var sugaredLogger *zap.SugaredLogger
+var logger *zap.Logger
 
 func Init(conf *setting.LogConfig, mode string) (err error) {
 	writeSyncer := getLogWriter(conf)
 	encoder := getEncoder()
 
-	level := zapcore.DebugLevel
-	//err = level.UnmarshalText([]byte(conf.Level))
-	//if err != nil {
-	//	return
-	//}
+	var l = new(zapcore.Level)
+	err = l.UnmarshalText([]byte(conf.Level))
+	if err != nil {
+		return
+	}
 
 	var core zapcore.Core
 	if mode == "dev" {
-		// dev mode, log output to terminal
+		// 开发模式，
 		consoleEncoder := zapcore.NewConsoleEncoder(zap.NewDevelopmentEncoderConfig())
-		// write to log file
+
+		// 使用NewTee输出到文件以及终端
 		core = zapcore.NewTee(
-			zapcore.NewCore(encoder, writeSyncer, level),
-			zapcore.NewCore(consoleEncoder, zapcore.Lock(os.Stdout), level),
+			zapcore.NewCore(encoder, writeSyncer, l),
+			zapcore.NewCore(consoleEncoder, zapcore.Lock(os.Stdout), zapcore.DebugLevel),
 		)
 
 	} else {
-		// output to terminal
-		core = zapcore.NewCore(encoder, writeSyncer, level)
+		core = zapcore.NewCore(encoder, writeSyncer, l)
 	}
-	logger := zap.New(core, zap.AddCaller())
+	// AddCaller 添加调用方信息
+	// AddCallerSkip(skip int)
+	logger = zap.New(core, zap.AddCaller())
+
 	//sugaredLogger = logger.Sugar()
 	zap.ReplaceGlobals(logger)
-
+	zap.L().Info("[logger] init success")
 	return
 }
 
+// getLogWriter 使用lumberjack，添加日志切割归档功能
 func getLogWriter(conf *setting.LogConfig) zapcore.WriteSyncer {
 	lumberjackLogger := &lumberjack.Logger{
 		Filename:   conf.Filename,
-		MaxSize:    conf.MaxSize,
-		MaxBackups: conf.MaxBackups,
-		MaxAge:     conf.MaxAge,
-		Compress:   false,
+		MaxSize:    conf.MaxSize,    //最大文件大小 M
+		MaxBackups: conf.MaxBackups, // 最大备份数量
+		MaxAge:     conf.MaxAge,     //最大备份天数
+		Compress:   false,           // 是否压缩
 	}
 	return zapcore.AddSync(lumberjackLogger)
 }
 
+// getEncoder 设置日志的编码格式
 func getEncoder() zapcore.Encoder {
-	return zapcore.NewConsoleEncoder(zap.NewProductionEncoderConfig())
+	encoderConfig := zap.NewProductionEncoderConfig()
+
+	// 日志级别设置为大写，INFO，ERROR，WARN
+	encoderConfig.EncodeLevel = zapcore.CapitalLevelEncoder
+	// 日志时间格式修改为"2006-01-02T15:04:05.000Z0700"格式
+	encoderConfig.EncodeTime = zapcore.ISO8601TimeEncoder
+
+	return zapcore.NewConsoleEncoder(encoderConfig)
 }
 
+// GinLogger 自定义日志，用于替换Gin框架中的log记录文件
 func GinLogger() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		start := time.Now()
@@ -72,7 +86,7 @@ func GinLogger() gin.HandlerFunc {
 		c.Next()
 
 		cost := time.Since(start)
-		zap.L().Info(path,
+		logger.Info(path,
 			zap.Int("status", c.Writer.Status()),
 			zap.String("method", c.Request.Method),
 			zap.String("path", path),
@@ -85,7 +99,7 @@ func GinLogger() gin.HandlerFunc {
 	}
 }
 
-// GinRecovery recover掉项目可能出现的panic
+// GinRecovery recover掉项目可能出现的panic，并使用zap记录相关日志
 func GinRecovery(stack bool) gin.HandlerFunc {
 	return func(c *gin.Context) {
 		defer func() {
@@ -103,7 +117,7 @@ func GinRecovery(stack bool) gin.HandlerFunc {
 
 				httpRequest, _ := httputil.DumpRequest(c.Request, false)
 				if brokenPipe {
-					zap.L().Error(c.Request.URL.Path,
+					logger.Error(c.Request.URL.Path,
 						zap.Any("error", err),
 						zap.String("request", string(httpRequest)),
 					)
@@ -114,13 +128,13 @@ func GinRecovery(stack bool) gin.HandlerFunc {
 				}
 
 				if stack {
-					zap.L().Error("[Recovery from panic]",
+					logger.Error("[Recovery from panic]",
 						zap.Any("error", err),
 						zap.String("request", string(httpRequest)),
 						zap.String("stack", string(debug.Stack())),
 					)
 				} else {
-					zap.L().Error("[Recovery from panic]",
+					logger.Error("[Recovery from panic]",
 						zap.Any("error", err),
 						zap.String("request", string(httpRequest)),
 					)

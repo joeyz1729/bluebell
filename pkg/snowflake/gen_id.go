@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"time"
 
+	"go.uber.org/zap"
+
 	sf "github.com/sony/sonyflake"
 )
 
@@ -27,13 +29,15 @@ func Init(startTime string, machineId uint16) (err error) {
 		MachineID: getMachineID,
 	}
 	sonyFlake = sf.NewSonyflake(settings)
+	zap.L().Info("[snowflake] init success")
+
 	return
 }
 
 // GenID 返回生成的id值
 func GenID() (id uint64, err error) {
 	if sonyFlake == nil {
-		err = fmt.Errorf("sony flake not inited")
+		err = fmt.Errorf("sonyflake not inited")
 		return
 	}
 

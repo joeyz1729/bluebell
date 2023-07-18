@@ -25,19 +25,18 @@ func main() {
 		fmt.Printf("init settings err: %s\n", err)
 	}
 
-	// 2. initialize log
-	if err := logger.Init(setting.Conf.LogConfig, "dev"); err != nil {
+	// zap 日志记录
+	if err := logger.Init(setting.Conf.LogConfig, setting.Conf.Mode); err != nil {
 		fmt.Printf("init logger err: %s\n", err)
 	}
 	defer zap.L().Sync()
-	zap.L().Info("[logger] init success")
 
+	// snowflake 雪花算法，用于注册时生成用于id
 	startTime, machineId := setting.Conf.StartTime, setting.Conf.MachineID
 	if err := snowflake.Init(startTime, machineId); err != nil {
 		fmt.Printf("init snowflake id err: %v\n", err)
 		return
 	}
-	zap.L().Info("[snowflake] init success")
 
 	// 3. connect to database
 	if err := mysql.Init(setting.Conf.MySQLConfig); err != nil {
@@ -60,7 +59,8 @@ func main() {
 	}
 	zap.L().Info("[trans] init success")
 
-	r := router.Setup()
+	// gin
+	r := router.Setup(setting.Conf.Mode)
 	zap.L().Info("[router] init success")
 
 	//5. graceful shutdown
@@ -87,6 +87,6 @@ func main() {
 	//}
 	//zap.L().Info("server exiting")
 
-	//// 5. start service
+	// 5. start service
 	r.Run(":8081")
 }

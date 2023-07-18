@@ -24,7 +24,7 @@ var (
 )
 
 // salt
-var secret = []byte("joey1729")
+var secret = []byte("joey1729.bluebell")
 
 // GenToken 根据用户身份信息生成jwt 的access token和refresh token
 func GenToken(userId uint64, username string) (aToken, rToken string, err error) {

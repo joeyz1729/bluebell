@@ -11,21 +11,25 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func Setup() *gin.Engine {
-	gin.SetMode(gin.DebugMode)
+func Setup(mode string) *gin.Engine {
+	if mode == gin.ReleaseMode {
+		gin.SetMode(gin.ReleaseMode)
+	} else {
+		gin.SetMode(gin.DebugMode)
+	}
+
+	// 自定制日志记录和恢复
 	r := gin.New()
+	r.Use(logger.GinLogger(), logger.GinRecovery(true))
+	//r.Use(logger.GinLogger(), logger.GinRecovery(true), middleware.RateLimitMiddleware(time.Second*2, 1))
 
 	r.GET("/ping", func(c *gin.Context) {
 		c.String(http.StatusOK, "pong")
 	})
 
-	//r.Use(logger.GinLogger(), logger.GinRecovery(true), middleware.RateLimitMiddleware(time.Second*2, 1))
-
 	pprof.Register(r)
 
 	v1 := r.Group("/api/v1")
-	v1.Use(logger.GinLogger(), logger.GinRecovery(true))
-
 	v1.POST("/signup", controller.SignupHandler)
 	v1.POST("/login", controller.LoginHandler)
 	v1.GET("/refresh_token", controller.RefreshTokenHandler)
