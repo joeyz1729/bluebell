@@ -15,12 +15,11 @@ import (
 )
 
 func main() {
-	// --------flag-------------
+	// 读取配置文件
+	// ./bluebell -conf conf/config.yaml
 	var configPath string
 	flag.StringVar(&configPath, "conf", "./conf/config.yaml", "配置文件路径")
 	flag.Parse()
-
-	// 1. load config file
 	if err := setting.Init(configPath); err != nil {
 		fmt.Printf("init settings err: %s\n", err)
 	}
@@ -88,5 +87,5 @@ func main() {
 	//zap.L().Info("server exiting")
 
 	// 5. start service
-	r.Run(":8081")
+	r.Run(fmt.Sprintf(":%d", setting.Conf.Port))
 }

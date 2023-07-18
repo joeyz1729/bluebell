@@ -12,9 +12,9 @@ import (
 type AppConfig struct {
 	Name                       string        `mapstructure:"name"`
 	Mode                       string        `mapstructure:"mode"`
+	Version                    string        `mapstructure:"version"`
 	Host                       string        `mapstructure:"host"`
 	Port                       int           `mapstructure:"port"`
-	Version                    string        `mapstructure:"version"`
 	StartTime                  string        `mapstructure:"start_time"`
 	MachineID                  uint16        `mapstructure:"machine_id"`
 	AccessTokenExpireDuration  time.Duration `mapstructure:"jwt_access_expire"`
@@ -45,8 +45,8 @@ type MySQLConfig struct {
 
 type RedisConfig struct {
 	Host     string `mapstructure:"host"`
-	Password string `mapstructure:"password"`
 	Port     int    `mapstructure:"port"`
+	Password string `mapstructure:"password"`
 	DB       int    `mapstructure:"db"`
 	PoolSize int    `mapstructure:"pool_size"`
 	//MinIdleConns int    `mapstructure:"min_idle_conns"`
@@ -54,26 +54,23 @@ type RedisConfig struct {
 
 var Conf = new(AppConfig)
 
-//var ConfigFile = "D:/Codes/Golang/src/zouyi/web-app2/config/config.yaml"
-
 func Init(configFile string) (err error) {
+	// 读取配置文件
 	viper.SetConfigFile(configFile)
-	//viper.SetConfigName("./config.yaml")
-	//viper.AddConfigPath("./config/") //在main.go中运行, 所以.是项目根目录
-	//viper.SetConfigType("yaml")
-
 	err = viper.ReadInConfig()
 	if err != nil {
 		//panic(fmt.Errorf("Fatal err read config file: %s\n", err))
-		fmt.Println("[setting] viper read config file err ")
+		fmt.Printf("[setting] viper read config file err:%v\n", err)
 		return
 	}
+	// 解析配置文件
 	err = viper.Unmarshal(&Conf)
 	if err != nil {
-		fmt.Println("[setting] viper unmarshal config file err")
+		fmt.Printf("[setting] viper unmarshal config file err:%v\n", err)
 		return
 	}
 
+	// 实时监控配置变化
 	viper.WatchConfig()
 	viper.OnConfigChange(func(in fsnotify.Event) {
 		fmt.Println("[setting] viper config file has been changed")

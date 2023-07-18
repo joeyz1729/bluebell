@@ -1,14 +1,10 @@
 name: "web-app"
 mode: "dev"
 version: "v0.1"
-
 host: 127.0.0.1
-port: 8080
-
-
+port: 8081
 start_time: "2023-5-29"
 machine_id: 1
-
 jwt_access_expire: 2592000
 jwt_refresh_expire: 2592000
 
