@@ -8,13 +8,6 @@ import (
 	"go.uber.org/zap"
 )
 
-// redis score
-// vote + 432
-
-// Voting restriction: Posts exceeding one week are not allowed to vote.
-// After expiration,save the data in redis to mysql.
-// Delete data from mysql when it expires.
-
 func PostVote(userId uint64, vf *model.VoteForm) error {
 	zap.L().Debug("logic.post vote",
 		zap.Uint64("userId", userId),

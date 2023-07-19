@@ -53,3 +53,36 @@
 2023-07-19T14:13:20.177+0800	INFO	controller/validator.go:61	init trans success
 2023-07-19T14:13:20.179+0800	INFO	router/router.go:54	[router] init success
 2023-07-19T14:13:22.673+0800	INFO	logger/logger.go:89	/api/v1/posts/1	{"status": 200, "method": "GET", "path": "/api/v1/posts/1", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.007571209}
+2023-07-19T14:54:45.171+0800	INFO	logger/logger.go:52	[logger] init success
+2023-07-19T14:54:45.171+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-07-19T14:54:45.201+0800	INFO	mysql/mysql.go:40	[mysql] init success
+2023-07-19T14:54:45.204+0800	INFO	redis/redis.go:28	[redis] init success
+2023-07-19T14:54:45.204+0800	INFO	controller/validator.go:61	init trans success
+2023-07-19T14:54:45.205+0800	INFO	router/router.go:54	[router] init success
+2023-07-19T14:54:49.351+0800	INFO	logger/logger.go:89	/api/v1/vote	{"status": 404, "method": "GET", "path": "/api/v1/vote", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000000541}
+2023-07-19T14:54:54.054+0800	ERROR	controller/vote.go:39	post vote err	{"error": "vote repeated"}
+2023-07-19T14:54:54.054+0800	INFO	logger/logger.go:89	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.001907958}
+2023-07-19T14:55:11.667+0800	ERROR	controller/vote.go:39	post vote err	{"error": "vote repeated"}
+2023-07-19T14:55:11.668+0800	INFO	logger/logger.go:89	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.00115}
+2023-07-19T14:55:20.038+0800	ERROR	controller/vote.go:39	post vote err	{"error": "vote repeated"}
+2023-07-19T14:55:20.038+0800	INFO	logger/logger.go:89	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.00118425}
+2023-07-19T14:55:23.419+0800	ERROR	controller/vote.go:39	post vote err	{"error": "vote repeated"}
+2023-07-19T14:55:23.419+0800	INFO	logger/logger.go:89	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000865459}
+2023-07-19T14:57:03.769+0800	ERROR	controller/vote.go:39	post vote err	{"error": "vote repeated"}
+2023-07-19T14:57:03.770+0800	INFO	logger/logger.go:89	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.002233}
+2023-07-19T14:57:19.102+0800	ERROR	controller/vote.go:39	post vote err	{"error": "vote repeated"}
+2023-07-19T14:57:19.103+0800	INFO	logger/logger.go:89	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.001182542}
+2023-07-19T14:57:35.622+0800	ERROR	controller/vote.go:39	post vote err	{"error": "vote repeated"}
+2023-07-19T14:57:35.623+0800	INFO	logger/logger.go:89	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.001402042}
+2023-07-19T14:57:39.246+0800	ERROR	controller/vote.go:39	post vote err	{"error": "vote repeated"}
+2023-07-19T14:57:39.246+0800	INFO	logger/logger.go:89	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.011285541}
+2023-07-19T15:08:38.055+0800	ERROR	controller/vote.go:24	vote form binding err	{"error": "json: cannot unmarshal number 1442 into Go struct field VoteForm.attitude of type int8"}
+2023-07-19T15:08:38.057+0800	INFO	logger/logger.go:89	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.001609958}
+2023-07-19T15:08:51.981+0800	ERROR	controller/vote.go:24	vote form binding err	{"error": "json: cannot unmarshal number 144 into Go struct field VoteForm.attitude of type int8"}
+2023-07-19T15:08:51.982+0800	INFO	logger/logger.go:89	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000913167}
+2023-07-19T15:09:00.844+0800	INFO	logger/logger.go:89	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.002459042}
+2023-07-19T15:09:21.497+0800	ERROR	controller/vote.go:39	post vote err	{"error": "vote repeated"}
+2023-07-19T15:09:21.498+0800	INFO	logger/logger.go:89	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.001098625}
+2023-07-19T15:09:28.078+0800	INFO	logger/logger.go:89	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000526666}
+2023-07-19T15:09:36.561+0800	INFO	logger/logger.go:89	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.00058575}
+2023-07-19T15:09:39.982+0800	INFO	logger/logger.go:89	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000791584}

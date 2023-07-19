@@ -33,7 +33,7 @@ func SignupHandler(c *gin.Context) {
 	}
 
 	if err := logic.Signup(sf); err != nil {
-		zap.L().Error("signup logic err", zap.Error(err))
+		zap.L().Error("signup err", zap.Error(err))
 		if errors.Is(err, mysql.ErrorUserExist) {
 			ResponseError(c, CodeUserExist)
 			return

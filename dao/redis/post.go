@@ -11,22 +11,24 @@ import (
 	"github.com/redis/go-redis/v9"
 )
 
+// CreatePost 将创建的帖子信息添加到redis中
 func CreatePost(pid, cid uint64) (err error) {
 	pipeline := rdb.TxPipeline()
 	ctx := context.Background()
-	// add post create time
+
+	// 按照创建时间排序 bluebell:post:time
 	_, err = pipeline.ZAdd(ctx, getRedisKey(PostTimeZSet), redis.Z{
 		Score:  float64(time.Now().Unix()),
 		Member: int64(pid),
 	}).Result()
 
-	// add post vote score
+	// 按照投票数排序 bluebell:post:score
 	_, err = pipeline.ZAdd(ctx, getRedisKey(PostScoreZSet), redis.Z{
 		Score:  0,
 		Member: int64(pid),
 	}).Result()
 
-	// add post community id
+	// 同社区内按照投票数排序 bluebell:community:cid
 	cKey := getRedisKey(CommunitySetPrefix + strconv.Itoa(int(cid)))
 	_, err = pipeline.ZAdd(ctx, cKey, redis.Z{
 		Score:  0,
@@ -41,6 +43,7 @@ func CreatePost(pid, cid uint64) (err error) {
 	return
 }
 
+// GetPostIdsInOrder 按照指定的排列顺序获取帖子分页信息
 func GetPostIdsInOrder(form *model.PostsForm) (PostIdStrings []string, err error) {
 	key := getRedisKey(PostTimeZSet)
 	if form.Order == model.OrderByScore {
@@ -52,10 +55,12 @@ func GetPostIdsInOrder(form *model.PostsForm) (PostIdStrings []string, err error
 	return
 }
 
+// GetPostVoteData 按照id列表从redis中获取投票数
 func GetPostVoteData(ids []string) (data []int64, err error) {
 	ctx := context.Background()
 	pipeline := rdb.TxPipeline()
 	for _, pid := range ids {
+		// bluebell:post:voted:pid
 		key := getRedisKey(PostVotedZSetPrefix + pid)
 		pipeline.ZCount(ctx, key, "1", "1")
 	}
@@ -98,6 +103,7 @@ func GetCommunityPostIdsInOrder(form *model.CommunityPostsForm) (PostIdStrings [
 
 }
 
+// getIdsFormKey 获取指定分页内的记录
 func getIdsFormKey(key string, page, size int64) ([]string, error) {
 	start := (page - 1) * size
 	end := page*size - 1

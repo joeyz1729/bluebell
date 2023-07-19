@@ -2,14 +2,11 @@ package redis
 
 const (
 	Prefix              = "bluebell:"
-	PostTimeZSet        = "post:time"
-	PostScoreZSet       = "post:score"
-	PostVotedZSetPrefix = "post:voted:"
-	CommunitySetPrefix  = "community:"
+	PostTimeZSet        = "post:time"   // bluebell:post:time, Sorted Set, key为pid, value为计时
+	PostScoreZSet       = "post:score"  // bluebell:post:score, Sorted Set, key为pid, value为投票得分
+	PostVotedZSetPrefix = "post:voted:" // bluebell:post:voted:pid, Sorted Set, key为uid, value为投票内容(-1, 0, 1)
+	CommunitySetPrefix  = "community:"  // community:cid, Sorted Set, key为pid, value默认取0
 )
-
-// community:cid set(pid)
-// post:voted:pid uid ifVoted
 
 func getRedisKey(key string) string {
 	return Prefix + key

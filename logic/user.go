@@ -8,7 +8,6 @@ import (
 )
 
 func Signup(sf *model.SignupForm) (err error) {
-
 	err = mysql.CheckUserExist(sf)
 	if err != nil {
 		return err
@@ -26,7 +25,7 @@ func Signup(sf *model.SignupForm) (err error) {
 		Username: sf.Username,
 		Password: sf.Password,
 	}
-	// 4. insert into database
+
 	return mysql.InsertUser(user)
 }
 
@@ -39,7 +38,6 @@ func Login(lf *model.LoginForm) (user *model.User, err error) {
 		return nil, err
 	}
 
-	// 生成jwt token
 	accessToken, refreshToken, err := jwt.GenToken(user.UserId, user.Username)
 	if err != nil {
 		return nil, err

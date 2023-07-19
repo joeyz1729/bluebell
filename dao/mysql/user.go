@@ -7,10 +7,11 @@ import (
 	"zouyi/bluebell/model"
 )
 
+// Login 验证用户登陆信息
 func Login(user *model.User) (err error) {
-	// 1. get user info from mysql database
-	sqlStr := `select user_id,password from user where username = ?`
 	inputPassword := user.Password
+
+	sqlStr := `select user_id, password from user where username = ?`
 	err = db.Get(user, sqlStr, user.Username)
 	if err != nil {
 		if err == sql.ErrNoRows {
@@ -18,6 +19,7 @@ func Login(user *model.User) (err error) {
 		}
 		return ErrorQueryUserData
 	}
+
 	if encryptPassword(inputPassword) != user.Password {
 		return ErrorIncorrectPassword
 	}
@@ -25,9 +27,8 @@ func Login(user *model.User) (err error) {
 	return
 }
 
-// CheckUserExist before store user's signup information, check if user already exists in mysql database by model.SignupForm
+// CheckUserExist 当用户登陆时，检查用户名是否已存在
 func CheckUserExist(sf *model.SignupForm) (err error) {
-
 	sqlStr := `select count(user_id) from user where username = ?`
 	var count int
 	err = db.Get(&count, sqlStr, sf.Username)
@@ -40,7 +41,7 @@ func CheckUserExist(sf *model.SignupForm) (err error) {
 	return
 }
 
-// InsertUser insert into mysql database by model.User struct.
+// InsertUser 添加存储用户信息
 func InsertUser(user *model.User) (err error) {
 	sqlStr := `insert into user(user_id, username, password) values(?, ?, ?)`
 	encryptedPassword := encryptPassword(user.Password)
@@ -49,7 +50,7 @@ func InsertUser(user *model.User) (err error) {
 
 }
 
-// encryptPassword encrypt user's password by md5 and secret salt before insert into database.
+// encryptPassword 将用户密码加密
 func encryptPassword(originPassword string) (encryptedPassword string) {
 	h := md5.New()
 	h.Write([]byte(secret))
@@ -57,7 +58,7 @@ func encryptPassword(originPassword string) (encryptedPassword string) {
 	return
 }
 
-// GetUserById select user info (username, email, age etc.)
+// GetUserById 通过用户id获取详细信息
 func GetUserById(uid uint64) (user *model.User, err error) {
 	user = new(model.User)
 	sqlStr := `select username from user where user_id = ?`

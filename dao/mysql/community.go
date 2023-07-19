@@ -7,8 +7,7 @@ import (
 	"go.uber.org/zap"
 )
 
-var ()
-
+// GetCommunityList 获取所有社区信息
 func GetCommunityList() (communityList []*model.Community, err error) {
 	sqlStr := `select community_id, community_name from community`
 	err = db.Select(&communityList, sqlStr)
@@ -20,6 +19,7 @@ func GetCommunityList() (communityList []*model.Community, err error) {
 	return
 }
 
+// GetCommunityDetailById 获取指定社区信息
 func GetCommunityDetailById(communityId uint64) (cd *model.CommunityDetail, err error) {
 	cd = new(model.CommunityDetail)
 	cd.CommunityId = communityId

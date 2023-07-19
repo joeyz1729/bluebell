@@ -10,27 +10,30 @@ import (
 	"go.uber.org/zap"
 )
 
+// PostVoteHandler 帖子投票功能
 func PostVoteHandler(c *gin.Context) {
-	// 1. params bind and verification
+	// 获取参数并绑定
 	var voteForm = new(model.VoteForm)
 	if err := c.ShouldBindJSON(&voteForm); err != nil {
 		if errs, ok := err.(validator.ValidationErrors); ok {
-			zap.L().Error("validation err", zap.Error(errs))
+			zap.L().Error("vote form validation err", zap.Error(errs))
 			ResponseErrorWithMsg(c, CodeInvalidParams, removeTopStruct(
 				errs.Translate(trans)))
 			return
 		}
-		zap.L().Error("binding err", zap.Error(err))
+		zap.L().Error("vote form binding err", zap.Error(err))
 		ResponseError(c, CodeInvalidParams)
 		return
 	}
+	// 从authToken中获取用户信息
 	userId, _, err := GetCurrentUser(c)
 	if err != nil {
-		zap.L().Error("invalid user", zap.Error(err))
+		zap.L().Error("get user info err", zap.Error(err))
 		ResponseError(c, CodeNotLogin)
 		return
 	}
-	// 2. logic vote
+
+	// 记录投票信息
 	err = logic.PostVote(userId, voteForm)
 	if err != nil {
 		zap.L().Error("post vote err", zap.Error(err))
@@ -38,6 +41,5 @@ func PostVoteHandler(c *gin.Context) {
 		return
 	}
 
-	// 3. return response
 	ResponseSuccess(c, nil)
 }

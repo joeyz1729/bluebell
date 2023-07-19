@@ -2,7 +2,7 @@ package mysql
 
 import "errors"
 
-const secret = "joey89"
+const secret = "bluebell.joey1729"
 
 var (
 	ErrorUserExist         = errors.New("user already exists")
