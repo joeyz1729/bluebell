@@ -37,55 +37,29 @@ func main() {
 		return
 	}
 
-	// 3. connect to database
+	// 连接 mysql 数据库
 	if err := mysql.Init(setting.Conf.MySQLConfig); err != nil {
-		fmt.Printf("init logger err: %s\n", err)
+		fmt.Printf("init mysql err: %s\n", err)
 	}
 	defer mysql.Close()
-	zap.L().Info("[mysql] init success")
 
+	// 连接 redis 数据库
 	if err := redis.Init(setting.Conf.RedisConfig); err != nil {
-		fmt.Printf("init logger err: %s\n", err)
+		fmt.Printf("init redis err: %s\n", err)
 	}
 	defer redis.Close()
-	zap.L().Info("[redis] init success")
 
-	// 4. route register
+	// validator校验器
 	if err := controller.InitTrans("en"); err != nil {
-		zap.L().Error("init trans err", zap.Error(err))
 		fmt.Printf("init validator err: %s\n", err)
 		return
 	}
-	zap.L().Info("[trans] init success")
 
-	// gin
+	// Gin 路由启动
 	r := router.Setup(setting.Conf.Mode)
-	zap.L().Info("[router] init success")
-
-	//5. graceful shutdown
-	//srv := &http.Server{
-	//	Addr:    fmt.Sprintf(":%d", viper.GetInt("app.port")),
-	//	Handler: r,
-	//}
-	//
-	//go func() {
-	//	if err := srv.ListenAndServe(); err != nil && err != http.ErrServerClosed {
-	//		log.Fatalf("listen: %s\n", err)
-	//	}
-	//}()
-	//
-	//quit := make(chan os.Signal, 1)
-	//
-	//signal.Notify(quit, syscall.SIGINT, syscall.SIGTERM)
-	//<-quit
-	//ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
-	//defer cancel()
-	//if err := srv.Shutdown(ctx); err != nil {
-	//	log.Fatal("server shutdown: ", err)
-	//
-	//}
-	//zap.L().Info("server exiting")
-
-	// 5. start service
-	r.Run(fmt.Sprintf(":%d", setting.Conf.Port))
+	err := r.Run(fmt.Sprintf(":%d", setting.Conf.Port))
+	if err != nil {
+		fmt.Printf("run server failed, err:%v\n", err)
+		return
+	}
 }

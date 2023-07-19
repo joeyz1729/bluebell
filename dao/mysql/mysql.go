@@ -36,10 +36,8 @@ func Init(conf *setting.MySQLConfig) (err error) {
 	db.SetConnMaxLifetime(conf.MaxLifetime * time.Second)
 	db.SetMaxOpenConns(conf.MaxOpenConns)
 	db.SetMaxIdleConns(conf.MaxIdleConns)
-	sqlStr1 := `select count(user_id) from user`
-	var cnt int
-	_ = db.Get(&cnt, sqlStr1)
-	fmt.Println(cnt)
+
+	zap.L().Info("[mysql] init success")
 	return nil
 }
 

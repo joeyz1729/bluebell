@@ -5,6 +5,8 @@ import (
 	"reflect"
 	"strings"
 
+	"go.uber.org/zap"
+
 	"zouyi/bluebell/model"
 
 	"github.com/gin-gonic/gin/binding"
@@ -19,9 +21,10 @@ import (
 var trans ut.Translator
 
 func InitTrans(locale string) (err error) {
+	// 修改gin框架validator引擎的属性
 	if v, ok := binding.Validator.Engine().(*validator.Validate); ok {
-
 		v.RegisterTagNameFunc(func(field reflect.StructField) string {
+			// 获取json tag中的第一个
 			name := strings.SplitN(field.Tag.Get("json"), ",", 2)[0]
 			if name == "-" {
 				return ""
@@ -29,18 +32,21 @@ func InitTrans(locale string) (err error) {
 			return name
 		})
 
-		//v.RegisterStructValidation(SignupStructLevelValidation, model.SignupForm{})
+		// 可以注册自定义校验方法：
+		// v.RegisterStructValidation(SignupStructLevelValidation, model.SignupForm{})
 
 		zhT := zh.New()
 		enT := en.New()
 		uni := ut.New(enT, zhT, enT)
 
 		var ok bool
-
 		trans, ok = uni.GetTranslator(locale)
 		if !ok {
-			return fmt.Errorf("uni.GetTranslator(%s) failed", locale)
+			err = fmt.Errorf("uni.GetTranslator(%s) failed", locale)
+			zap.L().Error("init trans err", zap.Error(err))
+			return
 		}
+
 		switch locale {
 		case "en":
 			err = enTrans.RegisterDefaultTranslations(v, trans)
@@ -49,12 +55,17 @@ func InitTrans(locale string) (err error) {
 		default:
 			err = enTrans.RegisterDefaultTranslations(v, trans)
 		}
+		if err != nil {
+			zap.L().Error("init trans err", zap.Error(err))
+		}
+		zap.L().Info("init trans success")
 		return
 	}
+	zap.L().Info("Failed to modify gin validator")
 	return
 }
 
-// 定义一个去掉结构体名称前缀的自定义方法：
+// removeTopStruct 定义一个去掉结构体名称前缀的自定义方法，例如SignupFrom.password去掉前面的SF
 func removeTopStruct(fields map[string]string) map[string]string {
 	res := map[string]string{}
 	for field, err := range fields {
@@ -63,6 +74,8 @@ func removeTopStruct(fields map[string]string) map[string]string {
 	return res
 }
 
+// SignupStructLevelValidation 验证两次密码相同
+// 也可以直接使用validator中的eqfield字段
 func SignupStructLevelValidation(sl validator.StructLevel) {
 	su := sl.Current().Interface().(model.SignupForm)
 	if su.Password != su.ConfirmPassword {

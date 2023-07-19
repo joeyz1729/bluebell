@@ -18,6 +18,11 @@ type LoginForm struct {
 	Password string `json:"password" binding:"required"`
 }
 
+type RefreshForm struct {
+	ConfirmPassword string `json:"confirm_password" binding:"required,eqfield=Password"`
+	Email           string `json:"email,omitempty" binding:"omitempty,email"`
+}
+
 type VoteForm struct {
 	// UserID, get from token
 	PostID   string `json:"post_id" binding:"required"`

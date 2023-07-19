@@ -25,6 +25,7 @@ func Init(conf *setting.RedisConfig) (err error) {
 		zap.L().Error("connect to redis failed, err: %s\n", zap.Error(err))
 		return
 	}
+	zap.L().Info("[redis] init success")
 	return
 }
 

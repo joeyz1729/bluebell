@@ -80,8 +80,7 @@ func RefreshToken(accessToken, refreshToken string) (newAccessToken, newRefreshT
 	if v.Errors == jwt.ValidationErrorExpired {
 		return GenToken(claims.UserId, claims.Username)
 	}
-
-	return
+	return accessToken, refreshToken, nil
 }
 
 func keyFunc(_ *jwt.Token) (i interface{}, err error) {
