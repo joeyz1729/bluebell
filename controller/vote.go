@@ -24,7 +24,7 @@ func PostVoteHandler(c *gin.Context) {
 		ResponseError(c, CodeInvalidParams)
 		return
 	}
-	userId, err := GetCurrentUser(c)
+	userId, _, err := GetCurrentUser(c)
 	if err != nil {
 		zap.L().Error("invalid user", zap.Error(err))
 		ResponseError(c, CodeNotLogin)

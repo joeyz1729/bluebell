@@ -1,7 +1,6 @@
 package controller
 
 import (
-	"fmt"
 	"strconv"
 	"zouyi/bluebell/logic"
 	"zouyi/bluebell/model"
@@ -10,58 +9,37 @@ import (
 	"go.uber.org/zap"
 )
 
+// PostHandler 用户登陆后，可以发布帖子
 func PostHandler(c *gin.Context) {
-	// 1. get params and verification
+	// 解析帖子内容
 	var post model.Post
 	if err := c.ShouldBindJSON(&post); err != nil {
-		zap.L().Debug("[PostHandler] bind err", zap.Error(err))
+		zap.L().Debug("post info bind err", zap.Error(err))
 		ResponseError(c, CodeInvalidParams)
 		return
 	}
-	// 2. get user id by authToken
-	userId, err := GetCurrentUser(c)
+
+	// 从token中获取user信息
+	userId, _, err := GetCurrentUser(c)
 	if err != nil {
-		zap.L().Error("get current user by authToken err", zap.Error(err))
+		zap.L().Error("get user by authToken err", zap.Error(err))
 		ResponseError(c, CodeNotLogin)
 		return
 	}
-
 	post.AuthorId = userId
 
-	// 3. create post and store into database
+	// 创建帖子并存储
 	if err := logic.CreatePost(&post); err != nil {
 		zap.L().Error("create post err", zap.Error(err))
 		ResponseError(c, CodeServerBusy)
 		return
 	}
 
-	// 4. return response
 	ResponseSuccess(c, post)
 }
 
-func GetPostHandler(c *gin.Context) {
-	pidStr := c.Param("pid")
-	pid, err := strconv.ParseUint(pidStr, 10, 64)
-	fmt.Println(pid)
-	if err != nil {
-		zap.L().Error("invalid params", zap.Error(err))
-		ResponseError(c, CodeInvalidParams)
-		return
-	}
-	postDetail, err := logic.GetPostDetailById(pid)
-	if err != nil {
-		zap.L().Error("GetPostDetailById() err", zap.Error(err))
-		ResponseError(c, CodeServerBusy)
-		return
-	}
-
-	ResponseSuccess(c, postDetail)
-}
-
+// PostListOrderHandler 按照指定顺序获取帖子，如vote数，create_time，update_time等
 func PostListOrderHandler(c *gin.Context) {
-	// score(vote), create_time, update_time
-	// get params from context, order basis
-	// GET /api/v1/posts
 	PostListForm := &model.PostsForm{
 		Page:  1,
 		Size:  10,
@@ -82,12 +60,14 @@ func PostListOrderHandler(c *gin.Context) {
 	ResponseSuccess(c, postList)
 
 }
+
+// PostListHandler 分页查找帖子记录，默认为第一页的前十条记录
 func PostListHandler(c *gin.Context) {
 	pageNum, pageSize := getPageInfo(c)
 
 	postList, err := logic.GetPostList(pageNum, pageSize)
 	if err != nil {
-		zap.L().Error("GetPostList() err", zap.Error(err))
+		zap.L().Error("get post list err", zap.Error(err))
 		ResponseError(c, CodeServerBusy)
 		return
 	}
@@ -95,12 +75,52 @@ func PostListHandler(c *gin.Context) {
 	ResponseSuccess(c, postList)
 }
 
+// CommunityPostListHandler 根据社区id获取分页的帖子列表
 func CommunityPostListHandler(c *gin.Context) {
-	// 1. get community id
-	// 2. mysql query by community id
+	// 获取社区id，分页大小信息
+	cidStr := c.Param("cid")
+	page, size := getPageInfo(c)
+	cid, err := strconv.ParseUint(cidStr, 10, 64)
+	if err != nil {
+		zap.L().Error("invalid params", zap.Error(err))
+		ResponseError(c, CodeInvalidParams)
+		return
+	}
 
+	// 查询帖子列表
+	postList, err := logic.GetCommunityPostList(cid, page, size)
+	if err != nil {
+		zap.L().Error("get community post list err", zap.Error(err))
+		ResponseError(c, CodeServerBusy)
+		return
+	}
+
+	ResponseSuccess(c, postList)
 }
 
+// GetPostHandler 获取指定id的帖子详细信息
+func GetPostHandler(c *gin.Context) {
+	// 获取并解析帖子id
+	pidStr := c.Param("pid")
+	pid, err := strconv.ParseUint(pidStr, 10, 64)
+	if err != nil {
+		zap.L().Error("invalid params", zap.Error(err))
+		ResponseError(c, CodeInvalidParams)
+		return
+	}
+
+	// 获取帖子信息
+	postDetail, err := logic.GetPostDetailById(pid)
+	if err != nil {
+		zap.L().Error("get post detail err", zap.Error(err))
+		ResponseError(c, CodeServerBusy)
+		return
+	}
+
+	ResponseSuccess(c, postDetail)
+}
+
+// getPageInfo 获取分页信息并处理
 func getPageInfo(c *gin.Context) (page, size int64) {
 	pageStr := c.Query("page")
 	sizeStr := c.Query("size")

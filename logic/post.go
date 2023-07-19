@@ -99,20 +99,57 @@ func GetPostList(page, size int64) (postDetailList []*model.PostDetail, err erro
 	return
 }
 
+// GetCommunityPostList 按照执行社区id获取帖子信息
+func GetCommunityPostList(cid uint64, page, size int64) (postDetailList []*model.PostDetail, err error) {
+	// 获取社区信息
+	communityDetail, err := mysql.GetCommunityDetailById(cid)
+	if err != nil {
+		zap.L().Error("get community detail err", zap.Error(err))
+		return nil, err
+	}
+
+	// 获取帖子列表
+	var posts []*model.Post
+	posts, err = mysql.GetCommunityPostList(cid, page, size)
+	if err != nil {
+		zap.L().Error("get community post list err", zap.Error(err))
+		return nil, err
+	}
+
+	// 补充帖子详细信息
+	for _, post := range posts {
+		var postDetail = new(model.PostDetail)
+		postDetail.Post = post
+
+		var user = new(model.User)
+		user, err = mysql.GetUserById(post.AuthorId)
+		if err != nil {
+			zap.L().Error("get username by id err", zap.Error(err))
+			continue
+		}
+		postDetail.AuthorName = user.Username
+		postDetail.CommunityDetail = communityDetail
+
+		postDetailList = append(postDetailList, postDetail)
+	}
+
+	return
+}
+
 func GetPostListInOrder(form *model.PostsForm) (postDetailList []*model.PostDetail, err error) {
 	postDetailList = make([]*model.PostDetail, 0, form.Size)
 	var posts []*model.Post
-	// get id in order in from redis
+	// 从redis中按照指定顺序获取post id
 	ids, err := redis.GetPostIdsInOrder(form)
 	if err != nil || len(ids) == 0 {
 		zap.L().Error("get post ids in order from redis err, or len(ids) == 0", zap.Error(err))
 		return
 	}
 
-	// get data from mysql
+	// 从数据库中获取指定id顺序的帖子
 	posts, err = mysql.GetPostByIds(ids)
 	if err != nil {
-		zap.L().Error("GetPostListByIds from mysql err", zap.Error(err))
+		zap.L().Error("get post by ids from mysql err", zap.Error(err))
 		return nil, err
 	}
 
@@ -176,9 +213,5 @@ func FullPostDetail(posts []*model.Post) (postDetailList []*model.PostDetail, er
 
 		postDetailList = append(postDetailList, postDetail)
 	}
-	return
-}
-
-func GetCommunityPosts(p *model.CommunityPostsForm) (data []*model.PostDetail, err error) {
 	return
 }

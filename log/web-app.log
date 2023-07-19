@@ -1,314 +1,55 @@
-2023-07-18T15:51:58.064+0800	INFO	bluebell/main.go:33	[logger] init success
-2023-07-18T15:51:58.065+0800	INFO	bluebell/main.go:40	[snowflake] init success
-2023-07-18T15:51:58.068+0800	INFO	bluebell/main.go:47	[mysql] init success
-2023-07-18T15:51:58.069+0800	INFO	bluebell/main.go:53	[redis] init success
-2023-07-18T15:51:58.069+0800	INFO	bluebell/main.go:61	[trans] init success
-2023-07-18T15:51:58.072+0800	INFO	bluebell/main.go:64	[router] init success
-2023-07-18T15:52:03.701+0800	INFO	logger/logger.go:78	/api/v1/posts	{"status": 200, "method": "GET", "path": "/api/v1/posts", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.007950916}
-2023-07-18T15:52:11.999+0800	ERROR	controller/user.go:37	[signup] [logic] err	{"error": "user already exists"}
-2023-07-18T15:52:12.000+0800	INFO	logger/logger.go:78	/api/v1/signup	{"status": 200, "method": "POST", "path": "/api/v1/signup", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.003362334}
-2023-07-18T16:09:12.396+0800	INFO	logger/logger.go:78	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.041791334}
-2023-07-18T16:09:26.658+0800	ERROR	middleware/auth.go:18	[jwt auth middleware] not login
-2023-07-18T16:09:26.659+0800	INFO	logger/logger.go:78	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.00026825}
-2023-07-18T16:43:20.207+0800	INFO	bluebell/main.go:33	[logger] init success
-2023-07-18T16:43:20.208+0800	INFO	bluebell/main.go:41	[snowflake] init success
-2023-07-18T16:43:20.246+0800	INFO	bluebell/main.go:48	[mysql] init success
-2023-07-18T16:43:20.249+0800	INFO	bluebell/main.go:54	[redis] init success
-2023-07-18T16:43:20.249+0800	INFO	bluebell/main.go:62	[trans] init success
-2023-07-18T16:43:20.251+0800	INFO	bluebell/main.go:65	[router] init success
-2023-07-18T16:43:23.696+0800	ERROR	middleware/auth.go:18	[jwt auth middleware] not login
-2023-07-18T16:43:23.696+0800	INFO	logger/logger.go:86	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000502417}
-2023-07-18T16:49:47.442+0800	INFO	logger/logger.go:50	[logger] init success
-2023-07-18T16:49:47.443+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
-2023-07-18T16:49:47.448+0800	INFO	bluebell/main.go:46	[mysql] init success
-2023-07-18T16:49:47.449+0800	INFO	bluebell/main.go:52	[redis] init success
-2023-07-18T16:49:47.449+0800	INFO	bluebell/main.go:60	[trans] init success
-2023-07-18T16:49:47.450+0800	INFO	bluebell/main.go:63	[router] init success
-2023-07-18T17:00:18.870+0800	INFO	logger/logger.go:45	[logger] init success
-2023-07-18T17:00:18.871+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
-2023-07-18T17:00:18.876+0800	INFO	bluebell/main.go:46	[mysql] init success
-2023-07-18T17:00:18.877+0800	INFO	bluebell/main.go:52	[redis] init success
-2023-07-18T17:00:18.877+0800	INFO	bluebell/main.go:60	[trans] init success
-2023-07-18T17:00:18.878+0800	INFO	bluebell/main.go:63	[router] init success
-2023-07-18T17:00:21.248+0800	ERROR	middleware/auth.go:18	[jwt auth middleware] not login
-2023-07-18T17:00:21.248+0800	INFO	logger/logger.go:82	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000302542}
-2023-07-18T17:01:32.908+0800	INFO	logger/logger.go:45	[logger] init success
-2023-07-18T17:01:32.909+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
-2023-07-18T17:01:32.919+0800	INFO	bluebell/main.go:46	[mysql] init success
-2023-07-18T17:01:32.920+0800	INFO	bluebell/main.go:52	[redis] init success
-2023-07-18T17:01:32.920+0800	INFO	bluebell/main.go:60	[trans] init success
-2023-07-18T17:01:32.921+0800	INFO	bluebell/main.go:63	[router] init success
-2023-07-18T17:11:37.504+0800	INFO	logger/logger.go:46	[logger] init success
-2023-07-18T17:11:37.505+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
-2023-07-18T17:11:37.510+0800	INFO	bluebell/main.go:46	[mysql] init success
-2023-07-18T17:11:37.510+0800	INFO	bluebell/main.go:52	[redis] init success
-2023-07-18T17:11:37.511+0800	INFO	bluebell/main.go:60	[trans] init success
-2023-07-18T17:11:37.512+0800	INFO	bluebell/main.go:63	[router] init success
-2023-07-18T17:13:25.044+0800	INFO	logger/logger.go:46	[logger] init success
-2023-07-18T17:13:25.045+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
-2023-07-18T17:13:25.049+0800	INFO	bluebell/main.go:46	[mysql] init success
-2023-07-18T17:13:25.050+0800	INFO	bluebell/main.go:52	[redis] init success
-2023-07-18T17:13:25.050+0800	INFO	bluebell/main.go:60	[trans] init success
-2023-07-18T17:13:25.051+0800	INFO	bluebell/main.go:63	[router] init success
-2023-07-18T17:43:48.960+0800	INFO	logger/logger.go:52	[logger] init success
-2023-07-18T17:43:48.961+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
-2023-07-18T17:43:49.004+0800	INFO	bluebell/main.go:46	[mysql] init success
-2023-07-18T17:43:49.009+0800	INFO	bluebell/main.go:52	[redis] init success
-2023-07-18T17:43:49.009+0800	INFO	bluebell/main.go:60	[trans] init success
-2023-07-18T17:43:49.010+0800	INFO	bluebell/main.go:64	[router] init success
-2023-07-18T17:43:51.521+0800	ERROR	middleware/auth.go:18	[jwt auth middleware] not login
-2023-07-18T17:43:51.522+0800	INFO	logger/logger.go:89	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000443458}
-2023-07-18T17:43:55.369+0800	INFO	logger/logger.go:89	/api/v1/singup	{"status": 404, "method": "POST", "path": "/api/v1/singup", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000000625}
-2023-07-18T17:43:58.512+0800	ERROR	controller/user.go:37	[signup] [logic] err	{"error": "user already exists"}
-2023-07-18T17:43:58.512+0800	INFO	logger/logger.go:89	/api/v1/signup	{"status": 200, "method": "POST", "path": "/api/v1/signup", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.00948175}
-2023-07-18T17:44:01.044+0800	INFO	logger/logger.go:89	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.003279916}
-2023-07-18T17:44:16.941+0800	ERROR	controller/user.go:28	[signup] [params] verification err	{"error": "Key: 'SignupForm.age' Error:Field validation for 'age' failed on the 'lte' tag\nKey: 'SignupForm.email' Error:Field validation for 'email' failed on the 'email' tag"}
-2023-07-18T17:44:16.942+0800	INFO	logger/logger.go:89	/api/v1/signup	{"status": 200, "method": "POST", "path": "/api/v1/signup", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.001245333}
-2023-07-18T17:44:22.303+0800	ERROR	controller/user.go:24	[signup] [params] invalid err	{"error": "json: cannot unmarshal string into Go struct field SignupForm.age of type uint8"}
-2023-07-18T17:44:22.303+0800	INFO	logger/logger.go:89	/api/v1/signup	{"status": 200, "method": "POST", "path": "/api/v1/signup", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000198416}
-2023-07-18T17:44:27.251+0800	ERROR	controller/user.go:28	[signup] [params] verification err	{"error": "Key: 'SignupForm.email' Error:Field validation for 'email' failed on the 'email' tag"}
-2023-07-18T17:44:27.252+0800	INFO	logger/logger.go:89	/api/v1/signup	{"status": 200, "method": "POST", "path": "/api/v1/signup", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.001152125}
-2023-07-18T17:44:31.948+0800	INFO	logger/logger.go:89	/api/v1/signup	{"status": 200, "method": "POST", "path": "/api/v1/signup", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.041337667}
-2023-07-18T17:44:37.859+0800	INFO	logger/logger.go:89	/api/v1/community	{"status": 404, "method": "POST", "path": "/api/v1/community", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000000917}
-2023-07-18T17:44:41.355+0800	INFO	logger/logger.go:89	/api/v1/community	{"status": 200, "method": "GET", "path": "/api/v1/community", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.002341041}
-2023-07-18T18:49:08.412+0800	INFO	logger/logger.go:52	[logger] init success
-2023-07-18T18:49:08.413+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
-2023-07-18T18:49:08.454+0800	INFO	bluebell/main.go:46	[mysql] init success
-2023-07-18T18:49:08.458+0800	INFO	bluebell/main.go:52	[redis] init success
-2023-07-18T18:49:08.459+0800	INFO	bluebell/main.go:60	[trans] init success
-2023-07-18T18:49:08.459+0800	INFO	bluebell/main.go:64	[router] init success
-2023-07-18T18:50:24.387+0800	INFO	logger/logger.go:52	[logger] init success
-2023-07-18T18:50:24.388+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
-2023-07-18T18:50:24.392+0800	INFO	bluebell/main.go:43	[mysql] init success
-2023-07-18T18:50:24.393+0800	INFO	bluebell/main.go:49	[redis] init success
-2023-07-18T18:50:24.393+0800	INFO	bluebell/main.go:57	[trans] init success
-2023-07-18T18:50:24.394+0800	INFO	bluebell/main.go:61	[router] init success
-2023-07-18T19:16:11.072+0800	INFO	logger/logger.go:52	[logger] init success
-2023-07-18T19:16:11.074+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
-2023-07-18T19:16:11.080+0800	INFO	bluebell/main.go:44	[mysql] init success
-2023-07-18T19:16:11.081+0800	INFO	bluebell/main.go:50	[redis] init success
-2023-07-18T19:16:11.082+0800	INFO	bluebell/main.go:58	[trans] init success
-2023-07-18T19:16:11.083+0800	INFO	bluebell/main.go:62	[router] init success
-2023-07-18T19:16:41.261+0800	INFO	logger/logger.go:52	[logger] init success
-2023-07-18T19:16:41.261+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
-2023-07-18T19:16:41.265+0800	INFO	bluebell/main.go:44	[mysql] init success
-2023-07-18T19:16:41.265+0800	INFO	bluebell/main.go:50	[redis] init success
-2023-07-18T19:16:41.265+0800	INFO	bluebell/main.go:58	[trans] init success
-2023-07-18T19:16:41.266+0800	INFO	bluebell/main.go:62	[router] init success
-2023-07-18T19:17:23.599+0800	INFO	logger/logger.go:52	[logger] init success
-2023-07-18T19:17:23.600+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
-2023-07-18T19:17:23.604+0800	INFO	bluebell/main.go:44	[mysql] init success
-2023-07-18T19:17:23.605+0800	INFO	bluebell/main.go:50	[redis] init success
-2023-07-18T19:17:23.605+0800	INFO	bluebell/main.go:58	[trans] init success
-2023-07-18T19:17:23.606+0800	INFO	bluebell/main.go:62	[router] init success
-2023-07-18T19:33:17.532+0800	INFO	logger/logger.go:52	[logger] init success
-2023-07-18T19:33:17.533+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
-2023-07-18T19:33:17.538+0800	INFO	bluebell/main.go:44	[mysql] init success
-2023-07-18T19:33:17.539+0800	INFO	bluebell/main.go:50	[redis] init success
-2023-07-18T19:33:17.539+0800	INFO	bluebell/main.go:58	[trans] init success
-2023-07-18T19:33:17.540+0800	INFO	bluebell/main.go:62	[router] init success
-2023-07-18T19:37:38.380+0800	INFO	logger/logger.go:52	[logger] init success
-2023-07-18T19:37:38.381+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
-2023-07-18T19:37:38.385+0800	INFO	bluebell/main.go:52	[mysql] init success
-2023-07-18T19:37:38.386+0800	INFO	bluebell/main.go:58	[redis] init success
-2023-07-18T19:37:38.386+0800	INFO	bluebell/main.go:66	[trans] init success
-2023-07-18T19:37:38.387+0800	INFO	bluebell/main.go:70	[router] init success
-2023-07-18T19:42:29.966+0800	INFO	logger/logger.go:52	[logger] init success
-2023-07-18T19:42:29.967+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
-2023-07-18T19:42:29.972+0800	INFO	bluebell/main.go:44	[mysql] init success
-2023-07-18T19:42:29.973+0800	INFO	bluebell/main.go:50	[redis] init success
-2023-07-18T19:42:29.974+0800	INFO	bluebell/main.go:58	[trans] init success
-2023-07-18T19:42:29.974+0800	INFO	bluebell/main.go:62	[router] init success
-2023-07-18T19:42:47.402+0800	INFO	logger/logger.go:52	[logger] init success
-2023-07-18T19:42:47.403+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
-2023-07-18T19:42:47.407+0800	INFO	bluebell/main.go:44	[mysql] init success
-2023-07-18T19:42:47.408+0800	INFO	bluebell/main.go:50	[redis] init success
-2023-07-18T19:42:47.408+0800	INFO	bluebell/main.go:58	[trans] init success
-2023-07-18T19:42:47.409+0800	INFO	bluebell/main.go:62	[router] init success
-2023-07-18T19:42:59.616+0800	INFO	logger/logger.go:52	[logger] init success
-2023-07-18T19:42:59.617+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
-2023-07-18T19:42:59.621+0800	INFO	bluebell/main.go:46	[mysql] init success
-2023-07-18T19:42:59.622+0800	INFO	bluebell/main.go:52	[redis] init success
-2023-07-18T19:42:59.622+0800	INFO	bluebell/main.go:60	[trans] init success
-2023-07-18T19:42:59.623+0800	INFO	bluebell/main.go:64	[router] init success
-2023-07-18T20:13:01.379+0800	INFO	logger/logger.go:52	[logger] init success
-2023-07-18T20:13:01.380+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
-2023-07-18T20:13:01.384+0800	INFO	bluebell/main.go:52	[mysql] init success
-2023-07-18T20:13:01.385+0800	INFO	bluebell/main.go:58	[redis] init success
-2023-07-18T20:13:01.385+0800	INFO	bluebell/main.go:66	[trans] init success
-2023-07-18T20:13:01.386+0800	INFO	bluebell/main.go:70	[router] init success
-2023-07-18T20:13:18.674+0800	INFO	bluebell/main.go:94	server exiting
-2023-07-18T20:17:22.428+0800	INFO	logger/logger.go:52	[logger] init success
-2023-07-18T20:17:22.428+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
-2023-07-18T20:17:22.433+0800	INFO	bluebell/main.go:52	[mysql] init success
-2023-07-18T20:17:22.434+0800	INFO	bluebell/main.go:58	[redis] init success
-2023-07-18T20:17:22.435+0800	INFO	bluebell/main.go:66	[trans] init success
-2023-07-18T20:17:22.436+0800	INFO	bluebell/main.go:70	[router] init success
-2023-07-18T20:17:27.047+0800	INFO	bluebell/main.go:94	server exiting
-2023-07-18T20:20:02.001+0800	INFO	logger/logger.go:52	[logger] init success
-2023-07-18T20:20:02.002+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
-2023-07-18T20:20:02.005+0800	INFO	bluebell/main.go:52	[mysql] init success
-2023-07-18T20:20:02.006+0800	INFO	bluebell/main.go:58	[redis] init success
-2023-07-18T20:20:02.006+0800	INFO	bluebell/main.go:66	[trans] init success
-2023-07-18T20:20:02.007+0800	INFO	bluebell/main.go:70	[router] init success
-2023-07-18T20:20:12.011+0800	INFO	bluebell/main.go:94	server exiting
-2023-07-18T20:25:35.719+0800	INFO	logger/logger.go:52	[logger] init success
-2023-07-18T20:25:35.720+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
-2023-07-18T20:25:35.724+0800	INFO	mysql/mysql.go:40	[mysql] init success
-2023-07-18T20:25:35.725+0800	INFO	redis/redis.go:28	[redis] init success
-2023-07-18T20:25:35.726+0800	INFO	bluebell/main.go:58	[trans] init success
-2023-07-18T20:25:35.727+0800	INFO	bluebell/main.go:62	[router] init success
-2023-07-18T21:18:28.041+0800	INFO	logger/logger.go:52	[logger] init success
-2023-07-18T21:18:28.042+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
-2023-07-18T21:18:28.073+0800	INFO	mysql/mysql.go:40	[mysql] init success
-2023-07-18T21:18:28.076+0800	INFO	redis/redis.go:28	[redis] init success
-2023-07-18T21:18:28.076+0800	INFO	bluebell/main.go:58	[trans] init success
-2023-07-18T21:18:28.078+0800	INFO	bluebell/main.go:62	[router] init success
-2023-07-18T21:21:14.352+0800	INFO	logger/logger.go:52	[logger] init success
-2023-07-18T21:21:14.352+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
-2023-07-18T21:21:14.355+0800	INFO	mysql/mysql.go:40	[mysql] init success
-2023-07-18T21:21:14.356+0800	INFO	redis/redis.go:28	[redis] init success
-2023-07-18T21:21:14.356+0800	INFO	bluebell/main.go:58	[trans] init success
-2023-07-18T21:21:14.358+0800	INFO	bluebell/main.go:62	[router] init success
-2023-07-18T21:45:25.471+0800	INFO	logger/logger.go:52	[logger] init success
-2023-07-18T21:45:25.472+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
-2023-07-18T21:45:25.474+0800	INFO	mysql/mysql.go:40	[mysql] init success
-2023-07-18T21:45:25.475+0800	INFO	redis/redis.go:28	[redis] init success
-2023-07-18T21:45:25.475+0800	INFO	controller/validator.go:57	init trans success
-2023-07-18T21:45:25.478+0800	INFO	bluebell/main.go:61	[router] init success
-2023-07-18T21:49:46.496+0800	INFO	logger/logger.go:52	[logger] init success
-2023-07-18T21:49:46.498+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
-2023-07-18T21:49:46.500+0800	INFO	mysql/mysql.go:40	[mysql] init success
-2023-07-18T21:49:46.501+0800	INFO	redis/redis.go:28	[redis] init success
-2023-07-18T21:49:46.501+0800	INFO	controller/validator.go:59	init trans success
-2023-07-18T21:49:46.503+0800	INFO	router/router.go:58	[router] init success
-2023-07-18T21:58:32.145+0800	INFO	logger/logger.go:52	[logger] init success
-2023-07-18T21:58:32.146+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
-2023-07-18T21:58:32.149+0800	INFO	mysql/mysql.go:40	[mysql] init success
-2023-07-18T21:58:32.149+0800	INFO	redis/redis.go:28	[redis] init success
-2023-07-18T21:58:32.150+0800	INFO	controller/validator.go:61	init trans success
-2023-07-18T21:58:32.151+0800	INFO	router/router.go:53	[router] init success
-2023-07-18T21:58:43.734+0800	INFO	logger/logger.go:89	/api/v1/community	{"status": 200, "method": "GET", "path": "/api/v1/community", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.021251125}
-2023-07-18T21:58:48.628+0800	INFO	logger/logger.go:89	/api/v1/posts	{"status": 200, "method": "GET", "path": "/api/v1/posts", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.008670958}
-2023-07-18T21:59:00.500+0800	INFO	logger/logger.go:89	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.003227917}
-2023-07-18T21:59:23.686+0800	ERROR	controller/vote.go:18	validation err	{"error": "Key: 'VoteForm.post_id' Error:Field validation for 'post_id' failed on the 'required' tag"}
-2023-07-18T21:59:23.687+0800	INFO	logger/logger.go:89	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.001045958}
-2023-07-18T22:20:33.297+0800	INFO	logger/logger.go:52	[logger] init success
-2023-07-18T22:20:33.298+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
-2023-07-18T22:20:33.301+0800	INFO	mysql/mysql.go:40	[mysql] init success
-2023-07-18T22:20:33.314+0800	INFO	redis/redis.go:28	[redis] init success
-2023-07-18T22:20:33.314+0800	INFO	controller/validator.go:61	init trans success
-2023-07-18T22:20:33.316+0800	INFO	router/router.go:53	[router] init success
-2023-07-18T22:20:41.695+0800	INFO	logger/logger.go:89	/api/v1/login	{"status": 404, "method": "GET", "path": "/api/v1/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000000375}
-2023-07-18T22:20:45.363+0800	INFO	logger/logger.go:89	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.005948708}
-2023-07-18T22:21:01.690+0800	ERROR	controller/user.go:64	login logic err	{"error": "user not exist"}
-2023-07-18T22:21:01.690+0800	INFO	logger/logger.go:89	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.002848834}
-2023-07-18T22:21:18.474+0800	ERROR	controller/user.go:64	login logic err	{"error": "incorrect password"}
-2023-07-18T22:21:18.475+0800	INFO	logger/logger.go:89	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.00209225}
-2023-07-18T22:21:30.429+0800	ERROR	controller/user.go:64	login logic err	{"error": "incorrect password"}
-2023-07-18T22:21:30.430+0800	INFO	logger/logger.go:89	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.001972708}
-2023-07-18T22:21:33.927+0800	INFO	logger/logger.go:89	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000532833}
-2023-07-18T22:21:39.842+0800	INFO	logger/logger.go:89	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000873292}
-2023-07-18T22:21:42.245+0800	ERROR	controller/user.go:64	login logic err	{"error": "incorrect password"}
-2023-07-18T22:21:42.245+0800	INFO	logger/logger.go:89	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.002957083}
-2023-07-18T22:22:33.398+0800	ERROR	controller/user.go:64	login logic err	{"error": "incorrect password"}
-2023-07-18T22:22:33.399+0800	INFO	logger/logger.go:89	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.005962}
-2023-07-18T22:22:37.510+0800	INFO	logger/logger.go:89	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.001065375}
-2023-07-18T22:25:02.469+0800	INFO	logger/logger.go:52	[logger] init success
-2023-07-18T22:25:02.469+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
-2023-07-18T22:25:02.472+0800	INFO	mysql/mysql.go:40	[mysql] init success
-2023-07-18T22:25:02.473+0800	INFO	redis/redis.go:28	[redis] init success
-2023-07-18T22:25:02.473+0800	INFO	controller/validator.go:61	init trans success
-2023-07-18T22:25:02.475+0800	INFO	router/router.go:53	[router] init success
-2023-07-18T22:25:05.471+0800	INFO	logger/logger.go:89	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.002329917}
-2023-07-19T11:05:02.492+0800	INFO	logger/logger.go:52	[logger] init success
-2023-07-19T11:05:02.493+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
-2023-07-19T11:05:02.524+0800	INFO	mysql/mysql.go:40	[mysql] init success
-2023-07-19T11:05:02.528+0800	INFO	redis/redis.go:28	[redis] init success
-2023-07-19T11:05:02.528+0800	INFO	controller/validator.go:61	init trans success
-2023-07-19T11:05:02.529+0800	INFO	router/router.go:53	[router] init success
-2023-07-19T11:05:07.518+0800	INFO	logger/logger.go:89	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.012074917}
-2023-07-19T11:06:02.010+0800	INFO	logger/logger.go:89	/api/v1/refresh_token	{"status": 404, "method": "POST", "path": "/api/v1/refresh_token", "query": "refresh_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTIzMjc5MDcsImlzcyI6ImJsdWViZWxsIn0.Qx_6SFiD9jvTycBJ_OklqykWVQtqqTJ6cjXnxLK-bkQ", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000000625}
-2023-07-19T11:06:05.671+0800	ERROR	logger/logger.go:131	[Recovery from panic]	{"error": "runtime error: invalid memory address or nil pointer dereference", "request": "GET /api/v1/refresh_token?refresh_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTIzMjc5MDcsImlzcyI6ImJsdWViZWxsIn0.Qx_6SFiD9jvTycBJ_OklqykWVQtqqTJ6cjXnxLK-bkQ HTTP/1.1\r\nHost: 127.0.0.1:8081\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nAuthorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0NzAwMDM0MjUwNDQ1OTQ2ODksInVzZXJuYW1lIjoieHlxIiwiZXhwIjoxNjkyMzI3OTA3LCJpc3MiOiJibHVlYmVsbCJ9.SPQMNc_DpDXmfd1XKfkF4sDeudWR3qjNaQbDR61ODzQ\r\nCache-Control: no-cache\r\nConnection: Upgrade\r\nContent-Length: 75\r\nContent-Type: application/json\r\nPostman-Token: 13108b62-38f1-4dcf-8e23-c64244be11be\r\nSec-Websocket-Key: madgsEHrmgO3SJ9bujg0/A==\r\nSec-Websocket-Version: 13\r\nUpgrade: Websocket\r\nUser-Agent: PostmanRuntime/7.32.3\r\n\r\n", "stack": "goroutine 81 [running]:\nruntime/debug.Stack()\n\t/usr/local/go/src/runtime/debug/stack.go:24 +0x64\nzouyi/bluebell/logger.GinRecovery.func1.1()\n\t/Users/zouyi/go/src/zouyi/bluebell/logger/logger.go:134 +0x254\npanic({0x1050888e0, 0x10547b070})\n\t/usr/local/go/src/runtime/panic.go:884 +0x204\nzouyi/bluebell/pkg/jwt.RefreshToken({0x140004a4007, 0xbd}, {0x1400049a028?, 0x1?})\n\t/Users/zouyi/go/src/zouyi/bluebell/pkg/jwt/jwt.go:80 +0xa0\nzouyi/bluebell/controller.RefreshTokenHandler(0x1400013e200)\n\t/Users/zouyi/go/src/zouyi/bluebell/controller/user.go:104 +0xd0\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/zouyi/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174\nzouyi/bluebell/logger.GinRecovery.func1(0x1400013e200)\n\t/Users/zouyi/go/src/zouyi/bluebell/logger/logger.go:145 +0x74\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/zouyi/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174\nzouyi/bluebell/logger.GinLogger.func1(0x1400013e200)\n\t/Users/zouyi/go/src/zouyi/bluebell/logger/logger.go:86 +0x84\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/zouyi/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0x140006829c0, 0x1400013e200)\n\t/Users/zouyi/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620 +0x54c\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0x140006829c0, {0x1051377d0?, 0x140004aa000}, 0x1400013e100)\n\t/Users/zouyi/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576 +0x1d4\nnet/http.serverHandler.ServeHTTP({0x1051364e8?}, {0x1051377d0, 0x140004aa000}, 0x1400013e100)\n\t/usr/local/go/src/net/http/server.go:2936 +0x2d8\nnet/http.(*conn).serve(0x140000ae090, {0x105137ea8, 0x1400008f710})\n\t/usr/local/go/src/net/http/server.go:1995 +0x560\ncreated by net/http.(*Server).Serve\n\t/usr/local/go/src/net/http/server.go:3089 +0x520\n"}
-2023-07-19T11:06:05.673+0800	INFO	logger/logger.go:89	/api/v1/refresh_token	{"status": 500, "method": "GET", "path": "/api/v1/refresh_token", "query": "refresh_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTIzMjc5MDcsImlzcyI6ImJsdWViZWxsIn0.Qx_6SFiD9jvTycBJ_OklqykWVQtqqTJ6cjXnxLK-bkQ", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.002023334}
-2023-07-19T11:07:00.534+0800	ERROR	logger/logger.go:131	[Recovery from panic]	{"error": "runtime error: invalid memory address or nil pointer dereference", "request": "GET /api/v1/refresh_token?refresh_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTIzMjc5MDcsImlzcyI6ImJsdWViZWxsIn0.Qx_6SFiD9jvTycBJ_OklqykWVQtqqTJ6cjXnxLK-bkQ HTTP/1.1\r\nHost: 127.0.0.1:8081\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nAuthorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0NzAwMDM0MjUwNDQ1OTQ2ODksInVzZXJuYW1lIjoieHlxIiwiZXhwIjoxNjkyMzI3OTA3LCJpc3MiOiJibHVlYmVsbCJ9.SPQMNc_DpDXmfd1XKfkF4sDeudWR3qjNaQbDR61ODzQ\r\nCache-Control: no-cache\r\nConnection: Upgrade\r\nContent-Length: 75\r\nContent-Type: application/json\r\nPostman-Token: 3de43d07-ce80-4ed9-97f0-d725c049e899\r\nSec-Websocket-Key: madgsEHrmgO3SJ9bujg0/A==\r\nSec-Websocket-Version: 13\r\nUpgrade: Websocket\r\nUser-Agent: PostmanRuntime/7.32.3\r\n\r\n", "stack": "goroutine 81 [running]:\nruntime/debug.Stack()\n\t/usr/local/go/src/runtime/debug/stack.go:24 +0x64\nzouyi/bluebell/logger.GinRecovery.func1.1()\n\t/Users/zouyi/go/src/zouyi/bluebell/logger/logger.go:134 +0x254\npanic({0x1050888e0, 0x10547b070})\n\t/usr/local/go/src/runtime/panic.go:884 +0x204\nzouyi/bluebell/pkg/jwt.RefreshToken({0x140004a40d7, 0xbd}, {0x1400049a1a8?, 0x1?})\n\t/Users/zouyi/go/src/zouyi/bluebell/pkg/jwt/jwt.go:80 +0xa0\nzouyi/bluebell/controller.RefreshTokenHandler(0x1400013e200)\n\t/Users/zouyi/go/src/zouyi/bluebell/controller/user.go:104 +0xd0\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/zouyi/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174\nzouyi/bluebell/logger.GinRecovery.func1(0x1400013e200)\n\t/Users/zouyi/go/src/zouyi/bluebell/logger/logger.go:145 +0x74\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/zouyi/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174\nzouyi/bluebell/logger.GinLogger.func1(0x1400013e200)\n\t/Users/zouyi/go/src/zouyi/bluebell/logger/logger.go:86 +0x84\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/zouyi/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0x140006829c0, 0x1400013e200)\n\t/Users/zouyi/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620 +0x54c\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0x140006829c0, {0x1051377d0?, 0x140004aa2a0}, 0x1400013e300)\n\t/Users/zouyi/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576 +0x1d4\nnet/http.serverHandler.ServeHTTP({0x1051364e8?}, {0x1051377d0, 0x140004aa2a0}, 0x1400013e300)\n\t/usr/local/go/src/net/http/server.go:2936 +0x2d8\nnet/http.(*conn).serve(0x140000ae090, {0x105137ea8, 0x1400008f710})\n\t/usr/local/go/src/net/http/server.go:1995 +0x560\ncreated by net/http.(*Server).Serve\n\t/usr/local/go/src/net/http/server.go:3089 +0x520\n"}
-2023-07-19T11:07:00.539+0800	INFO	logger/logger.go:89	/api/v1/refresh_token	{"status": 500, "method": "GET", "path": "/api/v1/refresh_token", "query": "refresh_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTIzMjc5MDcsImlzcyI6ImJsdWViZWxsIn0.Qx_6SFiD9jvTycBJ_OklqykWVQtqqTJ6cjXnxLK-bkQ", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.005711041}
-2023-07-19T11:07:42.556+0800	INFO	logger/logger.go:89	/api/v1/refresh_token	{"status": 200, "method": "GET", "path": "/api/v1/refresh_token", "query": "refresh_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTIzMjc5MDcsImlzcyI6ImJsdWViZWxsIn0.Qx_6SFiD9jvTycBJ_OklqykWVQtqqTJ6cjXnxLK-bkQ", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000022833}
-2023-07-19T11:08:16.326+0800	ERROR	controller/user.go:106	jwt.refreshToken failed	{"error": "token contains an invalid number of segments"}
-2023-07-19T11:08:16.327+0800	INFO	logger/logger.go:89	/api/v1/refresh_token	{"status": 200, "method": "GET", "path": "/api/v1/refresh_token", "query": "refresh_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTIzMjc5MDcsImlzcyI6ImJsdWViZWxsIn0.Qx_6SFiD9jvTycBJ_OklqykWVQtqqTJ6cjXnxLK-bkQ", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.001383292}
-2023-07-19T11:09:04.659+0800	ERROR	controller/user.go:106	jwt.refreshToken failed	{"error": "invalid character 'ß' looking for beginning of value"}
-2023-07-19T11:09:04.660+0800	INFO	logger/logger.go:89	/api/v1/refresh_token	{"status": 200, "method": "GET", "path": "/api/v1/refresh_token", "query": "refresh_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTIzMjc5MDcsImlzcyI6ImJsdWViZWxsIn0.Qx_6SFiD9jvTycBJ_OklqykWVQtqqTJ6cjXnxLK-bkQ", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000815667}
-2023-07-19T11:09:17.948+0800	ERROR	controller/user.go:106	jwt.refreshToken failed	{"error": "signature is invalid"}
-2023-07-19T11:09:17.949+0800	INFO	logger/logger.go:89	/api/v1/refresh_token	{"status": 200, "method": "GET", "path": "/api/v1/refresh_token", "query": "refresh_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTIzMjc5MDcsImlzcyI6ImJsdWViZWxsIn0.Qx_6SFiD9jvTycBJ_OklqykWVQtqqTJ6cjXnxLK-bkQ", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000482209}
-2023-07-19T11:09:47.379+0800	ERROR	logger/logger.go:131	[Recovery from panic]	{"error": "runtime error: invalid memory address or nil pointer dereference", "request": "GET /api/v1/refresh_token?refresh_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTIzMjc5MDcsImlzcyI6ImJsdWViZWxsIn0.Qx_6SFiD9jvTycBJ_OklqykWVQtqqTJ6cjXnxLK-bkQ HTTP/1.1\r\nHost: 127.0.0.1:8081\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nAuthorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0NzAwMDM0MjUwNDQ1OTQ2ODksInVzZXJuYW1lIjoieHlxIiwiZXhwIjoxNjkyMzI3OTA3LCJpc3MiOiJibHVlYmVsbCJ9.SPQMNc_DpDXmfd1XKfkF4sDeudWR3qjNaQbDR61ODzQ\r\nCache-Control: no-cache\r\nConnection: Upgrade\r\nContent-Length: 75\r\nContent-Type: application/json\r\nPostman-Token: add9b247-b2ed-414c-bcb3-3f52e0e561de\r\nSec-Websocket-Key: madgsEHrmgO3SJ9bujg0/A==\r\nSec-Websocket-Version: 13\r\nUpgrade: Websocket\r\nUser-Agent: PostmanRuntime/7.32.3\r\n\r\n", "stack": "goroutine 81 [running]:\nruntime/debug.Stack()\n\t/usr/local/go/src/runtime/debug/stack.go:24 +0x64\nzouyi/bluebell/logger.GinRecovery.func1.1()\n\t/Users/zouyi/go/src/zouyi/bluebell/logger/logger.go:134 +0x254\npanic({0x1050888e0, 0x10547b070})\n\t/usr/local/go/src/runtime/panic.go:884 +0x204\nzouyi/bluebell/pkg/jwt.RefreshToken({0x140000c01a7, 0xbd}, {0x140000bc268?, 0x1?})\n\t/Users/zouyi/go/src/zouyi/bluebell/pkg/jwt/jwt.go:80 +0xa0\nzouyi/bluebell/controller.RefreshTokenHandler(0x14000482300)\n\t/Users/zouyi/go/src/zouyi/bluebell/controller/user.go:104 +0xd0\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/zouyi/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174\nzouyi/bluebell/logger.GinRecovery.func1(0x14000482300)\n\t/Users/zouyi/go/src/zouyi/bluebell/logger/logger.go:145 +0x74\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/zouyi/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174\nzouyi/bluebell/logger.GinLogger.func1(0x14000482300)\n\t/Users/zouyi/go/src/zouyi/bluebell/logger/logger.go:86 +0x84\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/zouyi/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0x140006829c0, 0x14000482300)\n\t/Users/zouyi/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620 +0x54c\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0x140006829c0, {0x1051377d0?, 0x140001401c0}, 0x14000602600)\n\t/Users/zouyi/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576 +0x1d4\nnet/http.serverHandler.ServeHTTP({0x1051364e8?}, {0x1051377d0, 0x140001401c0}, 0x14000602600)\n\t/usr/local/go/src/net/http/server.go:2936 +0x2d8\nnet/http.(*conn).serve(0x140000ae090, {0x105137ea8, 0x1400008f710})\n\t/usr/local/go/src/net/http/server.go:1995 +0x560\ncreated by net/http.(*Server).Serve\n\t/usr/local/go/src/net/http/server.go:3089 +0x520\n"}
-2023-07-19T11:09:47.381+0800	INFO	logger/logger.go:89	/api/v1/refresh_token	{"status": 500, "method": "GET", "path": "/api/v1/refresh_token", "query": "refresh_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTIzMjc5MDcsImlzcyI6ImJsdWViZWxsIn0.Qx_6SFiD9jvTycBJ_OklqykWVQtqqTJ6cjXnxLK-bkQ", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.002448542}
-2023-07-19T11:13:25.178+0800	ERROR	controller/user.go:28	signup form verification err	{"error": "Key: 'SignupForm.confirm_password' Error:Field validation for 'confirm_password' failed on the 'eqfield' tag"}
-2023-07-19T11:13:25.179+0800	INFO	logger/logger.go:89	/api/v1/signup	{"status": 200, "method": "POST", "path": "/api/v1/signup", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.0016625}
-2023-07-19T11:13:29.866+0800	INFO	logger/logger.go:89	/api/v1/signup	{"status": 200, "method": "POST", "path": "/api/v1/signup", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.016177666}
-2023-07-19T11:13:37.658+0800	INFO	logger/logger.go:89	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.001054625}
-2023-07-19T11:13:55.525+0800	ERROR	controller/user.go:57	login form verification err	{"error": "Key: 'LoginForm.password' Error:Field validation for 'password' failed on the 'required' tag"}
-2023-07-19T11:13:55.525+0800	INFO	logger/logger.go:89	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000197167}
-2023-07-19T11:14:06.016+0800	ERROR	controller/vote.go:18	validation err	{"error": "Key: 'VoteForm.post_id' Error:Field validation for 'post_id' failed on the 'required' tag"}
-2023-07-19T11:14:06.016+0800	INFO	logger/logger.go:89	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.001032958}
-2023-07-19T11:14:31.971+0800	INFO	logger/logger.go:89	/api/v1/ng	{"status": 404, "method": "POST", "path": "/api/v1/ng", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000000292}
-2023-07-19T11:14:34.055+0800	INFO	logger/logger.go:89	/api/v1/ping	{"status": 404, "method": "POST", "path": "/api/v1/ping", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000000708}
-2023-07-19T11:14:38.700+0800	INFO	logger/logger.go:89	/api/v1/ping	{"status": 200, "method": "GET", "path": "/api/v1/ping", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000247583}
-2023-07-19T11:14:55.859+0800	ERROR	controller/user.go:57	login form verification err	{"error": "Key: 'LoginForm.password' Error:Field validation for 'password' failed on the 'required' tag"}
-2023-07-19T11:14:55.859+0800	INFO	logger/logger.go:89	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000255625}
-2023-07-19T11:15:08.579+0800	INFO	logger/logger.go:89	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.00383775}
-2023-07-19T11:16:05.740+0800	INFO	logger/logger.go:89	/api/v1/refresh_token	{"status": 404, "method": "POST", "path": "/api/v1/refresh_token", "query": "refresh_token=11.11.11", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000000625}
-2023-07-19T11:16:09.098+0800	ERROR	controller/user.go:106	jwt.refreshToken failed	{"error": "invalid character '×' looking for beginning of value"}
-2023-07-19T11:16:09.098+0800	INFO	logger/logger.go:89	/api/v1/refresh_token	{"status": 200, "method": "GET", "path": "/api/v1/refresh_token", "query": "refresh_token=11.11.11", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000139667}
-2023-07-19T11:17:06.690+0800	ERROR	logger/logger.go:131	[Recovery from panic]	{"error": "runtime error: invalid memory address or nil pointer dereference", "request": "GET /api/v1/refresh_token?refresh_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTIzMjg1MDgsImlzcyI6ImJsdWViZWxsIn0.7yTF4fS9PfU7ZWtKN47mDKBx8dSjmTGkp26Cag6XRkQ HTTP/1.1\r\nHost: 127.0.0.1:8081\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nAuthorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0NzAxMDkwMTczNTI0Mzc3NjEsInVzZXJuYW1lIjoicmZ0IiwiZXhwIjoxNjkyMzI4NDE3LCJpc3MiOiJibHVlYmVsbCJ9.hPQapwaq_HoXgq_8b1ILPPbfBhpkNMYzxzD3Ageaous\r\nCache-Control: no-cache\r\nConnection: Upgrade\r\nContent-Length: 46\r\nContent-Type: application/json\r\nPostman-Token: 449d5b90-0e75-41e0-bdfe-c5ae91232c99\r\nSec-Websocket-Key: madgsEHrmgO3SJ9bujg0/A==\r\nSec-Websocket-Version: 13\r\nUpgrade: Websocket\r\nUser-Agent: PostmanRuntime/7.32.3\r\n\r\n", "stack": "goroutine 81 [running]:\nruntime/debug.Stack()\n\t/usr/local/go/src/runtime/debug/stack.go:24 +0x64\nzouyi/bluebell/logger.GinRecovery.func1.1()\n\t/Users/zouyi/go/src/zouyi/bluebell/logger/logger.go:134 +0x254\npanic({0x1050888e0, 0x10547b070})\n\t/usr/local/go/src/runtime/panic.go:884 +0x204\nzouyi/bluebell/pkg/jwt.RefreshToken({0x1400056e007, 0xbd}, {0x140001c6028?, 0x1?})\n\t/Users/zouyi/go/src/zouyi/bluebell/pkg/jwt/jwt.go:80 +0xa0\nzouyi/bluebell/controller.RefreshTokenHandler(0x1400013e300)\n\t/Users/zouyi/go/src/zouyi/bluebell/controller/user.go:104 +0xd0\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/zouyi/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174\nzouyi/bluebell/logger.GinRecovery.func1(0x1400013e300)\n\t/Users/zouyi/go/src/zouyi/bluebell/logger/logger.go:145 +0x74\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/zouyi/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174\nzouyi/bluebell/logger.GinLogger.func1(0x1400013e300)\n\t/Users/zouyi/go/src/zouyi/bluebell/logger/logger.go:86 +0x84\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/zouyi/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0x140006829c0, 0x1400013e300)\n\t/Users/zouyi/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620 +0x54c\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0x140006829c0, {0x1051377d0?, 0x14000576000}, 0x1400013e100)\n\t/Users/zouyi/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576 +0x1d4\nnet/http.serverHandler.ServeHTTP({0x1051364e8?}, {0x1051377d0, 0x14000576000}, 0x1400013e100)\n\t/usr/local/go/src/net/http/server.go:2936 +0x2d8\nnet/http.(*conn).serve(0x140000ae090, {0x105137ea8, 0x1400008f710})\n\t/usr/local/go/src/net/http/server.go:1995 +0x560\ncreated by net/http.(*Server).Serve\n\t/usr/local/go/src/net/http/server.go:3089 +0x520\n"}
-2023-07-19T11:17:06.692+0800	INFO	logger/logger.go:89	/api/v1/refresh_token	{"status": 500, "method": "GET", "path": "/api/v1/refresh_token", "query": "refresh_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTIzMjg1MDgsImlzcyI6ImJsdWViZWxsIn0.7yTF4fS9PfU7ZWtKN47mDKBx8dSjmTGkp26Cag6XRkQ", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.003043709}
-2023-07-19T11:23:33.109+0800	INFO	logger/logger.go:52	[logger] init success
-2023-07-19T11:23:33.110+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
-2023-07-19T11:23:33.113+0800	INFO	mysql/mysql.go:40	[mysql] init success
-2023-07-19T11:23:33.113+0800	INFO	redis/redis.go:28	[redis] init success
-2023-07-19T11:23:33.114+0800	INFO	controller/validator.go:61	init trans success
-2023-07-19T11:23:33.116+0800	INFO	router/router.go:53	[router] init success
-2023-07-19T11:23:54.034+0800	INFO	logger/logger.go:89	/api/v1/refresh_token	{"status": 200, "method": "POST", "path": "/api/v1/refresh_token", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000306834}
-2023-07-19T11:35:48.490+0800	INFO	logger/logger.go:52	[logger] init success
-2023-07-19T11:35:48.492+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
-2023-07-19T11:35:48.495+0800	INFO	mysql/mysql.go:40	[mysql] init success
-2023-07-19T11:35:48.496+0800	INFO	redis/redis.go:28	[redis] init success
-2023-07-19T11:35:48.496+0800	INFO	controller/validator.go:61	init trans success
-2023-07-19T11:35:48.497+0800	INFO	router/router.go:53	[router] init success
-2023-07-19T11:35:55.913+0800	ERROR	controller/user.go:106	jwt.refreshToken failed	{"error": "token contains an invalid number of segments"}
-2023-07-19T11:35:55.913+0800	INFO	logger/logger.go:89	/api/v1/refresh_token	{"status": 200, "method": "GET", "path": "/api/v1/refresh_token", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.00021075}
-2023-07-19T11:36:43.170+0800	INFO	logger/logger.go:89	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.004544959}
-2023-07-19T11:40:27.104+0800	INFO	logger/logger.go:52	[logger] init success
-2023-07-19T11:40:27.105+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
-2023-07-19T11:40:27.109+0800	INFO	mysql/mysql.go:40	[mysql] init success
-2023-07-19T11:40:27.109+0800	INFO	redis/redis.go:28	[redis] init success
-2023-07-19T11:40:27.110+0800	INFO	controller/validator.go:61	init trans success
-2023-07-19T11:40:27.112+0800	INFO	router/router.go:53	[router] init success
-2023-07-19T11:40:29.938+0800	INFO	logger/logger.go:89	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.001788084}
-2023-07-19T11:40:35.779+0800	INFO	logger/logger.go:89	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000946209}
-2023-07-19T11:40:36.652+0800	INFO	logger/logger.go:89	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000578458}
-2023-07-19T11:40:37.478+0800	INFO	logger/logger.go:89	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.003470041}
-2023-07-19T11:40:38.301+0800	INFO	logger/logger.go:89	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000612}
-2023-07-19T11:41:12.107+0800	ERROR	controller/user.go:105	jwt.refreshToken failed	{"error": "token contains an invalid number of segments"}
-2023-07-19T11:41:12.107+0800	INFO	logger/logger.go:89	/api/v1/refresh_token	{"status": 200, "method": "GET", "path": "/api/v1/refresh_token", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000122917}
-2023-07-19T11:41:16.510+0800	ERROR	logger/logger.go:131	[Recovery from panic]	{"error": "runtime error: invalid memory address or nil pointer dereference", "request": "GET /api/v1/refresh_token?refresh_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTIzMzAwMzgsImlzcyI6ImJsdWViZWxsIn0.U1v5IRP_aDdCKQtY8Gnc3j9NaK4BIur4fhdAYcQdM8I HTTP/1.1\r\nHost: 127.0.0.1:8081\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nAuthorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0NzAxMDkwMTczNTI0Mzc3NjEsInVzZXJuYW1lIjoicmZ0IiwiZXhwIjoxNjkyMzMwMDM4LCJpc3MiOiJibHVlYmVsbCJ9.bdWAeh5xp48k9xaQhqRHoMLtqRZKPy9Kfo0vIrvxf54\r\nCache-Control: no-cache\r\nConnection: Upgrade\r\nContent-Length: 198\r\nContent-Type: application/json\r\nPostman-Token: d8b28117-1fc7-4b0a-8385-58f020a055d7\r\nSec-Websocket-Key: madgsEHrmgO3SJ9bujg0/A==\r\nSec-Websocket-Version: 13\r\nUpgrade: Websocket\r\nUser-Agent: PostmanRuntime/7.32.3\r\n\r\n", "stack": "goroutine 36 [running]:\nruntime/debug.Stack()\n\t/usr/local/go/src/runtime/debug/stack.go:24 +0x64\nzouyi/bluebell/logger.GinRecovery.func1.1()\n\t/Users/zouyi/go/src/zouyi/bluebell/logger/logger.go:134 +0x254\npanic({0x1049108e0, 0x104d03070})\n\t/usr/local/go/src/runtime/panic.go:884 +0x204\nzouyi/bluebell/pkg/jwt.RefreshToken({0x140005b2277, 0xbd}, {0x140005c01a8?, 0x1?})\n\t/Users/zouyi/go/src/zouyi/bluebell/pkg/jwt/jwt.go:80 +0xa0\nzouyi/bluebell/controller.RefreshTokenHandler(0x140005ae100)\n\t/Users/zouyi/go/src/zouyi/bluebell/controller/user.go:103 +0xd0\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/zouyi/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174\nzouyi/bluebell/logger.GinRecovery.func1(0x140005ae100)\n\t/Users/zouyi/go/src/zouyi/bluebell/logger/logger.go:145 +0x74\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/zouyi/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174\nzouyi/bluebell/logger.GinLogger.func1(0x140005ae100)\n\t/Users/zouyi/go/src/zouyi/bluebell/logger/logger.go:86 +0x84\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/zouyi/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0x14000003520, 0x140005ae100)\n\t/Users/zouyi/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620 +0x54c\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0x14000003520, {0x1049bf7d0?, 0x140005b6620}, 0x140005ae600)\n\t/Users/zouyi/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576 +0x1d4\nnet/http.serverHandler.ServeHTTP({0x1049be4e8?}, {0x1049bf7d0, 0x140005b6620}, 0x140005ae600)\n\t/usr/local/go/src/net/http/server.go:2936 +0x2d8\nnet/http.(*conn).serve(0x140004aa090, {0x1049bfea8, 0x14000705530})\n\t/usr/local/go/src/net/http/server.go:1995 +0x560\ncreated by net/http.(*Server).Serve\n\t/usr/local/go/src/net/http/server.go:3089 +0x520\n"}
-2023-07-19T11:41:16.511+0800	INFO	logger/logger.go:89	/api/v1/refresh_token	{"status": 500, "method": "GET", "path": "/api/v1/refresh_token", "query": "refresh_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTIzMzAwMzgsImlzcyI6ImJsdWViZWxsIn0.U1v5IRP_aDdCKQtY8Gnc3j9NaK4BIur4fhdAYcQdM8I", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.001966375}
-2023-07-19T11:41:36.131+0800	ERROR	controller/user.go:105	jwt.refreshToken failed	{"error": "illegal base64 data at input byte 1"}
-2023-07-19T11:41:36.132+0800	INFO	logger/logger.go:89	/api/v1/refresh_token	{"status": 200, "method": "GET", "path": "/api/v1/refresh_token", "query": "refresh_token=1.1.1", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.00011225}
-2023-07-19T11:42:02.293+0800	ERROR	controller/user.go:105	jwt.refreshToken failed	{"error": "illegal base64 data at input byte 1"}
-2023-07-19T11:42:02.293+0800	INFO	logger/logger.go:89	/api/v1/refresh_token	{"status": 200, "method": "GET", "path": "/api/v1/refresh_token", "query": "refresh_token=1.1.1", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000286}
-2023-07-19T11:42:07.075+0800	INFO	logger/logger.go:89	/api/v1/refresh_token	{"status": 200, "method": "GET", "path": "/api/v1/refresh_token", "query": "refresh_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTIzMzAwMzgsImlzcyI6ImJsdWViZWxsIn0.U1v5IRP_aDdCKQtY8Gnc3j9NaK4BIur4fhdAYcQdM8I", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.79", "errors": "", "cost": 0.000050916}
-2023-07-19T11:42:07.236+0800	INFO	logger/logger.go:89	/favicon.ico	{"status": 404, "method": "GET", "path": "/favicon.ico", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.79", "errors": "", "cost": 0.0000005}
-2023-07-19T11:42:57.083+0800	ERROR	controller/user.go:105	jwt.refreshToken failed	{"error": "illegal base64 data at input byte 1"}
-2023-07-19T11:42:57.085+0800	INFO	logger/logger.go:89	/api/v1/refresh_token	{"status": 200, "method": "GET", "path": "/api/v1/refresh_token", "query": "refresh_token=1.1.1", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.00183325}
-2023-07-19T11:43:31.130+0800	ERROR	controller/user.go:105	jwt.refreshToken failed	{"error": "invalid character 'y' looking for beginning of value"}
-2023-07-19T11:43:31.131+0800	INFO	logger/logger.go:89	/api/v1/refresh_token	{"status": 200, "method": "GET", "path": "/api/v1/refresh_token", "query": "refresh_token=eaayJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0NzAxMDkwMTczNTI0Mzc3NjEsInVzZXJuYW1lIjoicmZ0IiwiZXhwIjoxNjkyMzMwMDM4LCJpc3MiOiJibHVlYmVsbCJ9.bdWAeh5xp48k9xaQhqRHoMLtqRZKPy9Kfo0vIrvxf54", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000787334}
-2023-07-19T11:45:07.230+0800	INFO	logger/logger.go:52	[logger] init success
-2023-07-19T11:45:07.231+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
-2023-07-19T11:45:07.236+0800	INFO	mysql/mysql.go:40	[mysql] init success
-2023-07-19T11:45:07.237+0800	INFO	redis/redis.go:28	[redis] init success
-2023-07-19T11:45:07.237+0800	INFO	controller/validator.go:61	init trans success
-2023-07-19T11:45:07.238+0800	INFO	router/router.go:53	[router] init success
-2023-07-19T11:45:09.399+0800	ERROR	controller/user.go:104	jwt.refreshToken failed	{"error": "invalid character 'y' looking for beginning of value"}
-2023-07-19T11:45:09.399+0800	INFO	logger/logger.go:89	/api/v1/refresh_token	{"status": 200, "method": "GET", "path": "/api/v1/refresh_token", "query": "refresh_token=eaayJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0NzAxMDkwMTczNTI0Mzc3NjEsInVzZXJuYW1lIjoicmZ0IiwiZXhwIjoxNjkyMzMwMDM4LCJpc3MiOiJibHVlYmVsbCJ9.bdWAeh5xp48k9xaQhqRHoMLtqRZKPy9Kfo0vIrvxf54", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.00013825}
-2023-07-19T11:45:41.450+0800	INFO	logger/logger.go:89	/api/v1/refresh_token	{"status": 200, "method": "GET", "path": "/api/v1/refresh_token", "query": "refresh_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0NzAxMDkwMTczNTI0Mzc3NjEsInVzZXJuYW1lIjoicmZ0IiwiZXhwIjoxNjkyMzMwMDM4LCJpc3MiOiJibHVlYmVsbCJ9.bdWAeh5xp48k9xaQhqRHoMLtqRZKPy9Kfo0vIrvxf54", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000361708}
-2023-07-19T11:46:04.332+0800	INFO	logger/logger.go:89	/api/v1/refresh_token	{"status": 200, "method": "GET", "path": "/api/v1/refresh_token", "query": "refresh_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTIzMzAwMzgsImlzcyI6ImJsdWViZWxsIn0.U1v5IRP_aDdCKQtY8Gnc3j9NaK4BIur4fhdAYcQdM8I", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000110042}
+2023-07-19T13:20:03.221+0800	INFO	logger/logger.go:52	[logger] init success
+2023-07-19T13:20:03.222+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-07-19T13:20:03.226+0800	INFO	mysql/mysql.go:40	[mysql] init success
+2023-07-19T13:20:03.227+0800	INFO	redis/redis.go:28	[redis] init success
+2023-07-19T13:20:03.228+0800	INFO	controller/validator.go:61	init trans success
+2023-07-19T13:20:03.229+0800	INFO	router/router.go:53	[router] init success
+2023-07-19T13:20:12.665+0800	ERROR	controller/post.go:88	invalid params	{"error": "strconv.ParseUint: parsing \"order\": invalid syntax"}
+2023-07-19T13:20:12.666+0800	INFO	logger/logger.go:89	/api/v1/post/order	{"status": 200, "method": "GET", "path": "/api/v1/post/order", "query": "size=3&order=%22time%22&page=1", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000494}
+2023-07-19T13:20:32.313+0800	ERROR	logic/post.go:108	get post ids in order from redis err, or len(ids) == 0
+2023-07-19T13:20:32.313+0800	INFO	logger/logger.go:89	/api/v1/posts/order	{"status": 200, "method": "GET", "path": "/api/v1/posts/order", "query": "size=3&order=%22time%22&page=1", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.001802}
+2023-07-19T13:27:46.261+0800	ERROR	middleware/auth.go:34	[jwt auth middleware] invalid token	{"error": "invalid character 'y' looking for beginning of value"}
+2023-07-19T13:27:46.262+0800	INFO	logger/logger.go:89	/api/v1/ping	{"status": 200, "method": "GET", "path": "/api/v1/ping", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000319042}
+2023-07-19T13:27:54.162+0800	INFO	logger/logger.go:89	/api/v1/login	{"status": 404, "method": "GET", "path": "/api/v1/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000000583}
+2023-07-19T13:27:57.908+0800	INFO	logger/logger.go:89	/api/v1/login	{"status": 200, "method": "POST", "path": "/api/v1/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.005001958}
+2023-07-19T13:28:09.970+0800	INFO	logger/logger.go:89	/api/v1/ping	{"status": 404, "method": "POST", "path": "/api/v1/ping", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000000709}
+2023-07-19T13:28:12.820+0800	INFO	logger/logger.go:89	/api/v1/ping	{"status": 200, "method": "GET", "path": "/api/v1/ping", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000133125}
+2023-07-19T13:29:31.158+0800	INFO	logger/logger.go:89	/posts	{"status": 404, "method": "GET", "path": "/posts", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000000416}
+2023-07-19T13:29:48.987+0800	INFO	logger/logger.go:89	/api/vi/posts	{"status": 404, "method": "GET", "path": "/api/vi/posts", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.0000005}
+2023-07-19T13:30:04.933+0800	INFO	logger/logger.go:89	/api/v1/posts	{"status": 200, "method": "GET", "path": "/api/v1/posts", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.009619333}
+2023-07-19T13:30:16.707+0800	INFO	logger/logger.go:89	/api/v1/post	{"status": 404, "method": "GET", "path": "/api/v1/post", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000000459}
+2023-07-19T13:30:19.925+0800	INFO	logger/logger.go:89	/api/v1/post	{"status": 200, "method": "POST", "path": "/api/v1/post", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.00027575}
+2023-07-19T13:33:15.193+0800	INFO	logger/logger.go:89	/api/v1/post	{"status": 200, "method": "POST", "path": "/api/v1/post", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.037329959}
+2023-07-19T13:33:38.069+0800	INFO	logger/logger.go:89	/api/v1/post	{"status": 200, "method": "POST", "path": "/api/v1/post", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.005557167}
+2023-07-19T13:40:44.201+0800	INFO	logger/logger.go:52	[logger] init success
+2023-07-19T13:40:44.201+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-07-19T13:40:44.204+0800	INFO	mysql/mysql.go:40	[mysql] init success
+2023-07-19T13:40:44.205+0800	INFO	redis/redis.go:28	[redis] init success
+2023-07-19T13:40:44.205+0800	INFO	controller/validator.go:61	init trans success
+2023-07-19T13:40:44.206+0800	INFO	router/router.go:53	[router] init success
+2023-07-19T13:42:46.874+0800	INFO	logger/logger.go:52	[logger] init success
+2023-07-19T13:42:46.875+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-07-19T13:42:46.879+0800	INFO	mysql/mysql.go:40	[mysql] init success
+2023-07-19T13:42:46.879+0800	INFO	redis/redis.go:28	[redis] init success
+2023-07-19T13:42:46.880+0800	INFO	controller/validator.go:61	init trans success
+2023-07-19T13:42:46.881+0800	INFO	router/router.go:53	[router] init success
+2023-07-19T13:42:49.064+0800	INFO	logger/logger.go:89	/api/v1/post	{"status": 200, "method": "POST", "path": "/api/v1/post", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.01477725}
+2023-07-19T13:43:28.968+0800	INFO	logger/logger.go:89	/api/v1/post	{"status": 200, "method": "POST", "path": "/api/v1/post", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.004462666}
+2023-07-19T13:43:38.111+0800	INFO	logger/logger.go:89	/api/v1/posts/order	{"status": 200, "method": "GET", "path": "/api/v1/posts/order", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.008699041}
+2023-07-19T13:44:08.952+0800	INFO	logger/logger.go:89	/api/v1/posts/order	{"status": 200, "method": "GET", "path": "/api/v1/posts/order", "query": "page=2&size=2", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.004411125}
+2023-07-19T13:44:19.385+0800	INFO	logger/logger.go:89	/api/v1/posts/order	{"status": 200, "method": "GET", "path": "/api/v1/posts/order", "query": "page=2&size=2&order=2", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.003264833}
+2023-07-19T13:44:22.380+0800	INFO	logger/logger.go:89	/api/v1/posts/order	{"status": 200, "method": "GET", "path": "/api/v1/posts/order", "query": "page=2&size=2&order=1", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.002117791}
+2023-07-19T14:09:56.147+0800	INFO	logger/logger.go:52	[logger] init success
+2023-07-19T14:09:56.147+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-07-19T14:09:56.150+0800	INFO	mysql/mysql.go:40	[mysql] init success
+2023-07-19T14:09:56.151+0800	INFO	redis/redis.go:28	[redis] init success
+2023-07-19T14:09:56.151+0800	INFO	controller/validator.go:61	init trans success
+2023-07-19T14:09:56.153+0800	INFO	router/router.go:54	[router] init success
+2023-07-19T14:10:05.547+0800	INFO	logger/logger.go:89	/api/v1/posts/1	{"status": 200, "method": "GET", "path": "/api/v1/posts/1", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.007015292}
+2023-07-19T14:13:20.171+0800	INFO	logger/logger.go:52	[logger] init success
+2023-07-19T14:13:20.171+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-07-19T14:13:20.176+0800	INFO	mysql/mysql.go:40	[mysql] init success
+2023-07-19T14:13:20.177+0800	INFO	redis/redis.go:28	[redis] init success
+2023-07-19T14:13:20.177+0800	INFO	controller/validator.go:61	init trans success
+2023-07-19T14:13:20.179+0800	INFO	router/router.go:54	[router] init success
+2023-07-19T14:13:22.673+0800	INFO	logger/logger.go:89	/api/v1/posts/1	{"status": 200, "method": "GET", "path": "/api/v1/posts/1", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.007571209}
