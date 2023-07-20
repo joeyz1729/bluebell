@@ -64,6 +64,16 @@ bluebell
 </code>
 </pre>
 
+# 技能清单
+* Viper配置管理
+* Zap日志库
+* 雪花算法 
+* JWT认证 
+* 令牌桶限流
+* Gin框架
+* Go语言操作MySQL (sqlx)
+* Go语言操作Redis (go-redis)
+
 # 启动流程
 1. 修改conf/config.yaml 文件中 host，port，MySQL，Redis等配置
 2. 连接上MySQL数据库，并建库建表和插入初始数据
