@@ -86,3 +86,13 @@
 2023-07-19T15:09:28.078+0800	INFO	logger/logger.go:89	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000526666}
 2023-07-19T15:09:36.561+0800	INFO	logger/logger.go:89	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.00058575}
 2023-07-19T15:09:39.982+0800	INFO	logger/logger.go:89	/api/v1/vote	{"status": 200, "method": "POST", "path": "/api/v1/vote", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000791584}
+2023-07-20T15:31:06.795+0800	INFO	logger/logger.go:52	[logger] init success
+2023-07-20T15:31:06.796+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-07-20T15:31:06.833+0800	INFO	mysql/mysql.go:40	[mysql] init success
+2023-07-20T15:31:06.838+0800	INFO	redis/redis.go:28	[redis] init success
+2023-07-20T15:31:06.839+0800	INFO	controller/validator.go:61	init trans success
+2023-07-20T15:31:06.841+0800	INFO	router/router.go:54	[router] init success
+2023-07-20T15:31:22.921+0800	INFO	logger/logger.go:89	/	{"status": 404, "method": "GET", "path": "/", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.79", "errors": "", "cost": 0.0000005}
+2023-07-20T15:31:35.236+0800	INFO	logger/logger.go:89	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.79", "errors": "", "cost": 0.000015625}
+2023-07-20T15:31:39.119+0800	INFO	logger/logger.go:89	/swagger/index.html	{"status": 404, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.79", "errors": "", "cost": 0.000000542}
+2023-07-20T15:31:42.398+0800	INFO	logger/logger.go:89	/swagger/index.html	{"status": 404, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "127.0.0.1", "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.79", "errors": "", "cost": 0.000000541}
