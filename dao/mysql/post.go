@@ -2,7 +2,8 @@ package mysql
 
 import (
 	"strings"
-	"zouyi/bluebell/model"
+
+	"github.com/YiZou89/bluebell/model"
 
 	"github.com/jmoiron/sqlx"
 )

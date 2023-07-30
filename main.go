@@ -3,14 +3,14 @@ package main
 import (
 	"flag"
 	"fmt"
-	"zouyi/bluebell/controller"
-	"zouyi/bluebell/dao/mysql"
-	"zouyi/bluebell/dao/redis"
-	"zouyi/bluebell/logger"
-	"zouyi/bluebell/pkg/snowflake"
-	"zouyi/bluebell/router"
-	"zouyi/bluebell/setting"
 
+	"github.com/YiZou89/bluebell/controller"
+	"github.com/YiZou89/bluebell/dao/mysql"
+	"github.com/YiZou89/bluebell/dao/redis"
+	"github.com/YiZou89/bluebell/logger"
+	"github.com/YiZou89/bluebell/pkg/snowflake"
+	"github.com/YiZou89/bluebell/router"
+	"github.com/YiZou89/bluebell/setting"
 	"go.uber.org/zap"
 )
 

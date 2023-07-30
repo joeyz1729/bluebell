@@ -4,7 +4,8 @@ import (
 	"crypto/md5"
 	"database/sql"
 	"encoding/hex"
-	"zouyi/bluebell/model"
+
+	"github.com/YiZou89/bluebell/model"
 )
 
 // Login 验证用户登陆信息

@@ -2,8 +2,9 @@ package logic
 
 import (
 	"strconv"
-	"zouyi/bluebell/dao/redis"
-	"zouyi/bluebell/model"
+
+	"github.com/YiZou89/bluebell/dao/redis"
+	"github.com/YiZou89/bluebell/model"
 
 	"go.uber.org/zap"
 )

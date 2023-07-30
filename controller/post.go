@@ -2,8 +2,9 @@ package controller
 
 import (
 	"strconv"
-	"zouyi/bluebell/logic"
-	"zouyi/bluebell/model"
+
+	"github.com/YiZou89/bluebell/logic"
+	"github.com/YiZou89/bluebell/model"
 
 	"github.com/gin-gonic/gin"
 	"go.uber.org/zap"

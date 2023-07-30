@@ -1,6 +1,6 @@
 name: "web-app"
 mode: "dev"
-version: "v0.1"
+version: "v0.2"
 host: 127.0.0.1
 port: 8081
 start_time: "2023-5-29"

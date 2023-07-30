@@ -3,7 +3,8 @@ package mysql
 import (
 	"fmt"
 	"time"
-	"zouyi/bluebell/setting"
+
+	"github.com/YiZou89/bluebell/setting"
 
 	"github.com/jmoiron/sqlx"
 

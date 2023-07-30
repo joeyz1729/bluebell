@@ -2,7 +2,8 @@ package controller
 
 import (
 	"strconv"
-	"zouyi/bluebell/dao/mysql"
+
+	"github.com/YiZou89/bluebell/dao/mysql"
 
 	"go.uber.org/zap"
 

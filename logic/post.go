@@ -1,10 +1,10 @@
 package logic
 
 import (
-	"zouyi/bluebell/dao/mysql"
-	"zouyi/bluebell/dao/redis"
-	"zouyi/bluebell/model"
-	"zouyi/bluebell/pkg/snowflake"
+	"github.com/YiZou89/bluebell/dao/mysql"
+	"github.com/YiZou89/bluebell/dao/redis"
+	"github.com/YiZou89/bluebell/model"
+	"github.com/YiZou89/bluebell/pkg/snowflake"
 
 	"go.uber.org/zap"
 )

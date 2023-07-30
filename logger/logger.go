@@ -8,8 +8,8 @@ import (
 	"runtime/debug"
 	"strings"
 	"time"
-	"zouyi/bluebell/setting"
 
+	"github.com/YiZou89/bluebell/setting"
 	"github.com/gin-gonic/gin"
 	"github.com/natefinch/lumberjack"
 	"go.uber.org/zap"

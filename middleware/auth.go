@@ -2,8 +2,9 @@ package middleware
 
 import (
 	"strings"
-	"zouyi/bluebell/controller"
-	"zouyi/bluebell/pkg/jwt"
+
+	"github.com/YiZou89/bluebell/controller"
+	"github.com/YiZou89/bluebell/pkg/jwt"
 
 	"go.uber.org/zap"
 

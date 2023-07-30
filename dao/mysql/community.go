@@ -2,7 +2,8 @@ package mysql
 
 import (
 	"database/sql"
-	"zouyi/bluebell/model"
+
+	"github.com/YiZou89/bluebell/model"
 
 	"go.uber.org/zap"
 )

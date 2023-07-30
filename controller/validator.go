@@ -7,7 +7,7 @@ import (
 
 	"go.uber.org/zap"
 
-	"zouyi/bluebell/model"
+	"github.com/YiZou89/bluebell/model"
 
 	"github.com/gin-gonic/gin/binding"
 	"github.com/go-playground/locales/en"

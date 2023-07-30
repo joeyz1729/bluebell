@@ -1,10 +1,10 @@
 package logic
 
 import (
-	"zouyi/bluebell/dao/mysql"
-	"zouyi/bluebell/model"
-	"zouyi/bluebell/pkg/jwt"
-	"zouyi/bluebell/pkg/snowflake"
+	"github.com/YiZou89/bluebell/dao/mysql"
+	"github.com/YiZou89/bluebell/model"
+	"github.com/YiZou89/bluebell/pkg/jwt"
+	"github.com/YiZou89/bluebell/pkg/snowflake"
 )
 
 func Signup(sf *model.SignupForm) (err error) {

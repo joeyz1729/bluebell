@@ -3,7 +3,8 @@ package redis
 import (
 	"context"
 	"fmt"
-	"zouyi/bluebell/setting"
+
+	"github.com/YiZou89/bluebell/setting"
 
 	"github.com/redis/go-redis/v9"
 	"go.uber.org/zap"

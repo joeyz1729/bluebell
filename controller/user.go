@@ -4,10 +4,11 @@ import (
 	"errors"
 	"fmt"
 	"strings"
-	"zouyi/bluebell/dao/mysql"
-	"zouyi/bluebell/logic"
-	"zouyi/bluebell/model"
-	"zouyi/bluebell/pkg/jwt"
+
+	"github.com/YiZou89/bluebell/dao/mysql"
+	"github.com/YiZou89/bluebell/logic"
+	"github.com/YiZou89/bluebell/model"
+	"github.com/YiZou89/bluebell/pkg/jwt"
 
 	"go.uber.org/zap"
 

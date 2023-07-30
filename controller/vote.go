@@ -1,8 +1,8 @@
 package controller
 
 import (
-	"zouyi/bluebell/logic"
-	"zouyi/bluebell/model"
+	"github.com/YiZou89/bluebell/logic"
+	"github.com/YiZou89/bluebell/model"
 
 	"github.com/go-playground/validator/v10"
 
