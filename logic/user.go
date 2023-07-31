@@ -3,6 +3,7 @@ package logic
 import (
 	"github.com/YiZou89/bluebell/dao/mysql"
 	"github.com/YiZou89/bluebell/model"
+
 	"github.com/YiZou89/bluebell/pkg/jwt"
 	"github.com/YiZou89/bluebell/pkg/snowflake"
 )
@@ -45,4 +46,17 @@ func Login(lf *model.LoginForm) (user *model.User, err error) {
 	user.AccessToken = accessToken
 	user.RefreshToken = refreshToken
 	return
+}
+
+func GetUserDetailById(uid uint64) (userDetail model.UserDetail, err error) {
+	userDetail = model.UserDetail{}
+	userDetail.Id = uid
+
+	user, err := mysql.GetUserById(uid)
+	if err != nil {
+		return
+	}
+	userDetail.Name = user.Username
+
+	return userDetail, nil
 }

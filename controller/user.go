@@ -3,6 +3,7 @@ package controller
 import (
 	"errors"
 	"fmt"
+	"strconv"
 	"strings"
 
 	"github.com/YiZou89/bluebell/dao/mysql"
@@ -84,6 +85,28 @@ func LoginHandler(c *gin.Context) {
 		"token":         user.AccessToken,
 		"refresh_token": user.RefreshToken,
 	})
+}
+
+func GetUserInfoHandler(c *gin.Context) {
+	// 获取需要查看的id
+	uidStr := c.Param("uid")
+	uid, err := strconv.ParseUint(uidStr, 10, 64)
+	if err != nil {
+		zap.L().Error("get user id err", zap.Error(err))
+		ResponseError(c, CodeInvalidParams)
+		return
+	}
+
+	// 业务处理， 查询
+	userDetail, err := logic.GetUserDetailById(uid)
+	if err != nil {
+		// TODO 根据错误类型判断，是uid不存在，还是查询失败，还是其他
+		zap.L().Error("get user detail by uid err", zap.Error(err))
+		ResponseError(c, CodeServerBusy)
+		return
+	}
+
+	ResponseSuccess(c, userDetail)
 }
 
 func RefreshTokenHandler(c *gin.Context) {

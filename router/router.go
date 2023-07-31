@@ -3,10 +3,10 @@ package router
 import (
 	"net/http"
 
-	"github.com/YiZou89/bluebell/controller"
-	"github.com/YiZou89/bluebell/logger"
 	"github.com/YiZou89/bluebell/middleware"
 
+	"github.com/YiZou89/bluebell/controller"
+	"github.com/YiZou89/bluebell/logger"
 	"go.uber.org/zap"
 
 	"github.com/gin-contrib/pprof"
@@ -37,21 +37,23 @@ func Setup(mode string) *gin.Engine {
 	v2.GET("/community", controller.CommunityListHandler)
 	v2.GET("community/:id", controller.CommunityDetailHandler)
 
-	v2.POST("/community/publish", controller.TODO)
-	v2.GET("/community/list/:userid", controller.TODO)
-	v2.POST("/community/join", controller.TODO)
+	// v2.POST("/community/publish", controller.TODO)
+	v2.GET("/community/list/:userid", controller.TODO)                          // 获取userid关注的community列表
+	v2.POST("/community/join", middleware.JWTAuthMiddleware(), controller.TODO) // userid关注community
 
 	// 用户
 	v2.POST("/signup", controller.SignupHandler)
 	v2.POST("/login", controller.LoginHandler)
-	v2.GET("/userinfo", controller.TODO)
+	v2.GET("/userinfo/uid", middleware.JWTAuthMiddleware(), controller.GetUserInfoHandler) // 获取用户信息
 	v2.GET("/refresh_token", controller.RefreshTokenHandler)
 
-	v2.GET("/posts/favorite", controller.TODO)
+	v2.GET("/posts/favorite", controller.TODO) // 获取帖子点赞列表
 	v2.GET("/posts", controller.PostListHandler)
 	v2.GET("/posts/:cid", controller.CommunityPostListHandler)
 	v2.GET("/post/:pid", controller.GetPostHandler)
 	v2.GET("/posts/order", controller.PostListOrderHandler)
+	v2.POST("/post", middleware.JWTAuthMiddleware(), controller.PostHandler)
+	v2.POST("/vote", middleware.JWTAuthMiddleware(), controller.PostVoteHandler)
 
 	// 关注或取关， 关注，粉丝，好友列表
 	v2.POST("/relation/action/", controller.TODO)
@@ -61,17 +63,16 @@ func Setup(mode string) *gin.Engine {
 
 	v2.POST("/message/action/", controller.TODO)
 	v2.GET("/message/chat/", controller.TODO)
+	v2.GET("/ping", middleware.JWTAuthMiddleware(), func(c *gin.Context) {
+		userId := c.MustGet("user_id")
+		controller.ResponseSuccess(c, gin.H{"user_id": userId})
+	})
 
-	v2.Use(middleware.JWTAuthMiddleware())
-	{
-		v2.GET("/ping", func(c *gin.Context) {
-			userId := c.MustGet("user_id")
-			controller.ResponseSuccess(c, gin.H{"user_id": userId})
-		})
-		v2.POST("/post", controller.PostHandler)
-		v2.POST("/vote", controller.PostVoteHandler)
+	//v2.Use(middleware.JWTAuthMiddleware())
+	//{
 
-	}
+	//}
+
 	zap.L().Info("[router] init success")
 	return r
 }
