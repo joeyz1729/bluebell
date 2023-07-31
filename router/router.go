@@ -57,10 +57,10 @@ func Setup(mode string) *gin.Engine {
 	v2.POST("/vote", middleware.JWTAuthMiddleware(), controller.PostVoteHandler) //TODO， 发评论添加rabbitmq
 
 	// 关注或取关， 关注，粉丝，好友列表
-	v2.POST("/relation/action/", controller.TODO)
-	v2.GET("/relation/follow/list/", controller.TODO)
-	v2.GET("/relation/follower/list/", controller.TODO)
-	v2.GET("/relation/friend/list/", controller.TODO)
+	v2.POST("/relation/action/", middleware.JWTAuthMiddleware(), controller.FollowHandler)
+	v2.GET("/relation/following/list/", middleware.JWTAuthMiddleware(), controller.FollowingListHandler)
+	v2.GET("/relation/follower/list/", middleware.JWTAuthMiddleware(), controller.FollowerListHandler)
+	v2.GET("/relation/friend/list/", middleware.JWTAuthMiddleware(), controller.FriendListHandler)
 
 	v2.POST("/message/action/", controller.TODO)
 	v2.GET("/message/chat/", controller.TODO)

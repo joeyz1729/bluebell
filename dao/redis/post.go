@@ -30,7 +30,7 @@ func CreatePost(pid, cid uint64) (err error) {
 	}).Result()
 
 	// 同社区内按照投票数排序 bluebell:community:cid
-	cKey := getRedisKey(CommunitySetPrefix + strconv.Itoa(int(cid)))
+	cKey := getRedisKey(CommunityPostSetPrefix + strconv.Itoa(int(cid)))
 	_, err = pipeline.ZAdd(ctx, cKey, redis.Z{
 		Score:  0,
 		Member: int64(pid),
@@ -84,7 +84,7 @@ func GetCommunityPostIdsInOrder(form *model.CommunityPostsForm) (PostIdStrings [
 		orderKey = getRedisKey(PostScoreZSet)
 	}
 
-	cKey := getRedisKey(CommunitySetPrefix) + strconv.Itoa(int(form.CommunityId))
+	cKey := getRedisKey(CommunityPostSetPrefix) + strconv.Itoa(int(form.CommunityId))
 	key := orderKey + strconv.Itoa(int(form.CommunityId))
 	ctx := context.Background()
 
