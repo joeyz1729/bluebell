@@ -79,7 +79,7 @@ func PostListHandler(c *gin.Context) {
 // CommunityPostListHandler 根据社区id获取分页的帖子列表
 func CommunityPostListHandler(c *gin.Context) {
 	// 获取社区id，分页大小信息
-	cidStr := c.Param("cid")
+	cidStr := c.Query("cid")
 	page, size := getPageInfo(c)
 	cid, err := strconv.ParseUint(cidStr, 10, 64)
 	if err != nil {
@@ -97,6 +97,47 @@ func CommunityPostListHandler(c *gin.Context) {
 	}
 
 	ResponseSuccess(c, postList)
+}
+
+func FavoritePostListHandler(c *gin.Context) {
+	// TODO
+	uidStr := c.Query("uid")
+	page, size := getPageInfo(c)
+	uid, err := strconv.ParseUint(uidStr, 10, 64)
+	if err != nil {
+		zap.L().Error("invalid params", zap.Error(err))
+		ResponseError(c, CodeInvalidParams)
+		return
+	}
+	postList, err := logic.GetFavoritePostList(uid, page, size)
+	if err != nil {
+		zap.L().Error("get user post list err", zap.Error(err))
+		ResponseError(c, CodeServerBusy)
+		return
+	}
+	ResponseSuccess(c, postList)
+}
+
+// PublishPostListHandler 根据用户id获取分页的帖子列表
+func PublishPostListHandler(c *gin.Context) {
+	// .../list/?user_id=
+	//TODO, 记录帖子投票数，token id是否点赞
+	uidStr := c.Query("uid")
+	page, size := getPageInfo(c)
+	uid, err := strconv.ParseUint(uidStr, 10, 64)
+	if err != nil {
+		zap.L().Error("invalid params", zap.Error(err))
+		ResponseError(c, CodeInvalidParams)
+		return
+	}
+	postList, err := logic.GetPublishPostList(uid, page, size)
+	if err != nil {
+		zap.L().Error("get user post list err", zap.Error(err))
+		ResponseError(c, CodeServerBusy)
+		return
+	}
+	ResponseSuccess(c, postList)
+
 }
 
 // GetPostHandler 获取指定id的帖子详细信息

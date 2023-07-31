@@ -17,13 +17,31 @@ import (
 
 // CommunityListHandler 显示所有社区信息
 func CommunityListHandler(c *gin.Context) {
-	communityList, err := mysql.GetCommunityList()
+	communityList, err := mysql.GetAllCommunityList()
 	if err != nil {
-		zap.L().Error("GetCommunityList() error", zap.Error(err))
+		zap.L().Error("GetAllCommunityList() error", zap.Error(err))
 		ResponseError(c, CodeServerBusy)
 		return
 	}
 	ResponseSuccess(c, communityList)
+}
+
+func CommunityJoinListHandler(c *gin.Context) {
+	//uid, _, err := GetCurrentUser(c)
+	uidStr := c.Query("uid")
+	uid, err := strconv.ParseUint(uidStr, 10, 64)
+	if err != nil {
+		zap.L().Error("invalid params", zap.Error(err))
+		ResponseError(c, CodeInvalidParams)
+		return
+	}
+	communityList, err := logic.GetCommunityJoinList(uid)
+	ResponseSuccess(c, communityList)
+
+}
+
+func UserCommunityListHandler(c *gin.Context) {
+	//TODO
 }
 
 // CommunityDetailHandler 获取指定社区的详细信息

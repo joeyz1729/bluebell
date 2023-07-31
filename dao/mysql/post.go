@@ -53,3 +53,10 @@ func GetCommunityPostList(cid uint64, page, size int64) (posts []*model.Post, er
 	err = db.Select(&posts, sqlStr, cid, size, (page-1)*size)
 	return
 }
+
+func GetUserPostList(uid uint64, page, size int64) (posts []*model.Post, err error) {
+	posts = make([]*model.Post, 0, size)
+	sqlStr := `select post_id, author_id, title, content, create_time from post where author_id = ?  limit ? offset ?`
+	err = db.Select(&posts, sqlStr, uid, size, (page-1)*size)
+	return
+}

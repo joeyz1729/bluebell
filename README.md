@@ -84,3 +84,20 @@ bluebell
 3. 执行 `go build -o ./bin/bluebell`，编译可执行文件至项目的bin目录
 4. 执行 `./bin/bluebell conf/config.yaml`，启动程序
 5. 打开浏览器或postman测试 http://127.0.0.1:8081
+
+# API
+1. 基础接口
+   * 视频流接口，对应community列表和:id
+   * 用户登陆和注册接口，略
+   * 用户信息，TODO
+   * 视频投稿，对应post
+   * 发布列表，对应用户uid的所有帖子，TODO
+2. 互动接口
+   * 赞操作，对应join community
+   * 喜欢列表，对应查询user join的所有community列表，TODO
+   * 评论操作，与视频投稿类似，TODO
+   * 视频评论列表，对应community 下的所有post列表
+3. 社交接口
+TODO
+
+

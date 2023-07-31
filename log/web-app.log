@@ -68,3 +68,205 @@
 2023-07-31T16:04:04.352+0800	INFO	logger/logger.go:89	/api/v2/community/join	{"status": 200, "method": "POST", "path": "/api/v2/community/join", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.001659125}
 2023-07-31T16:04:10.480+0800	INFO	logger/logger.go:89	/api/v2/community/join	{"status": 200, "method": "POST", "path": "/api/v2/community/join", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.004155375}
 2023-07-31T16:04:20.411+0800	INFO	logger/logger.go:89	/api/v2/community/join	{"status": 200, "method": "POST", "path": "/api/v2/community/join", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.003326875}
+2023-07-31T16:39:20.197+0800	INFO	logger/logger.go:52	[logger] init success
+2023-07-31T16:39:20.197+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-07-31T16:39:20.232+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-07-31T16:39:20.247+0800	INFO	redis/redis.go:29	[redis] init success
+2023-07-31T16:39:20.247+0800	INFO	controller/validator.go:61	init trans success
+2023-07-31T16:39:20.250+0800	INFO	router/router.go:76	[router] init success
+2023-07-31T16:39:33.330+0800	INFO	logger/logger.go:89	/api/v2/list/	{"status": 404, "method": "POST", "path": "/api/v2/list/", "query": "user_id=", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000000417}
+2023-07-31T16:39:39.358+0800	INFO	logger/logger.go:89	/api/v2/list/	{"status": 404, "method": "GET", "path": "/api/v2/list/", "query": "user_id=", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000000459}
+2023-07-31T16:39:51.663+0800	ERROR	controller/post.go:112	invalid params	{"error": "strconv.ParseUint: parsing \"\": invalid syntax"}
+2023-07-31T16:39:51.705+0800	INFO	logger/logger.go:89	/api/v2/publish/list/	{"status": 200, "method": "GET", "path": "/api/v2/publish/list/", "query": "user_id=", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.042795916}
+2023-07-31T16:40:12.918+0800	INFO	logger/logger.go:52	[logger] init success
+2023-07-31T16:40:12.920+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-07-31T16:40:12.922+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-07-31T16:40:12.923+0800	INFO	redis/redis.go:29	[redis] init success
+2023-07-31T16:40:12.923+0800	INFO	controller/validator.go:61	init trans success
+2023-07-31T16:40:12.924+0800	INFO	router/router.go:76	[router] init success
+2023-07-31T16:40:15.022+0800	ERROR	controller/post.go:112	invalid params	{"error": "strconv.ParseUint: parsing \"\": invalid syntax"}
+2023-07-31T16:40:15.022+0800	INFO	logger/logger.go:89	/api/v2/publish/list/	{"status": 200, "method": "GET", "path": "/api/v2/publish/list/", "query": "user_id=", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000784292}
+2023-07-31T16:40:17.096+0800	INFO	logger/logger.go:89	/api/v2/publish/list/	{"status": 200, "method": "GET", "path": "/api/v2/publish/list/", "query": "user_id=1", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.0014985}
+2023-07-31T16:40:29.800+0800	INFO	logger/logger.go:89	/api/v2/publish/list/	{"status": 200, "method": "GET", "path": "/api/v2/publish/list/", "query": "user_id=28018727488323585", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.003302834}
+2023-07-31T16:40:43.321+0800	INFO	logger/logger.go:89	/api/v2/publish/list/	{"status": 200, "method": "GET", "path": "/api/v2/publish/list/", "query": "user_id=470109017352437761", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.00173575}
+2023-07-31T16:41:26.378+0800	INFO	logger/logger.go:89	/api/v2/community	{"status": 200, "method": "GET", "path": "/api/v2/community", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.0015745}
+2023-07-31T16:41:39.863+0800	INFO	logger/logger.go:89	/api/v2/posts/1	{"status": 200, "method": "GET", "path": "/api/v2/posts/1", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.006864542}
+2023-07-31T16:41:58.798+0800	INFO	logger/logger.go:89	/api/v2/publish/list/	{"status": 200, "method": "GET", "path": "/api/v2/publish/list/", "query": "user_id=1", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.001729792}
+2023-07-31T16:42:52.026+0800	INFO	logger/logger.go:52	[logger] init success
+2023-07-31T16:42:52.026+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-07-31T16:42:52.030+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-07-31T16:42:52.031+0800	INFO	redis/redis.go:29	[redis] init success
+2023-07-31T16:42:52.031+0800	INFO	controller/validator.go:61	init trans success
+2023-07-31T16:42:52.032+0800	INFO	router/router.go:76	[router] init success
+2023-07-31T16:42:57.718+0800	INFO	logger/logger.go:89	/api/v2/publish/list/	{"status": 200, "method": "GET", "path": "/api/v2/publish/list/", "query": "user_id=1", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.002831667}
+2023-07-31T16:42:59.640+0800	ERROR	controller/post.go:112	invalid params	{"error": "strconv.ParseUint: parsing \"\": invalid syntax"}
+2023-07-31T16:42:59.640+0800	INFO	logger/logger.go:89	/api/v2/publish/list/	{"status": 200, "method": "GET", "path": "/api/v2/publish/list/", "query": "user_id=", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000311}
+2023-07-31T16:43:07.877+0800	INFO	logger/logger.go:89	/api/v2/publish/list/	{"status": 200, "method": "GET", "path": "/api/v2/publish/list/", "query": "user_id=28018727488323585", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.001652334}
+2023-07-31T16:43:44.887+0800	INFO	logger/logger.go:52	[logger] init success
+2023-07-31T16:43:44.888+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-07-31T16:43:44.892+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-07-31T16:43:44.893+0800	INFO	redis/redis.go:29	[redis] init success
+2023-07-31T16:43:44.893+0800	INFO	controller/validator.go:61	init trans success
+2023-07-31T16:43:44.895+0800	INFO	router/router.go:76	[router] init success
+2023-07-31T16:43:46.621+0800	INFO	logger/logger.go:89	/api/v2/publish/list/	{"status": 200, "method": "GET", "path": "/api/v2/publish/list/", "query": "user_id=28018727488323585", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.00248675}
+2023-07-31T16:45:53.364+0800	INFO	logger/logger.go:89	/api/v2/publish/list/	{"status": 200, "method": "GET", "path": "/api/v2/publish/list/", "query": "user_id=1111", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.002687958}
+2023-07-31T16:50:51.744+0800	INFO	logger/logger.go:52	[logger] init success
+2023-07-31T16:50:51.745+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-07-31T16:50:51.747+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-07-31T16:50:51.747+0800	INFO	redis/redis.go:29	[redis] init success
+2023-07-31T16:50:51.748+0800	INFO	controller/validator.go:61	init trans success
+2023-07-31T16:50:51.749+0800	INFO	router/router.go:76	[router] init success
+2023-07-31T16:50:56.059+0800	INFO	logger/logger.go:89	/api/v2/publish/list/	{"status": 200, "method": "GET", "path": "/api/v2/publish/list/", "query": "user_id=1111", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.001608792}
+2023-07-31T16:52:22.409+0800	INFO	logger/logger.go:52	[logger] init success
+2023-07-31T16:52:22.409+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-07-31T16:52:22.412+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-07-31T16:52:22.412+0800	INFO	redis/redis.go:29	[redis] init success
+2023-07-31T16:52:22.413+0800	INFO	controller/validator.go:61	init trans success
+2023-07-31T16:52:22.414+0800	INFO	router/router.go:76	[router] init success
+2023-07-31T16:52:25.996+0800	INFO	logger/logger.go:89	/api/v2/publish/list/	{"status": 200, "method": "GET", "path": "/api/v2/publish/list/", "query": "user_id=1111", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.002179583}
+2023-07-31T16:53:05.582+0800	INFO	logger/logger.go:89	/api/v2/publish/list/	{"status": 200, "method": "GET", "path": "/api/v2/publish/list/", "query": "user_id=28018727488323585", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.002330584}
+2023-07-31T16:53:26.310+0800	INFO	logger/logger.go:52	[logger] init success
+2023-07-31T16:53:26.310+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-07-31T16:53:26.313+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-07-31T16:53:26.314+0800	INFO	redis/redis.go:29	[redis] init success
+2023-07-31T16:53:26.314+0800	INFO	controller/validator.go:61	init trans success
+2023-07-31T16:53:26.315+0800	INFO	router/router.go:76	[router] init success
+2023-07-31T16:53:28.385+0800	INFO	logger/logger.go:89	/api/v2/publish/list/	{"status": 200, "method": "GET", "path": "/api/v2/publish/list/", "query": "user_id=28018727488323585", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.0025965}
+2023-07-31T16:53:33.966+0800	INFO	logger/logger.go:89	/api/v2/publish/list/	{"status": 200, "method": "GET", "path": "/api/v2/publish/list/", "query": "user_id=28018727488323585", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000823417}
+2023-07-31T16:54:18.003+0800	INFO	logger/logger.go:52	[logger] init success
+2023-07-31T16:54:18.003+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-07-31T16:54:18.007+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-07-31T16:54:18.008+0800	INFO	redis/redis.go:29	[redis] init success
+2023-07-31T16:54:18.008+0800	INFO	controller/validator.go:61	init trans success
+2023-07-31T16:54:18.009+0800	INFO	router/router.go:76	[router] init success
+2023-07-31T16:54:19.754+0800	INFO	logger/logger.go:89	/api/v2/publish/list/	{"status": 200, "method": "GET", "path": "/api/v2/publish/list/", "query": "user_id=28018727488323585", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.002259792}
+2023-07-31T16:54:46.749+0800	INFO	logger/logger.go:89	/api/v2/publish/list/	{"status": 200, "method": "GET", "path": "/api/v2/publish/list/", "query": "user_id=28018727488323585", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.001699041}
+2023-07-31T16:55:05.174+0800	INFO	logger/logger.go:89	/api/v2/publish/list/	{"status": 200, "method": "GET", "path": "/api/v2/publish/list/", "query": "user_id=470109017352437761", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.002020458}
+2023-07-31T16:57:17.592+0800	INFO	logger/logger.go:89	/api/v2/publish/list/	{"status": 200, "method": "GET", "path": "/api/v2/publish/list/", "query": "user_id=28018727488323585", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.004546084}
+2023-07-31T16:59:11.494+0800	INFO	logger/logger.go:52	[logger] init success
+2023-07-31T16:59:11.495+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-07-31T16:59:11.497+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-07-31T16:59:11.498+0800	INFO	redis/redis.go:29	[redis] init success
+2023-07-31T16:59:11.499+0800	INFO	controller/validator.go:61	init trans success
+2023-07-31T16:59:11.500+0800	INFO	router/router.go:76	[router] init success
+2023-07-31T16:59:35.106+0800	INFO	logger/logger.go:89	/api/v2/community/post1	{"status": 200, "method": "GET", "path": "/api/v2/community/post1", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.006425417}
+2023-07-31T17:00:22.105+0800	INFO	logger/logger.go:52	[logger] init success
+2023-07-31T17:00:22.106+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-07-31T17:00:22.109+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-07-31T17:00:22.110+0800	INFO	redis/redis.go:29	[redis] init success
+2023-07-31T17:00:22.110+0800	INFO	controller/validator.go:61	init trans success
+2023-07-31T17:00:22.111+0800	INFO	router/router.go:76	[router] init success
+2023-07-31T17:00:39.649+0800	INFO	logger/logger.go:89	/api/v2/community/list/	{"status": 200, "method": "GET", "path": "/api/v2/community/list/", "query": "cid=1", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.004968917}
+2023-07-31T17:00:44.617+0800	INFO	logger/logger.go:89	/api/v2/community/list/	{"status": 200, "method": "GET", "path": "/api/v2/community/list/", "query": "cid=2", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.001225}
+2023-07-31T17:00:50.560+0800	INFO	logger/logger.go:89	/api/v2/community/list/	{"status": 200, "method": "GET", "path": "/api/v2/community/list/", "query": "cid=3", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.003348}
+2023-07-31T17:01:14.977+0800	INFO	logger/logger.go:52	[logger] init success
+2023-07-31T17:01:14.977+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-07-31T17:01:14.981+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-07-31T17:01:14.982+0800	INFO	redis/redis.go:29	[redis] init success
+2023-07-31T17:01:14.982+0800	INFO	controller/validator.go:61	init trans success
+2023-07-31T17:01:14.983+0800	INFO	router/router.go:76	[router] init success
+2023-07-31T17:01:18.605+0800	INFO	logger/logger.go:89	/api/v2/community/list/	{"status": 200, "method": "GET", "path": "/api/v2/community/list/", "query": "cid=3", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.003874458}
+2023-07-31T17:01:25.051+0800	INFO	logger/logger.go:89	/api/v2/publish/list/	{"status": 200, "method": "GET", "path": "/api/v2/publish/list/", "query": "uid=3", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.002541167}
+2023-07-31T17:01:27.739+0800	INFO	logger/logger.go:89	/api/v2/publish/list/	{"status": 200, "method": "GET", "path": "/api/v2/publish/list/", "query": "uid=1111", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000676958}
+2023-07-31T17:02:43.946+0800	INFO	logger/logger.go:89	/api/v2/publish/list/	{"status": 200, "method": "GET", "path": "/api/v2/publish/list/", "query": "uid=28018727488323585", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.00302275}
+2023-07-31T17:06:26.058+0800	INFO	logger/logger.go:52	[logger] init success
+2023-07-31T17:06:26.058+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-07-31T17:06:26.063+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-07-31T17:06:26.064+0800	INFO	redis/redis.go:29	[redis] init success
+2023-07-31T17:06:26.064+0800	INFO	controller/validator.go:61	init trans success
+2023-07-31T17:06:26.065+0800	INFO	router/router.go:76	[router] init success
+2023-07-31T17:06:28.189+0800	INFO	logger/logger.go:89	/api/v2/publish/list/	{"status": 200, "method": "GET", "path": "/api/v2/publish/list/", "query": "uid=28018727488323585", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.001987834}
+2023-07-31T17:07:38.324+0800	ERROR	controller/post.go:110	invalid params	{"error": "strconv.ParseUint: parsing \"\": invalid syntax"}
+2023-07-31T17:07:38.324+0800	INFO	logger/logger.go:89	/api/v2/publish/list/	{"status": 200, "method": "GET", "path": "/api/v2/publish/list/", "query": "cid=1", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000611875}
+2023-07-31T17:07:45.769+0800	INFO	logger/logger.go:89	/api/v2/commynity/list/	{"status": 404, "method": "GET", "path": "/api/v2/commynity/list/", "query": "cid=1", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000000541}
+2023-07-31T17:07:48.934+0800	INFO	logger/logger.go:89	/api/v2/community/list/	{"status": 200, "method": "GET", "path": "/api/v2/community/list/", "query": "cid=1", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.010119416}
+2023-07-31T17:08:00.801+0800	INFO	logger/logger.go:89	/api/v2/publish/list/	{"status": 200, "method": "GET", "path": "/api/v2/publish/list/", "query": "uid=28018727488323585", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.001823291}
+2023-07-31T17:11:26.049+0800	INFO	logger/logger.go:52	[logger] init success
+2023-07-31T17:11:26.049+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-07-31T17:11:26.054+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-07-31T17:11:26.055+0800	INFO	redis/redis.go:29	[redis] init success
+2023-07-31T17:11:26.055+0800	INFO	controller/validator.go:61	init trans success
+2023-07-31T17:11:26.057+0800	INFO	router/router.go:76	[router] init success
+2023-07-31T17:11:28.919+0800	INFO	logger/logger.go:89	/api/v2/publish/list/	{"status": 200, "method": "GET", "path": "/api/v2/publish/list/", "query": "uid=28018727488323585", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.002031084}
+2023-07-31T17:12:13.348+0800	ERROR	controller/post.go:116	get user post list err	{"error": "sql: no rows in result set"}
+2023-07-31T17:12:13.349+0800	INFO	logger/logger.go:89	/api/v2/publish/list/	{"status": 200, "method": "GET", "path": "/api/v2/publish/list/", "query": "uid=1111", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.003103625}
+2023-07-31T17:12:23.762+0800	ERROR	controller/post.go:116	get user post list err	{"error": "sql: no rows in result set"}
+2023-07-31T17:12:23.764+0800	INFO	logger/logger.go:89	/api/v2/publish/list/	{"status": 200, "method": "GET", "path": "/api/v2/publish/list/", "query": "uid=1111", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.003108375}
+2023-07-31T17:12:40.441+0800	INFO	logger/logger.go:89	/api/v2/publish/list/	{"status": 200, "method": "GET", "path": "/api/v2/publish/list/", "query": "uid=28018727488323585", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.002206833}
+2023-07-31T17:13:07.129+0800	INFO	logger/logger.go:89	/api/v2/publish/list/	{"status": 200, "method": "GET", "path": "/api/v2/publish/list/", "query": "uid=28018727488323585", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.003767708}
+2023-07-31T17:16:13.760+0800	INFO	logger/logger.go:52	[logger] init success
+2023-07-31T17:16:13.761+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-07-31T17:16:13.763+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-07-31T17:16:13.764+0800	INFO	redis/redis.go:29	[redis] init success
+2023-07-31T17:16:13.764+0800	INFO	controller/validator.go:61	init trans success
+2023-07-31T17:16:13.765+0800	INFO	router/router.go:76	[router] init success
+2023-07-31T17:16:15.741+0800	INFO	logger/logger.go:89	/api/v2/publish/list/	{"status": 200, "method": "GET", "path": "/api/v2/publish/list/", "query": "uid=28018727488323585", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.0016295}
+2023-07-31T17:16:28.805+0800	INFO	logger/logger.go:89	/api/v2/community/list/	{"status": 200, "method": "GET", "path": "/api/v2/community/list/", "query": "cid=1", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.004118125}
+2023-07-31T17:16:38.326+0800	INFO	logger/logger.go:89	/api/v2/publish/list/	{"status": 200, "method": "GET", "path": "/api/v2/publish/list/", "query": "uid=28018727488323585", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000916541}
+2023-07-31T17:18:45.431+0800	INFO	logger/logger.go:89	/api/v2/publish/list/	{"status": 200, "method": "GET", "path": "/api/v2/publish/list/", "query": "uid=28018727488323585", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.005423334}
+2023-07-31T17:18:54.534+0800	INFO	logger/logger.go:89	/api/v2/publish/list/	{"status": 200, "method": "GET", "path": "/api/v2/publish/list/", "query": "uid=470109017352437761", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.001687292}
+2023-07-31T17:19:33.200+0800	INFO	logger/logger.go:52	[logger] init success
+2023-07-31T17:19:33.200+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-07-31T17:19:33.204+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-07-31T17:19:33.206+0800	INFO	redis/redis.go:29	[redis] init success
+2023-07-31T17:19:33.207+0800	INFO	controller/validator.go:61	init trans success
+2023-07-31T17:19:33.208+0800	INFO	router/router.go:76	[router] init success
+2023-07-31T17:19:35.139+0800	INFO	logger/logger.go:89	/api/v2/publish/list/	{"status": 200, "method": "GET", "path": "/api/v2/publish/list/", "query": "uid=470109017352437761", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.001907542}
+2023-07-31T17:20:46.203+0800	INFO	logger/logger.go:52	[logger] init success
+2023-07-31T17:20:46.204+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-07-31T17:20:46.206+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-07-31T17:20:46.207+0800	INFO	redis/redis.go:29	[redis] init success
+2023-07-31T17:20:46.207+0800	INFO	controller/validator.go:61	init trans success
+2023-07-31T17:20:46.208+0800	INFO	router/router.go:76	[router] init success
+2023-07-31T17:20:48.206+0800	INFO	logger/logger.go:89	/api/v2/publish/list/	{"status": 200, "method": "GET", "path": "/api/v2/publish/list/", "query": "uid=470109017352437761", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.002762875}
+2023-07-31T17:22:49.415+0800	INFO	logger/logger.go:52	[logger] init success
+2023-07-31T17:22:49.416+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-07-31T17:22:49.419+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-07-31T17:22:49.419+0800	INFO	redis/redis.go:29	[redis] init success
+2023-07-31T17:22:49.420+0800	INFO	controller/validator.go:61	init trans success
+2023-07-31T17:22:49.421+0800	INFO	router/router.go:76	[router] init success
+2023-07-31T17:22:51.687+0800	INFO	logger/logger.go:89	/api/v2/publish/list/	{"status": 200, "method": "GET", "path": "/api/v2/publish/list/", "query": "uid=470109017352437761", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.003299583}
+2023-07-31T17:23:25.888+0800	INFO	logger/logger.go:52	[logger] init success
+2023-07-31T17:23:25.889+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-07-31T17:23:25.892+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-07-31T17:23:25.892+0800	INFO	redis/redis.go:29	[redis] init success
+2023-07-31T17:23:25.893+0800	INFO	controller/validator.go:61	init trans success
+2023-07-31T17:23:25.894+0800	INFO	router/router.go:76	[router] init success
+2023-07-31T17:23:27.898+0800	INFO	logger/logger.go:89	/api/v2/publish/list/	{"status": 200, "method": "GET", "path": "/api/v2/publish/list/", "query": "uid=470109017352437761", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.005275291}
+2023-07-31T17:23:52.153+0800	INFO	logger/logger.go:52	[logger] init success
+2023-07-31T17:23:52.153+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-07-31T17:23:52.156+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-07-31T17:23:52.156+0800	INFO	redis/redis.go:29	[redis] init success
+2023-07-31T17:23:52.157+0800	INFO	controller/validator.go:61	init trans success
+2023-07-31T17:23:52.158+0800	INFO	router/router.go:76	[router] init success
+2023-07-31T17:23:54.235+0800	INFO	logger/logger.go:89	/api/v2/publish/list/	{"status": 200, "method": "GET", "path": "/api/v2/publish/list/", "query": "uid=470109017352437761", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.003571334}
+2023-07-31T17:25:00.828+0800	INFO	logger/logger.go:52	[logger] init success
+2023-07-31T17:25:00.828+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-07-31T17:25:00.833+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-07-31T17:25:00.835+0800	INFO	redis/redis.go:29	[redis] init success
+2023-07-31T17:25:00.835+0800	INFO	controller/validator.go:61	init trans success
+2023-07-31T17:25:00.836+0800	INFO	router/router.go:76	[router] init success
+2023-07-31T17:25:02.684+0800	INFO	logger/logger.go:89	/api/v2/publish/list/	{"status": 200, "method": "GET", "path": "/api/v2/publish/list/", "query": "uid=470109017352437761", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.004624542}
+2023-07-31T17:25:15.237+0800	INFO	logger/logger.go:89	/api/v2/community/list/	{"status": 200, "method": "GET", "path": "/api/v2/community/list/", "query": "cid=1", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.005283708}
+2023-07-31T17:41:44.186+0800	INFO	logger/logger.go:52	[logger] init success
+2023-07-31T17:41:44.187+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-07-31T17:41:44.191+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-07-31T17:41:44.192+0800	INFO	redis/redis.go:29	[redis] init success
+2023-07-31T17:41:44.192+0800	INFO	controller/validator.go:61	init trans success
+2023-07-31T17:41:44.194+0800	INFO	router/router.go:78	[router] init success
+2023-07-31T17:41:53.736+0800	INFO	logger/logger.go:89	/api/v2/communities	{"status": 200, "method": "GET", "path": "/api/v2/communities", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.001719167}
+2023-07-31T17:42:22.583+0800	INFO	logger/logger.go:89	/join/list/	{"status": 404, "method": "GET", "path": "/join/list/", "query": "uid=1", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000000583}
+2023-07-31T17:42:33.539+0800	INFO	logger/logger.go:89	/join/list	{"status": 404, "method": "GET", "path": "/join/list", "query": "uid=1", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000000708}
+2023-07-31T17:42:53.689+0800	INFO	logger/logger.go:89	/api/v2/join/list	{"status": 200, "method": "GET", "path": "/api/v2/join/list", "query": "uid=1", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.004712875}
+2023-07-31T17:42:57.781+0800	INFO	logger/logger.go:89	/api/v2/join/list	{"status": 200, "method": "GET", "path": "/api/v2/join/list", "query": "uid=2", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000689625}
+2023-07-31T17:43:01.667+0800	INFO	logger/logger.go:89	/api/v2/join/list	{"status": 200, "method": "GET", "path": "/api/v2/join/list", "query": "uid=6", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.001223583}
+2023-07-31T17:45:59.139+0800	INFO	logger/logger.go:52	[logger] init success
+2023-07-31T17:45:59.139+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-07-31T17:45:59.143+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-07-31T17:45:59.144+0800	INFO	redis/redis.go:29	[redis] init success
+2023-07-31T17:45:59.144+0800	INFO	controller/validator.go:61	init trans success
+2023-07-31T17:45:59.146+0800	INFO	router/router.go:78	[router] init success
+2023-07-31T17:46:01.187+0800	INFO	logger/logger.go:89	/api/v2/join/list/	{"status": 200, "method": "GET", "path": "/api/v2/join/list/", "query": "uid=6", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.001484917}
+2023-07-31T17:46:04.017+0800	INFO	logger/logger.go:89	/api/v2/join/list/	{"status": 200, "method": "GET", "path": "/api/v2/join/list/", "query": "uid=2", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.001017625}
+2023-07-31T17:46:06.222+0800	INFO	logger/logger.go:89	/api/v2/join/list/	{"status": 200, "method": "GET", "path": "/api/v2/join/list/", "query": "uid=1", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000506625}
+2023-07-31T17:46:15.395+0800	INFO	logger/logger.go:89	/api/v2/join/list/	{"status": 200, "method": "GET", "path": "/api/v2/join/list/", "query": "uid=469896035695591425", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.00219575}

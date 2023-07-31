@@ -19,7 +19,11 @@ type Post struct {
 
 type PostDetail struct {
 	AuthorName string `json:"username" db:"username"`
-	Votes      int64  `json:"votes"`
+
+	IfVoted bool
 	*Post
-	*CommunityDetail `json:"community"`
+	*CommunityDetail `json:"community,omitempty"`
+	*UserDetail      `json:"author,omitempty"`
+
+	Votes int64 `json:"votes"`
 }

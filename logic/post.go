@@ -130,6 +130,65 @@ func GetCommunityPostList(cid uint64, page, size int64) (postDetailList []*model
 	return
 }
 
+func GetPublishPostList(uid uint64, page, size int64) (postDetailList []*model.PostDetail, err error) {
+	// 获取帖子列表
+	var posts []*model.Post
+	posts, err = mysql.GetUserPostList(uid, page, size)
+	if err != nil {
+		return nil, err
+	}
+
+	// 补充帖子详细信息
+	for _, post := range posts {
+		var postDetail = new(model.PostDetail)
+		postDetail.Post = post
+
+		var user = new(model.User)
+		user, err = mysql.GetUserById(post.AuthorId)
+		if err != nil {
+			continue
+		}
+
+		postDetail.AuthorName = user.Username
+
+		postDetailList = append(postDetailList, postDetail)
+	}
+
+	return
+	// 获取社区信息
+
+}
+
+func GetFavoritePostList(uid uint64, page, size int64) (postDetailList []*model.PostDetail, err error) {
+	// 获取帖子列表
+	//TODO
+	var posts []*model.Post
+	posts, err = mysql.GetUserPostList(uid, page, size)
+	if err != nil {
+		return nil, err
+	}
+
+	// 补充帖子详细信息
+	for _, post := range posts {
+		var postDetail = new(model.PostDetail)
+		postDetail.Post = post
+
+		var user = new(model.User)
+		user, err = mysql.GetUserById(post.AuthorId)
+		if err != nil {
+			continue
+		}
+
+		postDetail.AuthorName = user.Username
+
+		postDetailList = append(postDetailList, postDetail)
+	}
+
+	return
+	// 获取社区信息
+
+}
+
 // GetPostListInOrder 按照指定顺序获取帖子列表
 func GetPostListInOrder(form *model.PostsForm) (postDetailList []*model.PostDetail, err error) {
 	postDetailList = make([]*model.PostDetail, 0, form.Size)

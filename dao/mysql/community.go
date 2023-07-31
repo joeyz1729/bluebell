@@ -8,12 +8,24 @@ import (
 	"go.uber.org/zap"
 )
 
-// GetCommunityList 获取所有社区信息
-func GetCommunityList() (communityList []*model.Community, err error) {
+// GetAllCommunityList 获取所有社区信息
+func GetAllCommunityList() (communityList []*model.Community, err error) {
 	sqlStr := `select community_id, community_name from community`
 	err = db.Select(&communityList, sqlStr)
 	if err == sql.ErrNoRows {
 		zap.L().Warn("no community in db")
+		err = nil
+		return
+	}
+	return
+}
+
+func GetCommunityJoinList(uid uint64) (list []*model.Community, err error) {
+	//sqlStr := `select member.community_id, community_name from member, community where member.user_id = ? and member.community_id = community.community_id`
+	sqlStr := `select community_id from member where user_id = ?`
+	err = db.Select(&list, sqlStr, uid)
+	if err == sql.ErrNoRows {
+		zap.L().Warn("The user didn't join any community")
 		err = nil
 		return
 	}

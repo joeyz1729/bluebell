@@ -21,3 +21,15 @@ func CommunityJoin(uid uint64, jf *model.JoinForm) (err error) {
 	}
 	return
 }
+
+func GetCommunityList() (list []*model.Community, err error) {
+	list, err = mysql.GetAllCommunityList()
+	// 业务错误处理
+	return
+}
+
+func GetCommunityJoinList(uid uint64) (list []*model.Community, err error) {
+	list, err = mysql.GetCommunityJoinList(uid)
+	// 业务错误处理
+	return
+}
