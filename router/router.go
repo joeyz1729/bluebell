@@ -50,11 +50,11 @@ func Setup(mode string) *gin.Engine {
 	v2.GET("/userinfo/uid", middleware.JWTAuthMiddleware(), controller.GetUserInfoHandler) // 获取用户信息
 	v2.GET("/refresh_token", controller.RefreshTokenHandler)
 
-	v2.GET("/posts/favorite", controller.TODO) // 获取帖子点赞列表
+	v2.GET("/posts/favorite", controller.TODO) // 获取用户点赞过的帖子列表，和/favorite/list/类似， 略
 	v2.GET("/post/:pid", controller.GetPostHandler)
 	v2.GET("/posts/order", controller.PostListOrderHandler)
-	v2.POST("/post", middleware.JWTAuthMiddleware(), controller.PostHandler)     // TODO， 发帖添加rabbitmq
-	v2.POST("/vote", middleware.JWTAuthMiddleware(), controller.PostVoteHandler) //TODO， 发评论添加rabbitmq
+	v2.POST("/post", middleware.JWTAuthMiddleware(), controller.PostHandler)
+	v2.POST("/vote", middleware.JWTAuthMiddleware(), controller.PostVoteHandler)
 
 	// 关注或取关， 关注，粉丝，好友列表
 	v2.POST("/relation/action/", middleware.JWTAuthMiddleware(), controller.FollowHandler)
@@ -64,6 +64,7 @@ func Setup(mode string) *gin.Engine {
 
 	v2.POST("/message/action/", controller.TODO)
 	v2.GET("/message/chat/", controller.TODO)
+
 	v2.GET("/ping", middleware.JWTAuthMiddleware(), func(c *gin.Context) {
 		userId := c.MustGet("user_id")
 		controller.ResponseSuccess(c, gin.H{"user_id": userId})

@@ -45,13 +45,13 @@ func CreatePost(pid, cid uint64) (err error) {
 }
 
 // GetPostIdsInOrder 按照指定的排列顺序获取帖子分页信息
-func GetPostIdsInOrder(form *model.PostsForm) (PostIdStrings []string, err error) {
+func GetPostIdsInOrder(order string, page, size int64) (PostIdStrings []string, err error) {
 	key := getRedisKey(PostTimeZSet)
-	if form.Order == model.OrderByScore {
+	if order == model.OrderByScore {
 		key = getRedisKey(PostScoreZSet)
 	}
 	ctx := context.Background()
-	PostIdStrings, err = rdb.ZRevRange(ctx, key, (form.Page-1)*form.Size, form.Page*form.Size-1).Result()
+	PostIdStrings, err = rdb.ZRevRange(ctx, key, (page-1)*size, size-1).Result()
 
 	return
 }

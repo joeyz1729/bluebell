@@ -88,16 +88,24 @@ bluebell
 # API
 1. 基础接口
    * 视频流接口，对应community列表和:id
-   * 用户登陆和注册接口，略
-   * 用户信息，TODO
+   * 用户登陆和注册接口
+   * 用户信息
    * 视频投稿，对应post
-   * 发布列表，对应用户uid的所有帖子，TODO
+   * 发布列表，对应用户uid的所有帖子
 2. 互动接口
    * 赞操作，对应join community
-   * 喜欢列表，对应查询user join的所有community列表，TODO
+   * 喜欢列表，对应查询user join的所有community列表
    * 评论操作，与视频投稿类似，TODO
    * 视频评论列表，对应community 下的所有post列表
 3. 社交接口
-TODO
+   * 关注操作
+   * 获取关注列表
+   * 获取粉丝列表
+   * 获取好友列表 TODO
 
 
+# TODO
+* 修改数据查询流程，如果redis中不存在，则从数据库中查询
+* controller用结构体form传值
+* service/logic层用interface+method
+* logic层添加rabbitmq，异步处理请求

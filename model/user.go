@@ -15,19 +15,18 @@ type UserDetail struct {
 	Id   uint64 `json:"user_id,string" db:"user_id"`
 	Name string `json:"username" db:"username"`
 
-	// 关注
-	//FollowCount   uint64
-	//FollowerCount uint64
-	//IsFollow      bool
+	FollowCount   int64
+	FollowerCount int64
+	IsFollow      bool
 
 	// 发帖数
-	WorkCount uint64
+	WorkCount int64
 
 	// 帖子被赞数
-	TotalFavorited uint64 // auth id - post id - vote
+	TotalFavorited int64 // auth id - post id - vote
 
 	// 加入的社区数量
-	JoinedCount uint64
+	JoinedCount int64
 }
 
 func CreateUser(userID uint64, sf *SignupForm) *User {

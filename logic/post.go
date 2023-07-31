@@ -190,12 +190,12 @@ func GetFavoritePostList(uid uint64, page, size int64) (postDetailList []*model.
 }
 
 // GetPostListInOrder 按照指定顺序获取帖子列表
-func GetPostListInOrder(form *model.PostsForm) (postDetailList []*model.PostDetail, err error) {
-	postDetailList = make([]*model.PostDetail, 0, form.Size)
+func GetPostListInOrder(order string, page, size int64) (postDetailList []*model.PostDetail, err error) {
+	postDetailList = make([]*model.PostDetail, 0, size)
 	var posts []*model.Post
 
 	// 从redis中按照指定顺序获取post id
-	ids, err := redis.GetPostIdsInOrder(form)
+	ids, err := redis.GetPostIdsInOrder(order, page, size)
 	if err != nil || len(ids) == 0 {
 		zap.L().Error("get post ids in order from redis err, or len(ids) == 0", zap.Error(err))
 		return

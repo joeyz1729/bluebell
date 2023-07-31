@@ -10,6 +10,12 @@ import (
 	"go.uber.org/zap"
 )
 
+type PostsForm struct {
+	Page  int64  `form:"page"`
+	Size  int64  `form:"size"`
+	Order string `form:"order"`
+}
+
 // PostHandler 用户登陆后，可以发布帖子
 func PostHandler(c *gin.Context) {
 	// 解析帖子内容
@@ -52,7 +58,7 @@ func PostListOrderHandler(c *gin.Context) {
 		ResponseError(c, CodeInvalidParams)
 		return
 	}
-	postList, err := logic.GetPostListInOrder(PostListForm)
+	postList, err := logic.GetPostListInOrder(PostListForm.Order, PostListForm.Page, PostListForm.Size)
 	if err != nil {
 		zap.L().Error("get post list by order err", zap.Error(err))
 		ResponseError(c, CodeServerBusy)

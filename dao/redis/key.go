@@ -7,12 +7,13 @@ const (
 	PostTimeZSet  = "post:time"  // bluebell:post:time, Sorted Set, key为pid, value为计时
 	PostScoreZSet = "post:score" // bluebell:post:score, Sorted Set, key为pid, value为投票得分
 
-	PostVotedZSetPrefix     = "post:voted:"     // bluebell:post:voted:pid, Sorted Set, key为uid, value为投票内容(-1, 0, 1)
-	CommunityPostSetPrefix  = "community:post:" // community:cid, Sorted Set, key为pid, value默认取0
-	UserPostSetPrefix       = "work:post:"
-	UserPostVotedZSetPrefix = "work:post:vote:" // 统计发帖数，总获赞数
+	PostVotedZSetPrefix       = "post:voted:"     // bluebell:post:voted:pid, Sorted Set, key为uid, value为投票内容(-1, 0, 1)
+	CommunityPostSetPrefix    = "community:post:" // community:cid, Sorted Set, key为pid, value默认取0
+	AuthorPostSetPrefix       = "work:post:"
+	AuthorPostVotedZSetPrefix = "work:post:vote:" // 统计发帖数，总获赞数
 
 	CommunityMemberPrefix = "community:member:"
+	MemberCommunityPrefix = "member:community:"
 
 	FollowerSetPrefix  = "follower:"
 	FollowingSetPrefix = "following:"
