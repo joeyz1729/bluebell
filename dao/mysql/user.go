@@ -72,6 +72,47 @@ func GetUserById(uid uint64) (user *model.User, err error) {
 	return
 }
 
+func GetUserDetailById(uid, userId uint64) (user *model.UserDetail, err error) {
+	user = new(model.UserDetail)
+	sqlStr := `select username, user_id from user where user_id = ?`
+	err = db.Get(user, sqlStr, userId)
+	if err != nil {
+		return
+	}
+
+	tf, err := GetJoinCount(userId)
+	if err != nil {
+		return
+	}
+	user.TotalFavorited = tf
+
+	wc, err := GetWorkCount(userId)
+	if err != nil {
+		return
+	}
+	user.WorkCount = wc
+
+	iff, err := IsFollowed(uid, userId)
+	if err != nil {
+		return
+	}
+	user.IsFollow = iff
+
+	frc, err := GetFollowerCount(userId)
+	if err != nil {
+		return
+	}
+	user.FollowerCount = frc
+
+	fgc, err := GetFollowingCount(userId)
+	if err != nil {
+		return
+	}
+	user.FollowCount = fgc
+
+	return
+}
+
 func GetUsersByIds(ids []string) (users []*model.UserDetail, err error) {
 	sqlStr := `select user_id, username from user where user_id in (?)`
 	query, args, err := sqlx.In(sqlStr, ids)

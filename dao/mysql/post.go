@@ -60,3 +60,9 @@ func GetUserPostList(uid uint64, page, size int64) (posts []*model.Post, err err
 	err = db.Select(&posts, sqlStr, uid, size, (page-1)*size)
 	return
 }
+
+func GetWorkCount(uid uint64) (n int64, err error) {
+	sqlStr := `select count(*) from post where author_id = ?`
+	err = db.Select(&n, sqlStr, uid)
+	return
+}

@@ -63,3 +63,9 @@ func GetCommunityNameById(communityId uint64) (cn string, err error) {
 	}
 	return
 }
+
+func GetJoinCount(uid uint64) (n int64, err error) {
+	sqlStr := `select count(*) from member where user_id = ?`
+	err = db.Get(&n, sqlStr, uid)
+	return
+}

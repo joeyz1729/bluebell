@@ -1,7 +1,3 @@
-// follow关系
-// uid, toUid, ifCancel存两个redis表， 一个mysql表
-//
-
 package logic
 
 import (
@@ -12,6 +8,10 @@ import (
 
 	"go.uber.org/zap"
 )
+
+// follow关系
+// uid, toUid, ifCancel存两个redis表， 一个mysql表
+//
 
 func Follow(uid, toUid uint64, attitude bool) (err error) {
 	//TODO 拓展mysql和rabbitmq

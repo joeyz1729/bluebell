@@ -40,10 +40,6 @@ func CommunityJoinListHandler(c *gin.Context) {
 
 }
 
-func UserCommunityListHandler(c *gin.Context) {
-	//TODO
-}
-
 // CommunityDetailHandler 获取指定社区的详细信息
 func CommunityDetailHandler(c *gin.Context) {
 	// 获取社区id

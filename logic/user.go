@@ -1,8 +1,12 @@
 package logic
 
 import (
+	"strconv"
+
 	"github.com/YiZou89/bluebell/dao/mysql"
+	"github.com/YiZou89/bluebell/dao/redis"
 	"github.com/YiZou89/bluebell/model"
+	"go.uber.org/zap"
 
 	"github.com/YiZou89/bluebell/pkg/jwt"
 	"github.com/YiZou89/bluebell/pkg/snowflake"
@@ -48,15 +52,18 @@ func Login(lf *model.LoginForm) (user *model.User, err error) {
 	return
 }
 
-func GetUserDetailById(uid uint64) (userDetail model.UserDetail, err error) {
-	userDetail = model.UserDetail{}
-	userDetail.Id = uid
-
-	user, err := mysql.GetUserById(uid)
-	if err != nil {
-		return
+func GetUserDetailById(uid, userId uint64) (user *model.UserDetail, err error) {
+	user = new(model.UserDetail)
+	user, err = redis.GetUserInfo(strconv.Itoa(int(uid)), strconv.Itoa(int(userId)))
+	if err == nil {
+		return user, err
 	}
-	userDetail.Name = user.Username
+	zap.L().Error("get user info from redis err", zap.Error(err))
 
-	return userDetail, nil
+	user, err = mysql.GetUserDetailById(uid, userId)
+	if err != nil {
+		zap.L().Error("get user info from mysql err", zap.Error(err))
+		return nil, err
+	}
+	return user, nil
 }

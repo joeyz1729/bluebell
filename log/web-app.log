@@ -332,3 +332,92 @@
 2023-07-31T22:07:53.657+0800	INFO	router/router.go:77	[router] init success
 2023-07-31T22:07:56.394+0800	ERROR	redis/follow.go:55	no data
 2023-07-31T22:07:56.394+0800	INFO	logger/logger.go:89	/api/v2/relation/following/list/	{"status": 200, "method": "GET", "path": "/api/v2/relation/following/list/", "query": "user_id=114", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.0007505}
+2023-08-01T01:13:22.849+0800	INFO	logger/logger.go:52	[logger] init success
+2023-08-01T01:13:22.850+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-08-01T01:13:22.882+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-08-01T01:13:22.886+0800	INFO	redis/redis.go:42	[redis] init success
+2023-08-01T01:13:22.887+0800	INFO	controller/validator.go:61	init trans success
+2023-08-01T01:13:22.888+0800	INFO	router/router.go:76	[router] init success
+2023-08-01T01:13:40.557+0800	INFO	logger/logger.go:89	/api/v2/userinfo	{"status": 404, "method": "GET", "path": "/api/v2/userinfo", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000000625}
+2023-08-01T01:13:42.405+0800	ERROR	logger/logger.go:131	[Recovery from panic]	{"error": "runtime error: invalid memory address or nil pointer dereference", "request": "GET /api/v2/userinfo/uid HTTP/1.1\r\nHost: 127.0.0.1:8081\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nAuthorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0NzE4NzY5MDQ4MjgyNzI2NDEsInVzZXJuYW1lIjoidjJhZG1pbiIsImV4cCI6MTY5MzM4MjE3NywiaXNzIjoiYmx1ZWJlbGwifQ.MSlqMHquXth1KyMD7Ja2znUyNTjWq8ALOs9fPU9-jJc\r\nCache-Control: no-cache\r\nConnection: keep-alive\r\nContent-Length: 96\r\nContent-Type: application/json\r\nPostman-Token: f79ca8f8-306d-45b8-a50c-bab6e36ddf92\r\nUser-Agent: PostmanRuntime/7.32.3\r\n\r\n", "stack": "goroutine 55 [running]:\nruntime/debug.Stack()\n\t/usr/local/go/src/runtime/debug/stack.go:24 +0x64\ngithub.com/YiZou89/bluebell/logger.GinRecovery.func1.1()\n\t/Users/zouyi/go/src/zouyi/bluebell/logger/logger.go:134 +0x254\npanic({0x1014d8d20, 0x1018cf070})\n\t/usr/local/go/src/runtime/panic.go:884 +0x204\ngithub.com/YiZou89/bluebell/dao/redis.GetUserInfo({0x140000243a8, 0x12})\n\t/Users/zouyi/go/src/zouyi/bluebell/dao/redis/user.go:41 +0x3b4\ngithub.com/YiZou89/bluebell/logic.GetUserDetailById(0x0?)\n\t/Users/zouyi/go/src/zouyi/bluebell/logic/user.go:57 +0x40\ngithub.com/YiZou89/bluebell/controller.GetUserInfoHandler(0x140001e8700?)\n\t/Users/zouyi/go/src/zouyi/bluebell/controller/user.go:110 +0x198\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/zouyi/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174\ngithub.com/YiZou89/bluebell/middleware.JWTAuthMiddleware.func1(0x140001e8700)\n\t/Users/zouyi/go/src/zouyi/bluebell/middleware/auth.go:47 +0x2d8\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/zouyi/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174\ngithub.com/YiZou89/bluebell/logger.GinRecovery.func1(0x140001e8700)\n\t/Users/zouyi/go/src/zouyi/bluebell/logger/logger.go:145 +0x74\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/zouyi/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174\ngithub.com/YiZou89/bluebell/logger.GinLogger.func1(0x140001e8700)\n\t/Users/zouyi/go/src/zouyi/bluebell/logger/logger.go:86 +0x84\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/zouyi/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0x14000082ea0, 0x140001e8700)\n\t/Users/zouyi/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620 +0x54c\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0x14000082ea0, {0x101588270?, 0x14000406380}, 0x140001e8800)\n\t/Users/zouyi/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576 +0x1d4\nnet/http.serverHandler.ServeHTTP({0x101586f88?}, {0x101588270, 0x14000406380}, 0x140001e8800)\n\t/usr/local/go/src/net/http/server.go:2936 +0x2d8\nnet/http.(*conn).serve(0x14000192480, {0x101588948, 0x1400039e180})\n\t/usr/local/go/src/net/http/server.go:1995 +0x560\ncreated by net/http.(*Server).Serve\n\t/usr/local/go/src/net/http/server.go:3089 +0x520\n"}
+2023-08-01T01:13:42.406+0800	INFO	logger/logger.go:89	/api/v2/userinfo/uid	{"status": 500, "method": "GET", "path": "/api/v2/userinfo/uid", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.014457042}
+2023-08-01T01:16:05.295+0800	INFO	logger/logger.go:52	[logger] init success
+2023-08-01T01:16:05.296+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-08-01T01:16:05.301+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-08-01T01:16:05.302+0800	INFO	redis/redis.go:42	[redis] init success
+2023-08-01T01:16:05.302+0800	INFO	controller/validator.go:61	init trans success
+2023-08-01T01:16:05.303+0800	INFO	router/router.go:76	[router] init success
+2023-08-01T01:16:10.205+0800	ERROR	logger/logger.go:131	[Recovery from panic]	{"error": "runtime error: invalid memory address or nil pointer dereference", "request": "GET /api/v2/userinfo/ HTTP/1.1\r\nHost: 127.0.0.1:8081\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nAuthorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0NzE4NzY5MDQ4MjgyNzI2NDEsInVzZXJuYW1lIjoidjJhZG1pbiIsImV4cCI6MTY5MzM4MjE3NywiaXNzIjoiYmx1ZWJlbGwifQ.MSlqMHquXth1KyMD7Ja2znUyNTjWq8ALOs9fPU9-jJc\r\nCache-Control: no-cache\r\nConnection: keep-alive\r\nPostman-Token: a85ed0c4-989b-48b9-ae96-de1c967a859b\r\nReferer: http://127.0.0.1:8081/api/v2/userinfo\r\nUser-Agent: PostmanRuntime/7.32.3\r\n\r\n", "stack": "goroutine 13 [running]:\nruntime/debug.Stack()\n\t/usr/local/go/src/runtime/debug/stack.go:24 +0x64\ngithub.com/YiZou89/bluebell/logger.GinRecovery.func1.1()\n\t/Users/zouyi/go/src/zouyi/bluebell/logger/logger.go:134 +0x254\npanic({0x101198d20, 0x10158f070})\n\t/usr/local/go/src/runtime/panic.go:884 +0x204\ngithub.com/YiZou89/bluebell/dao/redis.GetUserInfo({0x1400052a078, 0x12})\n\t/Users/zouyi/go/src/zouyi/bluebell/dao/redis/user.go:41 +0x3b4\ngithub.com/YiZou89/bluebell/logic.GetUserDetailById(0x0?)\n\t/Users/zouyi/go/src/zouyi/bluebell/logic/user.go:59 +0x80\ngithub.com/YiZou89/bluebell/controller.GetUserInfoHandler(0x140000ac200?)\n\t/Users/zouyi/go/src/zouyi/bluebell/controller/user.go:110 +0x198\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/zouyi/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174\ngithub.com/YiZou89/bluebell/middleware.JWTAuthMiddleware.func1(0x140000ac200)\n\t/Users/zouyi/go/src/zouyi/bluebell/middleware/auth.go:47 +0x2d8\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/zouyi/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174\ngithub.com/YiZou89/bluebell/logger.GinRecovery.func1(0x140000ac200)\n\t/Users/zouyi/go/src/zouyi/bluebell/logger/logger.go:145 +0x74\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/zouyi/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174\ngithub.com/YiZou89/bluebell/logger.GinLogger.func1(0x140000ac200)\n\t/Users/zouyi/go/src/zouyi/bluebell/logger/logger.go:86 +0x84\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/zouyi/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0x14000512820, 0x140000ac200)\n\t/Users/zouyi/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620 +0x54c\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0x14000512820, {0x101248290?, 0x140005220e0}, 0x140000ac100)\n\t/Users/zouyi/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576 +0x1d4\nnet/http.serverHandler.ServeHTTP({0x1400052d110?}, {0x101248290, 0x140005220e0}, 0x140000ac100)\n\t/usr/local/go/src/net/http/server.go:2936 +0x2d8\nnet/http.(*conn).serve(0x1400009c120, {0x101248968, 0x1400052d020})\n\t/usr/local/go/src/net/http/server.go:1995 +0x560\ncreated by net/http.(*Server).Serve\n\t/usr/local/go/src/net/http/server.go:3089 +0x520\n"}
+2023-08-01T01:16:10.217+0800	INFO	logger/logger.go:89	/api/v2/userinfo/	{"status": 500, "method": "GET", "path": "/api/v2/userinfo/", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.013177167}
+2023-08-01T01:16:45.379+0800	INFO	logger/logger.go:52	[logger] init success
+2023-08-01T01:16:45.380+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-08-01T01:16:45.381+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-08-01T01:16:45.382+0800	INFO	redis/redis.go:42	[redis] init success
+2023-08-01T01:16:45.382+0800	INFO	controller/validator.go:61	init trans success
+2023-08-01T01:16:45.383+0800	INFO	router/router.go:76	[router] init success
+2023-08-01T01:16:51.435+0800	INFO	logger/logger.go:52	[logger] init success
+2023-08-01T01:16:51.435+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-08-01T01:16:51.438+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-08-01T01:16:51.439+0800	INFO	redis/redis.go:42	[redis] init success
+2023-08-01T01:16:51.439+0800	INFO	controller/validator.go:61	init trans success
+2023-08-01T01:16:51.440+0800	INFO	router/router.go:76	[router] init success
+2023-08-01T01:16:54.499+0800	INFO	logger/logger.go:89	/api/v2/userinfo/	{"status": 200, "method": "GET", "path": "/api/v2/userinfo/", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000490208}
+2023-08-01T01:17:50.219+0800	INFO	logger/logger.go:52	[logger] init success
+2023-08-01T01:17:50.221+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-08-01T01:17:50.223+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-08-01T01:17:50.224+0800	INFO	redis/redis.go:42	[redis] init success
+2023-08-01T01:17:50.225+0800	INFO	controller/validator.go:61	init trans success
+2023-08-01T01:17:50.226+0800	INFO	router/router.go:76	[router] init success
+2023-08-01T01:17:52.744+0800	ERROR	logger/logger.go:131	[Recovery from panic]	{"error": "runtime error: invalid memory address or nil pointer dereference", "request": "GET /api/v2/userinfo/ HTTP/1.1\r\nHost: 127.0.0.1:8081\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate, br\r\nAuthorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0NzE4NzY5MDQ4MjgyNzI2NDEsInVzZXJuYW1lIjoidjJhZG1pbiIsImV4cCI6MTY5MzM4MjE3NywiaXNzIjoiYmx1ZWJlbGwifQ.MSlqMHquXth1KyMD7Ja2znUyNTjWq8ALOs9fPU9-jJc\r\nCache-Control: no-cache\r\nConnection: keep-alive\r\nPostman-Token: 16c0f015-5877-40e8-8ad9-d47df72c210e\r\nReferer: http://127.0.0.1:8081/api/v2/userinfo\r\nUser-Agent: PostmanRuntime/7.32.3\r\n\r\n", "stack": "goroutine 21 [running]:\nruntime/debug.Stack()\n\t/usr/local/go/src/runtime/debug/stack.go:24 +0x64\ngithub.com/YiZou89/bluebell/logger.GinRecovery.func1.1()\n\t/Users/zouyi/go/src/zouyi/bluebell/logger/logger.go:134 +0x254\npanic({0x102d44d20, 0x10313b070})\n\t/usr/local/go/src/runtime/panic.go:884 +0x204\ngithub.com/YiZou89/bluebell/dao/redis.GetUserInfo({0x140002d5170, 0x12})\n\t/Users/zouyi/go/src/zouyi/bluebell/dao/redis/user.go:41 +0x13c\ngithub.com/YiZou89/bluebell/logic.GetUserDetailById(0x0?)\n\t/Users/zouyi/go/src/zouyi/bluebell/logic/user.go:57 +0x40\ngithub.com/YiZou89/bluebell/controller.GetUserInfoHandler(0x14000518300?)\n\t/Users/zouyi/go/src/zouyi/bluebell/controller/user.go:110 +0x198\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/zouyi/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174\ngithub.com/YiZou89/bluebell/middleware.JWTAuthMiddleware.func1(0x14000518300)\n\t/Users/zouyi/go/src/zouyi/bluebell/middleware/auth.go:47 +0x2d8\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/zouyi/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174\ngithub.com/YiZou89/bluebell/logger.GinRecovery.func1(0x14000518300)\n\t/Users/zouyi/go/src/zouyi/bluebell/logger/logger.go:145 +0x74\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/zouyi/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174\ngithub.com/YiZou89/bluebell/logger.GinLogger.func1(0x14000518300)\n\t/Users/zouyi/go/src/zouyi/bluebell/logger/logger.go:86 +0x84\ngithub.com/gin-gonic/gin.(*Context).Next(...)\n\t/Users/zouyi/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0x14000082d00, 0x14000518300)\n\t/Users/zouyi/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620 +0x54c\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP(0x14000082d00, {0x102df4210?, 0x1400052c620}, 0x14000518400)\n\t/Users/zouyi/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576 +0x1d4\nnet/http.serverHandler.ServeHTTP({0x1400038b1d0?}, {0x102df4210, 0x1400052c620}, 0x14000518400)\n\t/usr/local/go/src/net/http/server.go:2936 +0x2d8\nnet/http.(*conn).serve(0x140000b2240, {0x102df48e8, 0x1400038af00})\n\t/usr/local/go/src/net/http/server.go:1995 +0x560\ncreated by net/http.(*Server).Serve\n\t/usr/local/go/src/net/http/server.go:3089 +0x520\n"}
+2023-08-01T01:17:52.748+0800	INFO	logger/logger.go:89	/api/v2/userinfo/	{"status": 500, "method": "GET", "path": "/api/v2/userinfo/", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.005634041}
+2023-08-01T01:18:32.319+0800	INFO	logger/logger.go:52	[logger] init success
+2023-08-01T01:18:32.319+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-08-01T01:18:32.322+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-08-01T01:18:32.323+0800	INFO	redis/redis.go:42	[redis] init success
+2023-08-01T01:18:32.324+0800	INFO	controller/validator.go:61	init trans success
+2023-08-01T01:18:32.325+0800	INFO	router/router.go:76	[router] init success
+2023-08-01T01:18:34.039+0800	INFO	logger/logger.go:89	/api/v2/userinfo/	{"status": 200, "method": "GET", "path": "/api/v2/userinfo/", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000503583}
+2023-08-01T01:19:00.568+0800	INFO	logger/logger.go:52	[logger] init success
+2023-08-01T01:19:00.570+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-08-01T01:19:00.572+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-08-01T01:19:00.573+0800	INFO	redis/redis.go:42	[redis] init success
+2023-08-01T01:19:00.573+0800	INFO	controller/validator.go:61	init trans success
+2023-08-01T01:19:00.574+0800	INFO	router/router.go:76	[router] init success
+2023-08-01T01:19:02.106+0800	INFO	logger/logger.go:89	/api/v2/userinfo/	{"status": 200, "method": "GET", "path": "/api/v2/userinfo/", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000571708}
+2023-08-01T01:19:49.786+0800	INFO	logger/logger.go:52	[logger] init success
+2023-08-01T01:19:49.786+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-08-01T01:19:49.788+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-08-01T01:19:49.788+0800	INFO	redis/redis.go:42	[redis] init success
+2023-08-01T01:19:49.789+0800	INFO	controller/validator.go:61	init trans success
+2023-08-01T01:19:49.790+0800	INFO	router/router.go:76	[router] init success
+2023-08-01T01:19:51.519+0800	INFO	logger/logger.go:89	/api/v2/userinfo/	{"status": 200, "method": "GET", "path": "/api/v2/userinfo/", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000608542}
+2023-08-01T01:20:49.639+0800	INFO	logger/logger.go:52	[logger] init success
+2023-08-01T01:20:49.640+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-08-01T01:20:49.642+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-08-01T01:20:49.643+0800	INFO	redis/redis.go:42	[redis] init success
+2023-08-01T01:20:49.643+0800	INFO	controller/validator.go:61	init trans success
+2023-08-01T01:20:49.644+0800	INFO	router/router.go:76	[router] init success
+2023-08-01T01:20:51.503+0800	INFO	logger/logger.go:89	/api/v2/userinfo/	{"status": 200, "method": "GET", "path": "/api/v2/userinfo/", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000731583}
+2023-08-01T01:25:15.626+0800	INFO	logger/logger.go:52	[logger] init success
+2023-08-01T01:25:15.628+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-08-01T01:25:15.630+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-08-01T01:25:15.631+0800	INFO	redis/redis.go:42	[redis] init success
+2023-08-01T01:25:15.631+0800	INFO	controller/validator.go:61	init trans success
+2023-08-01T01:25:15.632+0800	INFO	router/router.go:76	[router] init success
+2023-08-01T01:25:18.512+0800	ERROR	controller/user.go:102	get user id err	{"error": "strconv.ParseUint: parsing \"\": invalid syntax"}
+2023-08-01T01:25:18.512+0800	INFO	logger/logger.go:89	/api/v2/userinfo/	{"status": 200, "method": "GET", "path": "/api/v2/userinfo/", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000247875}
+2023-08-01T01:25:28.712+0800	INFO	logger/logger.go:89	/api/v2/userinfo/	{"status": 200, "method": "GET", "path": "/api/v2/userinfo/", "query": "uid=1", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000577833}
+2023-08-01T01:25:47.124+0800	INFO	logger/logger.go:89	/api/v2/userinfo/	{"status": 200, "method": "GET", "path": "/api/v2/userinfo/", "query": "uid=4183532125556736", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.001039208}
+2023-08-01T01:26:12.405+0800	INFO	logger/logger.go:52	[logger] init success
+2023-08-01T01:26:12.405+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-08-01T01:26:12.409+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-08-01T01:26:12.410+0800	INFO	redis/redis.go:42	[redis] init success
+2023-08-01T01:26:12.410+0800	INFO	controller/validator.go:61	init trans success
+2023-08-01T01:26:12.411+0800	INFO	router/router.go:76	[router] init success
+2023-08-01T01:26:14.826+0800	INFO	logger/logger.go:89	/api/v2/userinfo/	{"status": 200, "method": "GET", "path": "/api/v2/userinfo/", "query": "uid=4183532125556736", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000794958}
+2023-08-01T01:59:05.031+0800	INFO	logger/logger.go:52	[logger] init success
+2023-08-01T01:59:05.032+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-08-01T01:59:05.035+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-08-01T01:59:05.036+0800	INFO	redis/redis.go:42	[redis] init success
+2023-08-01T01:59:05.036+0800	INFO	controller/validator.go:61	init trans success
+2023-08-01T01:59:05.039+0800	INFO	router/router.go:76	[router] init success
