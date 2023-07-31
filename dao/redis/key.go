@@ -39,7 +39,6 @@ const (
 // follow 关注
 // 用于计算关注数，和被关注数
 // 判断是否已关注
-// 朋友是互关的两个user，
 // set follower:userid (key follower id)
 // set following: userid (key following id)
 //

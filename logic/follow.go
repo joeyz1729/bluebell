@@ -14,7 +14,8 @@ import (
 )
 
 func Follow(uid, toUid uint64, attitude bool) (err error) {
-	zap.L().Debug("logic.post vote",
+	//TODO 拓展mysql和rabbitmq
+	zap.L().Debug("logic.follow",
 		zap.Uint64("userId", uid),
 		zap.Uint64("postId", toUid),
 		zap.Bool("attitude", attitude),
@@ -23,17 +24,28 @@ func Follow(uid, toUid uint64, attitude bool) (err error) {
 
 }
 
-func GetFollowerList(uid uint64) (users []*model.UserDetail, err error) {
+func GetFollowers(uid uint64) (users []*model.UserDetail, err error) {
+	zap.L().Debug("logic.getFollowers",
+		zap.Uint64("userId", uid),
+	)
+	users, err = redis.GetFollowers(strconv.Itoa(int(uid)))
+	return
+}
+
+func GetFollowings(uid uint64) (users []*model.UserDetail, err error) {
+	zap.L().Debug("logic.getFollowings",
+		zap.Uint64("userId", uid),
+	)
+	users, err = redis.GetFollowings(strconv.Itoa(int(uid)))
 
 	return
 }
 
-func GetFollowingList(uid uint64) (users []*model.UserDetail, err error) {
-
+func GetFriends(uid uint64) (users []*model.UserDetail, err error) {
+	zap.L().Debug("logic.getFriends",
+		zap.Uint64("userId", uid),
+	)
+	users, err = redis.GetFriends(strconv.Itoa(int(uid)))
 	return
-}
 
-func GetFriendList(uid uint64) (users []*model.UserDetail, err error) {
-
-	return
 }

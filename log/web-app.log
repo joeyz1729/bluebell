@@ -284,3 +284,51 @@
 2023-07-31T21:11:58.887+0800	ERROR	controller/follow.go:41	invalid action type
 2023-07-31T21:11:58.887+0800	INFO	logger/logger.go:89	/api/v2/relation/action/	{"status": 200, "method": "POST", "path": "/api/v2/relation/action/", "query": "to_user_id=28018727488323585&action_type=0", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000251917}
 2023-07-31T21:12:01.366+0800	INFO	logger/logger.go:89	/api/v2/relation/action/	{"status": 200, "method": "POST", "path": "/api/v2/relation/action/", "query": "to_user_id=28018727488323585&action_type=2", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.0003705}
+2023-07-31T21:56:48.650+0800	INFO	logger/logger.go:52	[logger] init success
+2023-07-31T21:56:48.650+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-07-31T21:56:48.653+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-07-31T21:56:48.654+0800	INFO	redis/redis.go:42	[redis] init success
+2023-07-31T21:56:48.655+0800	INFO	controller/validator.go:61	init trans success
+2023-07-31T21:56:48.656+0800	INFO	router/router.go:77	[router] init success
+2023-07-31T21:57:28.019+0800	INFO	logger/logger.go:89	/api/v2/relation/follower/list/	{"status": 404, "method": "POST", "path": "/api/v2/relation/follower/list/", "query": "to_user_id=28018727488323585", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000000875}
+2023-07-31T21:57:32.574+0800	ERROR	controller/follow.go:75		{"error": "empty slice passed to 'in' query"}
+2023-07-31T21:57:32.574+0800	INFO	logger/logger.go:89	/api/v2/relation/follower/list/	{"status": 200, "method": "GET", "path": "/api/v2/relation/follower/list/", "query": "to_user_id=28018727488323585", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000784208}
+2023-07-31T21:58:28.528+0800	ERROR	controller/follow.go:103		{"error": "empty slice passed to 'in' query"}
+2023-07-31T21:58:28.529+0800	INFO	logger/logger.go:89	/api/v2/relation/following/list/	{"status": 200, "method": "GET", "path": "/api/v2/relation/following/list/", "query": "to_user_id=28018727488323585", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.001803417}
+2023-07-31T21:58:34.540+0800	ERROR	controller/follow.go:103		{"error": "empty slice passed to 'in' query"}
+2023-07-31T21:58:34.540+0800	INFO	logger/logger.go:89	/api/v2/relation/following/list/	{"status": 200, "method": "GET", "path": "/api/v2/relation/following/list/", "query": "user_id=28018727488323585", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000508375}
+2023-07-31T21:59:31.404+0800	ERROR	controller/follow.go:103		{"error": "empty slice passed to 'in' query"}
+2023-07-31T21:59:31.405+0800	INFO	logger/logger.go:89	/api/v2/relation/following/list/	{"status": 200, "method": "GET", "path": "/api/v2/relation/following/list/", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.001351}
+2023-07-31T22:02:24.355+0800	INFO	logger/logger.go:52	[logger] init success
+2023-07-31T22:02:24.356+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-07-31T22:02:24.361+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-07-31T22:02:24.362+0800	INFO	redis/redis.go:42	[redis] init success
+2023-07-31T22:02:24.362+0800	INFO	controller/validator.go:61	init trans success
+2023-07-31T22:02:24.363+0800	INFO	router/router.go:77	[router] init success
+2023-07-31T22:02:29.842+0800	ERROR	controller/follow.go:103		{"error": "empty slice passed to 'in' query"}
+2023-07-31T22:02:29.843+0800	INFO	logger/logger.go:89	/api/v2/relation/following/list/	{"status": 200, "method": "GET", "path": "/api/v2/relation/following/list/", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.001117958}
+2023-07-31T22:03:03.129+0800	INFO	logger/logger.go:52	[logger] init success
+2023-07-31T22:03:03.130+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-07-31T22:03:03.132+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-07-31T22:03:03.133+0800	INFO	redis/redis.go:42	[redis] init success
+2023-07-31T22:03:03.133+0800	INFO	controller/validator.go:61	init trans success
+2023-07-31T22:03:03.134+0800	INFO	router/router.go:77	[router] init success
+2023-07-31T22:03:05.120+0800	INFO	logger/logger.go:89	/api/v2/relation/following/list/	{"status": 200, "method": "GET", "path": "/api/v2/relation/following/list/", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.0271655}
+2023-07-31T22:03:23.380+0800	INFO	logger/logger.go:89	/api/v2/relation/follower/list/	{"status": 200, "method": "GET", "path": "/api/v2/relation/follower/list/", "query": "user_id=4183532125556736", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.004607875}
+2023-07-31T22:04:28.513+0800	INFO	logger/logger.go:52	[logger] init success
+2023-07-31T22:04:28.514+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-07-31T22:04:28.516+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-07-31T22:04:28.517+0800	INFO	redis/redis.go:42	[redis] init success
+2023-07-31T22:04:28.517+0800	INFO	controller/validator.go:61	init trans success
+2023-07-31T22:04:28.518+0800	INFO	router/router.go:77	[router] init success
+2023-07-31T22:04:35.512+0800	INFO	logger/logger.go:89	/api/v2/relation/following/list/	{"status": 200, "method": "GET", "path": "/api/v2/relation/following/list/", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.002321917}
+2023-07-31T22:04:45.501+0800	ERROR	controller/follow.go:108		{"error": "empty slice passed to 'in' query"}
+2023-07-31T22:04:45.501+0800	INFO	logger/logger.go:89	/api/v2/relation/following/list/	{"status": 200, "method": "GET", "path": "/api/v2/relation/following/list/", "query": "user_id=114", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000350208}
+2023-07-31T22:07:53.649+0800	INFO	logger/logger.go:52	[logger] init success
+2023-07-31T22:07:53.649+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-07-31T22:07:53.654+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-07-31T22:07:53.656+0800	INFO	redis/redis.go:42	[redis] init success
+2023-07-31T22:07:53.656+0800	INFO	controller/validator.go:61	init trans success
+2023-07-31T22:07:53.657+0800	INFO	router/router.go:77	[router] init success
+2023-07-31T22:07:56.394+0800	ERROR	redis/follow.go:55	no data
+2023-07-31T22:07:56.394+0800	INFO	logger/logger.go:89	/api/v2/relation/following/list/	{"status": 200, "method": "GET", "path": "/api/v2/relation/following/list/", "query": "user_id=114", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.0007505}

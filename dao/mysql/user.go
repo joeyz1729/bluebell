@@ -5,6 +5,8 @@ import (
 	"database/sql"
 	"encoding/hex"
 
+	"github.com/jmoiron/sqlx"
+
 	"github.com/YiZou89/bluebell/model"
 )
 
@@ -67,5 +69,16 @@ func GetUserById(uid uint64) (user *model.User, err error) {
 	if err != nil {
 		return
 	}
+	return
+}
+
+func GetUsersByIds(ids []string) (users []*model.UserDetail, err error) {
+	sqlStr := `select user_id, username from user where user_id in (?)`
+	query, args, err := sqlx.In(sqlStr, ids)
+	if err != nil {
+		return nil, err
+	}
+	query = db.Rebind(query)
+	err = db.Select(&users, query, args...)
 	return
 }

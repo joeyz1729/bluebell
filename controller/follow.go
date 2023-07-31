@@ -1,6 +1,7 @@
 package controller
 
 import (
+	"database/sql"
 	"strconv"
 
 	"github.com/YiZou89/bluebell/logic"
@@ -10,7 +11,6 @@ import (
 )
 
 func FollowHandler(c *gin.Context) {
-	// TODO, to_user_id, action_type
 	uid, _, err := GetCurrentUser(c)
 	if err != nil {
 		zap.L().Error("", zap.Error(err))
@@ -55,57 +55,87 @@ func FollowHandler(c *gin.Context) {
 }
 
 func FollowerListHandler(c *gin.Context) {
-	// TODO, token 解析uid即可
+	// jwt token 中拿到uid
 	uid, _, err := GetCurrentUser(c)
 	if err != nil {
 		zap.L().Error("", zap.Error(err))
 		ResponseError(c, CodeInvalidParams)
 		return
 	}
+	// 尝试获取query中参数, 如果正确就查询需要的user id
+	uidStr := c.Query("user_id")
+	if uidStr != "" {
+		userId, err := strconv.ParseUint(uidStr, 10, 64)
+		if err == nil {
+			uid = userId
+		}
+	}
 
-	users, err := logic.GetFollowerList(uid)
+	followers, err := logic.GetFollowers(uid)
 	if err != nil {
 		zap.L().Error("", zap.Error(err))
 		ResponseError(c, CodeInvalidParams)
 		return
 	}
 
-	ResponseSuccess(c, users)
+	ResponseSuccess(c, followers)
+
 }
 
 func FollowingListHandler(c *gin.Context) {
-
+	// jwt token 中拿到uid
 	uid, _, err := GetCurrentUser(c)
 	if err != nil {
 		zap.L().Error("", zap.Error(err))
 		ResponseError(c, CodeInvalidParams)
 		return
 	}
+	// 尝试获取query中参数, 如果正确就查询需要的user id
+	uidStr := c.Query("user_id")
+	if uidStr != "" {
+		userId, err := strconv.ParseUint(uidStr, 10, 64)
+		if err == nil {
+			uid = userId
+		}
+	}
 
-	users, err := logic.GetFollowingList(uid)
+	followers, err := logic.GetFollowings(uid)
 	if err != nil {
+		if err == sql.ErrNoRows {
+			ResponseSuccess(c, nil)
+			return
+		}
 		zap.L().Error("", zap.Error(err))
-		ResponseError(c, CodeInvalidParams)
+		ResponseError(c, CodeServerBusy)
 		return
 	}
 
-	ResponseSuccess(c, users)
+	ResponseSuccess(c, followers)
 }
 
 func FriendListHandler(c *gin.Context) {
+	// jwt token 中拿到uid
 	uid, _, err := GetCurrentUser(c)
 	if err != nil {
 		zap.L().Error("", zap.Error(err))
-		ResponseError(c, CodeInvalidParams)
+		ResponseError(c, CodeServerBusy)
 		return
 	}
+	// 尝试获取query中参数, 如果正确就查询需要的user id
+	uidStr := c.Query("user_id")
+	if uidStr != "" {
+		userId, err := strconv.ParseUint(uidStr, 10, 64)
+		if err == nil {
+			uid = userId
+		}
+	}
 
-	users, err := logic.GetFriendList(uid)
+	followers, err := logic.GetFriends(uid)
 	if err != nil {
 		zap.L().Error("", zap.Error(err))
 		ResponseError(c, CodeInvalidParams)
 		return
 	}
 
-	ResponseSuccess(c, users)
+	ResponseSuccess(c, followers)
 }
