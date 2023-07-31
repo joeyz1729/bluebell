@@ -5,6 +5,7 @@ import "errors"
 const secret = "bluebell.joey1729"
 
 var (
+	ErrorNotJoin           = errors.New("user not join community yet")
 	ErrorUserExist         = errors.New("user already exists")
 	ErrorUserNotExist      = errors.New("user not exist")
 	ErrorQueryUserData     = errors.New("query user data err")

@@ -35,11 +35,11 @@ func Setup(mode string) *gin.Engine {
 
 	// 社区
 	v2.GET("/community", controller.CommunityListHandler)
-	v2.GET("community/:id", controller.CommunityDetailHandler)
+	v2.GET("community/detail/:id", controller.CommunityDetailHandler)
+	v2.POST("/community/join", middleware.JWTAuthMiddleware(), controller.CommunityJoinHandler) // TODO，订阅用rabbitmquserid关注community
 
 	// v2.POST("/community/publish", controller.TODO)
-	v2.GET("/community/list/:userid", controller.TODO)                          // 获取userid关注的community列表
-	v2.POST("/community/join", middleware.JWTAuthMiddleware(), controller.TODO) // userid关注community
+	v2.GET("/community/list/:userid", controller.TODO) // 获取userid关注的community列表
 
 	// 用户
 	v2.POST("/signup", controller.SignupHandler)
@@ -52,8 +52,8 @@ func Setup(mode string) *gin.Engine {
 	v2.GET("/posts/:cid", controller.CommunityPostListHandler)
 	v2.GET("/post/:pid", controller.GetPostHandler)
 	v2.GET("/posts/order", controller.PostListOrderHandler)
-	v2.POST("/post", middleware.JWTAuthMiddleware(), controller.PostHandler)
-	v2.POST("/vote", middleware.JWTAuthMiddleware(), controller.PostVoteHandler)
+	v2.POST("/post", middleware.JWTAuthMiddleware(), controller.PostHandler)     // TODO， 发帖添加rabbitmq
+	v2.POST("/vote", middleware.JWTAuthMiddleware(), controller.PostVoteHandler) //TODO， 发评论添加rabbitmq
 
 	// 关注或取关， 关注，粉丝，好友列表
 	v2.POST("/relation/action/", controller.TODO)

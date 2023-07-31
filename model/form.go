@@ -29,6 +29,12 @@ type VoteForm struct {
 	Attitude int8   `json:"attitude,string" binding:"oneof=1 0 -1" `
 }
 
+type JoinForm struct {
+	// UserID, get from token
+	CommunityID uint64 `json:"community_id" binding:"required"`
+	ActionType  int32  `json:"action_type" binding:"oneof=1 2" `
+}
+
 type PostsForm struct {
 	Page  int64  `form:"page"`
 	Size  int64  `form:"size"`

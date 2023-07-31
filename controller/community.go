@@ -3,6 +3,11 @@ package controller
 import (
 	"strconv"
 
+	"github.com/YiZou89/bluebell/model"
+	"github.com/go-playground/validator/v10"
+
+	"github.com/YiZou89/bluebell/logic"
+
 	"github.com/YiZou89/bluebell/dao/mysql"
 
 	"go.uber.org/zap"
@@ -39,4 +44,34 @@ func CommunityDetailHandler(c *gin.Context) {
 		return
 	}
 	ResponseSuccess(c, communityDetail)
+}
+
+func CommunityJoinHandler(c *gin.Context) {
+	var joinForm = new(model.JoinForm)
+	if err := c.ShouldBindJSON(&joinForm); err != nil {
+		if errs, ok := err.(validator.ValidationErrors); ok {
+			zap.L().Error("join form validation err", zap.Error(errs))
+			ResponseErrorWithMsg(c, CodeInvalidParams, removeTopStruct(
+				errs.Translate(trans)))
+			return
+		}
+		zap.L().Error("vote form binding err", zap.Error(err))
+		ResponseError(c, CodeInvalidParams)
+		return
+	}
+	uid, _, err := GetCurrentUser(c)
+	if err != nil {
+		zap.L().Error("get user id err", zap.Error(err))
+		ResponseError(c, CodeInvalidToken)
+		return
+	}
+
+	err = logic.CommunityJoin(uid, joinForm)
+	if err != nil {
+		zap.L().Error("join community err", zap.Error(err))
+		ResponseError(c, CodeServerBusy)
+		return
+	}
+	ResponseSuccess(c, nil)
+
 }

@@ -1,9 +1,10 @@
 package model
 
 type Join struct {
-	Id          uint64
-	CommunityId uint64
-	UserId      uint64
+	//Id          uint64 `json:"comment_id,string" db:"comment_id"`
+	CommunityId uint64 `json:"community_id,string" db:"community_id"`
+	UserId      uint64 `json:"user_id,string" db:"user_id"`
+	Cancel      bool   `json:"cancel,int"`
 }
 
 type Follow struct {
