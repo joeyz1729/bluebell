@@ -270,3 +270,17 @@
 2023-07-31T17:46:04.017+0800	INFO	logger/logger.go:89	/api/v2/join/list/	{"status": 200, "method": "GET", "path": "/api/v2/join/list/", "query": "uid=2", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.001017625}
 2023-07-31T17:46:06.222+0800	INFO	logger/logger.go:89	/api/v2/join/list/	{"status": 200, "method": "GET", "path": "/api/v2/join/list/", "query": "uid=1", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000506625}
 2023-07-31T17:46:15.395+0800	INFO	logger/logger.go:89	/api/v2/join/list/	{"status": 200, "method": "GET", "path": "/api/v2/join/list/", "query": "uid=469896035695591425", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.00219575}
+2023-07-31T21:07:53.474+0800	INFO	logger/logger.go:52	[logger] init success
+2023-07-31T21:07:53.475+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-07-31T21:07:53.508+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-07-31T21:07:53.511+0800	INFO	redis/redis.go:42	[redis] init success
+2023-07-31T21:07:53.511+0800	INFO	controller/validator.go:61	init trans success
+2023-07-31T21:07:53.513+0800	INFO	router/router.go:77	[router] init success
+2023-07-31T21:08:25.331+0800	ERROR	controller/follow.go:24		{"error": "strconv.ParseUint: parsing \"\": invalid syntax"}
+2023-07-31T21:08:25.331+0800	INFO	logger/logger.go:89	/api/v2/relation/action/	{"status": 200, "method": "POST", "path": "/api/v2/relation/action/", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.0006475}
+2023-07-31T21:09:27.279+0800	INFO	logger/logger.go:89	/api/v2/relation/action/	{"status": 200, "method": "POST", "path": "/api/v2/relation/action/", "query": "to_user_id=4183532125556736&action_type=1", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.002369667}
+2023-07-31T21:11:39.612+0800	INFO	logger/logger.go:89	/api/v2/relation/action/	{"status": 200, "method": "POST", "path": "/api/v2/relation/action/", "query": "to_user_id=470109017352437761&action_type=1", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000611375}
+2023-07-31T21:11:52.743+0800	INFO	logger/logger.go:89	/api/v2/relation/action/	{"status": 200, "method": "POST", "path": "/api/v2/relation/action/", "query": "to_user_id=28018727488323585&action_type=1", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000363333}
+2023-07-31T21:11:58.887+0800	ERROR	controller/follow.go:41	invalid action type
+2023-07-31T21:11:58.887+0800	INFO	logger/logger.go:89	/api/v2/relation/action/	{"status": 200, "method": "POST", "path": "/api/v2/relation/action/", "query": "to_user_id=28018727488323585&action_type=0", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000251917}
+2023-07-31T21:12:01.366+0800	INFO	logger/logger.go:89	/api/v2/relation/action/	{"status": 200, "method": "POST", "path": "/api/v2/relation/action/", "query": "to_user_id=28018727488323585&action_type=2", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.0003705}

@@ -2,23 +2,12 @@ package redis
 
 import (
 	"context"
-	"errors"
 	"math"
 	"time"
 
 	"github.com/redis/go-redis/v9"
 
 	"go.uber.org/zap"
-)
-
-const (
-	oneWeek = 7 * 24 * 3600 * time.Second
-)
-
-var (
-	ErrVoteTimeExpire         = errors.New("vote time expired")
-	ErrVoteRepeated           = errors.New("vote repeated")
-	voteScore         float64 = 432
 )
 
 // VoteForPost 修改指定帖子id的投票数

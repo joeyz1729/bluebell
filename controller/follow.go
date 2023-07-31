@@ -25,14 +25,25 @@ func FollowHandler(c *gin.Context) {
 		ResponseError(c, CodeInvalidParams)
 		return
 	}
+
 	action, err := strconv.ParseInt(actionStr, 10, 64)
 	if err != nil {
 		zap.L().Error("", zap.Error(err))
 		ResponseError(c, CodeInvalidParams)
 		return
 	}
+	var attitude bool
+	if action == int64(1) {
+		attitude = true
+	} else if action == int64(2) {
+		attitude = false
+	} else {
+		zap.L().Error("invalid action type")
+		ResponseError(c, CodeInvalidParams)
+		return
+	}
 
-	err = logic.Follow(uid, toUid, action)
+	err = logic.Follow(uid, toUid, attitude)
 	if err != nil {
 		zap.L().Error("", zap.Error(err))
 		ResponseError(c, CodeInvalidParams)

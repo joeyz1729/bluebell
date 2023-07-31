@@ -2,16 +2,9 @@ package redis
 
 import (
 	"context"
-	"errors"
 	"time"
 
 	"go.uber.org/zap"
-)
-
-var (
-	ErrJoinTimeExpire         = errors.New("vote time expired")
-	ErrJoinRepeated           = errors.New("vote repeated")
-	joinScore         float64 = 432
 )
 
 func JoinCommunity(userId, postId string, action bool) (err error) {

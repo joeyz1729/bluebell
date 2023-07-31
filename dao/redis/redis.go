@@ -2,12 +2,25 @@ package redis
 
 import (
 	"context"
+	"errors"
 	"fmt"
+	"time"
 
 	"github.com/YiZou89/bluebell/setting"
 
 	"github.com/redis/go-redis/v9"
 	"go.uber.org/zap"
+)
+
+const (
+	oneWeek = 7 * 24 * 3600 * time.Second
+)
+
+var (
+	ErrVoteTimeExpire         = errors.New("vote time expired")
+	ErrVoteRepeated           = errors.New("vote repeated")
+	voteScore         float64 = 432
+	ctx                       = context.Background()
 )
 
 var rdb *redis.Client
