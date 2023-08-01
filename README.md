@@ -109,3 +109,4 @@ bluebell
 * controller用结构体form传值
 * service/logic层用interface+method
 * logic层添加rabbitmq，异步处理请求
+* 首先检查redis是否存在，如果查询成功则更新expire，否则从mysql中查询，并加入redis中

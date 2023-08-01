@@ -44,6 +44,11 @@ const (
 // set following: userid (key following id)
 //
 
+// TODO，添加userid+work count， userid+favorited count， userid + follower count，简化查询的同时，可能被用于热门推荐
+// TODO，post更新数据库操作时使用rabbitmq
+//关注数card/count计算
+//
+
 func getRedisKey(key string) string {
 	return Prefix + key
 }
