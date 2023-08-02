@@ -421,3 +421,104 @@
 2023-08-01T01:59:05.036+0800	INFO	redis/redis.go:42	[redis] init success
 2023-08-01T01:59:05.036+0800	INFO	controller/validator.go:61	init trans success
 2023-08-01T01:59:05.039+0800	INFO	router/router.go:76	[router] init success
+2023-08-01T15:37:52.956+0800	INFO	logger/logger.go:52	[logger] init success
+2023-08-01T15:37:52.957+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-08-01T15:37:52.986+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-08-01T15:37:52.989+0800	INFO	redis/redis.go:42	[redis] init success
+2023-08-01T15:37:52.990+0800	INFO	controller/validator.go:61	init trans success
+2023-08-01T15:39:18.433+0800	INFO	logger/logger.go:89	/ping	{"status": 404, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000000542}
+2023-08-01T15:39:24.687+0800	INFO	logger/logger.go:89	/username	{"status": 404, "method": "GET", "path": "/username", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000000792}
+2023-08-01T15:39:47.710+0800	INFO	logger/logger.go:89	/ping	{"status": 404, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000000625}
+2023-08-01T15:40:49.850+0800	INFO	logger/logger.go:89	/api/v2/login	{"status": 404, "method": "POST", "path": "/api/v2/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000000541}
+2023-08-01T15:40:53.635+0800	INFO	logger/logger.go:89	/api/v2/login	{"status": 404, "method": "GET", "path": "/api/v2/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000000625}
+2023-08-01T15:41:21.525+0800	INFO	logger/logger.go:52	[logger] init success
+2023-08-01T15:41:21.525+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-08-01T15:41:21.528+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-08-01T15:41:21.529+0800	INFO	redis/redis.go:42	[redis] init success
+2023-08-01T15:41:21.529+0800	INFO	controller/validator.go:61	init trans success
+2023-08-01T15:41:25.875+0800	INFO	logger/logger.go:89	/api/v2/login	{"status": 404, "method": "GET", "path": "/api/v2/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000000208}
+2023-08-01T15:41:36.041+0800	INFO	logger/logger.go:89	/api/v2/login	{"status": 404, "method": "POST", "path": "/api/v2/login", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000000542}
+2023-08-01T15:42:20.425+0800	INFO	logger/logger.go:89	/api/v2/userinfo/	{"status": 404, "method": "POST", "path": "/api/v2/userinfo/", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000000833}
+2023-08-01T15:42:24.257+0800	INFO	logger/logger.go:89	/api/v2/userinfo/	{"status": 404, "method": "GET", "path": "/api/v2/userinfo/", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.0000005}
+2023-08-01T15:42:27.101+0800	INFO	logger/logger.go:89	/api/v2/userinfo/	{"status": 404, "method": "POST", "path": "/api/v2/userinfo/", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.0000005}
+2023-08-01T15:44:01.986+0800	INFO	logger/logger.go:52	[logger] init success
+2023-08-01T15:44:01.987+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-08-01T15:44:01.990+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-08-01T15:44:01.990+0800	INFO	redis/redis.go:42	[redis] init success
+2023-08-01T15:44:01.991+0800	INFO	controller/validator.go:61	init trans success
+2023-08-01T15:44:08.406+0800	INFO	logger/logger.go:89	/	{"status": 404, "method": "POST", "path": "/", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000000292}
+2023-08-01T15:44:11.159+0800	INFO	logger/logger.go:89	/	{"status": 404, "method": "GET", "path": "/", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000000625}
+2023-08-01T15:44:13.371+0800	INFO	logger/logger.go:89	/ping	{"status": 404, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000000625}
+2023-08-01T15:47:01.874+0800	INFO	logger/logger.go:52	[logger] init success
+2023-08-01T15:47:01.874+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-08-01T15:47:01.879+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-08-01T15:47:01.880+0800	INFO	redis/redis.go:42	[redis] init success
+2023-08-01T15:47:01.880+0800	INFO	controller/validator.go:61	init trans success
+2023-08-01T15:48:09.309+0800	INFO	logger/logger.go:52	[logger] init success
+2023-08-01T15:48:09.310+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-08-01T15:48:09.313+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-08-01T15:48:09.313+0800	INFO	redis/redis.go:42	[redis] init success
+2023-08-01T15:48:09.313+0800	INFO	controller/validator.go:61	init trans success
+2023-08-01T15:49:08.408+0800	INFO	logger/logger.go:52	[logger] init success
+2023-08-01T15:49:08.409+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-08-01T15:49:08.412+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-08-01T15:49:08.413+0800	INFO	redis/redis.go:42	[redis] init success
+2023-08-01T15:49:08.413+0800	INFO	controller/validator.go:61	init trans success
+2023-08-01T15:52:00.178+0800	INFO	logger/logger.go:52	[logger] init success
+2023-08-01T15:52:00.178+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-08-01T15:52:00.181+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-08-01T15:52:00.182+0800	INFO	redis/redis.go:42	[redis] init success
+2023-08-01T15:52:00.183+0800	INFO	controller/validator.go:61	init trans success
+2023-08-01T15:52:06.611+0800	INFO	logger/logger.go:89	/ping	{"status": 404, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.0000005}
+2023-08-01T15:52:13.734+0800	INFO	logger/logger.go:89	/ping	{"status": 404, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000000541}
+2023-08-01T15:52:30.083+0800	INFO	logger/logger.go:52	[logger] init success
+2023-08-01T15:52:30.083+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-08-01T15:52:30.087+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-08-01T15:52:30.088+0800	INFO	redis/redis.go:42	[redis] init success
+2023-08-01T15:52:30.088+0800	INFO	controller/validator.go:61	init trans success
+2023-08-01T15:52:34.151+0800	INFO	logger/logger.go:89	/ping	{"status": 404, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000003583}
+2023-08-01T15:52:38.458+0800	INFO	logger/logger.go:89	/ping	{"status": 404, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000000708}
+2023-08-01T15:54:16.989+0800	INFO	logger/logger.go:52	[logger] init success
+2023-08-01T15:54:16.990+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-08-01T15:54:16.995+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-08-01T15:54:16.996+0800	INFO	redis/redis.go:42	[redis] init success
+2023-08-01T15:54:16.996+0800	INFO	controller/validator.go:61	init trans success
+2023-08-01T15:54:16.998+0800	INFO	router/router.go:92	[router] init success
+2023-08-01T15:54:26.678+0800	INFO	logger/logger.go:89	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000014041}
+2023-08-01T15:54:30.001+0800	INFO	logger/logger.go:89	/uesrname	{"status": 404, "method": "GET", "path": "/uesrname", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000000541}
+2023-08-01T15:56:22.223+0800	INFO	logger/logger.go:52	[logger] init success
+2023-08-01T15:56:22.224+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-08-01T15:56:22.226+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-08-01T15:56:22.227+0800	INFO	redis/redis.go:42	[redis] init success
+2023-08-01T15:56:22.227+0800	INFO	controller/validator.go:61	init trans success
+2023-08-01T15:56:22.229+0800	INFO	router/router.go:88	[router] init success
+2023-08-01T15:56:29.124+0800	INFO	logger/logger.go:89	/uesrname	{"status": 404, "method": "GET", "path": "/uesrname", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000000333}
+2023-08-01T15:56:32.488+0800	INFO	logger/logger.go:89	/username	{"status": 200, "method": "GET", "path": "/username", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000296709}
+2023-08-01T15:59:21.843+0800	INFO	logger/logger.go:52	[logger] init success
+2023-08-01T15:59:21.843+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-08-01T15:59:21.847+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-08-01T15:59:21.848+0800	INFO	redis/redis.go:42	[redis] init success
+2023-08-01T15:59:21.848+0800	INFO	controller/validator.go:61	init trans success
+2023-08-01T15:59:21.849+0800	INFO	router/router.go:90	[router] init success
+2023-08-01T15:59:34.338+0800	INFO	logger/logger.go:89	/username	{"status": 200, "method": "GET", "path": "/username", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.019360084}
+2023-08-01T16:00:21.604+0800	INFO	logger/logger.go:89	/username	{"status": 200, "method": "GET", "path": "/username", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.002868541}
+2023-08-01T16:01:01.930+0800	INFO	logger/logger.go:89	/username	{"status": 200, "method": "GET", "path": "/username", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.005391083}
+2023-08-01T20:26:09.521+0800	INFO	logger/logger.go:52	[logger] init success
+2023-08-01T20:26:09.522+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-08-01T20:26:09.565+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-08-01T20:26:09.569+0800	INFO	redis/redis.go:42	[redis] init success
+2023-08-01T20:26:09.570+0800	INFO	controller/validator.go:61	init trans success
+2023-08-01T20:26:09.571+0800	INFO	router/router.go:90	[router] init success
+2023-08-01T20:47:39.804+0800	INFO	logger/logger.go:52	[logger] init success
+2023-08-01T20:47:39.805+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-08-01T20:47:39.837+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-08-01T20:47:39.905+0800	ERROR	redis/redis.go:39	connect to redis failed, err: %s
+	{"error": "dial tcp 127.0.0.1:59341: connect: connection refused"}
+2023-08-01T20:47:39.905+0800	INFO	controller/validator.go:61	init trans success
+2023-08-01T20:47:39.914+0800	INFO	router/router.go:90	[router] init success
+2023-08-01T20:48:02.649+0800	INFO	logger/logger.go:52	[logger] init success
+2023-08-01T20:48:02.649+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-08-01T20:48:02.662+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-08-01T20:48:02.668+0800	INFO	redis/redis.go:42	[redis] init success
+2023-08-01T20:48:02.668+0800	INFO	controller/validator.go:61	init trans success
+2023-08-01T20:48:02.669+0800	INFO	router/router.go:90	[router] init success

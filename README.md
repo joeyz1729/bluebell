@@ -64,15 +64,45 @@ bluebell
 </code>
 </pre>
 
+# API
+1. User 相关
+   * POST 用户注册操作
+   * POST 用户登陆操作
+   * GET 获取用户详细信息
+   * GET jwt鉴权，生成access token和fresh token，通过fresh token刷新
+
+2. Community 相关
+   * GET 获取所有社区信息
+   * GET 获取用户关注的社区列表
+   * GET 获取指定社区的详细信息
+   * POST 用户加入社区操作
+
+3. Post 相关
+   * GET 分页按顺序获取帖子信息
+   * GET 获取社区所有帖子信息
+   * GET 获取用户所有发帖信息
+   * GET 获取指定帖子信息
+   * POST 用户发帖操作
+   * POST 用户投票操作
+
+4. Follow 相关
+   * POST 用户关注操作
+   * GET 获取关注列表
+   * GET 获取粉丝列表
+   * GET 获取好友列表 TODO
+
+5. Comment 相关 TODO
+
 # 技能清单
 * Viper配置管理
 * Zap日志库
 * 雪花算法 
-* JWT认证 
+* JWT鉴权
 * 令牌桶限流
 * Gin框架
-* Go语言操作MySQL (sqlx)
-* Go语言操作Redis (go-redis)
+* Validator参数校验
+* Sqlx操作MySQL
+* GO-redis操作Redis
 
 # 启动流程
 1. 修改conf/config.yaml 文件中 host，port，MySQL，Redis等配置
@@ -85,28 +115,12 @@ bluebell
 4. 执行 `./bin/bluebell conf/config.yaml`，启动程序
 5. 打开浏览器或postman测试 http://127.0.0.1:8081
 
-# API
-1. 基础接口
-   * 视频流接口，对应community列表和:id
-   * 用户登陆和注册接口
-   * 用户信息
-   * 视频投稿，对应post
-   * 发布列表，对应用户uid的所有帖子
-2. 互动接口
-   * 赞操作，对应join community
-   * 喜欢列表，对应查询user join的所有community列表
-   * 评论操作，与视频投稿类似，TODO
-   * 视频评论列表，对应community 下的所有post列表
-3. 社交接口
-   * 关注操作
-   * 获取关注列表
-   * 获取粉丝列表
-   * 获取好友列表 TODO
 
 
-# TODO
-* 修改数据查询流程，如果redis中不存在，则从数据库中查询
-* controller用结构体form传值
-* service/logic层用interface+method
-* logic层添加rabbitmq，异步处理请求
-* 首先检查redis是否存在，如果查询成功则更新expire，否则从mysql中查询，并加入redis中
+
+# 改进
+* 数据获取流程，更新删除redis和延迟修改mysql
+* 添加rabbitmq，join, post, follow等请求放入消息队列异步处理
+* 规范controller层request，response form
+* 修改logic层，使用interface+method
+* 使用微服务架构

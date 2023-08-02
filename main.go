@@ -57,9 +57,12 @@ func main() {
 
 	// Gin 路由启动
 	r := router.Setup(setting.Conf.Mode)
-	err := r.Run(fmt.Sprintf(":%d", setting.Conf.Port))
-	if err != nil {
-		fmt.Printf("run server failed, err:%v\n", err)
-		return
-	}
+
+	//err := r.Run(fmt.Sprintf(":%d", setting.Conf.Port))
+	//
+	//if err != nil {
+	//	fmt.Printf("run server failed, err:%v\n", err)
+	//	return
+	//}
+	r.Run(":8081")
 }

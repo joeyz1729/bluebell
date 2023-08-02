@@ -3,10 +3,13 @@ package router
 import (
 	"net/http"
 
+	"github.com/YiZou89/bluebell/logic"
+
 	"github.com/YiZou89/bluebell/middleware"
 
 	"github.com/YiZou89/bluebell/controller"
 	"github.com/YiZou89/bluebell/logger"
+	httptransport "github.com/go-kit/kit/transport/http"
 	"go.uber.org/zap"
 
 	"github.com/gin-contrib/pprof"
@@ -15,6 +18,7 @@ import (
 )
 
 func Setup(mode string) *gin.Engine {
+	zap.L().Debug("setup router")
 	if mode == gin.ReleaseMode {
 		gin.SetMode(gin.ReleaseMode)
 	} else {
@@ -25,10 +29,20 @@ func Setup(mode string) *gin.Engine {
 	r := gin.New()
 	r.Use(logger.GinLogger(), logger.GinRecovery(true))
 	//r.Use(logger.GinLogger(), logger.GinRecovery(true), middleware.RateLimitMiddleware(time.Second*2, 1))
-
 	r.GET("/ping", func(c *gin.Context) {
 		c.String(http.StatusOK, "pong")
 	})
+
+	us := logic.NewUserService()
+	getUserHandler := httptransport.NewServer(
+		makeGetUserEndpoint(us),
+		decodeUserRequest,
+		encodeUserResponse,
+	)
+	r.GET("/username", func(c *gin.Context) {
+		getUserHandler.ServeHTTP(c.Writer, c.Request)
+	})
+
 	pprof.Register(r)
 	v2 := r.Group("/api/v2")
 
