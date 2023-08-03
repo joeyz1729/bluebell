@@ -34,6 +34,12 @@ func SignupHandler(c *gin.Context) {
 		}
 	}
 
+	// username, password
+	// 检查username是否存在
+	// 准备加密放入数据库
+	// 生成token
+	//
+
 	if err := logic.Signup(sf); err != nil {
 		zap.L().Error("signup err", zap.Error(err))
 		if errors.Is(err, mysql.ErrorUserExist) {

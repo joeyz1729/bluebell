@@ -1,5 +1,11 @@
 package mysql
 
+func AddFollow(uid, toUid int) error {
+	sqlStr := `insert into follow(user_id, follower_id, cancel) values(?, ?,?)`
+	_, err := db.Exec(sqlStr, uid, toUid, 0)
+	return err
+}
+
 func IsFollowed(uid, userId uint64) (ok bool, err error) {
 
 	sqlStr := `select count(*) from follow where user_id = ? and follower_id = ?`

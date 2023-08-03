@@ -600,3 +600,83 @@
 2023-08-03T20:24:06.751+0800	INFO	rabbitmq/rabbitmq.go:29	[rabbitmq] init success
 2023-08-03T20:24:06.751+0800	INFO	controller/validator.go:61	init trans success
 2023-08-03T20:24:06.753+0800	INFO	router/router.go:90	[router] init success
+2023-08-03T21:24:04.264+0800	INFO	logger/logger.go:52	[logger] init success
+2023-08-03T21:24:04.265+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-08-03T21:24:04.303+0800	ERROR	mysql/mysql.go:28	connect to mysql failed, err: %v
+	{"error": "Error 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)"}
+2023-08-03T21:24:04.304+0800	INFO	redis/redis.go:42	[redis] init success
+2023-08-03T21:24:04.322+0800	INFO	rabbitmq/rabbitmq.go:29	[rabbitmq] init success
+2023-08-03T21:24:04.322+0800	INFO	controller/validator.go:61	init trans success
+2023-08-03T21:24:04.324+0800	INFO	router/router.go:90	[router] init success
+2023-08-03T21:24:28.370+0800	INFO	logger/logger.go:52	[logger] init success
+2023-08-03T21:24:28.370+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-08-03T21:24:28.388+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-08-03T21:24:28.389+0800	INFO	redis/redis.go:42	[redis] init success
+2023-08-03T21:24:28.397+0800	INFO	rabbitmq/rabbitmq.go:29	[rabbitmq] init success
+2023-08-03T21:24:28.397+0800	INFO	controller/validator.go:61	init trans success
+2023-08-03T21:24:28.400+0800	INFO	router/router.go:90	[router] init success
+2023-08-03T23:48:43.653+0800	INFO	logger/logger.go:52	[logger] init success
+2023-08-03T23:48:43.654+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-08-03T23:48:43.689+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-08-03T23:48:43.705+0800	INFO	redis/redis.go:42	[redis] init success
+2023-08-03T23:48:43.727+0800	INFO	rabbitmq/rabbitmq.go:29	[rabbitmq] init success
+2023-08-03T23:48:43.727+0800	INFO	controller/validator.go:61	init trans success
+2023-08-03T23:48:43.731+0800	INFO	router/router.go:90	[router] init success
+2023-08-03T23:54:36.897+0800	INFO	logger/logger.go:52	[logger] init success
+2023-08-03T23:54:36.897+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-08-03T23:54:36.903+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-08-03T23:54:36.904+0800	INFO	redis/redis.go:42	[redis] init success
+2023-08-03T23:54:36.913+0800	INFO	rabbitmq/rabbitmq.go:29	[rabbitmq] init success
+2023-08-03T23:54:36.915+0800	INFO	controller/validator.go:61	init trans success
+2023-08-03T23:54:36.919+0800	INFO	router/router.go:90	[router] init success
+2023-08-03T23:56:40.728+0800	INFO	logger/logger.go:89	/v1/api/ping	{"status": 404, "method": "GET", "path": "/v1/api/ping", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000000584}
+2023-08-03T23:56:56.757+0800	ERROR	middleware/auth.go:20	jwt auth middleware err, not login
+2023-08-03T23:56:56.757+0800	INFO	logger/logger.go:89	/api/v2/ping	{"status": 200, "method": "GET", "path": "/api/v2/ping", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000557417}
+2023-08-03T23:57:05.813+0800	INFO	logger/logger.go:89	/ping	{"status": 200, "method": "GET", "path": "/ping", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000046666}
+2023-08-03T23:57:08.788+0800	INFO	logger/logger.go:89	/username	{"status": 500, "method": "GET", "path": "/username", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000127416}
+2023-08-03T23:57:18.146+0800	INFO	logger/logger.go:89	/follow	{"status": 404, "method": "GET", "path": "/follow", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.00000075}
+2023-08-03T23:57:25.663+0800	INFO	logger/logger.go:89	/api/v2/follow	{"status": 404, "method": "POST", "path": "/api/v2/follow", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.0000005}
+2023-08-03T23:57:40.082+0800	INFO	logger/logger.go:89	/api/v2/ralation/follow	{"status": 404, "method": "POST", "path": "/api/v2/ralation/follow", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000000625}
+2023-08-03T23:57:46.151+0800	INFO	logger/logger.go:89	/api/v2/ralation/action/	{"status": 404, "method": "POST", "path": "/api/v2/ralation/action/", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.000000542}
+2023-08-03T23:58:00.400+0800	ERROR	middleware/auth.go:20	jwt auth middleware err, not login
+2023-08-03T23:58:00.401+0800	INFO	logger/logger.go:89	/api/v2/relation/action/	{"status": 200, "method": "POST", "path": "/api/v2/relation/action/", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.001228917}
+2023-08-03T23:58:08.276+0800	ERROR	controller/follow.go:24		{"error": "strconv.ParseUint: parsing \"\": invalid syntax"}
+2023-08-03T23:58:08.278+0800	INFO	logger/logger.go:89	/api/v2/relation/action/	{"status": 200, "method": "POST", "path": "/api/v2/relation/action/", "query": "", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.001881083}
+2023-08-03T23:59:43.960+0800	INFO	logger/logger.go:89	/api/v2/relation/action/	{"status": 200, "method": "POST", "path": "/api/v2/relation/action/", "query": "to_user_id=470003425044594689&action_type=1", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.007706708}
+2023-08-03T23:59:44.066+0800	ERROR	rabbitmq/follow.go:127	insert follow relation success
+2023-08-04T00:00:28.738+0800	INFO	logger/logger.go:89	/api/v2/relation/action/	{"status": 200, "method": "POST", "path": "/api/v2/relation/action/", "query": "to_user_id=470109017352437761&action_type=1", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.003219125}
+2023-08-04T00:00:28.753+0800	ERROR	rabbitmq/follow.go:127	insert follow relation success
+2023-08-04T00:05:59.122+0800	ERROR	rabbitmq/follow.go:124	insert follow relation err	{"error": "Error 1062 (23000): Duplicate entry '471876904828272641-470109017352437761' for key 'follow.follow_pk'"}
+2023-08-04T00:05:59.125+0800	INFO	logger/logger.go:89	/api/v2/relation/action/	{"status": 200, "method": "POST", "path": "/api/v2/relation/action/", "query": "to_user_id=470109017352437761&action_type=1", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.032965625}
+2023-08-04T00:07:06.897+0800	INFO	logger/logger.go:52	[logger] init success
+2023-08-04T00:07:06.898+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-08-04T00:07:06.902+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-08-04T00:07:06.917+0800	INFO	redis/redis.go:42	[redis] init success
+2023-08-04T00:07:06.932+0800	INFO	rabbitmq/rabbitmq.go:29	[rabbitmq] init success
+2023-08-04T00:07:06.933+0800	INFO	controller/validator.go:61	init trans success
+2023-08-04T00:07:06.935+0800	INFO	router/router.go:90	[router] init success
+2023-08-04T00:07:09.322+0800	INFO	logger/logger.go:89	/api/v2/relation/action/	{"status": 200, "method": "POST", "path": "/api/v2/relation/action/", "query": "to_user_id=470109017352437761&action_type=1", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.014130958}
+2023-08-04T00:07:09.324+0800	ERROR	rabbitmq/follow.go:124	insert follow relation err	{"error": "Error 1062 (23000): Duplicate entry '471876904828272641-470109017352437761' for key 'follow.follow_pk'"}
+2023-08-04T00:07:21.849+0800	INFO	logger/logger.go:89	/api/v2/relation/action/	{"status": 200, "method": "POST", "path": "/api/v2/relation/action/", "query": "to_user_id=470109017352437761&action_type=2", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.002535208}
+2023-08-04T00:07:21.854+0800	ERROR	rabbitmq/follow.go:143	insert follow relation err	{"error": "Error 1062 (23000): Duplicate entry '471876904828272641-470109017352437761' for key 'follow.follow_pk'"}
+2023-08-04T00:07:59.810+0800	INFO	logger/logger.go:89	/api/v2/relation/action/	{"status": 200, "method": "POST", "path": "/api/v2/relation/action/", "query": "to_user_id=333&action_type=2", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.004507583}
+2023-08-04T00:08:42.918+0800	INFO	logger/logger.go:89	/api/v2/relation/action/	{"status": 200, "method": "POST", "path": "/api/v2/relation/action/", "query": "to_user_id=333&action_type=1", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.03196075}
+2023-08-04T00:09:49.452+0800	INFO	logger/logger.go:89	/api/v2/relation/action/	{"status": 200, "method": "POST", "path": "/api/v2/relation/action/", "query": "to_user_id=333&action_type=1", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.002295125}
+2023-08-04T00:10:44.556+0800	INFO	logger/logger.go:89	/api/v2/relation/action/	{"status": 200, "method": "POST", "path": "/api/v2/relation/action/", "query": "to_user_id=33414134&action_type=1", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.002457584}
+2023-08-04T00:11:29.123+0800	INFO	logger/logger.go:89	/api/v2/relation/action/	{"status": 200, "method": "POST", "path": "/api/v2/relation/action/", "query": "to_user_id=470156835370827777&action_type=1", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.003569583}
+2023-08-04T00:12:40.018+0800	INFO	logger/logger.go:52	[logger] init success
+2023-08-04T00:12:40.018+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-08-04T00:12:40.021+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-08-04T00:12:40.021+0800	INFO	redis/redis.go:42	[redis] init success
+2023-08-04T00:12:40.030+0800	INFO	rabbitmq/rabbitmq.go:29	[rabbitmq] init success
+2023-08-04T00:12:40.032+0800	INFO	controller/validator.go:61	init trans success
+2023-08-04T00:12:40.035+0800	INFO	router/router.go:90	[router] init success
+2023-08-04T00:13:43.372+0800	INFO	logger/logger.go:52	[logger] init success
+2023-08-04T00:13:43.372+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-08-04T00:13:43.375+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-08-04T00:13:43.388+0800	INFO	redis/redis.go:42	[redis] init success
+2023-08-04T00:13:43.397+0800	INFO	rabbitmq/rabbitmq.go:29	[rabbitmq] init success
+2023-08-04T00:13:43.398+0800	INFO	controller/validator.go:61	init trans success
+2023-08-04T00:13:43.400+0800	INFO	router/router.go:90	[router] init success
+2023-08-04T00:14:27.720+0800	INFO	logger/logger.go:89	/api/v2/relation/action/	{"status": 200, "method": "POST", "path": "/api/v2/relation/action/", "query": "to_user_id=28018727488323585&action_type=1", "ip": "127.0.0.1", "user-agent": "PostmanRuntime/7.32.3", "errors": "", "cost": 0.002867291}
+2023-08-04T00:14:27.733+0800	ERROR	rabbitmq/follow.go:127	insert follow relation success

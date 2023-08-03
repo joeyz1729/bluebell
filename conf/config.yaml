@@ -1,6 +1,6 @@
 name: "web-app"
 mode: "dev"
-version: "v0.2"
+version: "v0.3"
 host: 127.0.0.1
 port: 8080
 start_time: "2023-5-29"
@@ -18,9 +18,9 @@ log:
 
 mysql:
   host: "127.0.0.1"
-  port: 43306
+  port: 3306
   username: "root"
-  password: "mysql"
+  password: "Zy_9908091729"
   dbname: "bluebell"
   max_life_time: 10
   max_open_conns: 200
@@ -28,14 +28,14 @@ mysql:
 
 redis:
   host: "127.0.0.1"
-  port: 46379
+  port: 6379
   password: ""
   db: 0
   pool_size: 100
 
 rabbitmq:
   host: "127.0.0.1"
-  port: 45672
-  management_port: 55672
+  port: 5672
+  management_port: 5672
   username: test
   password: test

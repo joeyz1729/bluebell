@@ -42,11 +42,13 @@ func FollowHandler(c *gin.Context) {
 		ResponseError(c, CodeInvalidParams)
 		return
 	}
+	// 成功获取参数之后，异步处理
+	// goroutine执行，直接返回
 
 	err = logic.Follow(uid, toUid, attitude)
 	if err != nil {
-		zap.L().Error("", zap.Error(err))
-		ResponseError(c, CodeInvalidParams)
+		zap.L().Error("redis follow action failed", zap.Error(err))
+		ResponseError(c, CodeServerBusy)
 		return
 	}
 

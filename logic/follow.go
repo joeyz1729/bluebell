@@ -2,6 +2,9 @@ package logic
 
 import (
 	"strconv"
+	"strings"
+
+	"github.com/YiZou89/bluebell/middleware/rabbitmq"
 
 	"github.com/YiZou89/bluebell/dao/redis"
 	"github.com/YiZou89/bluebell/model"
@@ -14,12 +17,26 @@ import (
 //
 
 func Follow(uid, toUid uint64, attitude bool) (err error) {
-	//TODO 拓展mysql和rabbitmq
 	zap.L().Debug("logic.follow",
 		zap.Uint64("userId", uid),
-		zap.Uint64("postId", toUid),
+		zap.Uint64("toUid", toUid),
 		zap.Bool("attitude", attitude),
 	)
+	// rabbitmq + mysql
+	sb := strings.Builder{}
+	sb.WriteString(strconv.Itoa(int(uid)))
+	sb.WriteString(" ")
+	sb.WriteString(strconv.Itoa(int(toUid)))
+
+	switch attitude {
+	case true:
+		_ = rabbitmq.RmqFollowAdd.Publish(sb.String())
+
+	case false:
+		_ = rabbitmq.RmqFollowDel.Publish(sb.String())
+	}
+
+	// redis
 	return redis.Follow(strconv.Itoa(int(uid)), strconv.Itoa(int(toUid)), attitude)
 
 }

@@ -28,6 +28,11 @@ func Init(conf *setting.RabbitmqConfig) (err error) {
 	}
 	zap.L().Info("[rabbitmq] init success")
 	RabbitmqConn = dial
+
+	InitFollowRmq()
+	InitVoteRmq()
+	InitLikeRmq()
+
 	return nil
 }
 func Close() {

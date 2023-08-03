@@ -9,7 +9,7 @@ import (
 )
 
 func Follow(uid, toUid string, attitude bool) (err error) {
-	// TODO 添加关注时，如果对方已经关注了自己，则为互相关注
+
 	pipeline := rdb.TxPipeline()
 	if attitude {
 		rdb.SAdd(ctx, getRedisKey(FollowerSetPrefix+toUid), uid)
@@ -19,7 +19,14 @@ func Follow(uid, toUid string, attitude bool) (err error) {
 		rdb.SRem(ctx, getRedisKey(FollowingSetPrefix+uid), toUid)
 	}
 	_, err = pipeline.Exec(ctx)
-
+	if err != nil {
+		zap.L().Error("redis add follow err", zap.Error(err))
+		return err
+	}
+	zap.L().Debug("redis follow add success",
+		zap.String("uid", uid),
+		zap.String("toUid", toUid),
+	)
 	return
 }
 
