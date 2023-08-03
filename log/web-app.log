@@ -522,3 +522,81 @@
 2023-08-01T20:48:02.668+0800	INFO	redis/redis.go:42	[redis] init success
 2023-08-01T20:48:02.668+0800	INFO	controller/validator.go:61	init trans success
 2023-08-01T20:48:02.669+0800	INFO	router/router.go:90	[router] init success
+2023-08-03T01:37:38.152+0800	INFO	logger/logger.go:52	[logger] init success
+2023-08-03T01:37:38.152+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-08-03T01:37:38.153+0800	ERROR	mysql/mysql.go:28	connect to mysql failed, err: %v
+	{"error": "dial tcp 127.0.0.1:43306: connect: connection refused"}
+2023-08-03T01:37:38.221+0800	ERROR	redis/redis.go:39	connect to redis failed, err: %s
+	{"error": "dial tcp 127.0.0.1:46379: connect: connection refused"}
+2023-08-03T01:37:38.221+0800	INFO	controller/validator.go:61	init trans success
+2023-08-03T01:37:38.223+0800	INFO	router/router.go:90	[router] init success
+2023-08-03T19:57:25.287+0800	INFO	logger/logger.go:52	[logger] init success
+2023-08-03T19:57:25.288+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-08-03T19:57:25.321+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-08-03T19:57:25.330+0800	INFO	redis/redis.go:42	[redis] init success
+2023-08-03T19:57:25.330+0800	ERROR	rabbitmq/rabbitmq.go:26	connect to rabbitmq err: 	{"error": "parse \"amqp://127.0.0.1:%!s(int=45672)@test:test/\": invalid port \":test\" after host"}
+2023-08-03T19:57:25.330+0800	INFO	controller/validator.go:61	init trans success
+2023-08-03T19:57:25.332+0800	INFO	router/router.go:90	[router] init success
+2023-08-03T19:57:57.791+0800	INFO	logger/logger.go:52	[logger] init success
+2023-08-03T19:57:57.792+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-08-03T19:57:57.808+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-08-03T19:57:57.812+0800	INFO	redis/redis.go:42	[redis] init success
+2023-08-03T19:57:57.812+0800	ERROR	rabbitmq/rabbitmq.go:26	connect to rabbitmq err: 	{"error": "parse \"amqp://127.0.0.1:45672@test:test/\": invalid port \":test\" after host"}
+2023-08-03T19:57:57.812+0800	INFO	controller/validator.go:61	init trans success
+2023-08-03T19:57:57.814+0800	INFO	router/router.go:90	[router] init success
+2023-08-03T19:58:50.009+0800	INFO	logger/logger.go:52	[logger] init success
+2023-08-03T19:58:50.009+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-08-03T19:58:50.025+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-08-03T19:58:50.028+0800	INFO	redis/redis.go:42	[redis] init success
+2023-08-03T19:58:53.051+0800	ERROR	rabbitmq/rabbitmq.go:26	connect to rabbitmq err: 	{"error": "Exception (403) Reason: \"username or password not allowed\""}
+2023-08-03T19:58:53.052+0800	INFO	controller/validator.go:61	init trans success
+2023-08-03T19:58:53.059+0800	INFO	router/router.go:90	[router] init success
+2023-08-03T19:59:49.290+0800	INFO	logger/logger.go:52	[logger] init success
+2023-08-03T19:59:49.290+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-08-03T19:59:49.312+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-08-03T19:59:49.317+0800	INFO	redis/redis.go:42	[redis] init success
+2023-08-03T19:59:49.332+0800	ERROR	rabbitmq/rabbitmq.go:26	connect to rabbitmq err: 	{"error": "Exception (403) Reason: \"no access to this vhost\""}
+2023-08-03T19:59:49.333+0800	INFO	controller/validator.go:61	init trans success
+2023-08-03T19:59:49.336+0800	INFO	router/router.go:90	[router] init success
+2023-08-03T20:00:43.418+0800	INFO	logger/logger.go:52	[logger] init success
+2023-08-03T20:00:43.419+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-08-03T20:00:43.440+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-08-03T20:00:43.444+0800	INFO	redis/redis.go:42	[redis] init success
+2023-08-03T20:00:43.449+0800	INFO	rabbitmq/rabbitmq.go:29	[rabbitmq] init success
+2023-08-03T20:00:43.449+0800	INFO	controller/validator.go:61	init trans success
+2023-08-03T20:00:43.452+0800	INFO	router/router.go:90	[router] init success
+2023-08-03T20:01:27.698+0800	INFO	logger/logger.go:52	[logger] init success
+2023-08-03T20:01:27.698+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-08-03T20:01:27.720+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-08-03T20:01:27.724+0800	INFO	redis/redis.go:42	[redis] init success
+2023-08-03T20:01:27.741+0800	ERROR	rabbitmq/rabbitmq.go:26	connect to rabbitmq err: 	{"error": "Exception (403) Reason: \"no access to this vhost\""}
+2023-08-03T20:01:27.742+0800	INFO	controller/validator.go:61	init trans success
+2023-08-03T20:01:27.744+0800	INFO	router/router.go:90	[router] init success
+2023-08-03T20:04:01.300+0800	INFO	logger/logger.go:52	[logger] init success
+2023-08-03T20:04:01.300+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-08-03T20:04:01.319+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-08-03T20:04:01.323+0800	INFO	redis/redis.go:42	[redis] init success
+2023-08-03T20:04:01.338+0800	ERROR	rabbitmq/rabbitmq.go:26	connect to rabbitmq err: 	{"error": "Exception (403) Reason: \"no access to this vhost\""}
+2023-08-03T20:04:01.338+0800	INFO	controller/validator.go:61	init trans success
+2023-08-03T20:04:01.342+0800	INFO	router/router.go:90	[router] init success
+2023-08-03T20:07:45.701+0800	INFO	logger/logger.go:52	[logger] init success
+2023-08-03T20:07:45.701+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-08-03T20:07:45.719+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-08-03T20:07:45.723+0800	INFO	redis/redis.go:42	[redis] init success
+2023-08-03T20:07:45.736+0800	ERROR	rabbitmq/rabbitmq.go:26	connect to rabbitmq err: 	{"error": "Exception (403) Reason: \"no access to this vhost\""}
+2023-08-03T20:07:45.737+0800	INFO	controller/validator.go:61	init trans success
+2023-08-03T20:07:45.739+0800	INFO	router/router.go:90	[router] init success
+2023-08-03T20:21:59.482+0800	INFO	logger/logger.go:52	[logger] init success
+2023-08-03T20:21:59.483+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-08-03T20:21:59.525+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-08-03T20:21:59.529+0800	INFO	redis/redis.go:42	[redis] init success
+2023-08-03T20:21:59.545+0800	ERROR	rabbitmq/rabbitmq.go:26	connect to rabbitmq err: 	{"error": "Exception (403) Reason: \"no access to this vhost\""}
+2023-08-03T20:21:59.546+0800	INFO	controller/validator.go:61	init trans success
+2023-08-03T20:21:59.549+0800	INFO	router/router.go:90	[router] init success
+2023-08-03T20:24:06.713+0800	INFO	logger/logger.go:52	[logger] init success
+2023-08-03T20:24:06.714+0800	INFO	snowflake/gen_id.go:32	[snowflake] init success
+2023-08-03T20:24:06.732+0800	INFO	mysql/mysql.go:41	[mysql] init success
+2023-08-03T20:24:06.736+0800	INFO	redis/redis.go:42	[redis] init success
+2023-08-03T20:24:06.751+0800	INFO	rabbitmq/rabbitmq.go:29	[rabbitmq] init success
+2023-08-03T20:24:06.751+0800	INFO	controller/validator.go:61	init trans success
+2023-08-03T20:24:06.753+0800	INFO	router/router.go:90	[router] init success

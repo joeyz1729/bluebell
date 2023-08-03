@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  redis:
+    image: redis
+    ports:
+      - "46379:6379"
+
+  mysql:
+    image: mysql
+    ports:
+      - "43306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: mysql
+
+  rabbitmq:
+    image: rabbitmq
+    ports:
+      - "45672:5672"
+      - "55672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: bluebell
+      RABBITMQ_DEFAULT_PASS: bluebell
+    command: >
+      bash -c "
+        rabbitmqctl wait /var/lib/rabbitmq/mnesia/rabbit\@$HOSTNAME.pid &&
+        rabbitmqctl add_user bluebell bluebell &&
+        rabbitmqctl set_user_tags bluebell administrator &&
+        rabbitmqctl set_permissions -p / bluebell ".*" ".*" ".*"
+      "

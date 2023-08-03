@@ -18,6 +18,7 @@ require (
 	github.com/redis/go-redis/v9 v9.0.5
 	github.com/sony/sonyflake v1.1.0
 	github.com/spf13/viper v1.16.0
+	github.com/streadway/amqp v1.0.0
 	go.uber.org/zap v1.24.0
 )
 

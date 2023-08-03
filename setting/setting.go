@@ -19,6 +19,7 @@ type AppConfig struct {
 	MachineID                  uint16        `mapstructure:"machine_id"`
 	AccessTokenExpireDuration  time.Duration `mapstructure:"jwt_access_expire"`
 	RefreshTokenExpireDuration time.Duration `mapstructure:"jwt_refresh_expire"`
+	*RabbitmqConfig            `mapstructure:"rabbitmq"`
 	*LogConfig                 `mapstructure:"log"`
 	*MySQLConfig               `mapstructure:"mysql"`
 	*RedisConfig               `mapstructure:"redis"`
@@ -50,6 +51,14 @@ type RedisConfig struct {
 	DB       int    `mapstructure:"db"`
 	PoolSize int    `mapstructure:"pool_size"`
 	//MinIdleConns int    `mapstructure:"min_idle_conns"`
+}
+
+type RabbitmqConfig struct {
+	Host           string `mapstructure:"host"`
+	Port           int    `mapstructure:"port"`
+	ManagementPort int    `mapstructure:"management_port"`
+	Username       string `mapstructure:"username"`
+	Password       string `mapstructure:"password"`
 }
 
 var Conf = new(AppConfig)

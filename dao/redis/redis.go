@@ -40,7 +40,7 @@ func Init(conf *setting.RedisConfig) (err error) {
 		return
 	}
 	zap.L().Info("[redis] init success")
-	return
+	return nil
 }
 
 func Close() {

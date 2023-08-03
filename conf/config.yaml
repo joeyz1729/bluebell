@@ -33,4 +33,9 @@ redis:
   db: 0
   pool_size: 100
 
-
+rabbitmq:
+  host: "127.0.0.1"
+  port: 45672
+  management_port: 55672
+  username: test
+  password: test

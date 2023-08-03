@@ -4,6 +4,8 @@ import (
 	"flag"
 	"fmt"
 
+	"github.com/YiZou89/bluebell/middleware/rabbitmq"
+
 	"github.com/YiZou89/bluebell/controller"
 	"github.com/YiZou89/bluebell/dao/mysql"
 	"github.com/YiZou89/bluebell/dao/redis"
@@ -44,10 +46,12 @@ func main() {
 	defer mysql.Close()
 
 	// 连接 redis 数据库
-	if err := redis.Init(setting.Conf.RedisConfig); err != nil {
-		fmt.Printf("init redis err: %s\n", err)
-	}
+	redis.Init(setting.Conf.RedisConfig)
 	defer redis.Close()
+
+	// 连接rabbitmq
+	rabbitmq.Init(setting.Conf.RabbitmqConfig)
+	defer rabbitmq.Close()
 
 	// validator校验器
 	if err := controller.InitTrans("en"); err != nil {
