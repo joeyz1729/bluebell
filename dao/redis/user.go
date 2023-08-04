@@ -28,7 +28,7 @@ func GetUserInfo(uid, userId string) (info *model.UserDetail, err error) {
 	info.FollowerCount = frc
 
 	// 加入的社区总数
-	jc, err := rdb.SCard(ctx, getRedisKey(MemberCommunityPrefix)+uid).Result()
+	jc, err := rdb.SCard(ctx, getRedisKey(MemberCommunitySetPrefix)+uid).Result()
 	if err != nil {
 		return
 	}

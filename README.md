@@ -124,3 +124,22 @@ bluebell
 * 规范controller层request，response form
 * 修改logic层，使用interface+method
 * 使用微服务架构
+
+
+# 点赞操作，user-video
+更新uid的redis
+1. uid有：
+添加到uid的redis，
+   * 成功则rmq异步更新，
+   * 失败则直接返回，防止脏数据；
+
+2. uid无：
+添加到uid的redis，失败则终止
+设置有效时间，失败则终止
+
+获得uid的点赞列表，用于判断vid，错误返回
+添加到redis，错误就删掉
+新操作中的vid添加到列表，错误就返回
+成功就rmq
+
+更新vid的redis

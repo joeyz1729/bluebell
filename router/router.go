@@ -54,8 +54,8 @@ func Setup(mode string) *gin.Engine {
 
 	// 社区
 	v2.GET("/communities", controller.CommunityListHandler)
-	v2.GET("/join/list/", middleware.JWTAuthMiddleware(), controller.CommunityJoinListHandler)
 	v2.GET("community/detail/:id", controller.CommunityDetailHandler)
+	v2.GET("/join/list/", middleware.JWTAuthMiddleware(), controller.CommunityJoinListHandler)
 	v2.POST("/member/action/", middleware.JWTAuthMiddleware(), controller.CommunityJoinHandler)
 
 	// 帖子

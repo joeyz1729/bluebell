@@ -2,46 +2,36 @@ package redis
 
 import (
 	"context"
-	"time"
-
-	"go.uber.org/zap"
 )
 
-func JoinCommunity(userId, postId string, action bool) (err error) {
-	// action: 加入或者退出
-	var ctx = context.Background()
-	// 检查是否过期
-	postTime := rdb.ZScore(ctx, getRedisKey(PostTimeZSet), postId).Val()
-	if float64(time.Now().Unix())-postTime > float64(oneWeek) {
-		zap.L().Error("the post has been expired, can not be voted", zap.Error(err))
-		return ErrVoteTimeExpire
+//
+//CommunityMemberPrefix = "community:member:"
+//MemberCommunitySetPrefix = "member:community:"
+
+func JoinCommunity(uid, cid string, action bool) (err error) {
+	// 有两个缓存集合，使用事务
+	pipeline := rdb.TxPipeline()
+	if action {
+		rdb.SAdd(context.Background(), getRedisKey(CommunityMemberSetPrefix)+cid, uid)
+		rdb.SAdd(context.Background(), getRedisKey(MemberCommunitySetPrefix)+uid, cid)
+	} else {
+		rdb.SRem(context.Background(), getRedisKey(CommunityMemberSetPrefix)+cid, uid)
+		rdb.SRem(context.Background(), getRedisKey(MemberCommunitySetPrefix)+uid, cid)
 	}
-
-	//// 获取uid为pid的投票值, -1, 0, 1
-	//voteValue := rdb.ZScore(ctx, getRedisKey(PostVotedZSetPrefix+postId), userId).Val()
-	//if attitude == voteValue {
-	//	return ErrVoteRepeated
-	//}
-	//
-	//var sign float64
-	//sign = -1
-	//if attitude > voteValue {
-	//	sign = 1
-	//}
-	//diff := math.Abs(voteValue - attitude)
-	//
-	//// 修改
-	//pipeline := rdb.TxPipeline()
-	//_, err = pipeline.ZIncrBy(ctx, getRedisKey(PostScoreZSet), sign*diff*voteScore, postId).Result()
-	//if attitude == 0 {
-	//	_, err = pipeline.ZRem(ctx, getRedisKey(PostVotedZSetPrefix)+postId, userId).Result()
-	//} else {
-	//	_, err = pipeline.ZAdd(ctx, getRedisKey(PostVotedZSetPrefix+postId), redis.Z{
-	//		Score:  attitude,
-	//		Member: userId,
-	//	}).Result()
-	//}
-	//_, err = pipeline.Exec(ctx)
-
+	_, err = pipeline.Exec(context.Background())
 	return
+}
+
+func IsMember(uid, cid string) (ok bool, err error) {
+	ok, err = rdb.SIsMember(context.Background(), getRedisKey(CommunityMemberSetPrefix+cid), uid).Result()
+	return
+}
+
+func DelJoinCommunity(uid, cid string) (err error) {
+	return
+}
+
+func GetCommunityJoinList(uid string) (ids []string, err error) {
+	return rdb.SMembers(context.Background(), getRedisKey(MemberCommunitySetPrefix+uid)).Result()
+
 }

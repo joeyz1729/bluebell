@@ -5,19 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4442b348-6a14-4d8d-91b0-6538f5c3cea0" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/middleware/rabbitmq/follow.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware/rabbitmq/like.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware/rabbitmq/vote.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/join.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/follow.go" beforeDir="false" afterPath="$PROJECT_DIR$/controller/follow.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/controller/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/mysql/follow.go" beforeDir="false" afterPath="$PROJECT_DIR$/dao/mysql/follow.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/redis/follow.go" beforeDir="false" afterPath="$PROJECT_DIR$/dao/redis/follow.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/community.go" beforeDir="false" afterPath="$PROJECT_DIR$/controller/community.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/mysql/community.go" beforeDir="false" afterPath="$PROJECT_DIR$/dao/mysql/community.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/mysql/join.go" beforeDir="false" afterPath="$PROJECT_DIR$/dao/mysql/join.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/redis/join.go" beforeDir="false" afterPath="$PROJECT_DIR$/dao/redis/join.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/redis/key.go" beforeDir="false" afterPath="$PROJECT_DIR$/dao/redis/key.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/redis/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/dao/redis/user.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/web-app.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/web-app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic/community.go" beforeDir="false" afterPath="$PROJECT_DIR$/logic/community.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logic/follow.go" beforeDir="false" afterPath="$PROJECT_DIR$/logic/follow.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/rabbitmq/rabbitmq.go" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/rabbitmq/rabbitmq.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic/post.go" beforeDir="false" afterPath="$PROJECT_DIR$/logic/post.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/router/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/router/router.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -123,27 +123,6 @@
       <recent name="$PROJECT_DIR$/router" />
       <recent name="$PROJECT_DIR$/model" />
     </key>
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
-      <module name="bluebell" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="zouyi/bluebell" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
-      <module name="bluebell" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="DIRECTORY" />
-      <package value="zouyi/bluebell" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <method v="2" />
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">

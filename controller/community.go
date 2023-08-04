@@ -37,7 +37,6 @@ func CommunityJoinListHandler(c *gin.Context) {
 	}
 	communityList, err := logic.GetCommunityJoinList(uid)
 	ResponseSuccess(c, communityList)
-
 }
 
 // CommunityDetailHandler 获取指定社区的详细信息
@@ -79,8 +78,18 @@ func CommunityJoinHandler(c *gin.Context) {
 		ResponseError(c, CodeInvalidToken)
 		return
 	}
+	var attitude bool
+	if joinForm.ActionType == 1 {
+		attitude = true
+	} else if joinForm.ActionType == 2 {
+		attitude = false
+	} else {
+		zap.L().Error("invalid action type err", zap.Error(err))
+		ResponseError(c, CodeInvalidParams)
+		return
+	}
 
-	err = logic.CommunityJoin(uid, joinForm)
+	err = logic.CommunityJoin(strconv.Itoa(int(uid)), strconv.Itoa(int(joinForm.CommunityID)), attitude)
 	if err != nil {
 		zap.L().Error("join community err", zap.Error(err))
 		ResponseError(c, CodeServerBusy)

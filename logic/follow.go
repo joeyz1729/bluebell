@@ -22,6 +22,11 @@ func Follow(uid, toUid uint64, attitude bool) (err error) {
 		zap.Uint64("toUid", toUid),
 		zap.Bool("attitude", attitude),
 	)
+	// redis内可能有数据, 并且是事务插入的
+	// bluebell:follower:toUid:uid
+	// bluebell:following:uid:toUid
+	// 1. 判断redis中是否有，
+
 	// rabbitmq + mysql
 	sb := strings.Builder{}
 	sb.WriteString(strconv.Itoa(int(uid)))

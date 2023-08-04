@@ -24,6 +24,7 @@ func CreatePost(p *model.Post) (err error) {
 		zap.L().Error("post info save to redis err", zap.Error(err))
 		return
 	}
+	// TODO， 添加消息队列
 	err = mysql.CreatePost(p)
 	if err != nil {
 		zap.L().Error("post info save to mysql err", zap.Error(err))

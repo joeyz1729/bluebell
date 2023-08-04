@@ -22,7 +22,7 @@ func GetAllCommunityList() (communityList []*model.Community, err error) {
 
 func GetCommunityJoinList(uid uint64) (list []*model.Community, err error) {
 	//sqlStr := `select member.community_id, community_name from member, community where member.user_id = ? and member.community_id = community.community_id`
-	sqlStr := `select community_id from member where user_id = ?`
+	sqlStr := `select community_id from member where user_id = ? and cancel = 0`
 	err = db.Select(&list, sqlStr, uid)
 	if err == sql.ErrNoRows {
 		zap.L().Warn("The user didn't join any community")
@@ -68,4 +68,9 @@ func GetJoinCount(uid uint64) (n int64, err error) {
 	sqlStr := `select count(*) from member where user_id = ?`
 	err = db.Get(&n, sqlStr, uid)
 	return
+}
+
+func GetCommunityByIds(ids []string) (communities []*model.Community, err error) {
+	return
+
 }

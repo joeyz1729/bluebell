@@ -12,8 +12,8 @@ const (
 	AuthorPostSetPrefix       = "work:post:"
 	AuthorPostVotedZSetPrefix = "work:post:vote:" // 统计发帖数，总获赞数
 
-	CommunityMemberPrefix = "community:member:"
-	MemberCommunityPrefix = "member:community:"
+	CommunityMemberSetPrefix = "community:member:"
+	MemberCommunitySetPrefix = "member:community:"
 
 	FollowerSetPrefix  = "follower:"
 	FollowingSetPrefix = "following:"
