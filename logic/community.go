@@ -70,7 +70,7 @@ func GetCommunityJoinList(uid uint64) (list []*model.Community, err error) {
 		list, err = mysql.GetCommunityJoinList(uid)
 		for _, community := range list {
 			cidStr, uidStr := strconv.Itoa(int(community.CommunityId)), strconv.Itoa(int(uid))
-			// TODO redis事务添加？
+			// TODO redis事务添加？`
 			mysql.CommunityJoin(cidStr, uidStr, true)
 		}
 		return
