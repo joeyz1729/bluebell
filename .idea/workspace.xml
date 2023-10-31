@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4442b348-6a14-4d8d-91b0-6538f5c3cea0" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logic/community.go" beforeDir="false" afterPath="$PROJECT_DIR$/logic/community.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/rabbitmq/like.go" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/rabbitmq/join.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

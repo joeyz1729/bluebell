@@ -39,7 +39,6 @@ func Init(conf *setting.LogConfig, mode string) (err error) {
 			zapcore.NewCore(encoder, writeSyncer, l),
 			zapcore.NewCore(consoleEncoder, zapcore.Lock(os.Stdout), zapcore.DebugLevel),
 		)
-
 	} else {
 		core = zapcore.NewCore(encoder, writeSyncer, l)
 	}

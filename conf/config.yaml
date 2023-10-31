@@ -20,7 +20,7 @@ mysql:
   host: "127.0.0.1"
   port: 3306
   username: "root"
-  password: "Zy_9908091729"
+  password: "root"
   dbname: "bluebell"
   max_life_time: 10
   max_open_conns: 200
